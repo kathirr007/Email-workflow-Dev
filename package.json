@@ -1,5 +1,5 @@
 {
-    "name": "html-email",
+    "name": "email-dev-workflow",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -8,9 +8,21 @@
         "watch": "gulp watch",
         "serveEmail": "node ./server.js"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kathirr007/Email-workflow-Dev.git"
+      },
+      "keywords": [
+        "Email",
+        "Nodemailer",
+        "Email marketing",
+        "Send email",
+        "Send Rich Text and HTML emails",
+        "Express"
+      ],
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Kathirr007",
+    "license": "MIT",
     "devDependencies": {
         "browser-sync": "^2.26.7",
         "del": "^5.1.0",
