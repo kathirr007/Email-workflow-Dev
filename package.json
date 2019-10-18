@@ -5,18 +5,25 @@
     "main": "index.js",
     "scripts": {
         "build": "gulp build",
-        "watch": "gulp watch"
+        "watch": "gulp watch",
+        "serveEmail": "node ./server.js"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "browser-sync": "^2.23.6",
-        "gulp": "^3.9.1",
-        "gulp-dest": "^0.2.3",
-        "gulp-inline-css": "^3.2.0",
-        "gulp-pug": "^3.3.0",
-        "gulp-rename": "^1.2.2",
-        "gulp-sass": "^3.1.0"
-    }
+        "browser-sync": "^2.26.7",
+        "del": "^5.1.0",
+        "express": "^4.17.1",
+        "gulp": "^4.0.2",
+        "gulp-inline-css": "^3.3.2",
+        "gulp-load-plugins": "^2.0.1",
+        "gulp-pug": "^4.0.1",
+        "gulp-rename": "^1.4.0",
+        "gulp-replace": "^1.0.0",
+        "gulp-sass": "^4.0.2",
+        "multer": "^1.4.2",
+        "nodemailer": "^6.3.1"
+    },
+    "dependencies": {}
 }

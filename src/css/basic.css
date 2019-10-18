@@ -1,9 +1,10 @@
 html, body {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif; }
 
-p, span, b, em, abbr, div, h1, h2, h3, h4, h5, a {
-  font-family: Arial, Helvetica, sans-serif;
+p, span, b, em, abbr, div, h1, h2, h3, h4, h5, a, td {
+  font-family: Helvetica, Arial, sans-serif;
   line-height: 1.4;
   margin: 0;
   box-sizing: border-box; }
@@ -26,8 +27,8 @@ table {
   margin: 0;
   padding: 0;
   empty-cells: hide; }
-  table.table {
-    width: 600px;
+  table.content-table {
+    width: 680px;
     margin: 0 auto;
     background-color: #eee; }
   table td {
