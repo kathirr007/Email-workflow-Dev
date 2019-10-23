@@ -1,4 +1,17 @@
 table{
+    &.wrapper-table {
+        @media screen  and (min-width:768px){
+            width: 100%;
+        }
+    }
+    &.content-table {
+        width: 100% !important;
+        margin: 0 auto;
+        background-color: #eee;
+        @media screen and (min-width:768px) {
+            width: 645px;
+        }
+    }
     tr{
         td{
             h3{

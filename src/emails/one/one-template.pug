@@ -1,10 +1,14 @@
 doctype html
 html
     head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="format-detection" content="telephone=no")
         title One | Email template!
 
         //- import css/scss stylesheets
         //- these file names will be replace by gulp with proper css file paths
+        link(rel="stylesheet", href="../../sass/bootstrap.scss")
         link(rel="stylesheet", href="../../sass/basic.scss")
         link(rel="stylesheet", href="../../sass/one/styles.scss")
 
@@ -16,27 +20,33 @@ html
             .bg-blue {
                 background-color: #7c22c9;
             }
+            .body-bg {
+                background-color: #f6f6f6;
+            }
+            .bg-gray {
+                background-color: #f6f6f6;
+            }
             .full-width{
                 width: 100%;
             }
     body
         // Yahoo Wrapper start
-        table.wrapper-table(cellspacing="0" cellpadding="0" border="0" width="100%")
+        table.wrapper-table.body-bg(cellspacing="0" cellpadding="0" border="0" width="100%")
             tr
                 td(align="center")
                     // Gmail Wrapper start
-                    table.content-table(cellpadding="0", cellspacing="0" width="680")
+                    table.content-table(cellpadding="0", cellspacing="0" width="645")
                         tbody
                             // Pre headder start
                             tr
                                 td(align="center" valign="middle")
                                     table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                         tr
-                                            td.bg-blue.text-center(style="color: white;")
+                                            td.bg-blue.text-center.p-2.pt-md-4(style="color: white;")
                                                 | Pre header copy bootiful
                                         tr
                                             td
-                                                img(src="images/gray-rnd-crnr-bottom-left.png")
+                                                img.d-none.d-sm-block(src="images/preheader-shadow.png")
                             // Pre-header end
                             tr
                                 td

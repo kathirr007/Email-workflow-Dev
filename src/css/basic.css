@@ -29,10 +29,6 @@ table {
   margin: 0;
   padding: 0;
   empty-cells: hide; }
-  table.content-table {
-    width: 680px;
-    margin: 0 auto;
-    background-color: #eee; }
   table td {
     margin: 0 auto; }
 
