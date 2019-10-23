@@ -3,12 +3,12 @@
     width: 100%; } }
 
 table.content-table {
-  width: 100% !important;
-  margin: 0 auto;
-  background-color: #eee; }
-  @media screen and (min-width: 768px) {
-    table.content-table {
-      width: 645px; } }
+  /* width: 100% !important;
+        margin: 0 auto;
+        background-color: #eee;
+        @media screen and (min-width:768px) {
+            width: 645px;
+        } */ }
 
 table tr td h3 {
   text-align: center;

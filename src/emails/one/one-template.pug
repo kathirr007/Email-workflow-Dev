@@ -29,6 +29,11 @@ html
             .full-width{
                 width: 100%;
             }
+            @media screen and (max-width:480px) {
+                .content-table {
+                    width: 100% !important;
+                }
+            }
     body
         // Yahoo Wrapper start
         table.wrapper-table.body-bg(cellspacing="0" cellpadding="0" border="0" width="100%")
@@ -44,9 +49,9 @@ html
                                         tr
                                             td.bg-blue.text-center.p-2.pt-md-4(style="color: white;")
                                                 | Pre header copy bootiful
-                                        tr
+                                        tr.d-none.d-sm-block
                                             td
-                                                img.d-none.d-sm-block(src="images/preheader-shadow.png")
+                                                img(src="images/preheader-shadow.png")
                             // Pre-header end
                             tr
                                 td

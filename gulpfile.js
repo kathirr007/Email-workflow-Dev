@@ -134,7 +134,11 @@ gulp.task('build', gulp.series('compileSass', () => {
         }))
 
         // // inline CSS
-        .pipe($.inlineCss())
+        .pipe($.inlineCss({
+            // applyStyleTags: false,
+            removeStyleTags: false,
+            preserveMediaQueries: false
+        }))
 
         // put compiled HTML email templates inside dist folder
         .pipe(gulp.dest(dest))
