@@ -1,8 +1,11 @@
 const gulp = require('gulp');
+// const gulp = require('gulp-param')(require('gulp'), process.argv);
 const $ = require('gulp-load-plugins')({
     lazy: true
 });
-const pug = require('gulp-pug');
+// const pug = require('gulp-pug');
+const pkg = require('./package.json');
+const del = require('del');
 // const sass = require('gulp-sass');
 // const replace = require('gulp-replace');
 // const inlineCss = require('gulp-inline-css');
@@ -13,16 +16,88 @@ const reload = browserSync.reload;
 // browserSync base directory
 // this will be the base directory of files for web preview
 // since we are building `index.pug` templates (located in src/emails) to `dist` folder.
-const baseDir = "./dist";
+
+const devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production');
+
+const source = './';
+const dest = devBuild ? 'builds/development/' : 'builds/production/';
+const baseDir = dest;
+
+// in: source + 'src/emails/**/*.(jpg|jpeg|png|svg|gif)',
+let images = {
+    in: 'src/emails/**/images/*.png',
+    out: dest
+};
 
 let resources = {
     watch : ['src/**/*scss', 'src/**/*pug' ,'!src/**/*.css']
 }
 
+// Clean tasks
+gulp.task('clean', function (done) {
+    del([
+        dest + '*'
+    ]);
+    done();
+});
+
+gulp.task('clean-images', function (done) {
+    del([
+        dest + 'images/**/*'
+    ]);
+    done();
+});
+
+gulp.task('clean-dir-images', function(dir) {
+    console.log(dir)
+    del([
+        dest + dir + '/images/**/*'
+    ]);
+    // done();
+});
+
+gulp.task('clean-html', (cb) => {
+    del([
+        dest + '**/*.html'
+    ]);
+    cb();
+});
+
+gulp.task('clean-dir-html', function (dir, done) {
+    del([
+        dest + dir + '/**/*.html'
+    ]);
+    done();
+});
+
+
+// show build type
+console.log(pkg.name + ' ' + pkg.version + ', ' + (devBuild ? 'development' : 'production') + ' build');
+
 // reload task
 gulp.task('reload', done => {
     browserSync.reload();
     done();
+});
+
+// manage images
+gulp.task('images', function () {
+    return gulp.src(images.in)
+        .pipe($.size({
+            title: 'images in '
+        }))
+        .pipe($.newer(images.out))
+        .pipe($.plumber())
+        .pipe($.image({
+            jpegRecompress: ['--strip', '--quality', 'medium', '--min', 40, '--max', 80],
+            // mozjpeg: ['-optimize', '-progressive'],
+            // guetzli: ['--quality', 85],
+            quiet: true
+        }))
+        .pipe($.size({
+            title: 'images out '
+        }))
+        .pipe(gulp.dest(images.out));
 });
 
 // compile sass to css
@@ -44,16 +119,16 @@ gulp.task('compileSass', () => {
 gulp.task('build', gulp.series('compileSass', () => {
     return gulp
         // import all email template (name ending with .template.pug) files from src/emails folder
-        .src('src/emails/one/one.template.pug')
+        .src('src/emails/**/*.pug')
 
         // replace `.scss` file paths from template with compiled file paths
         .pipe($.replace(new RegExp('\/sass\/(.+)\.scss', 'ig'), '/css/$1.css'))
 
         // do not generate sub-folders inside dist folder
-        .pipe($.rename({dirname: ''}))
+        // .pipe($.rename({dirname: ''}))
 
         // compile using Pug
-        .pipe(pug({
+        .pipe($.pug({
             doctype: 'html',
             pretty: true
         }))
@@ -62,15 +137,19 @@ gulp.task('build', gulp.series('compileSass', () => {
         .pipe($.inlineCss())
 
         // put compiled HTML email templates inside dist folder
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest(dest))
     })
 );
 
 // browserSync task to launch preview server
 gulp.task('browserSync', () => {
     return browserSync.init({
+        server: { baseDir: baseDir },
+        open: false,
+        injectChanges: true,
         reloadDelay: 2000, // reload after 2s, compilation is finished (hopefully)
-        server: { baseDir: baseDir }
+        // reloadDelay: 0,
+        notify: true
     });
 });
 
@@ -90,6 +169,9 @@ gulp.task(
         // gulp.watch(html.watch, gulp.series('html', 'reload'));
         gulp.watch(resources.watch, gulp.series('build', 'reload'));
         // gulp.watch('src/**/*.pug', gulp.series('build', 'reload'));
+        
+        // image changes
+        gulp.watch(images.in, gulp.series('images'));
     })
 );
 
@@ -99,4 +181,4 @@ gulp.task(
 // );
 
 // default task
-gulp.task('default', gulp.series('watch'));
+gulp.task('default', gulp.parallel('build', 'images', 'watch'));

@@ -21,7 +21,9 @@ a {
   text-decoration: none; }
 
 img {
-  vertical-align: sub; }
+  vertical-align: sub;
+  display: block;
+  border: none; }
 
 table {
   margin: 0;
@@ -33,3 +35,6 @@ table {
     background-color: #eee; }
   table td {
     margin: 0 auto; }
+
+.text-center {
+  text-align: center; }
