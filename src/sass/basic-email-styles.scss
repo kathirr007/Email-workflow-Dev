@@ -106,16 +106,21 @@ td[class~=coldrop] {
         display: table-cell !important;
         width: auto;
         padding: inherit !important;
-        
     }
 }
 
-.arrange_top {
-    display: table-header-group !important;
+.arrange-top {
+    display: table-header-group;
+    @media screen and (min-width:576px) {
+        display: table-cell !important;
+    }
 }
 
-.arrange_bottom {
-    display: table-footer-group !important;
+.arrange-bottom {
+    display: table-footer-group;
+    @media screen and (min-width:576px) {
+        display: table-cell !important;
+    }
 }
 
 *[class=autoheight] {

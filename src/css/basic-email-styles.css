@@ -100,12 +100,12 @@ td[class~=coldrop] {
   padding: 0px;
 }
 
-.arrange_top {
-  display: table-header-group !important;
+.arrange-top {
+  display: table-header-group;
 }
 
-.arrange_bottom {
-  display: table-footer-group !important;
+.arrange-bottom {
+  display: table-footer-group;
 }
 
 *[class=autoheight] {
