@@ -1,16 +1,11 @@
 table{
     &.wrapper-table {
-        @media screen  and (min-width:768px){
-            width: 100%;
-        }
+        
     }
     &.content-table {
-        /* width: 100% !important;
-        margin: 0 auto;
-        background-color: #eee;
-        @media screen and (min-width:768px) {
-            width: 645px;
-        } */
+        @media screen and (min-width:645px) {
+            width: 645px !important;
+        }
     }
     tr{
         td{
@@ -29,6 +24,19 @@ table{
 }
 .text-gray {
     color: #6c6c6c;
+}
+
+.bg-red{
+    background-color: #E84C50;
+}
+.bg-blue {
+    background-color: #7c22c9;
+}
+.body-bg {
+    background-color: #f6f6f6;
+}
+.bg-gray {
+    background-color: #f6f6f6;
 }
 
 .hero-heading {

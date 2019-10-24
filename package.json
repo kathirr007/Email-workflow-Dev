@@ -32,6 +32,9 @@
         "querystring": "^0.2.0"
     },
     "dependencies": {
+        "gulp-beautify": "^3.0.0",
+        "gulp-extract-media-queries": "^1.1.0",
+        "gulp-file-include": "^2.1.0",
         "gulp-filter": "^6.0.0",
         "gulp-if": "^3.0.0",
         "gulp-image": "^5.1.0",

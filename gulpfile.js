@@ -48,6 +48,13 @@ gulp.task('clean-images', function (done) {
     done();
 });
 
+gulp.task('clean-css', function (done) {
+    del([
+        './src/css/**/*'
+    ]);
+    done();
+});
+
 gulp.task('clean-dir-images', function(dir) {
     console.log(dir)
     del([
@@ -109,6 +116,7 @@ gulp.task('compileSass', () => {
 
         // on error, do not break the process
         .pipe($.sass().on('error', $.sass.logError))
+        .pipe($.extractMediaQueries())
 
         // output to `src/css` folder
         .pipe(gulp.dest('./src/css'));
@@ -140,10 +148,21 @@ gulp.task('build', gulp.series('compileSass', () => {
         .pipe(htmlFilter.restore)
         // compile using Pug
         .pipe(pugFilter)
+        /* .pipe($.fileInclude({
+            prefix: '@@',
+            basepath: '@file'
+          })) */
         .pipe($.pug({
             doctype: 'html',
             pretty: true
         }))
+        /* .pipe($.preprocess({
+            context: {
+                devBuild: devBuild,
+                author: pkg.author,
+                version: pkg.version
+            },
+        })) */
         .pipe(pugFilter.restore)
 
         // // inline CSS
@@ -152,6 +171,7 @@ gulp.task('build', gulp.series('compileSass', () => {
             removeStyleTags: false,
             preserveMediaQueries: false
         }))
+        .pipe($.beautify.html({ indent_size: 2 }))
 
         // put compiled HTML email templates inside dist folder
         .pipe(gulp.dest(dest))

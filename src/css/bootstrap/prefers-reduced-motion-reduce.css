@@ -1,0 +1,57 @@
+.form-control {
+  transition: none;
+}
+
+.form-range::-webkit-slider-thumb {
+  transition: none;
+}
+
+.form-range::-moz-range-thumb {
+  transition: none;
+}
+
+.form-range::-ms-thumb {
+  transition: none;
+}
+
+.btn {
+  transition: none;
+}
+
+.fade {
+  transition: none;
+}
+
+.collapsing {
+  transition: none;
+}
+
+.progress-bar {
+  transition: none;
+}
+
+.progress-bar-animated {
+  animation: none;
+}
+
+.modal.fade .modal-dialog {
+  transition: none;
+}
+
+.carousel-item {
+  transition: none;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+  transition: none;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  transition: none;
+}
+
+.carousel-indicators li {
+  transition: none;
+}

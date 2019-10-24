@@ -1,0 +1,20 @@
+.table-responsive-sm {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive-sm > .table-bordered {
+  border: 0;
+}
+
+.navbar-expand-sm > .container,
+.navbar-expand-sm > .container-fluid,
+.navbar-expand-sm > .container-sm,
+.navbar-expand-sm > .container-md,
+.navbar-expand-sm > .container-lg,
+.navbar-expand-sm > .container-xl {
+  padding-right: 0;
+  padding-left: 0;
+}

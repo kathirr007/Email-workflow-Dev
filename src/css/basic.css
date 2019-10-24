@@ -1,36 +1,68 @@
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-p, span, b, em, abbr, div, h1, h2, h3, h4, h5, a, td {
+p,
+span,
+b,
+em,
+abbr,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+td {
   font-family: Arial,Helvetica, sans-serif;
   line-height: 1.4;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
-h1, h2, h3, h4, h5 {
-  font-family: Arial, Helvetica, sans-serif; }
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-p, span, b, em, abbr, div {
+p,
+span,
+b,
+em,
+abbr,
+div {
   font-size: 12px;
-  color: #222; }
+  color: #222;
+}
 
 a {
   color: #4753be !important;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 img {
   vertical-align: sub;
   display: block;
-  border: none; }
+  border: none;
+}
 
 table {
   margin: 0;
   padding: 0;
-  empty-cells: hide; }
-  table td {
-    margin: 0 auto; }
+  empty-cells: hide;
+}
+
+table td {
+  margin: 0 auto;
+}
 
 .text-center {
-  text-align: center; }
+  text-align: center;
+}

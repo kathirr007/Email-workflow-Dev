@@ -1,0 +1,5 @@
+td[class~=coldrop] {
+  display: table-cell !important;
+  width: auto;
+  padding: inherit !important;
+}

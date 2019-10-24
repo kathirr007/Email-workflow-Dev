@@ -1,54 +1,71 @@
-@media screen and (min-width: 768px) {
-  table.wrapper-table {
-    width: 100%; } }
-
-table.content-table {
-  /* width: 100% !important;
-        margin: 0 auto;
-        background-color: #eee;
-        @media screen and (min-width:768px) {
-            width: 645px;
-        } */ }
-
 table tr td h3 {
   text-align: center;
   text-transform: uppercase;
   padding: 15px 25px;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+}
 
 .text-blue {
-  color: #7c22c9; }
+  color: #7c22c9;
+}
 
 .text-gray {
-  color: #6c6c6c; }
+  color: #6c6c6c;
+}
+
+.bg-red {
+  background-color: #E84C50;
+}
+
+.bg-blue {
+  background-color: #7c22c9;
+}
+
+.body-bg {
+  background-color: #f6f6f6;
+}
+
+.bg-gray {
+  background-color: #f6f6f6;
+}
 
 .hero-heading {
   font-size: 32px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .hero-content {
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 .cta-blue {
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 .block-heading {
   font-size: 25px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .promo-preheader {
   font-size: 12px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .promo-offer-text {
   font-size: 32px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 .promo-text {
-  font-size: 20px; }
+  font-size: 20px;
+}
 
 .cta {
   font-size: 14px;
-  font-weight: bold; }
-  .cta.big-cta {
-    font-size: 18px; }
+  font-weight: bold;
+}
+
+.cta.big-cta {
+  font-size: 18px;
+}

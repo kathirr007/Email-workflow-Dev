@@ -4,14 +4,17 @@ body {
   background-color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none !important;
-  -ms-text-size-adjust: none !important; }
+  -ms-text-size-adjust: none !important;
+}
 
 * {
-  line-height: normal !important; }
+  line-height: normal !important;
+}
 
 a[href^="x-apple-data-detectors:"] {
   color: inherit;
-  text-decoration: inherit; }
+  text-decoration: inherit;
+}
 
 a[x-apple-data-detectors] {
   color: inherit !important;
@@ -19,32 +22,37 @@ a[x-apple-data-detectors] {
   font-size: inherit !important;
   font-family: inherit !important;
   font-weight: inherit !important;
-  line-height: inherit !important; }
+  line-height: inherit !important;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 div {
-  display: inherit !important; }
+  display: inherit !important;
+}
 
 .wrapper-table {
-  width: 100%; }
+  width: 100%;
+}
 
 .content-table {
-  width: 95%; }
+  width: 95%;
+}
 
 *[class~=full] {
   width: 100% !important;
-  min-width: 100% !important; }
+  min-width: 100% !important;
+}
 
 *[class~=contents] {
-  width: 89.14728682% !important; }
+  width: 89.14728682% !important;
+}
 
 *[class~=hide] {
-  display: none; }
-  @media screen and (min-width: 645px) {
-    *[class~=hide] {
-      display: block; } }
+  display: none;
+}
 
 *[class~=show] {
   display: block !important;
@@ -52,90 +60,110 @@ div {
   max-height: none !important;
   width: auto !important;
   line-height: normal !important;
-  overflow: visible !important; }
+  overflow: visible !important;
+}
 
 *[class~=imgfull] {
   width: 100%;
-  height: auto; }
-  @media screen and (min-width: 645px) {
-    *[class~=imgfull] {
-      width: auto; } }
+  height: auto;
+}
+
+[class*='spacer'] {
+  line-height: 1px !important;
+  font-size: 1px !important;
+}
+
+.full-width {
+  width: 100%;
+}
 
 *[class~=text_center] {
-  text-align: center !important; }
+  text-align: center !important;
+}
 
 *[class~=align_center] {
   float: none !important;
-  margin: 0 auto !important; }
+  margin: 0 auto !important;
+}
 
 *[class~=align_right] {
-  float: right !important; }
+  float: right !important;
+}
 
 *[class~=align_left] {
-  float: left !important; }
+  float: left !important;
+}
 
 td[class~=coldrop] {
   display: block;
   width: 100%;
-  padding: 0px; }
-  @media screen and (min-width: 576px) {
-    td[class~=coldrop] {
-      display: table-cell;
-      width: auto;
-      padding: inherit; } }
+  padding: 0px;
+}
 
 .arrange_top {
-  display: table-header-group !important; }
+  display: table-header-group !important;
+}
 
 .arrange_bottom {
-  display: table-footer-group !important; }
+  display: table-footer-group !important;
+}
 
 *[class=autoheight] {
-  height: auto !important; }
+  height: auto !important;
+}
 
 *[class=autowidth] {
-  width: auto !important; }
+  width: auto !important;
+}
 
 *[class=autowidthheight] {
   width: auto !important;
-  height: auto !important; }
+  height: auto !important;
+}
 
 body[yahoo] *[class~=no_bg] {
   background: none !important;
-  background-color: #ffffff !important; }
+  background-color: #ffffff !important;
+}
 
 body[yahoo] *[class~=top_banner] {
   width: 100% !important;
   background-size: cover !important;
-  background-position: 100% top !important; }
+  background-position: 100% top !important;
+}
 
 *[class~=padding_lr10] {
-  padding: 0px 10px 0px 10px !important; }
+  padding: 0px 10px 0px 10px !important;
+}
 
 *[class~=padding_t10] {
-  padding: 10px 0px 0px 0px !important; }
+  padding: 10px 0px 0px 0px !important;
+}
 
 *[class~=nopad] {
-  padding: 0px 0px 0px 0px !important; }
+  padding: 0px 0px 0px 0px !important;
+}
 
 *[class~=margin_b10] {
-  margin-bottom: 10px !important; }
+  margin-bottom: 10px !important;
+}
 
 *[class~=margin_t10] {
-  margin-top: 10px !important; }
+  margin-top: 10px !important;
+}
 
 *[class~=height20] {
-  height: 20px !important; }
+  height: 20px !important;
+}
 
 *[class~=height15] {
-  height: 15px !important; }
+  height: 15px !important;
+}
 
 *[class~=height10] {
-  height: 10px !important; }
+  height: 10px !important;
+}
 
 *[class~=height5] {
-  height: 5px !important; }
-
-@media screen and (min-device-width: 645px) {
-  .content-table {
-    width: 645px; } }
+  height: 5px !important;
+}

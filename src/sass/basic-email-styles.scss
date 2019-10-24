@@ -52,7 +52,7 @@ div {
 *[class~=hide] {
     display: none;
     @media screen and (min-width:645px) {
-        display: block;
+        display: block !important;
     }
 }
 
@@ -69,8 +69,16 @@ div {
     width: 100%;
     height: auto;
     @media screen and (min-width:645px) {
-        width: auto;
+        width: auto !important;
     }
+}
+[class*='spacer'] {
+    line-height: 1px !important;
+    font-size: 1px !important;
+}
+
+.full-width{
+    width: 100%;
 }
 
 *[class~=text_center] {
@@ -95,9 +103,9 @@ td[class~=coldrop] {
     width: 100%;
     padding: 0px;
     @media screen and (min-width:576px) {
-        display: table-cell;
+        display: table-cell !important;
         width: auto;
-        padding: inherit;
+        padding: inherit !important;
         
     }
 }
@@ -170,19 +178,16 @@ body[yahoo] *[class~=top_banner] {
     height: 5px !important;
 }
 
-@media screen and (min-device-width:645px) {
-    .content-table {
-        width: 645px;
-    }
+@media screen and (min-width:645px) {
 }
 
-@media screen and (max-device-width: 480px) {
+@media screen and (max-width: 480px) {
 }
 
-@media screen and (max-device-width: 414px) {}
+@media screen and (max-width: 414px) {}
 
-@media screen and (max-device-width: 375px) {}
+@media screen and (max-width: 375px) {}
 
-@media screen and (max-device-width: 320px) {
+@media screen and (max-width: 320px) {
     
 }
