@@ -32,10 +32,13 @@
         "querystring": "^0.2.0"
     },
     "dependencies": {
+        "gulp-filter": "^6.0.0",
+        "gulp-if": "^3.0.0",
         "gulp-image": "^5.1.0",
         "gulp-newer": "^1.4.0",
         "gulp-param": "^1.0.3",
         "gulp-plumber": "^1.2.1",
+        "gulp-preprocess": "^3.0.3",
         "gulp-size": "^3.0.0"
     }
 }

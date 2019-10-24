@@ -25,12 +25,12 @@ const baseDir = dest;
 
 // in: source + 'src/emails/**/*.(jpg|jpeg|png|svg|gif)',
 let images = {
-    in: 'src/emails/**/images/*.png',
+    in: 'src/emails/**/images/*.{png,gif,jpg,jpeg,svg}',
     out: dest
 };
 
 let resources = {
-    watch : ['src/**/*scss', 'src/**/*pug' ,'!src/**/*.css']
+    watch : ['src/**/*.scss', 'src/**/*.pug', 'src/**/*.html' ,'!src/**/*.css']
 }
 
 // Clean tasks
@@ -117,9 +117,11 @@ gulp.task('compileSass', () => {
 // build complete HTML email template
 // compile sass (compileSass task) before running build
 gulp.task('build', gulp.series('compileSass', () => {
+    var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
+        pugFilter = $.filter(['**/*.pug'], { restore: true });
     return gulp
         // import all email template (name ending with .template.pug) files from src/emails folder
-        .src('src/emails/**/*.pug')
+        .src(['src/emails/**/*.html', 'src/emails/**/*.pug', '!**/_*', '!**/_partials/**/*'])
 
         // replace `.scss` file paths from template with compiled file paths
         .pipe($.replace(new RegExp('\/sass\/(.+)\.scss', 'ig'), '/css/$1.css'))
@@ -127,15 +129,26 @@ gulp.task('build', gulp.series('compileSass', () => {
         // do not generate sub-folders inside dist folder
         // .pipe($.rename({dirname: ''}))
 
+        .pipe(htmlFilter)
+        .pipe($.preprocess({
+            context: {
+                devBuild: devBuild,
+                author: pkg.author,
+                version: pkg.version
+            },
+        }))
+        .pipe(htmlFilter.restore)
         // compile using Pug
+        .pipe(pugFilter)
         .pipe($.pug({
             doctype: 'html',
             pretty: true
         }))
+        .pipe(pugFilter.restore)
 
         // // inline CSS
         .pipe($.inlineCss({
-            // applyStyleTags: false,
+            applyStyleTags: false,
             removeStyleTags: false,
             preserveMediaQueries: false
         }))
