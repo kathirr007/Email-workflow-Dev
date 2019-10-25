@@ -124,7 +124,7 @@ gulp.task('compileSass', () => {
 
 // build complete HTML email template
 // compile sass (compileSass task) before running build
-gulp.task('compileHTML', gulp.series('compileSass', () => {
+gulp.task('buildHTML', gulp.series('compileSass', () => {
     var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
         pugFilter = $.filter(['**/*.pug'], { restore: true });
     return gulp
@@ -218,7 +218,7 @@ gulp.task(
 // );
 
 // default task
-gulp.task('default', gulp.parallel('build', 'images', 'watch'));
+gulp.task('default', gulp.parallel('buildHTML', 'images', 'watch'));
 
 // build task
-gulp.task('build', gulp.parallel('build', 'images'));
+gulp.task('build', gulp.parallel('buildHTML', 'images'));
