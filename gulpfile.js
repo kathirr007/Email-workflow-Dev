@@ -30,7 +30,7 @@ let images = {
 };
 
 let resources = {
-    watch : ['src/**/*.scss', 'src/**/*.pug', 'src/**/*.html' ,'!src/**/*.css']
+    watch : ['src/**/*.scss', 'src/**/*.pug', 'src/*.html' , 'src/**/*.html' ,'!src/**/*.css']
 }
 
 // Clean tasks
@@ -129,7 +129,7 @@ gulp.task('build', gulp.series('compileSass', () => {
         pugFilter = $.filter(['**/*.pug'], { restore: true });
     return gulp
         // import all email template (name ending with .template.pug) files from src/emails folder
-        .src(['src/emails/**/*.html', 'src/emails/**/*.pug', '!**/_*', '!**/_partials/**/*'])
+        .src(['src/**/*.html', 'src/emails/**/*.pug', '!**/_*', '!**/_partials/**/*'])
 
         // replace `.scss` file paths from template with compiled file paths
         .pipe($.replace(new RegExp('\/sass\/(.+)\.scss', 'ig'), '/css/$1.css'))

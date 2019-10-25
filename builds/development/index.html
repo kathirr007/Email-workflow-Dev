@@ -1,0 +1,150 @@
+<html>
+
+<head>
+  <title>Node.JS Email application</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+    });
+  </script>
+  <style>
+    #container {
+      margin-left: 400px;
+      margin-top: 50px;
+    }
+
+    #to,
+    #subject,
+    #content,
+    #htmlContent {
+      font-family: "Segoe UI";
+      font-size: 18px;
+      width: 530px;
+    }
+
+    h1 {
+      font-family: "Segoe UI";
+      font-size: 40px;
+      color: #3b5998;
+    }
+
+    p {
+      color: green;
+    }
+
+    #send_email {
+      font-size: 15px;
+      font-family: "Segoe UI";
+    }
+
+    #message {
+      font-size: 18px;
+    }
+  </style>
+  <script type="text/javascript">
+    // Start Single Page Apps for GitHub Pages
+    /* Single Page Apps for GitHub Pages
+    https://github.com/rafrex/spa-github-pages
+    Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+    ----------------------------------------------------------------------
+    This script checks to see if a redirect is present in the query string
+    and converts it back into the correct url and adds it to the
+    browser's history using window.history.replaceState(...),
+    which won't cause the browser to attempt to load the new url.
+    When the single page app is loaded further down in this file,
+    the correct url will be waiting in the browser's history for
+    the single page app to route accordingly. */
+    (function(l) {
+      if (l.search) {
+        var q = {};
+        l.search.slice(1).split('&').forEach(function(v) {
+          var a = v.split('=');
+          q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+        });
+        if (q.p !== undefined) {
+          window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + (q.p || '') +
+            (q.q ? ('?' + q.q) : '') +
+            l.hash
+          );
+        }
+      }
+    }(window.location))
+    // End Single Page Apps for GitHub Pages
+  </script>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Mailer In Node.JS</h1>
+    <!-- <form action="" method="GET" id="emailForm" name="emailForm" enctype="multipart/form-data">
+        </form> -->
+    <input type="text" id="to" placeholder="Enter E-mail ID where you want to send"><br>
+    <input type="text" id="subject" placeholder="Write Subject"><br>
+    <textarea id="content" rows="5" cols="40" placeholder="Write what you want to send"></textarea><br>
+    <textarea id="htmlContent" rows="5" cols="40" placeholder="Place your HTML Content here..."></textarea><br>
+    <input id="mailAttachments" name="mailAttachments" type="file"><br>
+    <button id="send_email" type="button">Send Email</button><br>
+    <span id="message"></span>
+  </div>
+  <script>
+    $(document).ready(function() {
+      var from, to, subject, text, htmlContent, mailAttachments, filename;
+      var input = document.getElementById("mailAttachments");
+      var fReader = new FileReader();
+      // fReader.readAsDataURL(input.files[0]);
+      fReader.onloadend = function(event) {
+        mailAttachments = event.target.result;
+      }
+      /* sendMail = function (e) {
+          e.preventDefault();
+          to = $("#to").val();
+          subject = $("#subject").val();
+          text = $("#content").val();
+          htmlContent = $('#htmlContent').val();
+          mailAttachments = mailAttachments;
+          filename = $('#mailAttachments').val().split(/(\\|\/)/ig).pop();
+          $("#message").text("Sending E-mail...Please wait");
+          $.get("http://localhost:3000/send", {
+              to: to,
+              subject: subject,
+              text: text,
+              htmlContent: htmlContent,
+              // mailAttachments: mailAttachments,
+              // filename: filename,
+          }, function (data) {
+              if (data == "sent") {
+                  $("#message").empty().html("<p>Email is been sent at " + to +
+                      " . Please check inbox !</p>");
+              }
+          });
+      } */
+      $(document).on('click', "#send_email", function(e) {
+        e.preventDefault();
+        to = $("#to").val();
+        subject = $("#subject").val();
+        text = $("#content").val();
+        htmlContent = $('#htmlContent').val();
+        mailAttachments = mailAttachments;
+        filename = $('#mailAttachments').val().split(/(\\|\/)/ig).pop();
+        $("#message").text("Sending E-mail...Please wait");
+        $.get("http://localhost:3000/send", {
+          to: to,
+          subject: subject,
+          text: text,
+          htmlContent: htmlContent,
+          // mailAttachments: mailAttachments,
+          // filename: filename,
+        }, function(data) {
+          if (data == "sent") {
+            $("#message").empty().html("<p>Email is been sent at " + to +
+              " . Please check inbox !</p>");
+          }
+        });
+      });
+    })
+  </script>
+</body>
+
+</html>
