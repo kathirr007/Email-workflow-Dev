@@ -1,7 +1,0 @@
-*[class~=hide] {
-  display: block !important;
-}
-
-*[class~=imgfull] {
-  width: auto !important;
-}

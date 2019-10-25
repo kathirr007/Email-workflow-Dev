@@ -1,0 +1,134 @@
+.wrapper-table {
+  width: 100%;
+}
+
+.content-table {
+  width: 95%;
+}
+
+*[class~=full] {
+  width: 100% !important;
+  min-width: 100% !important;
+}
+
+*[class~=contents] {
+  width: 89.14728682% !important;
+}
+
+*[class~=hide] {
+  display: none;
+}
+
+*[class~=show] {
+  display: block !important;
+  font-size: inherit !important;
+  max-height: none !important;
+  width: auto !important;
+  line-height: normal !important;
+  overflow: visible !important;
+}
+
+*[class~=imgfull] {
+  width: 100%;
+  height: auto;
+}
+
+[class*='spacer'] {
+  line-height: 1px !important;
+  font-size: 1px !important;
+}
+
+.full-width {
+  width: 100%;
+}
+
+*[class~=text_center] {
+  text-align: center !important;
+}
+
+*[class~=align_center] {
+  float: none !important;
+  margin: 0 auto !important;
+}
+
+*[class~=align_right] {
+  float: right !important;
+}
+
+*[class~=align_left] {
+  float: left !important;
+}
+
+td[class~=coldrop] {
+  display: block;
+  width: 100%;
+  padding: 0px;
+}
+
+.arrange-top {
+  display: table-header-group;
+}
+
+.arrange-bottom {
+  display: table-footer-group;
+}
+
+*[class=autoheight] {
+  height: auto !important;
+}
+
+*[class=autowidth] {
+  width: auto !important;
+}
+
+*[class=autowidthheight] {
+  width: auto !important;
+  height: auto !important;
+}
+
+body[yahoo] *[class~=no_bg] {
+  background: none !important;
+  background-color: #ffffff !important;
+}
+
+body[yahoo] *[class~=top_banner] {
+  width: 100% !important;
+  background-size: cover !important;
+  background-position: 100% top !important;
+}
+
+*[class~=padding_lr10] {
+  padding: 0px 10px 0px 10px !important;
+}
+
+*[class~=padding_t10] {
+  padding: 10px 0px 0px 0px !important;
+}
+
+*[class~=nopad] {
+  padding: 0px 0px 0px 0px !important;
+}
+
+*[class~=margin_b10] {
+  margin-bottom: 10px !important;
+}
+
+*[class~=margin_t10] {
+  margin-top: 10px !important;
+}
+
+*[class~=height20] {
+  height: 20px !important;
+}
+
+*[class~=height15] {
+  height: 15px !important;
+}
+
+*[class~=height10] {
+  height: 10px !important;
+}
+
+*[class~=height5] {
+  height: 5px !important;
+}

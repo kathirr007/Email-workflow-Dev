@@ -25,7 +25,7 @@ const baseDir = dest;
 
 // in: source + 'src/emails/**/*.(jpg|jpeg|png|svg|gif)',
 let images = {
-    in: 'src/emails/**/images/*.{png,gif,jpg,jpeg,svg}',
+    in: 'src/**/*.{png,gif,jpg,jpeg,svg}',
     out: dest + 'images'
 };
 
@@ -55,28 +55,12 @@ gulp.task('clean-css', function (done) {
     done();
 });
 
-gulp.task('clean-dir-images', function(dir) {
-    console.log(dir)
-    del([
-        dest + dir + '/images/**/*'
-    ]);
-    // done();
-});
-
 gulp.task('clean-html', (cb) => {
     del([
         dest + '**/*.html'
     ]);
     cb();
 });
-
-gulp.task('clean-dir-html', function (dir, done) {
-    del([
-        dest + dir + '/**/*.html'
-    ]);
-    done();
-});
-
 
 // show build type
 console.log(pkg.name + ' ' + pkg.version + ', ' + (devBuild ? 'development' : 'production') + ' build');

@@ -1,0 +1,406 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="format-detection" content="telephone=no")
+        title One | Email template!
+
+        //- import css/scss stylesheets
+        //- these file names will be replace by gulp with proper css file paths
+        //- link(rel="stylesheet", href="../../sass/bootstrap/bootstrap-utilities.css")
+        link(rel="stylesheet", href="../../sass/basic-email-styles.scss")
+        link(rel="stylesheet", href="../../sass/basic.scss")
+        link(rel="stylesheet", href="../../sass/two/style.scss")
+
+        //- embdedded css allowed, but not sass
+        
+        style
+            //| @media screen and (min-width:576px) {
+            //include ../../css/screen-and-min-width-576px.css
+            //| }
+            | @media screen and (max-width:576px) {
+            include ../../css/screen-and-max-width-576px.css
+            | }
+            //| @media screen and (min-width:768px) {
+            //include ../../css/bootstrap/min-width-768px.css
+            //| }
+        
+    body.sc-body-bg
+        // Yahoo Wrapper start
+        table.wrapper-table.sc-body-bg(cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#2e9ebe")
+            tr
+                td(align="center" valign="top")
+                    // Gmail Wrapper start
+                    table.content-table(cellpadding="0" cellspacing="0" width="640")
+                        tbody
+                            // Pre headder start
+                            //- include ./_partials/_pre-header.pug
+                            // Pre-header end
+                            // Spacer 30 start
+                            include ../_partials/_spacer20-15.pug
+                            // Spacer 30 end
+                            // Hero block / white block one start
+                            tr
+                                td(valign="top" align="center")
+                                    table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                        tbody
+                                            // Rounded white block top start
+                                            include ./_partials/_rounded-white-block-top.pug
+                                            // Rounded white block top end
+                                            // Rounded white block content start
+                                            tr
+                                                td.rounded.rounded-sm-0(align="center" valign="middle" bgcolor="#ffffff")
+                                                    table.contents(cellpadding="0" cellspacing="0" border="0" width="89.14728682%" align="center")
+                                                        tbody
+                                                            // Spacer 10/20 start
+                                                            tr.d-none.d-sm-table-row
+                                                                include ../_partials/_height10.pug
+                                                            tr.d-table-row.d-sm-none
+                                                                include ../_partials/_height20.pug
+                                                            // Spacer 10/20 end
+                                                            // Company logo start
+                                                            tr
+                                                                td(align="center" valign="middle")
+                                                                    table(cellpadding="0" cellspacing="0" border="0" width="35%" align="center")
+                                                                        tr
+                                                                            td(align="center" valign="middle")
+                                                                                img.imgfull(src="../images/001-company-logo.png" alt="")
+                                                            // Company logo end
+                                                            // Spacer 20 start
+                                                            include ../_partials/_spacer20.pug
+                                                            // Spacer 20 end
+                                                            // Hero banner start
+                                                            tr
+                                                                td(valign="top" align="center")
+                                                                    img.imgfull(src="../images/001-hero-banner.jpg" alt="")
+                                                            // Hero banner end
+                                                            // Spacer 20 start
+                                                            include ../_partials/_spacer20.pug
+                                                            // Spacer 20 end
+                                                            tr
+                                                                td.hero-heading.text-center(valign="top" align="center")
+                                                                    | Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                                            // spacer 15 start
+                                                            tr
+                                                                include ../_partials/_height15.pug
+                                                            // spacer 15 end
+                                                            tr
+                                                                td.hero-content.text-gray.text-center(valign="top" align="center").
+                                                                    Quisque viverra felis odio, convallis feugiat nulla placerat vitae. Vivamus ac viverra diam. Ut molestie velit ac facilisis semper.
+                                                            // spacer 15 start
+                                                            tr
+                                                                include ../_partials/_height15.pug
+                                                            // spacer 15 end
+                                                            // big blue cta start
+                                                            include ./_partials/_big-blue-cta.pug
+                                                            // big blue cta end
+                                                            // spacer 20 start
+                                                            include ../_partials/_spacer10-20.pug
+                                                            // spacer 20 end
+
+                                            // Rounded white block content end
+                                            // Rounded white block bottom start
+                                            include ./_partials/_rounded-white-block-bottom.pug
+                                            // Rounded white block bottom end
+                            // Hero block / white block one end
+                            // Spacer 20/15 start
+                            include ../_partials/_spacer20-15.pug
+                            // Spacer 20/15 end
+                            // White block two start
+                            tr
+                                td(valign="top" align="center")
+                                    table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                        tbody
+                                            // Rounded white block top start
+                                            include ./_partials/_rounded-white-block-top.pug
+                                            // Rounded white block top end
+                                            // Rounded white block content start
+                                            tr
+                                                td.rounded.rounded-sm-0(align="center" valign="middle" bgcolor="#ffffff")
+                                                    table.contents(cellpadding="0" cellspacing="0" border="0" width="89.14728682%" align="center")
+                                                        tbody
+                                                            // Spacer 20 start
+                                                            tr
+                                                                include ../_partials/_height20.pug
+                                                            // Spacer 20 end
+                                                            // block heading start
+                                                            tr
+                                                                td(align="center" valign="middle")
+                                                                    table(cellpadding="0" cellspacing="0" border="0" width="" align="center")
+                                                                        tbody
+                                                                            tr
+                                                                                td(width="10" align="left" valign="middle" bgcolor="#ffffff")
+                                                                                    img(src="../images/001-multicolor-heading-decor-left.png" alt="")
+                                                                                td.text-center.block-heading.px-2(bgcolor="#ffffff" align="center" valign="middle")
+                                                                                    | Lorem ipsum dolor sit amet con
+                                                                                td(width="10" align="right" valign="middle" bgcolor="#ffffff")
+                                                                                    img(src="../images/001-multicolor-heading-decor-right.png" alt="")
+                                                            // block heading end
+                                                            // Spacer 20 start
+                                                            include ../_partials/_spacer20.pug
+                                                            // Spacer 20 end
+                                                            // Promo one start
+                                                            tr
+                                                                td(valign="top" align="center")
+                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                        tbody
+                                                                            tr
+                                                                                td.text-center.coldrop.w-sm-60(width="60%" align="center" valign="top")
+                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                        tbody
+                                                                                            tr
+                                                                                                td(valign="top" align="center")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                        tr
+                                                                                                            td.d-none.d-sm-table-cell(valign="top" align="center" width="10")
+                                                                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                                    tr
+                                                                                                                        td(valign="top" align="center")
+                                                                                                                            img(src="../images/001-gray-rnd-crnr-top-left.png " alt="")
+                                                                                                                    tr
+                                                                                                                        td.spacer(valign="top" align="center" bgcolor="#d8d8d8" height="28")
+                                                                                                                            | &nbsp;
+                                                                                                            td(valign="top" align="center")
+                                                                                                                table.rounded-top.rounded-sm-0(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8")
+                                                                                                                    tr
+                                                                                                                        td(valign="top" align="center")
+                                                                                                                            table(cellpadding="0" cellspacing="0" border="0" width="94" align="center")
+                                                                                                                                tr
+                                                                                                                                    td.spacer(valign="top" align="center" height="10" bgcolor="#ffffff")
+                                                                                                                                        | &nbsp;
+                                                                                                                                tr
+                                                                                                                                    td(valign="middle" align="center" bgcolor="#ffffff" style="font-weight:bold; font-size:16px; color: #7c22c9; vertical-align: middle;")
+                                                                                                                                        | $1 = 1 
+                                                                                                                                        img.d-inline-block(src="../images/001-price-badge.png", alt="")
+                                                                                                                                        
+                                                                                                                                tr
+                                                                                                                                    td(valign="top" align="center" height="10")
+                                                                                                                                        table(cellpadding="0" cellspacing="0" border="0" width="94" align="center")
+                                                                                                                                            tr
+                                                                                                                                                td(valign="top" align="left" width="10")
+                                                                                                                                                    img(src="../images/001-white-rnd-crnr-bottom-left.png", alt="")
+                                                                                                                                                td.spacer(valign="top" align="left" height="10" bgcolor="#ffffff")
+                                                                                                                                                    | &nbsp;
+                                                                                                                                                td(valign="top" align="right" width="10")
+                                                                                                                                                    img(src="../images/001-white-rnd-crnr-bottom-right.png", alt="")
+
+                                                                                                            td.d-none.d-sm-table-cell.spacer(valign="top" align="center" width="10" bgcolor="#d8d8d8")
+                                                                                                                | &nbsp;
+                                                                                            tr
+                                                                                                td(valign="top" align="center" bgcolor="#d8d8d8")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8")
+                                                                                                        tr
+                                                                                                            td(valign="top" align="center")
+                                                                                                                img.imgfull(src="../images/001-promo-placeholder.jpg", alt="")
+                                                                                            tr.d-none.d-sm-table-row
+                                                                                                td(valign="top" align="center")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                        tr
+                                                                                                            td(valign="top" align="center" width="10")
+                                                                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                                    tr
+                                                                                                                        td(valign="top" align="center")
+                                                                                                                            img(src="../images/001-gray-rnd-crnr-bottom-left.png " alt="")
+                                                                                                            td(valign="top" align="center" bgcolor="#d8d8d8")
+                                                                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8")
+                                                                                                                    tr
+                                                                                                                        td(valign="top" align="center")
+                                                                                                            td.spacer(valign="top" align="center" width="10" bgcolor="#d8d8d8")
+                                                                                                                | &nbsp;
+
+                                                                                td.text-center.coldrop.w-sm-40(align="center" width="40%" valign="top")
+                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                        tbody
+                                                                                            tr.d-none.d-sm-table-row
+                                                                                                td.spacer(valign="top" align="center" width="10" bgcolor="#f8f4fc")
+                                                                                                    | &nbsp;
+                                                                                                td(valign="top" align="center" bgcolor="#f8f4fc")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc")
+                                                                                                        tr
+                                                                                                            td(valign="top" align="center")
+                                                                                                td(valign="top" align="center" width="10")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                        tr
+                                                                                                            td(valign="top" align="center")
+                                                                                                                img(src="../images/001-lightgray-rnd-crnr-top-right.png " alt="")
+                                                                                            tr
+                                                                                                td(valign="top" align="center" colspan="3")
+                                                                                                    table.rounded-bottom.px-2.p-sm-0.rounded-sm-0(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc")
+                                                                                                        tr
+                                                                                                            include ../_partials/_height15.pug
+                                                                                                        tr
+                                                                                                            td.promo-preheader(valign="top" align="center" style="")
+                                                                                                                | Partner's Name
+                                                                                                        tr
+                                                                                                            include ../_partials/_height10.pug
+                                                                                                        tr
+                                                                                                            td.promo-offer-text.text-blue(valign="top" align="center" style="")
+                                                                                                                | 30% off
+                                                                                                        tr
+                                                                                                            td.promo-text.text-blue(valign="top" align="center" style="")
+                                                                                                                | food purchases on weekends with board gaming
+                                                                                                        tr
+                                                                                                            include ../_partials/_height10.pug
+                                                                                                        tr
+                                                                                                            td(valign="middle" align="center" style="vertical-align: middle")
+                                                                                                                img.mr-1.d-inline-block(src="../images/001-calendar-icon.png " alt="")
+                                                                                                                span.text-gray(style="font-style: italic; font-size: 10px;")
+                                                                                                                    | Valid till 28th Nov
+                                                                                                        tr
+                                                                                                            include ../_partials/_height10.pug
+                                                                                                        include ./_partials/_blue-cta.pug
+                                                                                                        tr
+                                                                                                            include ../_partials/_height15.pug
+                                                                                            tr.d-none.d-sm-table-row
+                                                                                                td.spacer(valign="top" align="center" width="10" bgcolor="#f8f4fc")
+                                                                                                    | &nbsp;
+                                                                                                td(valign="top" align="center" bgcolor="#f8f4fc")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc")
+                                                                                                        tr
+                                                                                                            td(valign="top" align="center")
+                                                                                                td(valign="top" align="center" width="10")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                        tr
+                                                                                                            td(valign="top" align="center")
+                                                                                                                img(src="../images/001-lightgray-rnd-crnr-bottom-right.png " alt="")
+                                                                                                                                             
+                                                            // Promo one end
+                                                            // Spacer 20 start
+                                                            include ../_partials/_spacer20.pug
+                                                            // Spacer 20 end
+                                                            // Promo two start
+                                                            tr
+                                                                td(valign="top" align="center")
+                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                        tbody
+                                                                            tr
+                                                                                td.text-center.arrange-bottom.w-sm-40(align="center" width="40%" valign="top")
+                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                        tbody
+                                                                                            tr.d-none.d-sm-table-row
+                                                                                                td.spacer(valign="top" align="center" width="10" bgcolor="#f8f4fc")
+                                                                                                    | &nbsp;
+                                                                                                td(valign="top" align="center" bgcolor="#f8f4fc")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc")
+                                                                                                        tr
+                                                                                                            td(valign="top" align="center")
+                                                                                                td(valign="top" align="center" width="10")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                        tr
+                                                                                                            td(valign="top" align="center")
+                                                                                                                img(src="../images/001-lightgray-rnd-crnr-top-right.png " alt="")
+                                                                                            tr
+                                                                                                td(valign="top" align="center" colspan="3")
+                                                                                                    table.rounded-top.px-2.p-sm-0.rounded-sm-0(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc")
+                                                                                                        tr
+                                                                                                            include ../_partials/_height15.pug
+                                                                                                        tr
+                                                                                                            td.promo-preheader(valign="top" align="center" style="")
+                                                                                                                | Partner's Name
+                                                                                                        tr
+                                                                                                            include ../_partials/_height10.pug
+                                                                                                        tr
+                                                                                                            td.promo-offer-text.text-blue(valign="top" align="center" style="")
+                                                                                                                | 30% off
+                                                                                                        tr
+                                                                                                            td.promo-text.text-blue(valign="top" align="center" style="")
+                                                                                                                | food purchases on weekends with board gaming
+                                                                                                        tr
+                                                                                                            include ../_partials/_height10.pug
+                                                                                                        tr
+                                                                                                            td(valign="middle" align="center" style="vertical-align: middle")
+                                                                                                                img.mr-1.d-inline-block(src="../images/001-calendar-icon.png " alt="")
+                                                                                                                span.text-gray(style="font-style: italic; font-size: 10px;")
+                                                                                                                    | Valid till 28th Nov
+                                                                                                        tr
+                                                                                                            include ../_partials/_height10.pug
+                                                                                                        include ./_partials/_blue-cta.pug
+                                                                                                        tr
+                                                                                                            include ../_partials/_height15.pug
+                                                                                            tr.d-none.d-sm-table-row
+                                                                                                td.spacer(valign="top" align="center" width="10" bgcolor="#f8f4fc")
+                                                                                                    | &nbsp;
+                                                                                                td(valign="top" align="center" bgcolor="#f8f4fc")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc")
+                                                                                                        tr
+                                                                                                            td(valign="top" align="center")
+                                                                                                td(valign="top" align="center" width="10")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                        tr
+                                                                                                            td(valign="top" align="center")
+                                                                                                                img(src="../images/001-lightgray-rnd-crnr-bottom-right.png " alt="")
+                                                                                td.text-center.arrange-top.w-sm-60(width="60%" align="center" valign="top")
+                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                        tbody
+                                                                                            tr.d-none.d-sm-table-row
+                                                                                                td(valign="top" align="center")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                        tr
+                                                                                                            td.spacer(valign="top" align="center" width="10" bgcolor="#d8d8d8")
+                                                                                                                | &nbsp;
+                                                                                                            td(valign="top" align="center" bgcolor="#d8d8d8")
+                                                                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8")
+                                                                                                                    tr
+                                                                                                                        td(valign="top" align="center")
+                                                                                                            td(valign="top" align="center" width="10")
+                                                                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                                    tr
+                                                                                                                        td(valign="top" align="center")
+                                                                                                                            img(src="../images/001-gray-rnd-crnr-top-right.png " alt="")
+                                                                                            tr
+                                                                                                td(valign="top" align="center")
+                                                                                                    table.rounded-top.rounded-sm-0(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8")
+                                                                                                        tr
+                                                                                                            td.rounded-top.rounded-sm-0(valign="top" align="center")
+                                                                                                                img.imgfull.rounded-top.rounded-sm-0(src="../images/001-promo-placeholder-2.jpg", alt="")
+                                                                                            tr.d-none.d-sm-table-row
+                                                                                                td(valign="top" align="center")
+                                                                                                    table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                        tr
+                                                                                                            td.spacer(valign="top" align="center" width="10" bgcolor="#d8d8d8")
+                                                                                                                | &nbsp;     
+                                                                                                            td(valign="top" align="center" bgcolor="#d8d8d8")
+                                                                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8")
+                                                                                                                    tr
+                                                                                                                        td(valign="top" align="center")
+                                                                                                            td(valign="top" align="center" width="10")
+                                                                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
+                                                                                                                    tr
+                                                                                                                        td(valign="top" align="center")
+                                                                                                                            img(src="../images/001-gray-rnd-crnr-bottom-right.png " alt="")
+                                                            // Promo two end
+                                                            // Spacer 20 start
+                                                            include ../_partials/_spacer20.pug
+                                                            // Spacer 20 end
+                                                            tr
+                                                                td.hero-heading.text-center(valign="top" align="center")
+                                                                    | Lorem ipsum dolor sit amet consectetur adipiscing elit
+                                                            // spacer 15 start
+                                                            tr
+                                                                include ../_partials/_height15.pug
+                                                            // spacer 15 end
+                                                            tr
+                                                                td.hero-content.text-center(valign="top" align="center").
+                                                                    Quisque viverra felis odio, convallis feugiat nulla placerat vitae. Vivamus ac viverra diam. Ut molestie velit ac facilisis semper.
+                                                            // spacer 15 start
+                                                            tr
+                                                                include ../_partials/_height15.pug
+                                                            // spacer 15 end
+                                                            // blue cta start
+                                                            include ./_partials/_big-blue-cta.pug
+                                                            // blue cta end
+                                                            // spacer 20 start
+                                                            include ../_partials/_spacer10-20.pug
+                                                            // spacer 20 end
+
+                                            // Rounded white block content end
+                                            // Rounded white block bottom start
+                                            include ./_partials/_rounded-white-block-bottom.pug
+                                            // Rounded white block bottom end
+                            // White block two end
+                            tr
+                                td
+                                    table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                        tr
+                                            td(align="center" valign="middle") Table cell text
