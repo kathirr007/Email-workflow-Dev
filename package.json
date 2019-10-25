@@ -42,6 +42,9 @@
         "gulp-param": "^1.0.3",
         "gulp-plumber": "^1.2.1",
         "gulp-preprocess": "^3.0.3",
-        "gulp-size": "^3.0.0"
+        "gulp-size": "^3.0.0",
+        "jquery": "^3.4.1",
+        "jsdom": "^15.2.0",
+        "xoauth2": "^1.2.0"
     }
 }
