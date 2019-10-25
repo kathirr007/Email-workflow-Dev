@@ -26,7 +26,7 @@ const baseDir = dest;
 // in: source + 'src/emails/**/*.(jpg|jpeg|png|svg|gif)',
 let images = {
     in: 'src/emails/**/images/*.{png,gif,jpg,jpeg,svg}',
-    out: dest
+    out: dest + 'images'
 };
 
 let resources = {
@@ -101,6 +101,7 @@ gulp.task('images', function () {
             // guetzli: ['--quality', 85],
             quiet: true
         }))
+        .pipe($.rename({dirname: ''}))
         .pipe($.size({
             title: 'images out '
         }))
@@ -129,7 +130,7 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
         pugFilter = $.filter(['**/*.pug'], { restore: true });
     return gulp
         // import all email template (name ending with .template.pug) files from src/emails folder
-        .src(['src/**/*.html', 'src/emails/**/*.pug', '!**/_*', '!**/_partials/**/*'])
+        .src(['src/*.html', 'src/emails/**/*.html', 'src/emails/**/*.pug', '!**/_*', '!**/_partials/**/*'])
 
         // replace `.scss` file paths from template with compiled file paths
         .pipe($.replace(new RegExp('\/sass\/(.+)\.scss', 'ig'), '/css/$1.css'))
@@ -164,6 +165,7 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
             },
         })) */
         .pipe(pugFilter.restore)
+        .pipe($.if(!devBuild, $.replace(/(src\=)\"(images)/g, '$1https://kathirr007.github.io/Email-workflow-Dev/$2')))
 
         // // inline CSS
         .pipe($.inlineCss({

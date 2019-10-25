@@ -4,7 +4,8 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build": "gulp build",
+        "dev": "gulp build",
+        "build": "cross-env NODE_ENV=production gulp build",
         "watch": "gulp watch",
         "serveEmail": "node ./server.js"
     },
@@ -32,6 +33,7 @@
         "querystring": "^0.2.0"
     },
     "dependencies": {
+        "cross-env": "^6.0.3",
         "gulp-beautify": "^3.0.0",
         "gulp-extract-media-queries": "^1.1.0",
         "gulp-file-include": "^2.1.0",
@@ -45,6 +47,7 @@
         "gulp-size": "^3.0.0",
         "jquery": "^3.4.1",
         "jsdom": "^15.2.0",
+        "lazypipe": "^1.0.2",
         "xoauth2": "^1.2.0"
     }
 }
