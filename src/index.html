@@ -1,7 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Node.JS Email application</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Email Templates</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
         $(document).ready(function () {
@@ -77,74 +81,12 @@
 
 <body>
     <div id="container">
-        <h1>Mailer In Node.JS</h1>
-        <!-- <form action="" method="GET" id="emailForm" name="emailForm" enctype="multipart/form-data">
-        </form> -->
-        <input type="text" id="to" placeholder="Enter E-mail ID where you want to send"><br>
-        <input type="text" id="subject" placeholder="Write Subject"><br>
-        <textarea id="content" rows="5" cols="40" placeholder="Write what you want to send"></textarea><br>
-        <textarea id="htmlContent" rows="5" cols="40" placeholder="Place your HTML Content here..."></textarea><br>
-        <input id="mailAttachments" name="mailAttachments" type="file"><br>
-        <button id="send_email" type="button">Send Email</button><br>
-        <span id="message"></span>
+        <h1>HTML Email Templages</h1>
+        <ul class="template-lists">
+            <li><a href="one/template-one.html">Template one</a></li>
+            <li><a href="one/one-template.html">Template one build Using PUG templating</a></li>
+        </ul>
     </div>
-    <script>
-        $(document).ready(function () {
-            var from, to, subject, text, htmlContent, mailAttachments, filename;
-            var input = document.getElementById("mailAttachments");
-            var fReader = new FileReader();
-            // fReader.readAsDataURL(input.files[0]);
-            fReader.onloadend = function (event) {
-                mailAttachments = event.target.result;
-            }
-            /* sendMail = function (e) {
-                e.preventDefault();
-                to = $("#to").val();
-                subject = $("#subject").val();
-                text = $("#content").val();
-                htmlContent = $('#htmlContent').val();
-                mailAttachments = mailAttachments;
-                filename = $('#mailAttachments').val().split(/(\\|\/)/ig).pop();
-                $("#message").text("Sending E-mail...Please wait");
-                $.get("http://localhost:3000/send", {
-                    to: to,
-                    subject: subject,
-                    text: text,
-                    htmlContent: htmlContent,
-                    // mailAttachments: mailAttachments,
-                    // filename: filename,
-                }, function (data) {
-                    if (data == "sent") {
-                        $("#message").empty().html("<p>Email is been sent at " + to +
-                            " . Please check inbox !</p>");
-                    }
-                });
-            } */
-            $(document).on('click', "#send_email", function (e) {
-                e.preventDefault();
-                to = $("#to").val();
-                subject = $("#subject").val();
-                text = $("#content").val();
-                htmlContent = $('#htmlContent').val();
-                mailAttachments = mailAttachments;
-                filename = $('#mailAttachments').val().split(/(\\|\/)/ig).pop();
-                $("#message").text("Sending E-mail...Please wait");
-                $.get("http://localhost:3000/send", {
-                    to: to,
-                    subject: subject,
-                    text: text,
-                    htmlContent: htmlContent,
-                    // mailAttachments: mailAttachments,
-                    // filename: filename,
-                }, function (data) {
-                    if (data == "sent") {
-                        $("#message").empty().html("<p>Email is been sent at " + to +
-                            " . Please check inbox !</p>");
-                    }
-                });
-            });
-        })
-    </script>
 </body>
 
 </html>
