@@ -35,6 +35,7 @@
     "dependencies": {
         "cross-env": "^6.0.3",
         "gulp-beautify": "^3.0.0",
+        "gulp-email-remove-unused-css": "^3.6.54",
         "gulp-extract-media-queries": "^1.1.0",
         "gulp-file-include": "^2.1.0",
         "gulp-filter": "^6.0.0",

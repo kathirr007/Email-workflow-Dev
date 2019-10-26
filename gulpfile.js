@@ -150,6 +150,19 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
         })) */
         .pipe(pugFilter.restore)
         .pipe($.if(!devBuild, $.replace(/(src\=\")..\/(images)|(src\=\")(images)/g, '$1https://kathirr007.github.io/Email-workflow-Dev/$2')))
+        .pipe($.emailRemoveUnusedCss({
+            whitelist: [
+            ".ExternalClass",
+            ".ReadMsgBody",
+            ".yshortcuts",
+            ".Mso*",
+            ".maxwidth-apple-mail-fix",
+            "#outlook",
+            ".module-*",
+            ".height_01",
+            "span.MsoHyperlink"
+            ]
+        }))
 
         // // inline CSS
         .pipe($.inlineCss({
