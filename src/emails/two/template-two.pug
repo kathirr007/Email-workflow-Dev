@@ -300,10 +300,10 @@ html
                                                                                                 td(valign='middle' align='center')
                                                                                                     table.contents(border='0' cellspacing='0' cellpadding='0' width="100%")
                                                                                                         tr
-                                                                                                            td.pr-10.p-mob-10(valign='middle' align='center' height="35" bgcolor="#c9e4e7")
+                                                                                                            td.pr-10.p-mob-10.rounded-top-10(valign='middle' align='center' height="35" bgcolor="#c9e4e7")
                                                                                                                 |¡OBTÉN ACCESO ANTES QUE NADIE!
                                                                                                         tr
-                                                                                                            td.autoheight.p-mob-15(valign='middle' align='left' height="112" bgcolor="#ffffff").
+                                                                                                            td.autoheight.p-mob-15.rounded-bottom-10(valign='middle' align='left' height="112" bgcolor="#ffffff").
                                                                                                                 Al seguirnos en redes sociales serás de las primeras personas en la fila para conocer el nuevo sitio. <br>
                                                                                                                 <strong> ¡Que no te ganen tu lugar! </strong>
 
@@ -344,25 +344,79 @@ html
                                     table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                         tbody
                                             tr
-                                                td(valign='top' align='center')
-                                                    table.align-center.autowidth(border='0' cellspacing='0' cellpadding='0' align='center' width="552")
-                                                        <tr>
-                                                            <!--Background-->
-                                                            td(bgcolor="#960096" class="CTA0hovermodif" style="background-image: url(https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg);" background="https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg" width="320" height="40" valign="middle" align="center")
-                                                                <!--[if gte mso 9]><v:rect style="width: 320px; height: 40px;" strokecolor="none"><v:fill type="tile" color="#960096" src="https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg"></v:fill></v:rect><v:shape id="theText" style="position: absolute; width: 320px; height: 40px;"><![endif]-->
-                                                                <table width="320" border="0" cellspacing="0" cellpadding="0">
-                                                                    <tr>
-                                                                        <!--partie texte du bouton-->                
-                                                                        <td height="40" width="270" valign="middle" style="text-align:center; mso-line-height-rule:exactly;">
-                                                                            | content goes here
-                                                                        </td>
-                                                                        <!--partie image du bouton-->
-                                                                    </tr>
-                                                                </table>
-                                                                <!--[if gte mso 9]></v:shape><![endif]-->
+                                                td(valign="top" align="center")
+                                                    table.full-width(width="640" border="0" cellspacing="0" cellpadding="0")
+                                                        tbody
+                                                            <!--[if !mso]><!-->
+                                                            tr
+                                                                td.coldrop(valign="top" align="center")
+                                                                    div(class="show" style="display: none; font-size: 0; max-height: 0; width:0px; line-height: 0; padding: 0;mso-hide: all; overflow:hidden;")
+                                                                        //mobile codes goes here
+                                                                        table(border='0' cellspacing='0' cellpadding='0' width="100%")
+                                                                            include ../_partials/_spacer15.pug
+                                                            <!--<![endif]-->
+                                                            tr
+                                                                // Image block Background start
+                                                                td.autoheight.full-width.p-mob-15(bgcolor="#2e9ebe" class="bg-responsive" style="background-image: url(https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg);" background="https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg" width="640" height="239" valign="middle" align="center")
+                                                                    <!--[if gte mso 9]><v:rect style="width: 640px; height: 40px;" strokecolor="none"><v:fill type="tile" color="#2e9ebe" src="https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg"></v:fill></v:rect><v:shape id="theText" style="position: absolute; width: 640px; height: 40px;"><![endif]-->
+                                                                    table.full-width(width="640" border="0" cellspacing="0" cellpadding="0")
+                                                                        tr
+                                                                            // Content inside background start
+                                                                            td(valign='top' align='center')
+                                                                                table.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="260")
+                                                                                    tr
+                                                                                        td(valign="middle" align="center")
+                                                                                            a(href="https://www.sample.link" target="_blank")
+                                                                                                img.imgfull(src="../images/002-facebook-cta.png" alt="Facebook CTA")
+                                                                                    include ../_partials/_spacer20.pug
+                                                                                    tr
+                                                                                        td(valign="middle" align="center")
+                                                                                            a(href="https://www.sample.link" target="_blank")
+                                                                                                img.imgfull(src="../images/002-instagram-cta.png" alt="Instagram CTA")
+                                                                                    include ../_partials/_spacer20.pug
+                                                                                    tr
+                                                                                        td(valign="middle" align="center" target="_blank")
+                                                                                            a(href="https://www.sample.link")
+                                                                                                img.imgfull(src="../images/002-youtube-cta.png" alt="Youtube CTA")
+                                                                                    include ../_partials/_spacer30.pug
+                                                                            // Content inside background end
+                                                                    <!--[if gte mso 9]></v:shape><![endif]-->
+                                                                // Image block Background end
                                     // Social media buttons block end
+                                    // Footer block start
+                                    table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                        tbody
+                                            tr
+                                                td(valign="top" align="center" bgcolor="#343434")
+                                                    table.full-width.p-mob-15(width="300" border="0" cellspacing="0" cellpadding="0" bgcolor="#343434")
+                                                        tr.hide
+                                                            include ../_partials/_height30.pug
+                                                        tr
+                                                            td.text-white(valign='middle' align='center' style="font-size: 10px; color: #ffffff;").
+                                                                © 2019 SkinCeuticals México.<br>
+                                                                Félix Cuevas No. 6, Tlacoquemecatl del Valle, 03200<br>
+                                                                Recibiste este correo porque estás suscrito a nuestro newsletter
+                                                                Desuscribirse
+                                                        tr
+                                                            include ../_partials/_height15.pug
+                                                        tr
+                                                            td.text-white(valign='middle' align='center' style="font-size: 10px; color: #ffffff;").
+                                                                Recibiste este correo porque estás suscrito a nuestro newsletter<br>
+                                                                <a href="https://www.samplelink.com" class="text-decoration-underline" style="text-decoration: underline; color:#ffffff">Desuscribirse</a>
+                                                        tr.hide
+                                                            include ../_partials/_height15.pug
+                                                        tr
+                                                            include ../_partials/_height15.pug
+                                                        tr
+                                                            td(valign='top' align='center')
+                                                                table.align-center(border='0' cellspacing='0' cellpadding='0' align='center')
+                                                                tr
+                                                                    td(valign='top' align='center')
+                                                                        img(src="../images/002-SC_logo-top.png", alt="SkinCeuticals")
+                                                        tr.hide
+                                                            include ../_partials/_height30.pug
 
-
+                                    // Footer block end
                             tr
                                 td(valign="top" align="center")
                                     table(cellpadding="0" cellspacing="0" border="0" width="100%")

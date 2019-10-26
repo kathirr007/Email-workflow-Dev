@@ -1295,7 +1295,7 @@ a[href^="x-apple-data-detectors:"] {
         line-height: 1px !important;
         font-size: 1px !important;
     }
-    
+
 a[x-apple-data-detectors] {
     color: inherit !important;
     text-decoration: none !important;
@@ -1330,20 +1330,20 @@ div {
         width: 95%;
     }
 
-    *[class~=full] {
+    *[class*=full] {
         width: 100% !important;
         min-width: 100% !important;
     }
 
-    *[class~=contents] {
+    *[class*=contents] {
         width: 89.14728682% !important;
     }
 
-    *[class~=hide] {
+    *[class*=hide] {
         display: none;
     }
 
-    *[class~=show] {
+    *[class*=show] {
         display: block !important;
         font-size: inherit !important;
         max-height: none !important;
@@ -1352,33 +1352,37 @@ div {
         overflow: visible !important;
     }
 
-    *[class~=imgfull] {
+    *[class*=imgfull] {
         width: 100%;
         height: auto;
+    }
+    *[class*='bg-responsive'] {
+        background-size: cover;
+        object-fit: cover;
     }
 
     .full-width {
         width: 100%;
     }
 
-    *[class~=text-center] {
+    *[class*=text-center] {
         text-align: center !important;
     }
 
-    *[class~=align-center] {
+    *[class*=align-center] {
         float: none !important;
         margin: 0 auto !important;
     }
 
-    *[class~=align-right] {
+    *[class*=align-right] {
         float: right !important;
     }
 
-    *[class~=align-left] {
+    *[class*=align-left] {
         float: left !important;
     }
 
-    td[class~=coldrop] {
+    td[class*=coldrop] {
         display: block;
         width: 100%;
         padding: 0px;
@@ -1392,25 +1396,25 @@ div {
         display: table-footer-group;
     }
 
-    *[class=autoheight] {
+    *[class*=autoheight] {
         height: auto !important;
     }
 
-    *[class~=autowidth] {
+    *[class*=autowidth] {
         width: auto !important;
     }
 
-    *[class~=autowidthheight] {
+    *[class*=autowidthheight] {
         width: auto !important;
         height: auto !important;
     }
 
-    body[yahoo] *[class~=no-bg] {
+    body[yahoo] *[class*=no-bg] {
         background: none !important;
         background-color: #ffffff !important;
     }
 
-    body[yahoo] *[class~=top-banner] {
+    body[yahoo] *[class*=top-banner] {
         width: 100% !important;
         background-size: cover !important;
         background-position: 100% top !important;
@@ -3973,39 +3977,39 @@ div {
         padding-bottom: 50px !important;
     }
 
-    *[class~=padding-lr10] {
+    *[class*=padding-lr10] {
         padding: 0px 10px 0px 10px !important;
     }
 
-    *[class~=padding-t10] {
+    *[class*=padding-t10] {
         padding: 10px 0px 0px 0px !important;
     }
 
-    *[class~=nopad] {
+    *[class*=nopad] {
         padding: 0px 0px 0px 0px !important;
     }
 
-    *[class~=margin-b10] {
+    *[class*=margin-b10] {
         margin-bottom: 10px !important;
     }
 
-    *[class~=margin-t10] {
+    *[class*=margin-t10] {
         margin-top: 10px !important;
     }
 
-    *[class~=height20] {
+    *[class*=height20] {
         height: 20px !important;
     }
 
-    *[class~=height15] {
+    *[class*=height15] {
         height: 15px !important;
     }
 
-    *[class~=height10] {
+    *[class*=height10] {
         height: 10px !important;
     }
 
-    *[class~=height5] {
+    *[class*=height5] {
         height: 5px !important;
     }
 }

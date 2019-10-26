@@ -35,7 +35,7 @@ div {
 }
 
 a {
-  color: #4753be !important;
+  color: inherit !important;
   text-decoration: none;
 }
 

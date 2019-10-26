@@ -38,20 +38,20 @@
         width: 95%;
       }
 
-      *[class~=full] {
+      *[class*=full] {
         width: 100% !important;
         min-width: 100% !important;
       }
 
-      *[class~=contents] {
+      *[class*=contents] {
         width: 89.14728682% !important;
       }
 
-      *[class~=hide] {
+      *[class*=hide] {
         display: none;
       }
 
-      *[class~=show] {
+      *[class*=show] {
         display: block !important;
         font-size: inherit !important;
         max-height: none !important;
@@ -60,33 +60,38 @@
         overflow: visible !important;
       }
 
-      *[class~=imgfull] {
+      *[class*=imgfull] {
         width: 100%;
         height: auto;
+      }
+
+      *[class*='bg-responsive'] {
+        background-size: cover;
+        object-fit: cover;
       }
 
       .full-width {
         width: 100%;
       }
 
-      *[class~=text-center] {
+      *[class*=text-center] {
         text-align: center !important;
       }
 
-      *[class~=align-center] {
+      *[class*=align-center] {
         float: none !important;
         margin: 0 auto !important;
       }
 
-      *[class~=align-right] {
+      *[class*=align-right] {
         float: right !important;
       }
 
-      *[class~=align-left] {
+      *[class*=align-left] {
         float: left !important;
       }
 
-      td[class~=coldrop] {
+      td[class*=coldrop] {
         display: block;
         width: 100%;
         padding: 0px;
@@ -100,25 +105,25 @@
         display: table-footer-group;
       }
 
-      *[class=autoheight] {
+      *[class*=autoheight] {
         height: auto !important;
       }
 
-      *[class~=autowidth] {
+      *[class*=autowidth] {
         width: auto !important;
       }
 
-      *[class~=autowidthheight] {
+      *[class*=autowidthheight] {
         width: auto !important;
         height: auto !important;
       }
 
-      body[yahoo] *[class~=no-bg] {
+      body[yahoo] *[class*=no-bg] {
         background: none !important;
         background-color: #ffffff !important;
       }
 
-      body[yahoo] *[class~=top-banner] {
+      body[yahoo] *[class*=top-banner] {
         width: 100% !important;
         background-size: cover !important;
         background-position: 100% top !important;
@@ -2682,39 +2687,39 @@
         padding-bottom: 50px !important;
       }
 
-      *[class~=padding-lr10] {
+      *[class*=padding-lr10] {
         padding: 0px 10px 0px 10px !important;
       }
 
-      *[class~=padding-t10] {
+      *[class*=padding-t10] {
         padding: 10px 0px 0px 0px !important;
       }
 
-      *[class~=nopad] {
+      *[class*=nopad] {
         padding: 0px 0px 0px 0px !important;
       }
 
-      *[class~=margin-b10] {
+      *[class*=margin-b10] {
         margin-bottom: 10px !important;
       }
 
-      *[class~=margin-t10] {
+      *[class*=margin-t10] {
         margin-top: 10px !important;
       }
 
-      *[class~=height20] {
+      *[class*=height20] {
         height: 20px !important;
       }
 
-      *[class~=height15] {
+      *[class*=height15] {
         height: 15px !important;
       }
 
-      *[class~=height10] {
+      *[class*=height10] {
         height: 10px !important;
       }
 
-      *[class~=height5] {
+      *[class*=height5] {
         height: 5px !important;
       }
     }
@@ -3298,10 +3303,10 @@
                                 <td valign="middle" align="center" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                   <table class="contents" border="0" cellspacing="0" cellpadding="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                     <tr style="line-height: normal;">
-                                      <td class="pr-10 p-mob-10" valign="middle" align="center" height="35" bgcolor="#c9e4e7" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto; padding-right: 10px;">¡OBTÉN ACCESO ANTES QUE NADIE!</td>
+                                      <td class="pr-10 p-mob-10 rounded-top-10" valign="middle" align="center" height="35" bgcolor="#c9e4e7" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto; padding-right: 10px;">¡OBTÉN ACCESO ANTES QUE NADIE!</td>
                                     </tr>
                                     <tr style="line-height: normal;">
-                                      <td class="autoheight p-mob-15" valign="middle" align="left" height="112" bgcolor="#ffffff" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                                      <td class="autoheight p-mob-15 rounded-bottom-10" valign="middle" align="left" height="112" bgcolor="#ffffff" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                         Al seguirnos en redes sociales serás de las primeras personas en la fila para conocer el nuevo sitio. <br style="line-height: normal;">
                                         <strong style="line-height: normal;"> ¡Que no te ganen tu lugar! </strong>
 
@@ -3375,27 +3380,118 @@
     <tbody style="line-height: normal;">
       <tr style="line-height: normal;">
         <td valign="top" align="center" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-          <table class="align-center autowidth" border="0" cellspacing="0" cellpadding="0" align="center" width="552" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-            <tr style="line-height: normal;">
-              <!--Background-->
-              <td class="CTA0hovermodif" bgcolor="#960096" style="background-image: url(https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg); box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;" background="https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg" width="320" height="40" valign="middle" align="center">
-                <!--[if gte mso 9]><v:rect style="width: 320px; height: 40px;" strokecolor="none"><v:fill type="tile" color="#960096" src="https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg"></v:fill></v:rect><v:shape id="theText" style="position: absolute; width: 320px; height: 40px;"><![endif]-->
-                <table width="320" border="0" cellspacing="0" cellpadding="0" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                  <tr style="line-height: normal;">
-                    <!--partie texte du bouton-->
-                    <td height="40" width="270" valign="middle" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto; mso-line-height-rule: exactly; text-align: center;">content goes here</td>
-                    <!--partie image du bouton-->
-                  </tr>
-                </table>
-                <!--[if gte mso 9]></v:shape><![endif]-->
-              </td>
-            </tr>
+          <table class="full-width" width="640" border="0" cellspacing="0" cellpadding="0" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+            <tbody style="line-height: normal;">
+              <!--[if !mso]><!-->
+              <tr style="line-height: normal;">
+                <td class="coldrop" valign="top" align="center" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                  <div class="show" style="box-sizing: border-box; color: #222; display: none; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 0; line-height: 0; margin: 0; max-height: 0; mso-hide: all; overflow: hidden; padding: 0; width: 0px;">
+                    <!--mobile codes goes here-->
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                      <tr style="line-height: normal;">
+                        <td class="height_15" valign="top" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <!--<![endif]-->
+              <tr style="line-height: normal;">
+                <!-- Image block Background start-->
+                <td class="autoheight full-width p-mob-15 bg-responsive" bgcolor="#2e9ebe" style="background-image: url(https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg); box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;" background="https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg" width="640" height="239" valign="middle" align="center">
+                  <!--[if gte mso 9]><v:rect style="width: 640px; height: 40px;" strokecolor="none"><v:fill type="tile" color="#2e9ebe" src="https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg"></v:fill></v:rect><v:shape id="theText" style="position: absolute; width: 640px; height: 40px;"><![endif]-->
+                  <table class="full-width" width="640" border="0" cellspacing="0" cellpadding="0" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                    <tr style="line-height: normal;">
+                      <!-- Content inside background start-->
+                      <td valign="top" align="center" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                        <table class="align-center" border="0" cellspacing="0" cellpadding="0" align="center" width="260" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                          <tr style="line-height: normal;">
+                            <td valign="middle" align="center" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><a href="https://www.sample.link" target="_blank" style="box-sizing: border-box; color: inherit !important; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: none;"><img class="imgfull" src="../images/002-facebook-cta.png" alt="Facebook CTA" style="border: none; display: block; line-height: normal; vertical-align: sub;"></a></td>
+                          </tr>
+                          <tr style="line-height: normal;">
+                            <td class="height_20" valign="top" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+                          </tr>
+                          <tr style="line-height: normal;">
+                            <td valign="middle" align="center" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><a href="https://www.sample.link" target="_blank" style="box-sizing: border-box; color: inherit !important; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: none;"><img class="imgfull" src="../images/002-instagram-cta.png" alt="Instagram CTA" style="border: none; display: block; line-height: normal; vertical-align: sub;"></a></td>
+                          </tr>
+                          <tr style="line-height: normal;">
+                            <td class="height_20" valign="top" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+                          </tr>
+                          <tr style="line-height: normal;">
+                            <td valign="middle" align="center" target="_blank" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><a href="https://www.sample.link" style="box-sizing: border-box; color: inherit !important; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: none;"><img class="imgfull" src="../images/002-youtube-cta.png" alt="Youtube CTA" style="border: none; display: block; line-height: normal; vertical-align: sub;"></a></td>
+                          </tr>
+                          <tr style="line-height: normal;">
+                            <td class="height_30" valign="top" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="30">&nbsp;</td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- Content inside background end-->
+                    </tr>
+                  </table>
+                  <!--[if gte mso 9]></v:shape><![endif]-->
+                </td>
+                <!-- Image block Background end-->
+              </tr>
+            </tbody>
           </table>
         </td>
       </tr>
     </tbody>
   </table>
   <!-- Social media buttons block end-->
+  <!-- Footer block start-->
+  <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+    <tbody style="line-height: normal;">
+      <tr style="line-height: normal;">
+        <td valign="top" align="center" bgcolor="#343434" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+          <table class="full-width p-mob-15" width="300" border="0" cellspacing="0" cellpadding="0" bgcolor="#343434" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+            <tr class="hide" style="line-height: normal;">
+              <td class="height_30" valign="top" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="30">&nbsp;</td>
+            </tr>
+            <tr style="line-height: normal;">
+              <td class="text-white" valign="middle" align="center" style="box-sizing: border-box; color: #ffffff; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 10px; line-height: normal; margin: 0 auto;">
+                © 2019 SkinCeuticals México.<br style="line-height: normal;">
+                Félix Cuevas No. 6, Tlacoquemecatl del Valle, 03200<br style="line-height: normal;">
+                Recibiste este correo porque estás suscrito a nuestro newsletter
+                Desuscribirse
+              </td>
+            </tr>
+            <tr style="line-height: normal;">
+              <td class="height_15" valign="top" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
+            </tr>
+            <tr style="line-height: normal;">
+              <td class="text-white" valign="middle" align="center" style="box-sizing: border-box; color: #ffffff; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 10px; line-height: normal; margin: 0 auto;">
+                Recibiste este correo porque estás suscrito a nuestro newsletter<br style="line-height: normal;">
+                <a href="https://www.samplelink.com" class="text-decoration-underline" style="box-sizing: border-box; color: inherit !important; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: underline;">Desuscribirse</a>
+              </td>
+            </tr>
+            <tr class="hide" style="line-height: normal;">
+              <td class="height_15" valign="top" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
+            </tr>
+            <tr style="line-height: normal;">
+              <td class="height_15" valign="top" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
+            </tr>
+            <tr style="line-height: normal;">
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <table class="align-center" border="0" cellspacing="0" cellpadding="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;"></table>
+              </td>
+            </tr>
+            <tr style="line-height: normal;">
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="../images/002-SC_logo-top.png" alt="SkinCeuticals" style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="hide" style="line-height: normal;">
+        <td class="height_30" valign="top" style="box-sizing: border-box; font-family: 'futura', Arial, Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="30">&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+
+
+  <!-- Footer block end-->
 
 
   <tr style="line-height: normal;">
