@@ -15,6 +15,36 @@ a[href^="x-apple-data-detectors:"] {
   text-decoration: inherit;
 }
 
+.spacer {
+  line-height: 1px !important;
+  font-size: 1px !important;
+}
+
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+div {
+  display: inherit;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-black {
+  color: #010101;
+}
+
 /* Spacing styles */
 
 .p-0 {
@@ -355,33 +385,3 @@ a[href^="x-apple-data-detectors:"] {
 }
 
 /* Spacing styles ends*/
-
-.spacer {
-  line-height: 1px !important;
-  font-size: 1px !important;
-}
-
-a[x-apple-data-detectors] {
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-}
-
-a {
-  text-decoration: none;
-}
-
-div {
-  display: inherit;
-}
-
-.text-white {
-  color: #ffffff;
-}
-
-.text-black {
-  color: #010101;
-}

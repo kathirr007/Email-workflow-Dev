@@ -27,6 +27,14 @@ table tr td h3 {
   letter-spacing: 0.5px;
 }
 
+.text-white {
+  color: #ffffff;
+}
+
+.text-black {
+  color: #010101;
+}
+
 .text-blue {
   color: #7c22c9;
 }
