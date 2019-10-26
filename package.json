@@ -7,7 +7,8 @@
         "dev": "gulp build",
         "build": "cross-env NODE_ENV=production gulp build",
         "watch": "gulp watch",
-        "serveEmail": "node ./server.js"
+        "serveEmail": "node ./server.js",
+        "sendTestMail": "cross-env NODE_ENV=production node ./sendmail.js"
     },
     "repository": {
         "type": "git",

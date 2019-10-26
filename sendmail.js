@@ -39,7 +39,7 @@ var
   source = './',
   dest = devBuild ? 'builds/development/' : 'builds/production/';
 
-var htmlPaths = [dest + 'one/one-template.html',
+var htmlPaths = [dest + 'two/template-two.html',
                 //  dest + 'mail-intern-info.html',
                 //  dest + 'mail-intern-cta.html',
                 //  dest + 'mail-contrib-info.html',
