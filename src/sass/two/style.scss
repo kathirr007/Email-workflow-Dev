@@ -1,15 +1,33 @@
-table{
-    &.wrapper-table {
-        
-    }
+html,
+body,
+p,
+span,
+b,
+em,
+abbr,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+a,
+td {
+    font-family: "futura", Arial, Helvetica, sans-serif;
+}
+
+table {
+    &.wrapper-table {}
+
     &.content-table {
         @media screen and (min-width:645px) {
             width: 645px !important;
         }
     }
-    tr{
-        td{
-            h3{
+
+    tr {
+        td {
+            h3 {
                 text-align: center;
                 text-transform: uppercase;
                 padding: 15px 25px;
@@ -22,22 +40,27 @@ table{
 .text-blue {
     color: #7c22c9;
 }
+
 .text-gray {
     color: #6c6c6c;
 }
 
-.bg-red{
+.bg-red {
     background-color: #E84C50;
 }
+
 .bg-blue {
     background-color: #7c22c9;
 }
+
 .body-bg {
     background-color: #f6f6f6;
 }
+
 .sc-body-bg {
     background-color: #2e9ebe;
 }
+
 .bg-gray {
     background-color: #f6f6f6;
 }
@@ -46,30 +69,38 @@ table{
     font-size: 32px;
     font-weight: bold;
 }
+
 .hero-content {
     font-size: 20px;
 }
+
 .cta-blue {
     color: #ffffff;
 }
+
 .block-heading {
     font-size: 25px;
     font-weight: bold;
 }
+
 .promo-preheader {
     font-size: 12px;
     font-weight: bold;
 }
+
 .promo-offer-text {
     font-size: 32px;
     font-weight: bold;
 }
+
 .promo-text {
     font-size: 20px;
 }
+
 .cta {
     font-size: 14px;
     font-weight: bold;
+
     &.big-cta {
         font-size: 18px;
     }

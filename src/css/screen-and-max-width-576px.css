@@ -42,20 +42,20 @@
   width: 100%;
 }
 
-*[class~=text_center] {
+*[class~=text-center] {
   text-align: center !important;
 }
 
-*[class~=align_center] {
+*[class~=align-center] {
   float: none !important;
   margin: 0 auto !important;
 }
 
-*[class~=align_right] {
+*[class~=align-right] {
   float: right !important;
 }
 
-*[class~=align_left] {
+*[class~=align-left] {
   float: left !important;
 }
 
@@ -86,22 +86,22 @@ td[class~=coldrop] {
   height: auto !important;
 }
 
-body[yahoo] *[class~=no_bg] {
+body[yahoo] *[class~=no-bg] {
   background: none !important;
   background-color: #ffffff !important;
 }
 
-body[yahoo] *[class~=top_banner] {
+body[yahoo] *[class~=top-banner] {
   width: 100% !important;
   background-size: cover !important;
   background-position: 100% top !important;
 }
 
-*[class~=padding_lr10] {
+*[class~=padding-lr10] {
   padding: 0px 10px 0px 10px !important;
 }
 
-*[class~=padding_t10] {
+*[class~=padding-t10] {
   padding: 10px 0px 0px 0px !important;
 }
 
@@ -109,11 +109,11 @@ body[yahoo] *[class~=top_banner] {
   padding: 0px 0px 0px 0px !important;
 }
 
-*[class~=margin_b10] {
+*[class~=margin-b10] {
   margin-bottom: 10px !important;
 }
 
-*[class~=margin_t10] {
+*[class~=margin-t10] {
   margin-top: 10px !important;
 }
 

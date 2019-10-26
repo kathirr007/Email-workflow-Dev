@@ -19,17 +19,9 @@ h5,
 a,
 td {
   font-family: Arial,Helvetica, sans-serif;
-  line-height: 1.4;
+  line-height: normal;
   margin: 0;
   box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 p,

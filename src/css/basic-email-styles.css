@@ -8,7 +8,7 @@ body {
 }
 
 * {
-  line-height: normal !important;
+  line-height: normal;
 }
 
 a[href^="x-apple-data-detectors:"] {
@@ -31,4 +31,12 @@ a {
 
 div {
   display: inherit !important;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-black {
+  color: #010101;
 }
