@@ -6,6 +6,8 @@ const $ = require('gulp-load-plugins')({
 // const pug = require('gulp-pug');
 const pkg = require('./package.json');
 const del = require('del');
+const uncss = require('uncss');
+const postuncss = require('postcss-uncss');
 // const sass = require('gulp-sass');
 // const replace = require('gulp-replace');
 // const inlineCss = require('gulp-inline-css');
@@ -94,6 +96,9 @@ gulp.task('images', function () {
 
 // compile sass to css
 gulp.task('compileSass', () => {
+    let plugins = [
+        postuncss()
+    ];
     return gulp
         // import all email .scss files from src/scss folder
         // ** means any sub or deep-sub files or foders
@@ -111,6 +116,7 @@ gulp.task('compileSass', () => {
 // compile sass (compileSass task) before running build
 gulp.task('buildHTML', gulp.series('compileSass', () => {
     var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
+        htmlFilter2 = $.filter(['**/*.html', '!404.html', '!index.html'], { restore: true }),
         pugFilter = $.filter(['**/*.pug'], { restore: true });
     return gulp
         // import all email template (name ending with .template.pug) files from src/emails folder
@@ -176,6 +182,71 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
         .pipe(gulp.dest(dest))
     })
 );
+
+// Remove unused CSS
+gulp.task('uncss', () => {
+    var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
+        htmlFilter2 = $.filter(['**/*.html', '!404.html', '!index.html'], { restore: true }),
+        pugFilter = $.filter(['**/*.pug'], { restore: true });
+    let plugins = [
+        postuncss({
+            html: [dest + 'one/*.html',dest + 'two/*.html']
+        })
+    ];
+    return gulp
+        // import all email template (name ending with .template.pug) files from src/emails folder
+        .src(['src/**/*.css'])
+        .pipe($.postcss(plugins))
+        /* .pipe($.emailRemoveUnusedCss({
+            whitelist: [
+            ".ExternalClass",
+            ".ReadMsgBody",
+            ".yshortcuts",
+            ".Mso*",
+            ".maxwidth-apple-mail-fix",
+            "#outlook",
+            ".module-*",
+            ".height_01",
+            "span.MsoHyperlink"
+            ]
+        })) */
+        .pipe($.beautify.html({ indent_size: 2 }))
+
+        // put compiled HTML email templates inside dist folder
+        .pipe(gulp.dest(dest))
+});
+// Remove unused CSS
+gulp.task('purify', () => {
+    var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
+        htmlFilter2 = $.filter(['**/*.html', '!404.html', '!index.html'], { restore: true }),
+        pugFilter = $.filter(['**/*.pug'], { restore: true });
+    let plugins = [
+        postuncss({
+            html: [dest + 'one/*.html',dest + 'two/*.html']
+        })
+    ];
+    return gulp
+        // import all email template (name ending with .template.pug) files from src/emails folder
+        .src(['src/**/*.css'])
+        .pipe($.postcss(plugins))
+        /* .pipe($.emailRemoveUnusedCss({
+            whitelist: [
+            ".ExternalClass",
+            ".ReadMsgBody",
+            ".yshortcuts",
+            ".Mso*",
+            ".maxwidth-apple-mail-fix",
+            "#outlook",
+            ".module-*",
+            ".height_01",
+            "span.MsoHyperlink"
+            ]
+        })) */
+        .pipe($.beautify.html({ indent_size: 2 }))
+
+        // put compiled HTML email templates inside dist folder
+        .pipe(gulp.dest(dest+'purifiedcss/'))
+});
 
 // browserSync task to launch preview server
 gulp.task('browserSync', () => {

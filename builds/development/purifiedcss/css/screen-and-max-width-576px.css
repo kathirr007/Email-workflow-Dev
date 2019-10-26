@@ -1,0 +1,91 @@
+.wrapper-table {
+width: 100%;
+}
+
+.content-table {
+width: 95%;
+}
+
+*[class*=full] {
+width: 100% !important;
+min-width: 100% !important;
+}
+
+.full-width {
+width: 100%;
+}
+
+.arrange-top {
+display: table-header-group;
+}
+
+.arrange-bottom {
+display: table-footer-group;
+}
+
+/*Font size styles */
+
+.fz-mob-25 {
+font-size: 25px !important;
+}
+
+.fz-mob-40 {
+font-size: 40px !important;
+}
+
+/*Font size styles ends */
+
+/*Rounded Corner Styles starts */
+
+.rounded-5 {
+border-radius: 5px;
+}
+
+.rounded-top-10 {
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+.rounded-bottom-10 {
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+/*Rounded Corner Styles ends */
+
+/*Spacing styles starts*/
+
+.p-mob-5 {
+padding-top: 5px;
+padding-bottom: 5px;
+padding-right: 5px;
+padding-left: 5px;
+}
+
+.p-mob-10 {
+padding-top: 10px;
+padding-bottom: 10px;
+padding-right: 10px;
+padding-left: 10px;
+}
+
+.p-mob-15 {
+padding-top: 15px;
+padding-bottom: 15px;
+padding-right: 15px;
+padding-left: 15px;
+}
+
+.p-mob-20 {
+padding-top: 20px;
+padding-bottom: 20px;
+padding-right: 20px;
+padding-left: 20px;
+}
+
+.px-mob-10 {
+padding-left: 10px;
+padding-right: 10px;
+}
+
+/*Spacing styles starts ends*/

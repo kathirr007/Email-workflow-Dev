@@ -44,11 +44,15 @@
         "gulp-newer": "^1.4.0",
         "gulp-param": "^1.0.3",
         "gulp-plumber": "^1.2.1",
+        "gulp-postcss": "^8.0.0",
         "gulp-preprocess": "^3.0.3",
+        "gulp-purifycss": "^0.2.0",
         "gulp-size": "^3.0.0",
         "jquery": "^3.4.1",
         "jsdom": "^15.2.0",
         "lazypipe": "^1.0.2",
+        "postcss-uncss": "^0.17.0",
+        "uncss": "^0.17.2",
         "xoauth2": "^1.2.0"
     }
 }

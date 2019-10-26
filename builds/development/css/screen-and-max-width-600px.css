@@ -1,0 +1,19 @@
+.wrapper-table {
+width: 100%;
+}
+
+.content-table {
+width: 95%;
+}
+
+.full-width {
+width: 100%;
+}
+
+.arrange-top {
+display: table-header-group;
+}
+
+.arrange-bottom {
+display: table-footer-group;
+}
