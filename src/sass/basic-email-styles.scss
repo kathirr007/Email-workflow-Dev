@@ -1,7 +1,6 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: none !important;
     -ms-text-size-adjust: none !important;
@@ -356,10 +355,10 @@ a[href^="x-apple-data-detectors:"] {
 
 /* Spacing styles ends*/
 
-    [class*='spacer'] {
-        line-height: 1px !important;
-        font-size: 1px !important;
-    }
+.spacer {
+    line-height: 1px !important;
+    font-size: 1px !important;
+}
 
 a[x-apple-data-detectors] {
     color: inherit !important;
@@ -387,6 +386,10 @@ div {
 }
 
 @media screen and (max-width:576px) {
+    .spacer {
+    line-height: 1px !important;
+    font-size: 1px !important;
+}
     .wrapper-table {
         width: 100%;
     }
@@ -395,20 +398,20 @@ div {
         width: 95%;
     }
 
-    *[class*=full] {
+    .full {
         width: 100% !important;
         min-width: 100% !important;
     }
 
-    *[class*=contents] {
+    .contents {
         width: 89.14728682% !important;
     }
 
-    *[class*=hide] {
+    .hide {
         display: none;
     }
 
-    *[class*=show] {
+    .show {
         display: block !important;
         font-size: inherit !important;
         max-height: none !important;
@@ -417,11 +420,11 @@ div {
         overflow: visible !important;
     }
 
-    *[class*=imgfull] {
+    .imgfull {
         width: 100%;
         height: auto;
     }
-    *[class*='bg-responsive'] {
+    .bg-responsive {
         background-size: cover;
         object-fit: cover;
     }
@@ -430,24 +433,24 @@ div {
         width: 100%;
     }
 
-    *[class*=text-center] {
+    .text-center {
         text-align: center !important;
     }
 
-    *[class*=align-center] {
+    .align-center {
         float: none !important;
         margin: 0 auto !important;
     }
 
-    *[class*=align-right] {
+    .align-right {
         float: right !important;
     }
 
-    *[class*=align-left] {
+    .align-left {
         float: left !important;
     }
 
-    td[class*=coldrop] {
+    .coldrop {
         display: block;
         width: 100%;
         padding: 0px;
@@ -461,25 +464,25 @@ div {
         display: table-footer-group;
     }
 
-    *[class*=autoheight] {
+    .autoheight {
         height: auto !important;
     }
 
-    *[class*=autowidth] {
+    .autowidth {
         width: auto !important;
     }
 
-    *[class*=autowidthheight] {
+    .autowidthheight {
         width: auto !important;
         height: auto !important;
     }
 
-    body[yahoo] *[class*=no-bg] {
+    body[yahoo] .no-bg {
         background: none !important;
         background-color: #ffffff !important;
     }
 
-    body[yahoo] *[class*=top-banner] {
+    body[yahoo] .top-banner {
         width: 100% !important;
         background-size: cover !important;
         background-position: 100% top !important;
@@ -1921,19 +1924,19 @@ div {
 
 /*Spacing styles starts ends*/
 
-    *[class*=height20] {
+    .height20 {
         height: 20px !important;
     }
 
-    *[class*=height15] {
+    .height15 {
         height: 15px !important;
     }
 
-    *[class*=height10] {
+    .height10 {
         height: 10px !important;
     }
 
-    *[class*=height5] {
+    .height5 {
         height: 5px !important;
     }
 }

@@ -167,7 +167,8 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
             ".module-*",
             ".height_01",
             "span.MsoHyperlink"
-            ]
+            ],
+            removeHTMLComments: false
         }))
 
         // // inline CSS

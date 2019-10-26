@@ -1,7 +1,6 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #FFFFFF;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none !important;
   -ms-text-size-adjust: none !important;
@@ -357,7 +356,7 @@ a[href^="x-apple-data-detectors:"] {
 
 /* Spacing styles ends*/
 
-[class*='spacer'] {
+.spacer {
   line-height: 1px !important;
   font-size: 1px !important;
 }
