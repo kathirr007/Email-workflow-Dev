@@ -34,6 +34,18 @@ var transporter = nodemailer.createTransport({
     }
 })
 
+// For todays date;
+Date.prototype.today = function () { 
+    return ((this.getDate() < 10)?"0":"") + this.getDate() +"/"+(((this.getMonth()+1) < 10)?"0":"") + (this.getMonth()+1) +"/"+ this.getFullYear();
+}
+
+// For the time now
+Date.prototype.timeNow = function () {
+     return ((this.getHours() < 10)?"0":"") + this.getHours() +":"+ ((this.getMinutes() < 10)?"0":"") + this.getMinutes() +":"+ ((this.getSeconds() < 10)?"0":"") + this.getSeconds();
+}
+
+var datetime = new Date().today() + " @" + new Date().timeNow();
+
 var
   devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production'),
   source = './',
@@ -56,7 +68,7 @@ var htmlPaths = [dest + 'two/template-two.html',
              kathirr007@hotmail.com, \
              kathirr007@yahoo.com, \
              kathirr007@yandex.com,',
-        subject: 'Test ' + i,
+        subject: 'Test Mail ' + i+1 + ' on ' + datetime,
         text: 'Hello World!!',
         html: {path:''+path+''}
         // html: {path:'https://ep-test.contentplace.io/webapp-theme/fo/mail-intern-info.html'}
