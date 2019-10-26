@@ -26,6 +26,14 @@ html
             |     font-weight: normal;
             |     font-style: normal;
             | }
+            | @font-face {
+            |     font-family: "futura-lt-bt";
+            |     src: url('https://www.fontify.me/cm/2e95df6feee620b447e733c01f6d4098/FUTURAL.eot');
+            |     src: url('https://www.fontify.me/cm/2e95df6feee620b447e733c01f6d4098/FUTURAL.eot?#iefix') format('embedded-opentype'),
+            |     url('https://www.fontify.me/cm/2e95df6feee620b447e733c01f6d4098/FUTURAL.ttf') format('truetype');
+            |     font-weight: normal;
+            |     font-style: normal;
+            | }
             | @media screen and (max-width:576px) {
             include ../../css/screen-and-max-width-576px.css
             | }
@@ -89,15 +97,271 @@ html
                                                 td(valign='top' align='center')
                                                     table.align-center(border='0' cellspacing='0' cellpadding='0' align='center')
                                                     tr
-                                                        td.text-white(valign='top' align='center' style="font-size:42px; color: #ffffff; letter-spacing:10px")
+                                                        td.text-white.fz-mob-25(valign='top' align='center' style="font-size:42px; color: #ffffff; letter-spacing:10px")
                                                             |iAPARTA
                                                             <br/>
                                                             |LA FECHA!
-
                                             // Spacer 30 start
                                             include ../_partials/_spacer20-15.pug
                                             // Spacer 30 end
                                     // Header block end
+                                    // Timer block start
+                                    table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                        tbody
+                                            tr
+                                                td(valign='top' align='center')
+                                                    table.align-center(border='0' cellspacing='0' cellpadding='0' align='center')
+                                                        tr
+                                                            td(valign="top" align="center")
+                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                                                    tr
+                                                                        td(valign='top' align='center')
+                                                                            table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                include ./_partials/_rounded-lightblue-block-top.pug
+                                                                                tr
+                                                                                    td(valign='top' align='center' colspan="3")
+                                                                                        table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                            tr
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                                td.rounded-5.px-10.p-mob-5.bg-lightblue.text-darkblue.text-center.fz-mob-40(bgcolor="#c9e4e7" align="center" style="font-size:70px;")
+                                                                                                    |0
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                include ./_partials/_rounded-lightblue-block-bottom.pug
+                                                                        td(valign='top' align='center' width="10")
+                                                                        td(valign='top' align='center')
+                                                                            table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                include ./_partials/_rounded-lightblue-block-top.pug
+                                                                                tr
+                                                                                    td(valign='top' align='center' colspan="3")
+                                                                                        table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                            tr
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                                td.rounded-5.px-10.p-mob-5.bg-lightblue.text-darkblue.text-center.fz-mob-40(bgcolor="#c9e4e7" align="center" style="font-size:70px;")
+                                                                                                    |8
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                include ./_partials/_rounded-lightblue-block-bottom.pug
+                                                            td(valign="middle" align="center")
+                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                                                    tr
+                                                                        td.hide(valign='top' align='center' width="14")
+                                                                        td.px-mob-10(valign='middle' align='center' width="")
+                                                                            table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                                                                tr
+                                                                                    td(valign="middle" align="center")
+                                                                                        img(src="../images/002-white-timer-dot-seperator.png", alt="")
+                                                                        td.hide(valign='top' align='center' width="14")
+                                                            td(valign="top" align="center")
+                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                                                    tr
+                                                                        td(valign='top' align='center')
+                                                                            table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                include ./_partials/_rounded-lightblue-block-top.pug
+                                                                                tr
+                                                                                    td(valign='top' align='center' colspan="3")
+                                                                                        table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                            tr
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                                td.rounded-5.px-10.p-mob-5.bg-lightblue.text-darkblue.text-center.fz-mob-40(bgcolor="#c9e4e7" align="center" style="font-size:70px;")
+                                                                                                    |0
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                include ./_partials/_rounded-lightblue-block-bottom.pug
+                                                                        td(valign='top' align='center' width="10")
+                                                                        td(valign='top' align='center')
+                                                                            table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                include ./_partials/_rounded-lightblue-block-top.pug
+                                                                                tr
+                                                                                    td(valign='top' align='center' colspan="3")
+                                                                                        table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                            tr
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                                td.rounded-5.px-10.p-mob-5.bg-lightblue.text-darkblue.text-center.fz-mob-40(bgcolor="#c9e4e7" align="center" style="font-size:70px;")
+                                                                                                    |8
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                include ./_partials/_rounded-lightblue-block-bottom.pug
+                                                            td(valign="middle" align="center")
+                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                                                    tr
+                                                                        td.hide(valign='top' align='center' width="14")
+                                                                        td.px-mob-10(valign='middle' align='center' width="")
+                                                                            table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                                                                tr
+                                                                                    td(valign="middle" align="center")
+                                                                                        img(src="../images/002-white-timer-dot-seperator.png", alt="")
+                                                                        td.hide(valign='top' align='center' width="14")
+                                                            td(valign="top" align="center")
+                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                                                    tr
+                                                                        td(valign='top' align='center')
+                                                                            table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                include ./_partials/_rounded-lightblue-block-top.pug
+                                                                                tr
+                                                                                    td(valign='top' align='center' colspan="3")
+                                                                                        table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                            tr
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                                td.rounded-5.px-10.p-mob-5.bg-lightblue.text-darkblue.text-center.fz-mob-40(bgcolor="#c9e4e7" align="center" style="font-size:70px;")
+                                                                                                    |0
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                include ./_partials/_rounded-lightblue-block-bottom.pug
+                                                                        td(valign='top' align='center' width="10")
+                                                                        td(valign='top' align='center')
+                                                                            table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                include ./_partials/_rounded-lightblue-block-top.pug
+                                                                                tr
+                                                                                    td(valign='top' align='center' colspan="3")
+                                                                                        table.autowidth.align-center(border='0' cellspacing='0' cellpadding='0' align='center' width="66")
+                                                                                            tr
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                                td.rounded-5.px-10.p-mob-5.bg-lightblue.text-darkblue.text-center.fz-mob-40(bgcolor="#c9e4e7" align="center" style="font-size:70px;")
+                                                                                                    |8
+                                                                                                td.hide(valign="top" bgcolor="#9bcfdb" style="font-size:1px; line-height:1px; background-color:#9bcfdb;" width="1")
+                                                                                                    |&nbsp;
+                                                                                include ./_partials/_rounded-lightblue-block-bottom.pug
+                                                            
+                                                        tr
+                                                            td(valign="top" align="center")
+                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                                                    tr
+                                                                        td.p-15.p-mob-5.text-white(valign="top" align="center" colspan="3" style="font-family:'futura-lt-bt', 'futura', Arial, Helvetica, sans-serif;")
+                                                                            |DÍAS
+                                                            td(valign="top" align="center")
+                                                            td(valign="top" align="center")
+                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                                                    tr
+                                                                        td.p-15.p-mob-5.text-white(valign="top" align="center" colspan="3" style="font-family:'futura-lt-bt', 'futura', Arial, Helvetica, sans-serif;")
+                                                                            |HORAS
+                                                            td(valign="top" align="center")
+                                                            td(valign="top" align="center")
+                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                                                    tr
+                                                                        td.p-15.p-mob-5.text-white(valign="top" align="center" colspan="3" style="font-family:'futura-lt-bt', 'futura', Arial, Helvetica, sans-serif;")
+                                                                            |MINUTOS
+                                    // Timer block end
+                                    // Content block 01 start
+                                    table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                        tbody
+                                            tr
+                                                td(valign='top' align='center')
+                                                    table.align-center.autowidth.p-mob-20(border='0' cellspacing='0' cellpadding='0' align='center' width="520")
+                                                        include ../_partials/_spacer15.pug
+                                                        tr
+                                                            td.text-white(valign='top' align='center' style="font-size:18px; color: #ffffff; font-family:'futura-lt-bt', 'futura', Arial, Helvetica, sans-serif;").
+                                                                A Partir del <strong>5 de noviembre</strong> podrás conseguir tus productos favoritos de SkinCeuticals hasta donde estés y sin salir de casa, con nuestra <strong>nueva tienda online.</strong>
+                                                        include ../_partials/_spacer15.pug
+                                                        tr
+                                                            td.text-white(valign='top' align='center' style="font-size:18px; color: #ffffff; font-family:'futura-lt-bt', 'futura', Arial, Helvetica, sans-serif;").
+                                                                <strong>¿Te emociona?</strong> ¡A nosotros también!
+                                                        include ../_partials/_spacer5.pug
+                                    // Content block 01 end
+                                    // Product block start
+                                    table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                        tbody
+                                            tr
+                                                td(valign='top' align='center')
+                                                    table.align-center.autowidth(border='0' cellspacing='0' cellpadding='0' align='center' width="552")
+                                                        <tr>
+                                                        <!--[if !mso]><!-->
+                                                            td.coldrop(valign="top" align="center")
+                                                                div(class="show" style="display: none; font-size: 0; max-height: 0; width:0px; line-height: 0; padding: 0;mso-hide: all; overflow:hidden;")
+                                                                    //mobile codes goes here
+                                                                    img(src="../images/002-transparent-product-sc-01.png", alt="")
+                                                        <!--<![endif]-->
+                                                            td.hide(valign="top" align="center")
+                                                                img(src="../images/002-product-sc-01.png", alt="")
+                                                            td.coldrop(valign="top" align="center")
+                                                                table.align-center.autowidth(border='0' cellspacing='0' cellpadding='0' align='center')
+                                                                    tr
+                                                                        td(valign='top' align='center')
+                                                                            table.align-center.autowidth(border='0' cellspacing='0' cellpadding='0' align='center')
+                                                                                tr.hide
+                                                                                    td(valign='top' align='center' height="62")
+                                                                                <!--[if !mso]><!-->
+                                                                                    td.coldrop(valign="top" align="center")
+                                                                                        div(class="show" style="display: none; font-size: 0; max-height: 0; width:0px; line-height: 0; padding: 0;mso-hide: all; overflow:hidden;")
+                                                                                            //mobile codes goes here
+                                                                                            table(border='0' cellspacing='0' cellpadding='0' width="100%")
+                                                                                                include ../_partials/_spacer15.pug
+                                                                                <!--<![endif]-->
+                                                                                tr
+                                                                                    td(valign='middle' align='center')
+                                                                                        table(border='0' cellspacing='0' cellpadding='0' width="100%")
+                                                                                            tr
+                                                                                                td(valign='middle' align='center')
+                                                                                                    table.contents(border='0' cellspacing='0' cellpadding='0' width="100%")
+                                                                                                        tr
+                                                                                                            td.pr-10.p-mob-10(valign='middle' align='center' height="35" bgcolor="#c9e4e7")
+                                                                                                                |¡OBTÉN ACCESO ANTES QUE NADIE!
+                                                                                                        tr
+                                                                                                            td.autoheight.p-mob-15(valign='middle' align='left' height="112" bgcolor="#ffffff").
+                                                                                                                Al seguirnos en redes sociales serás de las primeras personas en la fila para conocer el nuevo sitio. <br>
+                                                                                                                <strong> ¡Que no te ganen tu lugar! </strong>
+
+                                                                                                td.hide(valign='middle' width="40")
+                                                                                                    table(border='0' cellspacing='0' cellpadding='0' width="100%")
+                                                                                                        tr
+                                                                                                            td(valign='middle' align='center' height="17" bgcolor="#2e9ebe")
+                                                                                                        tr
+                                                                                                            td(valign='middle' align='center' height="18")
+                                                                                                                table(border='0' cellspacing='0' cellpadding='0' width="100%")
+                                                                                                                    tr
+                                                                                                                        td.spacer.rounded-10-top-right(valign='middle' align='center' width="30" height="18" bgcolor="#ffffff")
+                                                                                                                            |&nbsp;
+                                                                                                                        td.spacer.hide(valign='middle' width="10")
+                                                                                                                            table(border='0' cellspacing='0' cellpadding='0' width="10")
+                                                                                                                                tr
+                                                                                                                                    td.spacer(valign="top" align="right")
+                                                                                                                                        img(src="../images/002-10px-white-rnd-crnr-top-right.png", alt="")
+                                                                                                                                tr
+                                                                                                                                    td.spacer(valign="top" height="8" bgcolor="#ffffff")
+                                                                                                                                        |&nbsp;
+                                                                                                        tr
+                                                                                                            td(valign='middle' align='center' height="102" bgcolor="#ffffff")
+                                                                                                                |&nbsp;
+                                                                                                        tr
+                                                                                                            td(valign='middle' align='center')
+                                                                                                                table(border='0' cellspacing='0' cellpadding='0' width="100%")
+                                                                                                                    tr
+                                                                                                                        td.spacer.rounded-10-top-right(valign='middle' align='center' width="30" height="10" bgcolor="#ffffff")
+                                                                                                                            |&nbsp;
+                                                                                                                        td.spacer.hide(valign='middle' width="10")
+                                                                                                                            table(border='0' cellspacing='0' cellpadding='0' width="10")
+                                                                                                                                tr
+                                                                                                                                    td.spacer(valign="top" align="right")
+                                                                                                                                        img(src="../images/002-10px-white-rnd-crnr-bottom-right.png", alt="")
+                                    // Product block end
+                                    // Social media buttons block start
+                                    table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                        tbody
+                                            tr
+                                                td(valign='top' align='center')
+                                                    table.align-center.autowidth(border='0' cellspacing='0' cellpadding='0' align='center' width="552")
+                                                        <tr>
+                                                            <!--Background-->
+                                                            td(bgcolor="#960096" class="CTA0hovermodif" style="background-image: url(https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg);" background="https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg" width="320" height="40" valign="middle" align="center")
+                                                                <!--[if gte mso 9]><v:rect style="width: 320px; height: 40px;" strokecolor="none"><v:fill type="tile" color="#960096" src="https://kathirr007.github.io/Email-workflow-Dev/images/002-bottom-bg-image.jpg"></v:fill></v:rect><v:shape id="theText" style="position: absolute; width: 320px; height: 40px;"><![endif]-->
+                                                                <table width="320" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <!--partie texte du bouton-->                
+                                                                        <td height="40" width="270" valign="middle" style="text-align:center; mso-line-height-rule:exactly;">
+                                                                            | content goes here
+                                                                        </td>
+                                                                        <!--partie image du bouton-->
+                                                                    </tr>
+                                                                </table>
+                                                                <!--[if gte mso 9]></v:shape><![endif]-->
+                                    // Social media buttons block end
+
 
                             tr
                                 td(valign="top" align="center")
