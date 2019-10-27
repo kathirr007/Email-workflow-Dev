@@ -156,6 +156,14 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
         })) */
         .pipe(pugFilter.restore)
         .pipe($.if(!devBuild, $.replace(/(src\=\")..\/(images)|(src\=\")(images)/g, '$1https://kathirr007.github.io/Email-workflow-Dev/$2')))
+
+        // inline CSS
+        .pipe($.inlineCss({
+            applyStyleTags: false,
+            removeStyleTags: false,
+            preserveMediaQueries: false
+        }))
+        // remove unused css
         .pipe($.emailRemoveUnusedCss({
             whitelist: [
             ".ExternalClass",
@@ -169,13 +177,6 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
             "span.MsoHyperlink"
             ],
             removeHTMLComments: false
-        }))
-
-        // // inline CSS
-        .pipe($.inlineCss({
-            applyStyleTags: false,
-            removeStyleTags: false,
-            preserveMediaQueries: false
         }))
         .pipe($.beautify.html({ indent_size: 2 }))
 
