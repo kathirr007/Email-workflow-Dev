@@ -52,7 +52,7 @@ var
   dest = devBuild ? 'builds/development/' : 'builds/production/';
 
 var htmlPaths = [dest + 'two/template-two.html',
-                //  dest + 'mail-intern-info.html',
+                 dest + 'three/template-three.html',
                 //  dest + 'mail-intern-cta.html',
                 //  dest + 'mail-contrib-info.html',
                 //  dest + 'mail-contrib-cta.html'
@@ -68,7 +68,7 @@ var htmlPaths = [dest + 'two/template-two.html',
              kathirr007@hotmail.com, \
              kathirr007@yahoo.com, \
              kathirr007@yandex.com,',
-        subject: 'Test Mail ' + i+1 + ' on ' + datetime,
+        subject: `Test Mail ${i+1} on ${datetime}`,
         text: 'Hello World!!',
         html: {path:''+path+''}
         // html: {path:'https://ep-test.contentplace.io/webapp-theme/fo/mail-intern-info.html'}
@@ -78,7 +78,7 @@ var htmlPaths = [dest + 'two/template-two.html',
           if(err){
               console.log(err);
           } else {
-              console.log('Email Sent');
+              console.log(`Email ${i+1} has been sent Successfully`);
           }
       })
     });
