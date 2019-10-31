@@ -53,9 +53,7 @@ var
 
 var htmlPaths = [dest + 'two/template-two.html',
                  dest + 'three/template-three.html',
-                //  dest + 'mail-intern-cta.html',
-                //  dest + 'mail-contrib-info.html',
-                //  dest + 'mail-contrib-cta.html'
+                 dest + 'four/template-four.html',
                  ],
     path,mailOptions;
     $(htmlPaths).each(function(i){
