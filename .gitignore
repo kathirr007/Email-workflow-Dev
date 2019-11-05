@@ -1,1 +1,61 @@
+# Ignore docs files
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.zip
+*.7z
+*.rar
+*.vi
+*~
+
+# OS or Editor folders
+.DS_Store
+._*
+Thumbs.db
+.cache
+.project
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+.idea
+
+#test files
+test/
+master/json/*_*.json
+msater/*_*.html
+#development/
+
+# Design files
+Designs/
+
+.sass-cache/
+*.css.map
+
+#Node ignore files
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# Dependency directories
 node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm
+
