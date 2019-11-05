@@ -276,7 +276,7 @@ gulp.task(
         // html changes
         // gulp.watch(b2bhtml.watch, gulp.series('b2bhtml'));
         // gulp.watch(html.watch, gulp.series('html', 'reload'));
-        gulp.watch(resources.watch, gulp.series('build', 'reload'));
+        gulp.watch(resources.watch, gulp.series('buildHTML', 'reload'));
         // gulp.watch('src/**/*.pug', gulp.series('build', 'reload'));
         
         // image changes
