@@ -29,8 +29,6 @@ nbproject
 
 #test files
 test/
-master/json/*_*.json
-msater/*_*.html
 *_mod*
 #development/
 
@@ -38,7 +36,6 @@ msater/*_*.html
 Designs/
 
 # backup folders
-img-bckup-27-03-19/
 
 .sass-cache/
 *.css.map
