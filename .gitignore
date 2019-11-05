@@ -31,15 +31,21 @@ nbproject
 test/
 master/json/*_*.json
 msater/*_*.html
+<<<<<<< HEAD
 *_mod*
+=======
+>>>>>>> 5b67f468cb388d925c57be107173f69f6f1a7d94
 #development/
 
 # Design files
 Designs/
 
+<<<<<<< HEAD
 # backup folders
 img-bckup-27-03-19/
 
+=======
+>>>>>>> 5b67f468cb388d925c57be107173f69f6f1a7d94
 .sass-cache/
 *.css.map
 
@@ -62,3 +68,7 @@ jspm_packages
 
 # Optional npm cache directory
 .npm
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5b67f468cb388d925c57be107173f69f6f1a7d94
