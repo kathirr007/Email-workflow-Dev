@@ -255,6 +255,7 @@ gulp.task('browserSync', () => {
     return browserSync.init({
         server: { baseDir: baseDir },
         open: false,
+        port: 3030,
         injectChanges: true,
         reloadDelay: 2000, // reload after 2s, compilation is finished (hopefully)
         // reloadDelay: 0,
