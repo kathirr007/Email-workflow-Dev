@@ -61,4 +61,4 @@ jspm_packages
 .npm
 
 # Package lock files
-# *.lock
+*.lock
