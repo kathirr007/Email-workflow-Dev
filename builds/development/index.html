@@ -1,18 +1,38 @@
 <!DOCTYPE html>
-<html lang="en" style="--blue: #007bff; --breakpoint-lg: 992px; --breakpoint-md: 768px; --breakpoint-sm: 576px; --breakpoint-xl: 1200px; --breakpoint-xs: 0; --cyan: #17a2b8; --danger: #dc3545; --dark: #343a40; --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,'Liberation Mono','Courier New',monospace; --font-family-sans-serif: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'; --gray: #6c757d; --gray-dark: #343a40; --green: #28a745; --indigo: #6610f2; --info: #17a2b8; --light: #f8f9fa; --orange: #fd7e14; --pink: #e83e8c; --primary: #007bff; --purple: #6f42c1; --red: #dc3545; --secondary: #6c757d; --success: #28a745; --teal: #20c997; --warning: #ffc107; --white: #fff; --yellow: #ffc107; -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; box-sizing: border-box; font-family: sans-serif; line-height: 1.15;">
+<html lang="en">
 
-<head style="box-sizing: border-box;">
-  <meta charset="UTF-8" style="box-sizing: border-box;">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" style="box-sizing: border-box;">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" style="box-sizing: border-box;">
-  <title style="box-sizing: border-box;">HTML Email Templates</title>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" style="box-sizing: border-box;"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous" style="box-sizing: border-box;"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" style="box-sizing: border-box;"></script>
-  <script style="box-sizing: border-box;">
-    $(document).ready(function() {});
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HTML Email Templates</title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
-  <style style="box-sizing: border-box;">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script>
+    $(document).ready(function() {
+
+    });
+  </script>
+  <style>
+    #container {
+      margin-left: 400px;
+      margin-top: 50px;
+    }
+
+    #to,
+    #subject,
+    #content,
+    #htmlContent {
+      font-family: "Segoe UI";
+      font-size: 18px;
+      width: 530px;
+    }
+
     h1 {
       font-family: "Segoe UI";
       font-size: 40px;
@@ -22,8 +42,17 @@
     p {
       color: green;
     }
+
+    #send_email {
+      font-size: 15px;
+      font-family: "Segoe UI";
+    }
+
+    #message {
+      font-size: 18px;
+    }
   </style>
-  <script type="text/javascript" style="box-sizing: border-box;">
+  <script type="text/javascript">
     // Start Single Page Apps for GitHub Pages
     /* Single Page Apps for GitHub Pages
     https://github.com/rafrex/spa-github-pages
@@ -56,16 +85,17 @@
   </script>
 </head>
 
-<body style="background-color: #fff; box-sizing: border-box; color: #212529; font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'; font-size: 1rem; font-weight: 400; line-height: 1.5; margin: 0; text-align: left;">
-  <div style="box-sizing: border-box; margin-left: auto; margin-right: auto; padding-left: 15px; padding-right: 15px; width: 100%;">
-    <h1 style="box-sizing: border-box; font-size: 2.5rem; font-weight: 500; line-height: 1.2; margin-bottom: .5rem; margin-top: 0; text-align: center !important;">HTML Email Templates</h1>
-    <ul style="box-sizing: border-box; margin-bottom: 1rem; margin-top: 0;">
-      <li style="box-sizing: border-box;"><a href="one/template-one.html" style="background-color: transparent; box-sizing: border-box; color: #007bff; text-decoration: none;">Template one</a></li>
-      <li style="box-sizing: border-box;"><a href="two/template-two.html" style="background-color: transparent; box-sizing: border-box; color: #007bff; text-decoration: none;">Template two</a></li>
-      <li style="box-sizing: border-box;"><a href="three/template-three.html" style="background-color: transparent; box-sizing: border-box; color: #007bff; text-decoration: none;">Template three</a></li>
-      <li style="box-sizing: border-box;"><a href="four/template-four.html" style="background-color: transparent; box-sizing: border-box; color: #007bff; text-decoration: none;">Template four</a></li>
-      <li style="box-sizing: border-box;"><a href="five/template-five.html" style="background-color: transparent; box-sizing: border-box; color: #007bff; text-decoration: none;">Template five</a></li>
-      <li style="box-sizing: border-box;"><a href="six/template-six.html" style="background-color: transparent; box-sizing: border-box; color: #007bff; text-decoration: none;">Template six</a></li>
+<body>
+  <div class="container-fluid">
+    <h1 class="text-center text-info">HTML Email Templates</h1>
+    <ul class="template-lists mx-auto w-75">
+      <li><a href="one/template-one.html">Template one</a></li>
+      <li><a href="two/template-two.html">Template two</a></li>
+      <li><a href="three/template-three.html">Template three</a></li>
+      <li><a href="four/template-four.html">Template four</a></li>
+      <li><a href="five/template-five.html">Template five</a></li>
+      <li><a href="six/template-six.html">Template six</a></li>
+
     </ul>
   </div>
 </body>

@@ -1,7 +1,7 @@
 # Email-workflow-Dev
 Email development workflow with Node, Express, gulp & nodemailer
 
-[![Build Status](https://travis-ci.com/kathirr007/Email-workflow-Dev.svg?branch=master)](https://travis-ci.com/kathirr007/Email-workflow-Dev)
+[![Build Status](https://travis-ci.org/kathirr007/Email-workflow-Dev.svg?branch=master)](https://travis-ci.org/kathirr007/Email-workflow-Dev)
 
 **[Email-workflow-Dev](git@github.com:kathirr007/Email-workflow-Dev)** is the List of HTML emails by me for HTML Email Development outsourcing.
 
