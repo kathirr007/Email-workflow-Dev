@@ -28,7 +28,7 @@ const baseDir = dest;
 // in: source + 'src/emails/**/*.(jpg|jpeg|png|svg|gif)',
 let images = {
     in: 'src/**/*.{png,gif,jpg,jpeg,svg}',
-    out: dest + 'images'
+    out: dest
 };
 
 let resources = {
@@ -87,7 +87,7 @@ gulp.task('images', function () {
             // guetzli: ['--quality', 85],
             quiet: true
         }))
-        .pipe($.rename({dirname: ''}))
+        // .pipe($.rename({dirname: ''}))
         .pipe($.size({
             title: 'images out '
         }))
@@ -181,74 +181,9 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
         .pipe($.beautify.html({ indent_size: 2 }))
 
         // put compiled HTML email templates inside dist folder
-        .pipe(gulp.dest(dest))
+        .pipe(gulp.dest(dest + 'emails'))
     })
 );
-
-// Remove unused CSS
-gulp.task('uncss', () => {
-    var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
-        htmlFilter2 = $.filter(['**/*.html', '!404.html', '!index.html'], { restore: true }),
-        pugFilter = $.filter(['**/*.pug'], { restore: true });
-    let plugins = [
-        postuncss({
-            html: [dest + 'one/*.html',dest + 'two/*.html']
-        })
-    ];
-    return gulp
-        // import all email template (name ending with .template.pug) files from src/emails folder
-        .src(['src/**/*.css'])
-        .pipe($.postcss(plugins))
-        /* .pipe($.emailRemoveUnusedCss({
-            whitelist: [
-            ".ExternalClass",
-            ".ReadMsgBody",
-            ".yshortcuts",
-            ".Mso*",
-            ".maxwidth-apple-mail-fix",
-            "#outlook",
-            ".module-*",
-            ".height_01",
-            "span.MsoHyperlink"
-            ]
-        })) */
-        .pipe($.beautify.html({ indent_size: 2 }))
-
-        // put compiled HTML email templates inside dist folder
-        .pipe(gulp.dest(dest))
-});
-// Remove unused CSS
-gulp.task('purify', () => {
-    var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
-        htmlFilter2 = $.filter(['**/*.html', '!404.html', '!index.html'], { restore: true }),
-        pugFilter = $.filter(['**/*.pug'], { restore: true });
-    let plugins = [
-        postuncss({
-            html: [dest + 'one/*.html',dest + 'two/*.html']
-        })
-    ];
-    return gulp
-        // import all email template (name ending with .template.pug) files from src/emails folder
-        .src(['src/**/*.css'])
-        .pipe($.postcss(plugins))
-        /* .pipe($.emailRemoveUnusedCss({
-            whitelist: [
-            ".ExternalClass",
-            ".ReadMsgBody",
-            ".yshortcuts",
-            ".Mso*",
-            ".maxwidth-apple-mail-fix",
-            "#outlook",
-            ".module-*",
-            ".height_01",
-            "span.MsoHyperlink"
-            ]
-        })) */
-        .pipe($.beautify.html({ indent_size: 2 }))
-
-        // put compiled HTML email templates inside dist folder
-        .pipe(gulp.dest(dest+'purifiedcss/'))
-});
 
 // browserSync task to launch preview server
 gulp.task('browserSync', () => {
