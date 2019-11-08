@@ -155,7 +155,7 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
             },
         })) */
         .pipe(pugFilter.restore)
-        .pipe($.if(!devBuild, $.replace(/(src\=\")..\/(images)|(src\=\")(images)/g, '$1https://kathirr007.github.io/Email-workflow-Dev/$2')))
+        .pipe($.if(!devBuild, $.replace(/(src\=\")(images)|(src\=\")(images)/g, '$1https://kathirr007.github.io/Email-workflow-Dev/$2')))
         .pipe(htmlFilter2)
         // inline CSS
         .pipe($.inlineCss({
