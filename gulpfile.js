@@ -1,3 +1,4 @@
+const path = require('path');
 const gulp = require('gulp');
 // const gulp = require('gulp-param')(require('gulp'), process.argv);
 const $ = require('gulp-load-plugins')({
@@ -14,6 +15,19 @@ const postuncss = require('postcss-uncss');
 // const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
+const pathOptions = {
+    ext: {
+        template: ['html']
+    }
+    /*
+     root: process.cwd(),
+     ext: {
+     template: ['html'],
+     script: ['js'],
+     style: ['css', 'less', 'sass']
+     }
+     */
+};
 
 // browserSync base directory
 // this will be the base directory of files for web preview
@@ -23,7 +37,7 @@ const devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !
 
 const source = './';
 const dest = devBuild ? 'builds/development/' : 'builds/production/';
-const baseDir = dest;
+const baseDir = dest + 'emails/';
 
 // in: source + 'src/emails/**/*.(jpg|jpeg|png|svg|gif)',
 let images = {
@@ -118,6 +132,9 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
     var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
         htmlFilter2 = $.filter(['**/*.html', '!src/404.html', '!src/index.html'], { restore: true }),
         pugFilter = $.filter(['**/*.pug'], { restore: true });
+    function replaceImagePath(file, input) {
+        return input.replace(/(images\/)/g, `https://kathirr007.github.io/Email-workflow-Dev/${path.parse(file.path).dir.split('\\').pop()}/$1`)
+        }
     return gulp
         // import all email template (name ending with .template.pug) files from src/emails folder
         .src(['src/*.html', 'src/emails/**/*.html', 'src/emails/**/*.pug', '!**/_*', '!**/_partials/**/*'])
@@ -155,7 +172,20 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
             },
         })) */
         .pipe(pugFilter.restore)
-        .pipe($.if(!devBuild, $.replace(/(src\=\")(images)|(src\=\")(images)/g, '$1https://kathirr007.github.io/Email-workflow-Dev/$2')))
+        // .pipe($.if(!devBuild, $.replace(/(images\/)/g, `https://kathirr007.github.io/Email-workflow-Dev/${path.parse(file.path).name}$1`)))
+        .pipe($.if(!devBuild, $.tap(function(file, t) {
+            console.log(path.parse(file.path).dir.split('\\').pop())
+            file.contents = Buffer.from(replaceImagePath(file, file.contents.toString()))
+        })))
+        // function inline() {
+        //     return gulp.src('dist/**/*.html')
+        //       .pipe($.if(PRODUCTION, $.foreach(function(stream, file) {
+        //          var name = path.parse(file.path).name;
+        //          return stream.pipe(inliner('dist/css/' + name + '.css'));
+        //        })))
+        //       .pipe(gulp.dest('dist'));
+        //   }
+        // .pipe($.if(!devBuild, $.resolvePath()))
         .pipe(htmlFilter2)
         // inline CSS
         .pipe($.inlineCss({
