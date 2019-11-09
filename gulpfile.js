@@ -174,7 +174,7 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
         .pipe(pugFilter.restore)
         // .pipe($.if(!devBuild, $.replace(/(images\/)/g, `https://kathirr007.github.io/Email-workflow-Dev/${path.parse(file.path).name}$1`)))
         .pipe($.if(!devBuild, $.tap(function(file, t) {
-            console.log(path.parse(file.path).dir.split('\\').pop())
+            // console.log(path.parse(file.path).dir.split('\\').pop())
             file.contents = Buffer.from(replaceImagePath(file, file.contents.toString()))
         })))
         // function inline() {
