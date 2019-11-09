@@ -51,11 +51,12 @@ var
   source = './',
   dest = devBuild ? 'builds/development/' : 'builds/production/';
 
-var htmlPaths = [dest + 'two/template-two.html',
-                 dest + 'three/template-three.html',
-                 dest + 'four/template-four.html',
-                 dest + 'five/template-five.html',
-                 dest + 'six/template-six.html',
+var htmlPaths = [dest + 'emails/two/template-two.html',
+                 dest + 'emails/three/template-three.html',
+                 dest + 'emails/four/template-four.html',
+                 dest + 'emails/five/template-five.html',
+                 dest + 'emails/six/template-six.html',
+                 dest + 'emails/seven/template-seven.html',
                  ],
     path,mailOptions;
     $(htmlPaths).each(function(i){
