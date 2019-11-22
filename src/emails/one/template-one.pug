@@ -9,6 +9,7 @@ html
         //- import css/scss stylesheets
         //- these file names will be replace by gulp with proper css file paths
         //- link(rel="stylesheet", href="../../sass/bootstrap/bootstrap-utilities.css")
+        link(href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet")
         link(rel="stylesheet", href="../../sass/basic-email-styles.scss")
         link(rel="stylesheet", href="../../sass/basic.scss")
         link(rel="stylesheet", href="../../sass/one/styles.scss")
@@ -16,10 +17,7 @@ html
         //- embdedded css allowed, but not sass
         
         style
-            //- | @media screen and (min-width:576px) {
-            //- include ../../css/screen-and-min-width-576px.css
-            //- | }
-            | @media screen and (min-width:576px) {
+            | @media screen and (max-width:576px) {
             include ../../css/screen-and-max-width-576px.css
             | }
             //- | @media screen and (min-width:768px) {
