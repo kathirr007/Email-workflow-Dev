@@ -5,12 +5,20 @@ table tr td h3 {
   letter-spacing: 0.5px;
 }
 
-.text-blue {
-  color: #7c22c9;
+.text-black {
+  color: #010101;
+}
+
+.text-white {
+  color: #ffffff;
 }
 
 .text-gray {
   color: #6c6c6c;
+}
+
+.text-blue {
+  color: #7c22c9;
 }
 
 .bg-red {
@@ -21,12 +29,39 @@ table tr td h3 {
   background-color: #7c22c9;
 }
 
+.bg-lightgray {
+  background-color: #f8f4fc;
+}
+
+.bg-lightblue {
+  background-color: #e4d5f2;
+}
+
+.bg-lightpink {
+  background-color: #f2e8f9;
+}
+
 .body-bg {
   background-color: #f6f6f6;
 }
 
+v
 .bg-gray {
   background-color: #f6f6f6;
+}
+
+.ff-lato {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+.ff-latobold {
+  font-family: 'Lato Bold', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.ff-latoblack {
+  font-family: 'Lato Black', Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 .hero-heading {
@@ -35,7 +70,7 @@ table tr td h3 {
 }
 
 .hero-content {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .cta-blue {
@@ -53,12 +88,12 @@ table tr td h3 {
 }
 
 .promo-offer-text {
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .promo-text {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .cta {

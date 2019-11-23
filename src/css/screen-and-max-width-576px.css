@@ -2199,6 +2199,46 @@ body[yahoo] .top-banner {
 
 /*Spacing styles starts ends*/
 
+/* Display styles starts */
+
+.d-mob-none {
+  display: none !important;
+}
+
+.d-mob-inline {
+  display: inline !important;
+}
+
+.d-mob-inline-block {
+  display: inline-block !important;
+}
+
+.d-mob-block {
+  display: block !important;
+}
+
+.d-mob-table {
+  display: table !important;
+}
+
+.d-mob-table-row {
+  display: table-row !important;
+}
+
+.d-mob-table-cell {
+  display: table-cell !important;
+}
+
+.d-mob-flex {
+  display: flex !important;
+}
+
+.d-mob-inline-flex {
+  display: inline-flex !important;
+}
+
+/* Display styles ends */
+
 .height20 {
   height: 20px !important;
 }

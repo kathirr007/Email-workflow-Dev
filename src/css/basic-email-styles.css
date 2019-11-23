@@ -20,14 +20,14 @@ a[href^="x-apple-data-detectors:"] {
   font-size: 1px !important;
 }
 
-a[x-apple-data-detectors] {
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
-}
+/* a[x-apple-data-detectors] {
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+} */
 
 a {
   text-decoration: none;
@@ -383,5 +383,41 @@ div {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+/* Display styles starts */
+
+.d-inline {
+  display: inline;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-table {
+  display: table;
+}
+
+.d-table-row {
+  display: table-row;
+}
+
+.d-table-cell {
+  display: table-cell;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+/* Display styles ends */
 
 /* Spacing styles ends*/
