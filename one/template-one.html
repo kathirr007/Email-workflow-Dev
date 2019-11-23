@@ -8,9 +8,44 @@
   <title style="line-height: normal;">One | Email template!</title>
 
 
-
   <style style="line-height: normal;">
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWg.eot);
+      src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWA.woff) format('woff'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Lato Bold';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHw.woff) format('woff'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Lato Black';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh50XSwiPGQ.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh50XSwiPHw.woff) format('woff'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh50XSwiPHA.ttf) format('truetype');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
     @media screen and (max-width:576px) {
+      .text-white {
+        color: #ffffff;
+      }
+
+      .text-black {
+        color: #010101;
+      }
+
       .spacer {
         line-height: 1px !important;
         font-size: 1px !important;
@@ -24,17 +59,22 @@
         width: 95%;
       }
 
+      .full {
+        width: 100% !important;
+        min-width: 100% !important;
+      }
+
       .contents {
         width: 89.14728682% !important;
+      }
+
+      .hide {
+        display: none;
       }
 
       .imgfull {
         width: 100%;
         height: auto;
-      }
-
-      .full-width {
-        width: 100%;
       }
 
       .text-center {
@@ -54,8 +94,144 @@
       .arrange-bottom {
         display: table-footer-group;
       }
+
+      .autoheight {
+        height: auto !important;
+      }
+
+      .autowidth {
+        width: auto !important;
+      }
+
+      .fz-mob-16 {
+        font-size: 16px !important;
+      }
+
+      .fz-mob-18 {
+        font-size: 18px !important;
+      }
+
+      .fz-mob-22 {
+        font-size: 22px !important;
+      }
+
+      .fz-mob-24 {
+        font-size: 24px !important;
+      }
+
+      .rounded-8 {
+        border-radius: 8px;
+      }
+
+      .rounded-top-8 {
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .rounded-bottom-8 {
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+
+      .p-mob-5 {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+        padding-right: 5px !important;
+        padding-left: 5px !important;
+      }
+
+      .p-mob-10 {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        padding-right: 10px !important;
+        padding-left: 10px !important;
+      }
+
+      .px-mob-10 {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
+
+      .px-mob-15 {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
     }
   </style>
+  <style style="line-height: normal;">
+    body {
+      margin: 0px;
+      padding: 0px;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: none !important;
+      -ms-text-size-adjust: none !important;
+    }
+
+    * {
+      line-height: normal;
+    }
+
+    a[href^="x-apple-data-detectors:"] {
+      color: inherit;
+      text-decoration: inherit;
+    }
+
+    .spacer {
+      line-height: 1px !important;
+      font-size: 1px !important;
+    }
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    div {
+      display: inherit;
+    }
+
+    .text-white {
+      color: #ffffff;
+    }
+
+    .text-black {
+      color: #010101;
+    }
+  </style>
+  <!--[if (gte mso 9)|(IE)]>
+    <style type="text/css">
+        table {border-collapse: collapse;}
+    </style>
+    <![endif]-->
+  <!--[if gte mso 9]>
+    <xml>
+    <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+  <!--[if gt mso 14]>
+    <style type="text/css">
+        .height_01 {
+            font-size:1px;
+            line-height:1px;
+        }
+        span.MsoHyperlink {
+            mso-style-priority:100 !important;
+            color:inherit !important;
+            text-decoration:none !important;
+        }
+    </style>
+    <![endif]-->
 </head>
 
 <body style="-ms-text-size-adjust: none !important; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none !important; font-family: Arial, Helvetica, sans-serif; line-height: normal; margin: 0; padding: 0;">
@@ -64,26 +240,36 @@
     <tr style="line-height: normal;">
       <td align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
         <!-- Gmail Wrapper start-->
-        <table class="content-table" cellpadding="0" cellspacing="0" width="645" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+        <table class="content-table" cellpadding="0" cellspacing="0" width="600" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
           <tbody style="line-height: normal;">
             <!-- Pre headder start-->
             <tr style="line-height: normal;">
               <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                   <tr style="line-height: normal;">
-                    <td class="text-center" style="background-color: #7c22c9; box-sizing: border-box; color: white; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; text-align: center;">Pre header copy bootiful</td>
+                    <td class="text-center p-mob-5 rounded-bottom-8" style="background-color: #7c22c9; box-sizing: border-box; color: white; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; padding-top: 5px; text-align: center;">Pre header copy bootiful</td>
                   </tr>
-                  <tr style="line-height: normal;">
-                    <td style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="full-width" src="images/001-preheader-shadow.png" style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                  <tr class="hide" style="line-height: normal;">
+                    <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                        <tr style="line-height: normal;">
+                          <td valign="top" align="left" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-blue-rnd-crnr-bottom-left.png" style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                          <td class="spacer" align="center" valign="middle" bgcolor="#7c22c9" height="8" style="background-color: #7c22c9; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                          <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-blue-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                        </tr>
+                      </table>
+                    </td>
                   </tr>
                 </table>
               </td>
             </tr>
             <!-- Pre-header end-->
             <!-- Spacer 20/15 start-->
+            <tr class="hide" style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="5">&nbsp;</td>
+            </tr>
             <tr style="line-height: normal;">
               <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
-              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
             </tr>
             <!-- Spacer 20/15 end-->
             <!-- Hero block / white block one start-->
@@ -92,13 +278,13 @@
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                   <tbody style="line-height: normal;">
                     <!-- Rounded white block top start-->
-                    <tr style="line-height: normal;">
+                    <tr class="hide" style="line-height: normal;">
                       <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                         <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                           <tr style="line-height: normal;">
-                            <td align="left" valign="middle" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-top-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                            <td align="center" valign="middle" bgcolor="#ffffff" height="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;">&nbsp;</td>
-                            <td align="right" valign="middle" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-top-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                            <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-top-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                            <td class="spacer" align="center" valign="middle" bgcolor="#ffffff" height="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                            <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-top-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                           </tr>
                         </table>
                       </td>
@@ -106,15 +292,12 @@
                     <!-- Rounded white block top end-->
                     <!-- Rounded white block content start-->
                     <tr style="line-height: normal;">
-                      <td align="center" valign="middle" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                        <table class="contents" cellpadding="0" cellspacing="0" border="0" width="89.14728682%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                      <td class="rounded-8" align="center" valign="middle" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                        <table class="contents" cellpadding="0" cellspacing="0" border="0" width="88.3333333%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                           <tbody style="line-height: normal;">
                             <!-- Spacer 10/20 start-->
-                            <tr style="line-height: normal;">
-                              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
-                                &nbsp;
-                                &nbsp;
-                              </td>
+                            <tr class="hide" style="line-height: normal;">
+                              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="12">&nbsp;</td>
                             </tr>
                             <tr style="line-height: normal;">
                               <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
@@ -125,12 +308,15 @@
                               <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                 <table cellpadding="0" cellspacing="0" border="0" width="35%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                   <tr style="line-height: normal;">
-                                    <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull" src="images/001-company-logo.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                    <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull" src="images/001-company-logo.png" alt="Plus" style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                                   </tr>
                                 </table>
                               </td>
                             </tr>
                             <!-- Company logo end-->
+                            <tr class="hide" style="line-height: normal;">
+                              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="12">&nbsp;</td>
+                            </tr>
                             <!-- Spacer 20 start-->
                             <tr style="line-height: normal;">
                               <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
@@ -138,7 +324,7 @@
                             <!-- Spacer 20 end-->
                             <!-- Hero banner start-->
                             <tr style="line-height: normal;">
-                              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull" src="images/001-hero-banner.jpg" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull" src="images/001-hero-banner.jpg" alt="Hero Banner" style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                             </tr>
                             <!-- Hero banner end-->
                             <!-- Spacer 20 start-->
@@ -147,7 +333,7 @@
                             </tr>
                             <!-- Spacer 20 end-->
                             <tr style="line-height: normal;">
-                              <td class="text-center" valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 32px; font-weight: bold; line-height: normal; margin: 0 auto; text-align: center;">Lorem ipsum dolor sit amet consectetur adipiscing elit</td>
+                              <td class="text-center fz-mob-24" valign="top" align="center" style="box-sizing: border-box; font-family: 'Lato Black', Arial, Helvetica, sans-serif; font-size: 32px; font-weight: bold; line-height: normal; margin: 0 auto; text-align: center;">Lorem ipsum dolor sit amet consectetur adipiscing elit</td>
                             </tr>
                             <!-- spacer 15 start-->
                             <tr style="line-height: normal;">
@@ -155,7 +341,7 @@
                             </tr>
                             <!-- spacer 15 end-->
                             <tr style="line-height: normal;">
-                              <td class="text-center" valign="top" align="center" style="box-sizing: border-box; color: #6c6c6c; font-family: Arial,Helvetica, sans-serif; font-size: 20px; line-height: normal; margin: 0 auto; text-align: center;">Quisque viverra felis odio, convallis feugiat nulla placerat vitae. Vivamus ac viverra diam. Ut molestie velit ac facilisis semper.</td>
+                              <td class="text-center fz-mob-16" valign="top" align="center" style="box-sizing: border-box; color: #6c6c6c; font-family: 'Lato', Arial, Helvetica, sans-serif; font-size: 18px; line-height: normal; margin: 0 auto; text-align: center;">Quisque viverra felis odio, convallis feugiat nulla placerat vitae. Vivamus ac viverra diam. Ut molestie velit ac facilisis semper.</td>
                             </tr>
                             <!-- spacer 15 start-->
                             <tr style="line-height: normal;">
@@ -167,10 +353,30 @@
                               <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                 <table cellpadding="0" cellspacing="0" border="0" width="190" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                   <tbody style="line-height: normal;">
+                                    <tr class="hide" style="line-height: normal;">
+                                      <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                          <tr style="line-height: normal;">
+                                            <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-blue-rnd-crnr-top-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                            <td class="spacer" align="center" valign="middle" bgcolor="#7c22c9" height="8" style="background-color: #7c22c9; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                            <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-blue-rnd-crnr-top-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                          </tr>
+                                        </table>
+                                      </td>
+                                    </tr>
                                     <tr style="line-height: normal;">
-                                      <td width="10" align="left" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-big-btn-blue-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                                      <td class="text-center" bgcolor="#7c22c9" align="center" style="background-color: #7c22c9; box-sizing: border-box; color: #ffffff; font-family: Arial,Helvetica, sans-serif; font-size: 18px; font-weight: bold; line-height: normal; margin: 0 auto; text-align: center;">Learn more</td>
-                                      <td width="10" align="right" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-big-btn-blue-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                      <td class="rounded-8 text-center text-white" bgcolor="#7c22c9" align="center" style="background-color: #7c22c9; box-sizing: border-box; color: #ffffff; font-family: Arial,Helvetica, sans-serif; font-size: 18px; font-weight: bold; line-height: normal; margin: 0 auto; padding-bottom: 10px; padding-left: 10px; padding-right: 10px; padding-top: 10px; text-align: center;">Learn more</td>
+                                    </tr>
+                                    <tr class="hide" style="line-height: normal;">
+                                      <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                                        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                          <tr style="line-height: normal;">
+                                            <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-blue-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                            <td class="spacer" align="center" valign="middle" bgcolor="#7c22c9" height="8" style="background-color: #7c22c9; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                            <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-blue-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                          </tr>
+                                        </table>
+                                      </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -194,13 +400,13 @@
                     </tr>
                     <!-- Rounded white block content end-->
                     <!-- Rounded white block bottom start-->
-                    <tr style="line-height: normal;">
+                    <tr class="hide" style="line-height: normal;">
                       <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                         <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                           <tr style="line-height: normal;">
-                            <td align="left" valign="middle" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                            <td align="center" valign="middle" bgcolor="#ffffff" height="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;">&nbsp;</td>
-                            <td align="right" valign="middle" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                            <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                            <td class="spacer" align="center" valign="middle" bgcolor="#ffffff" height="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                            <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                           </tr>
                         </table>
                       </td>
@@ -223,13 +429,13 @@
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                   <tbody style="line-height: normal;">
                     <!-- Rounded white block top start-->
-                    <tr style="line-height: normal;">
+                    <tr class="hide" style="line-height: normal;">
                       <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                         <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                           <tr style="line-height: normal;">
-                            <td align="left" valign="middle" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-top-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                            <td align="center" valign="middle" bgcolor="#ffffff" height="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;">&nbsp;</td>
-                            <td align="right" valign="middle" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-top-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                            <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-top-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                            <td class="spacer" align="center" valign="middle" bgcolor="#ffffff" height="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                            <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-top-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                           </tr>
                         </table>
                       </td>
@@ -237,8 +443,8 @@
                     <!-- Rounded white block top end-->
                     <!-- Rounded white block content start-->
                     <tr style="line-height: normal;">
-                      <td align="center" valign="middle" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                        <table class="contents" cellpadding="0" cellspacing="0" border="0" width="89.14728682%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                      <td class="rounded-8" align="center" valign="middle" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                        <table class="contents" cellpadding="0" cellspacing="0" border="0" width="530" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                           <tbody style="line-height: normal;">
                             <!-- Spacer 20 start-->
                             <tr style="line-height: normal;">
@@ -252,7 +458,7 @@
                                   <tbody style="line-height: normal;">
                                     <tr style="line-height: normal;">
                                       <td width="10" align="left" valign="middle" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-multicolor-heading-decor-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                                      <td class="text-center" bgcolor="#ffffff" align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 25px; font-weight: bold; line-height: normal; margin: 0 auto; text-align: center;">Lorem ipsum dolor sit amet con</td>
+                                      <td class="text-center fz-mob-22" bgcolor="#ffffff" align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 25px; font-weight: bold; line-height: normal; margin: 0 auto; padding-left: 5px; padding-right: 5px; text-align: center;">Lorem ipsum dolor sit amet con</td>
                                       <td width="10" align="right" valign="middle" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-multicolor-heading-decor-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                                     </tr>
                                   </tbody>
@@ -271,41 +477,41 @@
                                 <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                   <tbody style="line-height: normal;">
                                     <tr style="line-height: normal;">
-                                      <td class="text-center coldrop" width="60%" align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; text-align: center;">
+                                      <td class="text-center coldrop" width="300" align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; text-align: center;">
                                         <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                           <tbody style="line-height: normal;">
                                             <tr style="line-height: normal;">
                                               <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                                 <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                                   <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                                                    <td class="hide" valign="top" align="center" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                                       <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                                         <tr style="line-height: normal;">
-                                                          <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-gray-rnd-crnr-top-left.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                          <td valign="top" align="left" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-gray-rnd-crnr-top-left.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                                                         </tr>
                                                         <tr style="line-height: normal;">
-                                                          <td class="spacer" valign="top" align="center" bgcolor="#d8d8d8" height="28" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                                          <td class="spacer" valign="top" align="center" bgcolor="#d8d8d8" height="27" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
                                                         </tr>
                                                       </table>
                                                     </td>
                                                     <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                                      <table class="rounded-top-8" cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                                         <tr style="line-height: normal;">
                                                           <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                                             <table cellpadding="0" cellspacing="0" border="0" width="94" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                                               <tr style="line-height: normal;">
-                                                                <td class="spacer" valign="top" align="center" height="10" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                                                <td class="spacer" valign="top" align="center" height="8" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
                                                               </tr>
                                                               <tr style="line-height: normal;">
-                                                                <td valign="middle" align="center" bgcolor="#ffffff" style="box-sizing: border-box; color: #7c22c9; font-family: Arial,Helvetica, sans-serif; font-size: 16px; font-weight: bold; line-height: normal; margin: 0 auto; vertical-align: middle;">$1 = 1 <img src="images/001-price-badge.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                                <td valign="middle" align="center" bgcolor="#ffffff" style="box-sizing: border-box; color: #7c22c9; font-family: Arial,Helvetica, sans-serif; font-size: 14px; font-weight: bold; line-height: normal; margin: 0 auto; vertical-align: middle;">$1 = 1 <img src="images/001-price-badge.png" alt style="border: none; display: inline-block; line-height: normal; vertical-align: sub;"></td>
                                                               </tr>
                                                               <tr style="line-height: normal;">
                                                                 <td valign="top" align="center" height="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                                                   <table cellpadding="0" cellspacing="0" border="0" width="94" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                                                     <tr style="line-height: normal;">
-                                                                      <td valign="top" align="left" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                                                                      <td class="spacer" valign="top" align="left" height="10" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
-                                                                      <td valign="top" align="right" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                                      <td valign="top" align="left" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                                      <td class="spacer" valign="top" align="left" height="8" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                                                      <td valign="top" align="right" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                                                                     </tr>
                                                                   </table>
                                                                 </td>
@@ -315,7 +521,7 @@
                                                         </tr>
                                                       </table>
                                                     </td>
-                                                    <td class="spacer" valign="top" align="center" width="10" bgcolor="#d8d8d8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                                    <td class="hide spacer" valign="top" align="center" width="10" bgcolor="#d8d8d8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
                                                   </tr>
                                                 </table>
                                               </td>
@@ -329,11 +535,11 @@
                                                 </table>
                                               </td>
                                             </tr>
-                                            <tr style="line-height: normal;">
+                                            <tr class="hide" style="line-height: normal;">
                                               <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                                 <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                                   <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                                                    <td valign="top" align="center" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                                       <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                                         <tr style="line-height: normal;">
                                                           <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-gray-rnd-crnr-bottom-left.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
@@ -355,29 +561,17 @@
                                           </tbody>
                                         </table>
                                       </td>
-                                      <td class="text-center coldrop" align="center" width="40%" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; text-align: center;">
+                                      <td class="text-center coldrop" align="center" width="230" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; text-align: center;">
                                         <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                           <tbody style="line-height: normal;">
-                                            <tr style="line-height: normal;">
-                                              <td class="spacer" valign="top" align="center" width="10" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
-                                              <td valign="top" align="center" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                  <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"></td>
-                                                  </tr>
-                                                </table>
-                                              </td>
-                                              <td valign="top" align="center" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                  <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightgray-rnd-crnr-top-right.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                                                  </tr>
-                                                </table>
-                                              </td>
+                                            <tr class="hide" style="line-height: normal;">
+                                              <td class="spacer" valign="top" align="left" width="8" bgcolor="#f8f4fc" style="background-color: #f8f4fc; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                              <td class="spacer" valign="top" align="center" bgcolor="#f8f4fc" width="214" style="background-color: #f8f4fc; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                              <td valign="top" align="right" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightgray-rnd-crnr-top-right.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                                             </tr>
                                             <tr style="line-height: normal;">
-                                              <td valign="top" align="center" colspan="3" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                              <td class="autoheight" valign="top" align="center" colspan="3" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                                                <table class="autoheight rounded-bottom-8" cellpadding="0" cellspacing="0" border="0" width="100%" height="234" align="center" bgcolor="#f8f4fc" style="background-color: #f8f4fc; empty-cells: hide; line-height: normal; margin: 0; padding: 0; padding-left: 10px; padding-right: 10px;">
                                                   <tr style="line-height: normal;">
                                                     <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
                                                   </tr>
@@ -391,10 +585,10 @@
                                                     </td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; color: #7c22c9; font-family: Arial,Helvetica, sans-serif; font-size: 32px; font-weight: bold; line-height: normal; margin: 0 auto;">30% off</td>
+                                                    <td valign="top" align="center" style="box-sizing: border-box; color: #7c22c9; font-family: 'Lato Black', Arial, Helvetica, sans-serif; font-size: 30px; font-weight: bold; line-height: normal; margin: 0 auto;">30% off</td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; color: #7c22c9; font-family: Arial,Helvetica, sans-serif; font-size: 20px; line-height: normal; margin: 0 auto;">food purchases on weekends with board gaming</td>
+                                                    <td class="text-black" valign="top" align="center" style="box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; font-size: 18px; line-height: normal; margin: 0 auto;">food purchases on weekends with board gaming</td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
                                                     <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
@@ -403,7 +597,14 @@
                                                     </td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
-                                                    <td valign="middle" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; vertical-align: middle;"><img src="images/001-calendar-icon.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"><span style="box-sizing: border-box; color: #6c6c6c; font-family: Arial,Helvetica, sans-serif; font-size: 10px; font-style: italic; line-height: normal; margin: 0;">Valid till 28th Nov</span></td>
+                                                    <td valign="middle" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; vertical-align: middle;">
+                                                      <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                                        <tr style="line-height: normal;">
+                                                          <td valign="middle" align="left" width="15" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-calendar-icon.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                          <td valign="middle" align="left" style="box-sizing: border-box; color: #6c6c6c; font-family: Arial,Helvetica, sans-serif; font-size: 10px; font-style: italic; line-height: normal; margin: 0 auto;">Valid till 28th Nov</td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
                                                     <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
@@ -430,22 +631,10 @@
                                                 </table>
                                               </td>
                                             </tr>
-                                            <tr style="line-height: normal;">
-                                              <td class="spacer" valign="top" align="center" width="10" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
-                                              <td valign="top" align="center" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                  <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"></td>
-                                                  </tr>
-                                                </table>
-                                              </td>
-                                              <td valign="top" align="center" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                  <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightgray-rnd-crnr-bottom-right.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                                                  </tr>
-                                                </table>
-                                              </td>
+                                            <tr class="hide" style="line-height: normal;">
+                                              <td class="spacer" valign="top" align="center" width="8" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                              <td class="spacer" valign="top" align="center" bgcolor="#f8f4fc" width="214" style="background-color: #f8f4fc; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                              <td valign="top" align="right" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightgray-rnd-crnr-bottom-right.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                                             </tr>
                                           </tbody>
                                         </table>
@@ -467,29 +656,17 @@
                                 <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                   <tbody style="line-height: normal;">
                                     <tr style="line-height: normal;">
-                                      <td class="text-center arrange-bottom" align="center" width="40%" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; text-align: center;">
+                                      <td class="text-center arrange-bottom" align="center" width="230" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; text-align: center;">
                                         <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                           <tbody style="line-height: normal;">
-                                            <tr style="line-height: normal;">
-                                              <td class="spacer" valign="top" align="center" width="10" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
-                                              <td valign="top" align="center" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                  <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"></td>
-                                                  </tr>
-                                                </table>
-                                              </td>
-                                              <td valign="top" align="center" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                  <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightgray-rnd-crnr-top-right.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                                                  </tr>
-                                                </table>
-                                              </td>
+                                            <tr class="hide" style="line-height: normal;">
+                                              <td class="spacer" valign="top" align="left" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;"><img src="images/001-lightgray-rnd-crnr-top-left.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                              <td class="spacer" valign="top" align="center" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                              <td class="spacer" valign="top" align="right" width="8" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
                                             </tr>
                                             <tr style="line-height: normal;">
                                               <td valign="top" align="center" colspan="3" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                                <table class="autoheight rounded-bottom-8" cellpadding="0" cellspacing="0" border="0" width="100%" height="234" align="center" bgcolor="#f8f4fc" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0; padding-left: 10px; padding-right: 10px;">
                                                   <tr style="line-height: normal;">
                                                     <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
                                                   </tr>
@@ -503,10 +680,10 @@
                                                     </td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; color: #7c22c9; font-family: Arial,Helvetica, sans-serif; font-size: 32px; font-weight: bold; line-height: normal; margin: 0 auto;">30% off</td>
-                                                  </tr>
-                                                  <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; color: #7c22c9; font-family: Arial,Helvetica, sans-serif; font-size: 20px; line-height: normal; margin: 0 auto;">food purchases on weekends with board gaming</td>
+                                                    <td class="text-black" valign="top" align="center" style="box-sizing: border-box; color: #010101; font-family: 'Lato Bold', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; line-height: normal; margin: 0 auto;">
+                                                      Add on Hong Kong Roast Chicken for just
+                                                      <span style="box-sizing: border-box; color: #7c22c9; font-family: 'Lato Bold', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; line-height: normal; margin: 0;">$1</span>
+                                                    </td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
                                                     <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
@@ -515,7 +692,64 @@
                                                     </td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
-                                                    <td valign="middle" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; vertical-align: middle;"><img src="images/001-calendar-icon.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"><span style="box-sizing: border-box; color: #6c6c6c; font-family: Arial,Helvetica, sans-serif; font-size: 10px; font-style: italic; line-height: normal; margin: 0;">Valid till 28th Nov</span></td>
+                                                    <td class="text-black" valign="middle" align="center" style="box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; font-size: 10px; font-weight: bold; line-height: normal; margin: 0 auto; vertical-align: middle;">Use promo code</td>
+                                                  </tr>
+                                                  <tr style="line-height: normal;">
+                                                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="5">&nbsp;</td>
+                                                  </tr>
+                                                  <tr style="line-height: normal;">
+                                                    <td valign="middle" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                                                      <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                                        <tr style="line-height: normal;">
+                                                          <td valign="middle" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-blue-heading-decor-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                          <td class="spacer" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;"></td>
+                                                          <td valign="middle" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                                                            <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                                              <tr class="hide" style="line-height: normal;">
+                                                                <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                                                                  <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                                                    <tr style="line-height: normal;">
+                                                                      <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightblue-rnd-crnr-top-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                                      <td class="spacer" align="center" valign="middle" bgcolor="#e4d5f2" height="8" style="background-color: #e4d5f2; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                                                      <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightblue-rnd-crnr-top-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                                    </tr>
+                                                                  </table>
+                                                                </td>
+                                                              </tr>
+                                                              <tr style="line-height: normal;">
+                                                                <td class="p-mob-10 fz-mob-18 rounded-8" valign="top" align="center" bgcolor="#e4d5f2" style="background-color: #e4d5f2; box-sizing: border-box; color: #7c22c9; font-family: 'Lato Black', Arial, Helvetica, sans-serif; font-size: 20px; font-weight: bold; line-height: normal; margin: 0 auto; padding-left: 10px; padding-right: 10px;">ABCXYZ</td>
+                                                              </tr>
+                                                              <tr class="hide" style="line-height: normal;">
+                                                                <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                                                                  <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                                                    <tr style="line-height: normal;">
+                                                                      <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightblue-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                                      <td class="spacer" align="center" valign="middle" bgcolor="#e4d5f2" height="8" style="background-color: #e4d5f2; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                                                      <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightblue-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                                    </tr>
+                                                                  </table>
+                                                                </td>
+                                                              </tr>
+                                                            </table>
+                                                          </td>
+                                                          <td class="spacer" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;"></td>
+                                                          <td valign="middle" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-blue-heading-decor-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
+                                                  </tr>
+                                                  <tr style="line-height: normal;">
+                                                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="5">&nbsp;</td>
+                                                  </tr>
+                                                  <tr style="line-height: normal;">
+                                                    <td valign="middle" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; vertical-align: middle;">
+                                                      <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                                        <tr style="line-height: normal;">
+                                                          <td valign="middle" align="left" width="15" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-calendar-icon.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                          <td valign="middle" align="left" style="box-sizing: border-box; color: #6c6c6c; font-family: Arial,Helvetica, sans-serif; font-size: 10px; font-style: italic; line-height: normal; margin: 0 auto;">Valid till 28th Nov</td>
+                                                        </tr>
+                                                      </table>
+                                                    </td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
                                                     <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
@@ -542,80 +776,44 @@
                                                 </table>
                                               </td>
                                             </tr>
-                                            <tr style="line-height: normal;">
-                                              <td class="spacer" valign="top" align="center" width="10" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
-                                              <td valign="top" align="center" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f8f4fc" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                  <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"></td>
-                                                  </tr>
-                                                </table>
-                                              </td>
-                                              <td valign="top" align="center" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                  <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightgray-rnd-crnr-bottom-right.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                                                  </tr>
-                                                </table>
-                                              </td>
+                                            <tr class="hide" style="line-height: normal;">
+                                              <td class="spacer" valign="top" align="left" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;"><img src="images/001-lightgray-rnd-crnr-bottom-left.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                              <td class="spacer" valign="top" align="center" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                              <td class="spacer" valign="top" align="right" width="8" bgcolor="#f8f4fc" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
                                             </tr>
                                           </tbody>
                                         </table>
                                       </td>
-                                      <td class="text-center arrange-top" width="60%" align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; text-align: center;">
+                                      <td class="text-center arrange-top" width="300" align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; text-align: center;">
                                         <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                           <tbody style="line-height: normal;">
-                                            <tr style="line-height: normal;">
+                                            <tr class="hide" style="line-height: normal;">
                                               <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                                 <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                                   <tr style="line-height: normal;">
                                                     <td class="spacer" valign="top" align="center" width="10" bgcolor="#d8d8d8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
-                                                    <td valign="top" align="center" bgcolor="#d8d8d8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                        <tr style="line-height: normal;">
-                                                          <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"></td>
-                                                        </tr>
-                                                      </table>
-                                                    </td>
-                                                    <td valign="top" align="center" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                        <tr style="line-height: normal;">
-                                                          <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-gray-rnd-crnr-top-right.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                                                        </tr>
-                                                      </table>
-                                                    </td>
+                                                    <td class="spacer" valign="top" align="center" bgcolor="#d8d8d8" width="282" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                                    <td class="spacer" valign="top" align="right" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;"><img src="images/001-gray-rnd-crnr-top-right.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                                                   </tr>
                                                 </table>
                                               </td>
                                             </tr>
                                             <tr style="line-height: normal;">
                                               <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                                                <table class="autoheight rounded-top-8" cellpadding="0" cellspacing="0" border="0" width="100%" height="238" align="center" bgcolor="#d8d8d8" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                                   <tr style="line-height: normal;">
-                                                    <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull" src="images/001-promo-placeholder-2.jpg" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                                    <td class="rounded-top-8" valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull rounded-top-8" src="images/001-promo-placeholder.jpg" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                                                   </tr>
                                                 </table>
                                               </td>
                                             </tr>
-                                            <tr style="line-height: normal;">
+                                            <tr class="hide" style="line-height: normal;">
                                               <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                                                 <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                                                   <tr style="line-height: normal;">
                                                     <td class="spacer" valign="top" align="center" width="10" bgcolor="#d8d8d8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp; </td>
-                                                    <td valign="top" align="center" bgcolor="#d8d8d8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                        <tr style="line-height: normal;">
-                                                          <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"></td>
-                                                        </tr>
-                                                      </table>
-                                                    </td>
-                                                    <td valign="top" align="center" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                                      <table cellpadding="0" cellspacing="0" border="0" width="100%" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                                        <tr style="line-height: normal;">
-                                                          <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-gray-rnd-crnr-bottom-right.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                                                        </tr>
-                                                      </table>
-                                                    </td>
+                                                    <td class="spacer" valign="top" align="center" bgcolor="#d8d8d8" width="282" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                                    <td class="spacer" valign="top" align="right" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;"><img src="images/001-gray-rnd-crnr-bottom-right.png " alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                                                   </tr>
                                                 </table>
                                               </td>
@@ -634,61 +832,19 @@
                               <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
                             </tr>
                             <!-- Spacer 20 end-->
-                            <tr style="line-height: normal;">
-                              <td class="text-center" valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 32px; font-weight: bold; line-height: normal; margin: 0 auto; text-align: center;">Lorem ipsum dolor sit amet consectetur adipiscing elit</td>
-                            </tr>
-                            <!-- spacer 15 start-->
-                            <tr style="line-height: normal;">
-                              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
-                            </tr>
-                            <!-- spacer 15 end-->
-                            <tr style="line-height: normal;">
-                              <td class="text-center" valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 20px; line-height: normal; margin: 0 auto; text-align: center;">Quisque viverra felis odio, convallis feugiat nulla placerat vitae. Vivamus ac viverra diam. Ut molestie velit ac facilisis semper.</td>
-                            </tr>
-                            <!-- spacer 15 start-->
-                            <tr style="line-height: normal;">
-                              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
-                            </tr>
-                            <!-- spacer 15 end-->
-                            <!-- blue cta start-->
-                            <tr style="line-height: normal;">
-                              <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
-                                <table cellpadding="0" cellspacing="0" border="0" width="190" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
-                                  <tbody style="line-height: normal;">
-                                    <tr style="line-height: normal;">
-                                      <td width="10" align="left" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-big-btn-blue-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                                      <td class="text-center" bgcolor="#7c22c9" align="center" style="background-color: #7c22c9; box-sizing: border-box; color: #ffffff; font-family: Arial,Helvetica, sans-serif; font-size: 18px; font-weight: bold; line-height: normal; margin: 0 auto; text-align: center;">Learn more</td>
-                                      <td width="10" align="right" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-big-btn-blue-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                            <!-- blue cta end-->
-                            <!-- spacer 20 start-->
-                            <tr style="line-height: normal;">
-                              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
-                                &nbsp;
-                                &nbsp;
-                              </td>
-                            </tr>
-                            <tr style="line-height: normal;">
-                              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
-                            </tr>
-                            <!-- spacer 20 end-->
                           </tbody>
                         </table>
                       </td>
                     </tr>
                     <!-- Rounded white block content end-->
                     <!-- Rounded white block bottom start-->
-                    <tr style="line-height: normal;">
+                    <tr class="hide" style="line-height: normal;">
                       <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                         <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                           <tr style="line-height: normal;">
-                            <td align="left" valign="middle" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
-                            <td align="center" valign="middle" bgcolor="#ffffff" height="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;">&nbsp;</td>
-                            <td align="right" valign="middle" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                            <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                            <td class="spacer" align="center" valign="middle" bgcolor="#ffffff" height="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                            <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-white-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                           </tr>
                         </table>
                       </td>
@@ -699,19 +855,336 @@
               </td>
             </tr>
             <!-- White block two end-->
+            <!-- Spacer 40/30 start-->
+            <tr class="hide" style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
+                &nbsp;
+                &nbsp;
+              </td>
+            </tr>
             <tr style="line-height: normal;">
-              <td style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="30">&nbsp;</td>
+            </tr>
+            <!-- Spacer 40/30 end-->
+            <!-- Footer banner start-->
+            <tr style="line-height: normal;">
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                   <tr style="line-height: normal;">
-                    <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">Table cell text</td>
+                    <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull" src="images/001-footer-banner.jpg" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                   </tr>
                 </table>
               </td>
             </tr>
+            <!-- Footer banner end-->
+            <!-- Spacer 40/30 start-->
+            <tr class="hide" style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
+                &nbsp;
+                &nbsp;
+              </td>
+            </tr>
+            <tr style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="30">&nbsp;</td>
+            </tr>
+            <!-- Spacer 40/30 end-->
           </tbody>
         </table>
       </td>
     </tr>
+    <!-- Footer white block start-->
+    <tr style="line-height: normal;">
+      <td valign="top" align="center" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+          <tbody style="line-height: normal;">
+            <!-- Spacer 30/20 start-->
+            <tr class="hide" style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
+                &nbsp;
+                &nbsp;
+              </td>
+            </tr>
+            <tr style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+            </tr>
+            <!-- Spacer 30/20 end-->
+            <!-- Payments and apps block start-->
+            <tr style="line-height: normal;">
+              <td class="px-mob-10" valign="top" align="center" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                  <tr style="line-height: normal;">
+                    <td class="coldrop" valign="middle" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                      <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                        <tr style="line-height: normal;">
+                          <td align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><a href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: inherit; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: none;"><img class="imgfull" src="images/001-cards.png" alt="Pay using cards" style="border: none; display: block; line-height: normal; vertical-align: sub;"></a></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="coldrop spacer" valign="middle" align="center" width="20" height="20" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                    <td class="coldrop" valign="middle" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                      <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                        <tr style="line-height: normal;">
+                          <td align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><a href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: inherit; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: none;"><img src="images/001-company-logo-bottom.png" alt="Plus" style="border: none; display: block; line-height: normal; vertical-align: sub;"></a></td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="coldrop spacer" valign="middle" align="center" width="10" height="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                    <td class="coldrop" valign="middle" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                      <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                        <tr style="line-height: normal;">
+                          <td align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><a href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: inherit; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: none;"><img src="images/001-google-play-icon.png" alt="Google play app" style="border: none; display: block; line-height: normal; vertical-align: sub;"></a></td>
+                        </tr>
+                        <!-- spacer 10 start-->
+                        <tr style="line-height: normal;">
+                          <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
+                            &nbsp;
+                            &nbsp;
+                          </td>
+                        </tr>
+                        <!-- spacer 10 end-->
+                        <tr style="line-height: normal;">
+                          <td align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><a href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: inherit; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: none;"><img src="images/001-appstore-icon.png" alt="AppleStore app" style="border: none; display: block; line-height: normal; vertical-align: sub;"></a></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Payments and apps block end-->
+            <!-- Spacer 30/20 start-->
+            <tr class="hide" style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
+                &nbsp;
+                &nbsp;
+              </td>
+            </tr>
+            <tr style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+            </tr>
+            <!-- Spacer 30/20 end-->
+            <!-- Footer CTAs block start-->
+            <tr style="line-height: normal;">
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <table class="full" cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                  <tr style="line-height: normal;">
+                    <td class="coldrop" align="center" valign="top" width="280" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                      <table class="px-mob-15" cellpadding="0" cellspacing="0" border="0" align="center" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                        <tr class="hide" style="line-height: normal;">
+                          <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                              <tr style="line-height: normal;">
+                                <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-top-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                <td class="spacer" align="center" valign="middle" bgcolor="#f2e8f9" height="8" style="background-color: #f2e8f9; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-top-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr style="line-height: normal;">
+                          <td class="p-mob-10 rounded-8 text-black" valign="top" align="center" bgcolor="#f2e8f9" style="background-color: #f2e8f9; box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; padding-left: 15px; padding-right: 15px;"><a class="text-black" href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; font-size: 12px; font-weight: bold; line-height: normal; margin: 0; text-decoration: none;">Current Promotions</a></td>
+                        </tr>
+                        <tr class="hide" style="line-height: normal;">
+                          <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                              <tr style="line-height: normal;">
+                                <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                <td class="spacer" align="center" valign="middle" bgcolor="#f2e8f9" height="8" style="background-color: #f2e8f9; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="spacer coldrop" valign="top" align="center" width="10" height="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;"></td>
+                    <td class="coldrop" align="center" valign="top" width="280" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                      <table class="px-mob-15" cellpadding="0" cellspacing="0" border="0" align="center" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                        <tr class="hide" style="line-height: normal;">
+                          <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                              <tr style="line-height: normal;">
+                                <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-top-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                <td class="spacer" align="center" valign="middle" bgcolor="#f2e8f9" height="8" style="background-color: #f2e8f9; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-top-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr style="line-height: normal;">
+                          <td class="p-mob-10 rounded-8 text-black" valign="top" align="center" bgcolor="#f2e8f9" style="background-color: #f2e8f9; box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; padding-left: 15px; padding-right: 15px;"><a class="text-black" href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; font-size: 12px; font-weight: bold; line-height: normal; margin: 0; text-decoration: none;">Plus! Benefits</a></td>
+                        </tr>
+                        <tr class="hide" style="line-height: normal;">
+                          <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                              <tr style="line-height: normal;">
+                                <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                <td class="spacer" align="center" valign="middle" bgcolor="#f2e8f9" height="8" style="background-color: #f2e8f9; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- spacer 10 start-->
+                  <tr style="line-height: normal;">
+                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
+                      &nbsp;
+                      &nbsp;
+                    </td>
+                  </tr>
+                  <!-- spacer 10 end-->
+                  <tr style="line-height: normal;">
+                    <td class="coldrop" align="center" valign="top" width="280" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                      <table class="px-mob-15" cellpadding="0" cellspacing="0" border="0" align="center" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                        <tr class="hide" style="line-height: normal;">
+                          <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                              <tr style="line-height: normal;">
+                                <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-top-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                <td class="spacer" align="center" valign="middle" bgcolor="#f2e8f9" height="8" style="background-color: #f2e8f9; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-top-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr style="line-height: normal;">
+                          <td class="p-mob-10 rounded-8 text-black" valign="top" align="center" bgcolor="#f2e8f9" style="background-color: #f2e8f9; box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; padding-left: 15px; padding-right: 15px;"><a class="text-black" href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; font-size: 12px; font-weight: bold; line-height: normal; margin: 0; text-decoration: none;">Update Your Profile</a></td>
+                        </tr>
+                        <tr class="hide" style="line-height: normal;">
+                          <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                              <tr style="line-height: normal;">
+                                <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                <td class="spacer" align="center" valign="middle" bgcolor="#f2e8f9" height="8" style="background-color: #f2e8f9; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                    <td class="spacer coldrop" valign="top" align="center" width="10" height="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;"></td>
+                    <td class="coldrop" align="center" valign="top" width="280" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                      <table class="px-mob-15" cellpadding="0" cellspacing="0" border="0" align="center" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                        <tr class="hide" style="line-height: normal;">
+                          <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                              <tr style="line-height: normal;">
+                                <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-top-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                <td class="spacer" align="center" valign="middle" bgcolor="#f2e8f9" height="8" style="background-color: #f2e8f9; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-top-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr style="line-height: normal;">
+                          <td class="p-mob-10 rounded-8 text-black" valign="top" align="center" bgcolor="#f2e8f9" style="background-color: #f2e8f9; box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; padding-left: 15px; padding-right: 15px;"><a class="text-black" href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; font-size: 12px; font-weight: bold; line-height: normal; margin: 0; text-decoration: none;">Update Your Profile</a></td>
+                        </tr>
+                        <tr class="hide" style="line-height: normal;">
+                          <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                              <tr style="line-height: normal;">
+                                <td align="left" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-bottom-left.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                                <td class="spacer" align="center" valign="middle" bgcolor="#f2e8f9" height="8" style="background-color: #f2e8f9; box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;">&nbsp;</td>
+                                <td align="right" valign="middle" width="8" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img src="images/001-lightpink-rnd-crnr-bottom-right.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Footer CTAs block end-->
+            <!-- Spacer 20 start-->
+            <tr style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+            </tr>
+            <!-- Spacer 20 end-->
+            <!-- Footer Social media block start-->
+            <tr style="line-height: normal;">
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                  <tr style="line-height: normal;">
+                    <td class="text-black" align="center" valign="middle" style="box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; font-size: 12px; font-weight: bold; line-height: normal; margin: 0 auto;">Connect with us</td>
+                    <td class="spacer" valign="middle" width="10" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;"></td>
+                    <td align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><a class="text-black" href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: none;"><img class="text-black" src="images/001-fb-icon.png" alt="Share us with Facebook" title="Share us with Facebook" style="border: none; color: #010101; display: block; font-size: 10px; line-height: normal; vertical-align: sub;"></a></td>
+                    <td class="spacer" valign="middle" width="5" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px !important; line-height: 1px !important; margin: 0 auto;"></td>
+                    <td align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><a class="text-black" href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: none;"><img class="text-black" src="images/001-instagram-icon.png" alt="Share us with Instagram" title="Share us with Instagram" style="border: none; color: #010101; display: block; font-size: 10px; line-height: normal; vertical-align: sub;"></a></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Footer Social media block end-->
+            <!-- spacer 40/20 start-->
+            <tr class="hide" style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+            </tr>
+            <tr style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+            </tr>
+            <!-- spacer 40/20 end-->
+            <!-- Footer text contents start-->
+            <tr style="line-height: normal;">
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <table class="px-mob-15 autowidth" cellpadding="0" cellspacing="0" border="0" align="center" width="550" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                  <tr style="line-height: normal;">
+                    <td align="center" valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><span class="text-black" style="box-sizing: border-box; color: #010101; display: block; font-family: 'Lato', Arial, Helvetica, sans-serif; font-size: 10px; line-height: 1.5; margin: 0;">Please do not reply to this email. For enquiries, email <a href="mailto:enquiries@ntuclink.com.sg" target="_blank" style="box-sizing: border-box; color: #7c22c9; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: underline;">enquiries@ntuclink.com.sg.</a> To unsubscribe, please click <a href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: #7c22c9; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: underline;">here.</a></span>
+                      <br style="line-height: normal;">
+                      <span class="text-black" style="box-sizing: border-box; color: #010101; display: block; font-family: 'Lato', Arial, Helvetica, sans-serif; font-size: 10px; line-height: 1.5; margin: 0;">Lost or damaged your card? Replace your card <a href="https://www.samplelink.com" target="_blank" style="box-sizing: border-box; color: #7c22c9; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0; text-decoration: underline;">here.</a></span>
+                      <br style="line-height: normal;">
+                      <span class="text-black" style="box-sizing: border-box; color: #010101; display: block; font-family: 'Lato', Arial, Helvetica, sans-serif; font-size: 10px; line-height: 1.5; margin: 0;">This is an email from NTUC Link Pte Ltd (Company Reg. No. 199801606C). Neither NTUC Link Pte Ltd nor any merchants or partners within the Plus! Programme accepts responsibility for the accuracy or completeness of the contents of this email as it has been transmitted over a public network. There may be links or hyperlinks within this email which will link you to websites maintained by third parties. NTUC Link is not responsible for, and disclaims liability for any content on third party websites. If you receive this email in error please accept our apology. If this is the case we would be obliged if you would contact the sender and then delete this email.</span>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Footer text contents end-->
+            <!-- spacer 40/20 start-->
+            <tr class="hide" style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+            </tr>
+            <tr style="line-height: normal;">
+              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+            </tr>
+            <!-- spacer 40/20 end-->
+          </tbody>
+        </table>
+      </td>
+    </tr>
+    <!-- Footer white block end-->
+    <!-- Footer Divider start-->
+    <tr style="line-height: normal;">
+      <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+        <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+          <tr style="line-height: normal;">
+            <td align="center" valign="top" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull" src="images/001-footer-seperator.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- Footer Divider end-->
+    <!-- Spacer 20 start-->
+    <tr bgcolor="#ffffff" style="line-height: normal;">
+      <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+    </tr>
+    <!-- Spacer 20 end-->
+    <!-- Footer background image start-->
+    <tr style="line-height: normal;">
+      <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+        <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+          <tr style="line-height: normal;">
+            <td align="center" valign="top" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull" src="images/001-footer-bg.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- Footer background image end-->
   </table>
 </body>
 
