@@ -51,7 +51,8 @@ var
   source = './',
   dest = devBuild ? 'builds/development/' : 'builds/production/';
 
-var htmlPaths = [dest + 'emails/two/template-two.html',
+var htmlPaths = [dest + 'emails/one/template-one.html',
+                 dest + 'emails/two/template-two.html',
                  dest + 'emails/three/template-three.html',
                  dest + 'emails/four/template-four.html',
                  dest + 'emails/five/template-five.html',
