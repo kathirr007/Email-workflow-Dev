@@ -9,6 +9,34 @@
 
 
   <style style="line-height: normal;">
+    @font-face {
+      font-family: 'Lato';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWg.eot);
+      src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWA.woff) format('woff'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Lato Bold';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHw.woff) format('woff'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: 'Lato Black';
+      font-style: normal;
+      font-weight: 900;
+      font-display: swap;
+      src: local('Lato Black'), local('Lato-Black'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh50XSwiPGQ.woff2) format('woff2'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh50XSwiPHw.woff) format('woff'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh50XSwiPHA.ttf) format('truetype');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
     @media screen and (max-width:576px) {
       .text-white {
         color: #ffffff;
@@ -216,7 +244,8 @@
           <tbody style="line-height: normal;">
             <!-- Pre headder start-->
             <tr style="line-height: normal;">
-              <td align="center" valign="middle" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- Preheader contentarea start-->
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                   <tr style="line-height: normal;">
                     <td class="text-center p-mob-5 rounded-bottom-8" style="background-color: #7c22c9; box-sizing: border-box; color: white; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto; padding-top: 5px; text-align: center;">Pre header copy bootiful</td>
@@ -233,20 +262,30 @@
                     </td>
                   </tr>
                 </table>
+                <!-- Preheader contentarea end-->
               </td>
             </tr>
             <!-- Pre-header end-->
             <!-- Spacer 20/15 start-->
-            <tr class="hide" style="line-height: normal;">
-              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="5">&nbsp;</td>
-            </tr>
             <tr style="line-height: normal;">
-              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- Spacer 20/15 contentarea block start-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                  <tr class="hide" style="line-height: normal;">
+                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="5">&nbsp;</td>
+                  </tr>
+                  <tr style="line-height: normal;">
+                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
+                  </tr>
+                </table>
+                <!-- Spacer 20/15 contentarea block end-->
+              </td>
             </tr>
             <!-- Spacer 20/15 end-->
             <!-- Hero block / white block one start-->
             <tr style="line-height: normal;">
               <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- Hero block / white block contentarea start-->
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                   <tbody style="line-height: normal;">
                     <!-- Rounded white block top start-->
@@ -386,18 +425,30 @@
                     <!-- Rounded white block bottom end-->
                   </tbody>
                 </table>
+                <!-- Hero block / white block contentarea end-->
               </td>
             </tr>
             <!-- Hero block / white block one end-->
             <!-- Spacer 20/15 start-->
             <tr style="line-height: normal;">
-              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
-              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- Spacer 20/15 contentarea block start-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                  <tr class="hide" style="line-height: normal;">
+                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="5">&nbsp;</td>
+                  </tr>
+                  <tr style="line-height: normal;">
+                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="15">&nbsp;</td>
+                  </tr>
+                </table>
+                <!-- Spacer 20/15 contentarea block end-->
+              </td>
             </tr>
             <!-- Spacer 20/15 end-->
             <!-- White block two start-->
             <tr style="line-height: normal;">
               <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- White block two contentarea start-->
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                   <tbody style="line-height: normal;">
                     <!-- Rounded white block top start-->
@@ -560,7 +611,7 @@
                                                     <td valign="top" align="center" style="box-sizing: border-box; color: #7c22c9; font-family: 'Lato Black', Arial, Helvetica, sans-serif; font-size: 30px; font-weight: bold; line-height: normal; margin: 0 auto;">30% off</td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
-                                                    <td class="text-black" valign="top" align="center" style="box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; font-size: 18px; line-height: normal; margin: 0 auto;">food purchases on weekends with board gaming</td>
+                                                    <td class="text-black" valign="top" align="center" style="box-sizing: border-box; color: #010101; font-family: Arial,Helvetica, sans-serif; font-size: 16px; line-height: normal; margin: 0 auto;">food purchases on weekends with board gaming</td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
                                                     <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
@@ -652,9 +703,9 @@
                                                     </td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
-                                                    <td class="text-black" valign="top" align="center" style="box-sizing: border-box; color: #010101; font-family: 'Lato Bold', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; line-height: normal; margin: 0 auto;">
+                                                    <td class="text-black" valign="top" align="center" style="box-sizing: border-box; color: #010101; font-family: 'Lato Bold', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; line-height: normal; margin: 0 auto;">
                                                       Add on Hong Kong Roast Chicken for just
-                                                      <span style="box-sizing: border-box; color: #7c22c9; font-family: 'Lato Bold', Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; line-height: normal; margin: 0;">$1</span>
+                                                      <span style="box-sizing: border-box; color: #7c22c9; font-family: 'Lato Bold', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; line-height: normal; margin: 0;">$1</span>
                                                     </td>
                                                   </tr>
                                                   <tr style="line-height: normal;">
@@ -824,45 +875,65 @@
                     <!-- Rounded white block bottom end-->
                   </tbody>
                 </table>
+                <!-- White block two contentarea end-->
               </td>
             </tr>
             <!-- White block two end-->
             <!-- Spacer 40/30 start-->
-            <tr class="hide" style="line-height: normal;">
-              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
-                &nbsp;
-                &nbsp;
-              </td>
-            </tr>
             <tr style="line-height: normal;">
-              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="30">&nbsp;</td>
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- Spacer 40/30 contentarea block start-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                  <tr class="hide" style="line-height: normal;">
+                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
+                      &nbsp;
+                      &nbsp;
+                    </td>
+                  </tr>
+                  <tr style="line-height: normal;">
+                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="30">&nbsp;</td>
+                  </tr>
+                </table>
+                <!-- Spacer 40/30 contentarea block end-->
+              </td>
             </tr>
             <!-- Spacer 40/30 end-->
             <!-- Footer banner start-->
             <tr style="line-height: normal;">
               <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- Footer banner contentarea start-->
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                   <tr style="line-height: normal;">
                     <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull" src="images/001-footer-banner.jpg" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                   </tr>
                 </table>
+                <!-- Footer banner contentarea end-->
               </td>
             </tr>
             <!-- Footer banner end-->
             <!-- Spacer 40/30 start-->
-            <tr class="hide" style="line-height: normal;">
-              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
-                &nbsp;
-                &nbsp;
-              </td>
-            </tr>
             <tr style="line-height: normal;">
-              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="30">&nbsp;</td>
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- Spacer 40/30 contentarea block start-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                  <tr class="hide" style="line-height: normal;">
+                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="10">
+                      &nbsp;
+                      &nbsp;
+                    </td>
+                  </tr>
+                  <tr style="line-height: normal;">
+                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="30">&nbsp;</td>
+                  </tr>
+                </table>
+                <!-- Spacer 40/30 contentarea block end-->
+              </td>
             </tr>
             <!-- Spacer 40/30 end-->
             <!-- Footer white block start-->
             <tr style="line-height: normal;">
               <td valign="top" align="center" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- Footer white block contentarea start-->
                 <table cellpadding="0" cellspacing="0" border="0" width="100%" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                   <tbody style="line-height: normal;">
                     <!-- Spacer 30/20 start-->
@@ -1123,33 +1194,46 @@
                     <!-- spacer 40/20 end-->
                   </tbody>
                 </table>
+                <!-- Footer white block contentarea end-->
               </td>
             </tr>
             <!-- Footer white block end-->
             <!-- Footer Divider start-->
             <tr style="line-height: normal;">
               <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- Footer Divider contentarea start-->
                 <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                   <tr style="line-height: normal;">
                     <td align="center" valign="top" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull" src="images/001-footer-seperator.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                   </tr>
                 </table>
+                <!-- Footer Divider contentarea end-->
               </td>
             </tr>
             <!-- Footer Divider end-->
             <!-- Spacer 20 start-->
-            <tr bgcolor="#ffffff" style="line-height: normal;">
-              <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+            <tr style="line-height: normal;">
+              <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- Spacer 20 contentarea start-->
+                <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
+                  <tr bgcolor="#ffffff" style="line-height: normal;">
+                    <td valign="top" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; font-size: 1px; line-height: 1px; margin: 0 auto;" height="20">&nbsp;</td>
+                  </tr>
+                </table>
+                <!-- Spacer 20 contentarea end-->
+              </td>
             </tr>
             <!-- Spacer 20 end-->
             <!-- Footer background image start-->
             <tr style="line-height: normal;">
               <td valign="top" align="center" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;">
+                <!-- Footer background image contentarea start-->
                 <table cellpadding="0" cellspacing="0" border="0" align="center" style="empty-cells: hide; line-height: normal; margin: 0; padding: 0;">
                   <tr style="line-height: normal;">
                     <td align="center" valign="top" bgcolor="#ffffff" style="box-sizing: border-box; font-family: Arial,Helvetica, sans-serif; line-height: normal; margin: 0 auto;"><img class="imgfull" src="images/001-footer-bg.png" alt style="border: none; display: block; line-height: normal; vertical-align: sub;"></td>
                   </tr>
                 </table>
+                <!-- Footer background image contentarea end-->
               </td>
             </tr>
             <!-- Footer background image end-->
