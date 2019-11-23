@@ -39,7 +39,7 @@ table{
     background-color: #7c22c9;
 }
 .bg-lightgray {
-    background-color: #f8f4fc;
+    background-color: #f6f4f9;
 }
 .bg-lightblue {
     background-color: #e4d5f2;
@@ -93,8 +93,11 @@ table{
 .promo-text {
     font-size: 16px;
 }
+.promo-text-02 {
+    font-size: 18px;
+}
 .cta {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
     &.big-cta {
         font-size: 18px;

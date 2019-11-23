@@ -30,7 +30,7 @@ table tr td h3 {
 }
 
 .bg-lightgray {
-  background-color: #f8f4fc;
+  background-color: #f6f4f9;
 }
 
 .bg-lightblue {
@@ -96,8 +96,12 @@ v
   font-size: 16px;
 }
 
+.promo-text-02 {
+  font-size: 18px;
+}
+
 .cta {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
 }
 

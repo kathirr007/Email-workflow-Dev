@@ -59,7 +59,7 @@ gulp.task('clean', function (done) {
 
 gulp.task('clean-images', function (done) {
     del([
-        dest + 'images/**/*'
+        dest + '**/images/**/*'
     ]);
     done();
 });

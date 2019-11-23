@@ -6,9 +6,9 @@ body {
   -ms-text-size-adjust: none !important;
 }
 
-* {
-  line-height: normal;
-}
+/* * {
+    line-height: normal;
+} */
 
 a[href^="x-apple-data-detectors:"] {
   color: inherit;
