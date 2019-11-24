@@ -1,0 +1,64 @@
+table(cellpadding="0" cellspacing="0" border="0" width="100%")
+    tbody
+        // Rounded white block top start
+        include ./_rounded-white-block-top.pug
+        // Rounded white block top end
+        // Rounded white block content start
+        tr
+            td.rounded-8(align="center" valign="middle" bgcolor="#ffffff")
+                table.contents(cellpadding="0" cellspacing="0" border="0" width="88.3333333%" align="center")
+                    tbody
+                        // Spacer 10/20 start
+                        tr.hide
+                            include ../../_partials/_height12.pug
+                        tr
+                            include ../../_partials/_height20.pug
+                        // Spacer 10/20 end
+                        // Company logo start
+                        tr
+                            td(align="center" valign="middle")
+                                table(cellpadding="0" cellspacing="0" border="0" width="35%" align="center")
+                                    tr
+                                        td(align="center" valign="middle")
+                                            img.imgfull(src="images/001-company-logo.png" alt="Plus")
+                        // Company logo end
+                        tr.hide
+                            include ../../_partials/_height12.pug
+                        // Spacer 20 start
+                        include ../../_partials/_spacer20.pug
+                        // Spacer 20 end
+                        // Hero banner start
+                        tr
+                            td(valign="top" align="center")
+                                img.imgfull(src="images/001-hero-banner.jpg" alt="Hero Banner")
+                        // Hero banner end
+                        // Spacer 20 start
+                        include ../../_partials/_spacer20.pug
+                        // Spacer 20 end
+                        tr
+                            td.hero-heading.text-center.ff-latoblack.fz-mob-24(valign="top" align="center")
+                                | Lorem ipsum dolor sit amet consectetur adipiscing elit
+                        // spacer 15 start
+                        tr
+                            include ../../_partials/_height15.pug
+                        // spacer 15 end
+                        tr
+                            td.hero-content.text-gray.text-center.ff-lato.fz-mob-16(valign="top" align="center").
+                                Quisque viverra felis odio, convallis feugiat nulla placerat vitae. Vivamus ac viverra diam. Ut molestie velit ac facilisis semper.
+                        // spacer 15 start
+                        tr
+                            include ../../_partials/_height15.pug
+                        // spacer 15 end
+                        // big blue cta start
+                        include ./_big-blue-cta.pug
+                        // big blue cta end
+                        // spacer 20 start
+                        tr.hide-mob
+                            include ../../_partials/_height10.pug
+                        tr.show-mob.hide-desktop
+                            include ../../_partials/_height20.pug
+                        // spacer 20 end
+        // Rounded white block content end
+        // Rounded white block bottom start
+        include ./_rounded-white-block-bottom.pug
+        // Rounded white block bottom end
