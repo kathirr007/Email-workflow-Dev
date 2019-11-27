@@ -204,7 +204,8 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
                 "#outlook",
                 ".module-*",
                 ".height_01",
-                "span.MsoHyperlink"
+                "span.MsoHyperlink",
+                ".fallback-font"
             ],
             removeHTMLComments: false
         }))
