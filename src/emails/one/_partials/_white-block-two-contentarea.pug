@@ -44,7 +44,7 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                         td.hide(valign="top" align="center" width="8")
                                                                             table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                                 tr
-                                                                                    td(valign="top" align="left" width="8")
+                                                                                    td.spacer(align="left" valign="middle" width="8" height="8")
                                                                                         img(src="images/001-gray-rnd-crnr-top-left.png " alt="")
                                                                                 tr
                                                                                     td.spacer(valign="top" align="center" bgcolor="#d8d8d8" height="27")
@@ -66,11 +66,11 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                                                 td(valign="top" align="center" height="10")
                                                                                                     table(cellpadding="0" cellspacing="0" border="0" width="94" align="center")
                                                                                                         tr
-                                                                                                            td(valign="top" align="left" width="8")
+                                                                                                            td.spacer(align="left" valign="middle" width="8" height="8")
                                                                                                                 img(src="images/001-white-rnd-crnr-bottom-left.png", alt="")
                                                                                                             td.spacer(valign="top" align="left" height="8" bgcolor="#ffffff")
                                                                                                                 | &nbsp;
-                                                                                                            td(valign="top" align="right" width="8")
+                                                                                                            td.spacer(align="right" valign="middle" width="8" height="8")
                                                                                                                 img(src="images/001-white-rnd-crnr-bottom-right.png", alt="")
 
                                                                         td.hide.spacer(valign="top" align="center" width="10" bgcolor="#d8d8d8")
@@ -105,9 +105,9 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                 | &nbsp;
                                                             td.spacer.bg-lightgray(valign="top" align="center" bgcolor="#f6f4f9" width="214")
                                                                 | &nbsp;
-                                                            td(valign="top" align="right" width="8")
+                                                            td.spacer(align="right" valign="middle" width="8" height="8")
                                                                 img(src="images/001-lightgray-rnd-crnr-top-right.png " alt="")
-                                                            //- td(valign="top" align="right" width="8")
+                                                            //- td.spacer(align="right" valign="middle" width="8" height="8")
                                                             //-     table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                             //-         tr
                                                         tr
@@ -121,10 +121,10 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                     tr
                                                                         include ../../_partials/_height10.pug
                                                                     tr
-                                                                        td.promo-offer-text.text-blue.ff-latoblack(valign="top" align="center" style="")
+                                                                        td.promo-offer-text.text-blue.fwb(valign="top" align="center" style="")
                                                                             | 30% off
                                                                     tr
-                                                                        td.promo-text.text-black.ff-latobold(valign="top" align="center" style="")
+                                                                        td.promo-text.text-black.fwb(valign="top" align="center" style="")
                                                                             | food purchases on weekends with board gaming
                                                                     tr
                                                                         include ../../_partials/_height10.pug
@@ -146,7 +146,7 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                 | &nbsp;
                                                             td.spacer.bg-lightgray(valign="top" align="center" bgcolor="#f6f4f9" width="214")
                                                                 | &nbsp;
-                                                            td(valign="top" align="right" width="8")
+                                                            td.spacer(align="right" valign="middle" width="8" height="8")
                                                                 img(src="images/001-lightgray-rnd-crnr-bottom-right.png " alt="")
 
                         // Promo one end
@@ -188,6 +188,11 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                             | &nbsp;
                                                                         td.spacer(valign="top" align="right" width="8")
                                                                             img(src="images/001-gray-rnd-crnr-bottom-right.png " alt="")
+                                                |<!--[if mso]>
+                                                |    </td>
+                                                |    <td valign="top">
+                                                |<![endif]-->
+                                                |<!--[if !(mso)]><!-->
                                                 table.full(cellpadding="0" cellspacing="0" border="0" width="230" align="left")
                                                     tbody
                                                         tr.hide
@@ -208,7 +213,7 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                     tr
                                                                         include ../../_partials/_height10.pug
                                                                     tr
-                                                                        td.promo-text.text-black.ff-latobold(valign="top" align="center" style="").
+                                                                        td.promo-text.text-black.fwb(valign="top" align="center" style="").
                                                                             Add on Hong Kong Roast Chicken for just
                                                                             <span class="text-blue promo-text ff-latobold">$1</span>
                                                                     tr
@@ -229,7 +234,7 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                                         table(cellpadding="0" cellspacing="0" border="0" align="center")
                                                                                             include ./_rounded-lightblue-block-top.pug
                                                                                             tr
-                                                                                                td.bg-lightblue.px-10.p-mob-10.ff-latoblack.text-blue.fz-mob-18.rounded-8(valign="top" align="center" bgcolor="#e4d5f2" style="font-size:20px;")
+                                                                                                td.bg-lightblue.px-10.p-mob-10.fwb.text-blue.fz-mob-18.rounded-8(valign="top" align="center" bgcolor="#e4d5f2" style="font-size:20px;")
                                                                                                     | ABCXYZ
                                                                                             include ./_rounded-lightblue-block-bottom.pug
                                                                                     td.spacer(valign="middle" width="8")
@@ -256,6 +261,12 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                 | &nbsp;
                                                             td.spacer(valign="top" align="right" width="8" bgcolor="#f6f4f9")
                                                                 | &nbsp;
+                                                |<!--<![endif]-->
+                                                |<!--[if mso]>
+                                                |    </td>
+                                                |<![endif]-->
+                                                |<!--[if !(mso)]><!-->
+                                                |<!--<![endif]-->
                                             // td.text-center.arrange-bottom.coldrop(align="center" width="230" valign="top")
                                             // td.text-center.arrange-top.coldrop(width="300" align="center" valign="top")
                                                 
