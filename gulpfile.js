@@ -6,6 +6,8 @@ const $ = require('gulp-load-plugins')({
 });
 // const pug = require('gulp-pug');
 const pkg = require('./package.json');
+const { crush } = require("html-crush");
+const comb = require('email-comb');
 const del = require('del');
 const uncss = require('uncss');
 const postuncss = require('postcss-uncss');
@@ -207,10 +209,16 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
                 "span.MsoHyperlink",
                 ".fallback-font"
             ],
-            removeHTMLComments: false
+            removeHTMLComments: devBuild ? false : true
         }))
         .pipe(htmlFilter2.restore)
-        .pipe($.beautify.html({ indent_size: 2 }))
+        .pipe($.if(devBuild, $.beautify.html({ indent_size: 2 })))
+        .pipe($.if(!devBuild, $.tap(function(file, t) {
+            // console.log(path.parse(file.path).dir.split('\\').pop())
+            const cleanedHtmlResult = crush(file.contents.toString(), { removeLineBreaks: true, removeIndentations: true })
+            file.contents = Buffer.from(cleanedHtmlResult.result)
+        })))
+        // .pipe($.beautify.html({ indent_size: 2 }))
 
         // put compiled HTML email templates inside dist folder
         .pipe(gulp.dest(dest + 'emails'))
