@@ -49,9 +49,9 @@ table{
 }
 .body-bg {
     background-color: #f6f6f6;
-}v
+}
 .bg-gray {
-    background-color: #f6f6f6;
+    background-color: #d8d8d8;
 }
 
 /* .ff-lato {
@@ -84,6 +84,8 @@ table{
 }
 .promo-preheader {
     font-size: 12px;
+    mso-line-height-rule:exactly;
+    line-height: 12px;
     font-weight: bold;
 }
 .promo-offer-text {

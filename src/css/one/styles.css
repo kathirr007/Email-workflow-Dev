@@ -45,9 +45,8 @@ table tr td h3 {
   background-color: #f6f6f6;
 }
 
-v
 .bg-gray {
-  background-color: #f6f6f6;
+  background-color: #d8d8d8;
 }
 
 /* .ff-lato {
@@ -84,6 +83,8 @@ v
 
 .promo-preheader {
   font-size: 12px;
+  mso-line-height-rule: exactly;
+  line-height: 12px;
   font-weight: bold;
 }
 
