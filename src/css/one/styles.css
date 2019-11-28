@@ -45,24 +45,23 @@ table tr td h3 {
   background-color: #f6f6f6;
 }
 
-v
 .bg-gray {
-  background-color: #f6f6f6;
+  background-color: #d8d8d8;
 }
 
-.ff-lato {
-  font-family: 'Lato', Arial, Helvetica, sans-serif;
+/* .ff-lato {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
 }
 
 .ff-latobold {
-  font-family: 'Lato Bold', Arial, Helvetica, sans-serif;
-  font-weight: bold;
+    font-family: 'Lato Bold', Arial, Helvetica, sans-serif;
+    font-weight: bold;
 }
 
 .ff-latoblack {
-  font-family: 'Lato Black', Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
+    font-family: 'Lato Black', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+} */
 
 .hero-heading {
   font-size: 32px;
@@ -84,6 +83,8 @@ v
 
 .promo-preheader {
   font-size: 12px;
+  mso-line-height-rule: exactly;
+  line-height: 12px;
   font-weight: bold;
 }
 

@@ -44,13 +44,13 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                         td.hide(valign="top" align="center" width="8")
                                                                             table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                                 tr
-                                                                                    td(valign="top" align="left" width="8")
+                                                                                    td.spacer(align="left" valign="middle" width="8" height="8")
                                                                                         img(src="images/001-gray-rnd-crnr-top-left.png " alt="")
                                                                                 tr
-                                                                                    td.spacer(valign="top" align="center" bgcolor="#d8d8d8" height="27")
+                                                                                    td.spacer.bg-gray(valign="top" align="center" bgcolor="#d8d8d8" height="30")
                                                                                         | &nbsp;
-                                                                        td(valign="top" align="center")
-                                                                            table.rounded-top-8(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8")
+                                                                        td.rounded-top-8.bg-gray(valign="top" align="center" bgcolor="#d8d8d8")
+                                                                            table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                                 tr
                                                                                     td(valign="top" align="center")
                                                                                         table(cellpadding="0" cellspacing="0" border="0" width="94" align="center")
@@ -66,29 +66,29 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                                                 td(valign="top" align="center" height="10")
                                                                                                     table(cellpadding="0" cellspacing="0" border="0" width="94" align="center")
                                                                                                         tr
-                                                                                                            td(valign="top" align="left" width="8")
+                                                                                                            td.spacer(align="left" valign="middle" width="8" height="8")
                                                                                                                 img(src="images/001-white-rnd-crnr-bottom-left.png", alt="")
                                                                                                             td.spacer(valign="top" align="left" height="8" bgcolor="#ffffff")
                                                                                                                 | &nbsp;
-                                                                                                            td(valign="top" align="right" width="8")
+                                                                                                            td.spacer(align="right" valign="middle" width="8" height="8")
                                                                                                                 img(src="images/001-white-rnd-crnr-bottom-right.png", alt="")
 
                                                                         td.hide(valign="top" align="center" width="8")
                                                                             table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                                 tr
-                                                                                    td(valign="top" align="left" width="8")
+                                                                                    td.spacer(align="left" valign="middle" width="8" height="8")
                                                                                         img(src="images/001-gray-rnd-crnr-top-right.png " alt="")
                                                                                 tr
-                                                                                    td.spacer(valign="top" align="center" bgcolor="#d8d8d8" height="27")
+                                                                                    td.bg-gray.spacer(valign="top" align="center" bgcolor="#d8d8d8" height="30")
                                                                                         | &nbsp;
                                                         tr
-                                                            td(valign="top" align="center" bgcolor="#d8d8d8")
-                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8")
+                                                            td.bg-gray(valign="top" align="center" bgcolor="#d8d8d8")
+                                                                table.bg-gray(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8")
                                                                     tr
                                                                         td(valign="top" align="center")
                                                                             img.imgfull(src="images/001-promo-placeholder-02.jpg", alt="")
                                                         tr
-                                                            td.autoheight.rounded-bottom-8(valign="middle" align="center" height="189" bgcolor="#f6f4f9")
+                                                            td.autoheight.rounded-bottom-8(valign="middle" align="center" height="200" bgcolor="#f6f4f9")
                                                                 table.px-10(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     tr
                                                                         include ../../_partials/_height15.pug
@@ -98,7 +98,7 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                     tr
                                                                         include ../../_partials/_height10.pug
                                                                     tr
-                                                                        td.promo-text.text-black.ff-latobold.fallback-font(valign="top" align="center" style="").
+                                                                        td.promo-text.text-black.fwb(valign="top" align="center" style="").
                                                                             Collect 8 stamps to redeem a 
                                                                             <span class="text-blue promo-text ff-latobold">free Tori Teriyaki Bento</span>
                                                                     tr
@@ -109,7 +109,7 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                                 tr
                                                                                     td(valign="middle" align="left" width="15")
                                                                                         img(src="images/001-calendar-icon.png " alt="")
-                                                                                    td.text-gray(valign="middle" align="left" style="font-style: italic; font-size: 10px;")
+                                                                                    td.text-gray(valign="middle" align="left" style="font-style: italic; font-size: 10px; mso-line-height-rule:exactly; line-height:10px;")
                                                                                         | Valid till 28th Nov
                                                                     tr
                                                                         include ../../_partials/_height10.pug
@@ -126,14 +126,14 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                     tbody
                                                         include ./_rounded-gray-block-top.pug
                                                         tr
-                                                            td(valign="middle" align="center")
-                                                                table.rounded-top-8.autoheight(cellpadding="0" cellspacing="0" border="0" width="100%" height="132" align="center" bgcolor="#d8d8d8")
+                                                            td.bg-gray.rounded-top-8.autoheight(valign="middle" align="center" height="135" bgcolor="#d8d8d8")
+                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     tr
                                                                         td(valign="top" align="center")
                                                                             img.rounded-top-8.imgfull(src="images/001-promo-placeholder-02.jpg", alt="")
                                                         tr
-                                                            td(valign="top" align="center")
-                                                                table.rounded-bottom-8.px-10(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#f6f4f9")
+                                                            td.rounded-bottom-8.autoheight(valign="top" align="center" bgcolor="#f6f4f9" height="200")
+                                                                table.px-10(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     tr
                                                                         include ../../_partials/_height15.pug
                                                                     tr
@@ -142,10 +142,10 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                     tr
                                                                         include ../../_partials/_height10.pug
                                                                     tr
-                                                                        td.promo-offer-text.text-blue.ff-latoblack.fallback-font(valign="top" align="center" style="")
+                                                                        td.promo-offer-text.text-blue.fwb(valign="top" align="center" style="")
                                                                             | 30% off
                                                                     tr
-                                                                        td.promo-text.text-black.ff-latobold.fallback-font(valign="top" align="center" style="")
+                                                                        td.promo-text.text-black.fwb(valign="top" align="center" style="")
                                                                             | food purchases on weekends with board gaming
                                                                     tr
                                                                         include ../../_partials/_height10.pug
@@ -155,7 +155,7 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                                 tr
                                                                                     td(valign="middle" align="left" width="15")
                                                                                         img(src="images/001-calendar-icon.png " alt="")
-                                                                                    td.text-gray(valign="middle" align="left" style="font-style: italic; font-size: 10px;")
+                                                                                    td.text-gray(valign="middle" align="left" style="font-style: italic; font-size: 10px; mso-line-height-rule:exactly; line-height:10px;")
                                                                                         | Valid till 28th Nov
                                                                     tr
                                                                         include ../../_partials/_height10.pug
