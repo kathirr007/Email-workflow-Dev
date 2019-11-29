@@ -8,6 +8,7 @@ const $ = require('gulp-load-plugins')({
 const pkg = require('./package.json');
 const { crush } = require("html-crush");
 const comb = require('email-comb');
+const wrapper = require('text-wrapper').wrapper;
 const del = require('del');
 const uncss = require('uncss');
 const postuncss = require('postcss-uncss');
@@ -215,7 +216,8 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
         .pipe($.if(devBuild, $.beautify.html({ indent_size: 2 })))
         .pipe($.if(!devBuild, $.tap(function(file, t) {
             // console.log(path.parse(file.path).dir.split('\\').pop())
-            const cleanedHtmlResult = crush(file.contents.toString(), { removeLineBreaks: true, removeIndentations: true })
+            const cleanedHtmlResult = crush(file.contents.toString(), { removeLineBreaks: false, removeIndentations: true, lineLengthLimit: 500 })
+            // const wrappedText = wrapper(cleanedHtmlResult.result, {wrapOn: 400})
             file.contents = Buffer.from(cleanedHtmlResult.result)
         })))
         // .pipe($.beautify.html({ indent_size: 2 }))
