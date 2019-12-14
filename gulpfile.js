@@ -211,17 +211,20 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
                 ".fallback-font",
                 ".fb-font"
             ],
-            removeHTMLComments: devBuild ? false : true
+            // removeHTMLComments: devBuild ? false : true // For HTML minification
+            removeHTMLComments: false
         }))
         .pipe(htmlFilter2.restore)
-        .pipe($.if(devBuild, $.beautify.html({ indent_size: 2 })))
-        .pipe($.if(!devBuild, $.tap(function(file, t) {
+        // Production html minification start
+        /* .pipe($.if(devBuild, $.beautify.html({ indent_size: 2 })))
+            .pipe($.if(!devBuild, $.tap(function(file, t) {
             // console.log(path.parse(file.path).dir.split('\\').pop())
             const cleanedHtmlResult = crush(file.contents.toString(), { removeLineBreaks: false, removeIndentations: true, lineLengthLimit: 500 })
             // const wrappedText = wrapper(cleanedHtmlResult.result, {wrapOn: 400})
             file.contents = Buffer.from(cleanedHtmlResult.result)
-        })))
-        // .pipe($.beautify.html({ indent_size: 2 }))
+        }))) */
+        // Production html minification end
+        .pipe($.beautify.html({ indent_size: 2 }))
 
         // put compiled HTML email templates inside dist folder
         .pipe(gulp.dest(dest + 'emails'))
