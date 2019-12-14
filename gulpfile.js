@@ -52,6 +52,11 @@ let resources = {
     watch : ['src/**/*.scss', 'src/**/*.pug', 'src/*.html' , 'src/**/*.html' ,'!src/**/*.css']
 }
 
+let fonts = {
+    in: source + 'src/fonts/**/*',
+    out: dest + 'emails/fonts/'
+};
+
 // Clean tasks
 gulp.task('clean', function (done) {
     del([
@@ -70,6 +75,13 @@ gulp.task('clean-images', function (done) {
 gulp.task('clean-css', function (done) {
     del([
         './src/css/**/*'
+    ]);
+    done();
+});
+
+gulp.task('clean-fonts', function (done) {
+    del([
+        dest + './emails/fonts/**/*'
     ]);
     done();
 });
@@ -109,6 +121,14 @@ gulp.task('images', function () {
             title: 'images out '
         }))
         .pipe(gulp.dest(images.out));
+});
+
+// copy fonts
+gulp.task('fonts', () => {
+    return gulp
+        .src(fonts.in)
+        .pipe($.newer(fonts.out))
+        .pipe(gulp.dest(fonts.out));
 });
 
 // compile sass to css
