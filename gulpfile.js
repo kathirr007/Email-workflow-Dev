@@ -151,7 +151,7 @@ gulp.task('compileSass', () => {
 
 // build complete HTML email template
 // compile sass (compileSass task) before running build
-gulp.task('buildHTML', gulp.series('compileSass', () => {
+gulp.task('buildHTML', gulp.series('fonts','compileSass', () => {
     var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
         htmlFilter2 = $.filter(['**/*.html', '!src/404.html', '!src/index.html'], { restore: true }),
         pugFilter = $.filter(['**/*.pug'], { restore: true });
@@ -229,7 +229,8 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
                 ".height_01",
                 "span.MsoHyperlink",
                 ".fallback-font",
-                ".fb-font"
+                ".fb-font",
+                ".p-o-10"
             ],
             // removeHTMLComments: devBuild ? false : true // For HTML minification
             removeHTMLComments: false
