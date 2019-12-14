@@ -1,3 +1,15 @@
+/* Mobile background styles start */
+
+.hero-bg-mob {
+  background-image: url(images/hero-banner-mob.png) !important;
+}
+
+.transparent-black-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile background styles ends */
+
 .text-white {
   color: #ffffff;
 }
@@ -97,6 +109,7 @@
 .bg-responsive {
   background-size: cover;
   object-fit: cover;
+  background-position: center;
 }
 
 .full-width {
@@ -157,6 +170,18 @@ body[yahoo] .top-banner {
   background-size: cover !important;
   background-position: 100% top !important;
 }
+
+/* Font styles start */
+
+.fwb-mob {
+  font-weight: bold !important;
+}
+
+.fwn-mob {
+  font-weight: normal !important;
+}
+
+/* Font styles end */
 
 /*Font size styles */
 

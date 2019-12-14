@@ -49,6 +49,14 @@ div {
   color: #010101;
 }
 
+.bg-white {
+  background-color: #ffffff;
+}
+
+.bg-black {
+  background-color: #010101;
+}
+
 /* Spacing styles */
 
 .p-0 {

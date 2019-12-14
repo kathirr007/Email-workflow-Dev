@@ -124,7 +124,7 @@ gulp.task('compileSass', () => {
         // on error, do not break the process
         .pipe($.sass().on('error', $.sass.logError))
         .pipe($.extractMediaQueries())
-
+        // .pipe($.rename({dirname: ''}))
         // output to `src/css` folder
         .pipe(gulp.dest('./src/css'));
 });
@@ -208,7 +208,8 @@ gulp.task('buildHTML', gulp.series('compileSass', () => {
                 ".module-*",
                 ".height_01",
                 "span.MsoHyperlink",
-                ".fallback-font"
+                ".fallback-font",
+                ".fb-font"
             ],
             removeHTMLComments: devBuild ? false : true
         }))
