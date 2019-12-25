@@ -1,0 +1,39 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="format-detection" content="telephone=no")
+        title Email template | Eight
+        //- import css/scss stylesheets
+        //- these file names will be replace by gulp with proper css file paths
+        //- link(rel="stylesheet", href="../../sass/bootstrap/bootstrap-utilities.css")
+        //- <link href="https://www.fontify.me/wf/f946b4b65d460845102e6e8994d8e699" rel="stylesheet" type="text/css">
+        link(rel="stylesheet", href="../../sass/basic-email-styles.scss")
+        link(rel="stylesheet", href="../../sass/basic.scss")
+        link(rel="stylesheet", href="../../sass/eight/style.scss")
+        //- embdedded css allowed, but not sass
+        include ./_partials/_custom-fonts-and-mobile-styles.pug
+        include ../_partials/_internal-and-conditional-styles.pug
+    body.bg-white
+        // Yahoo Wrapper start
+        table.wrapper-table.bg-white(cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#ffffff")
+            tr
+                td(align="center" valign="top")
+                    // Gmail Wrapper start
+                    table.full(cellpadding="0" cellspacing="0" width="640")
+                        tbody
+                            tr
+                                td(valign="top" align="center")
+                                    // Header block start
+                                    include ./_partials/_header-block.pug
+                                    // Header block end
+                                    // Hero block start
+                                    include ./_partials/_hero-block.pug
+                                    // Hero block end
+                                    // Product block start
+                                    include ./_partials/_product-block.pug
+                                    // Product block end
+                                    // Footer block start
+                                    include ./_partials/_footer-block.pug
+                                    // Footer block end
