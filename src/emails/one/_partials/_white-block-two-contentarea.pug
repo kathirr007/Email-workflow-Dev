@@ -5,7 +5,7 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
         // Rounded white block top end
         // Rounded white block content start
         tr
-            td.rounded-8(align="center" valign="middle" bgcolor="#ffffff" style="border-radius: 8px;")
+            td(align="center" valign="middle" bgcolor="#ffffff" style="border-radius: 8px;")
                 table.contents(cellpadding="0" cellspacing="0" border="0" width="530" align="center")
                     tbody
                         // Spacer 20 start
@@ -18,11 +18,11 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                 table(cellpadding="0" cellspacing="0" border="0" width="" align="center")
                                     tbody
                                         tr
-                                            td(width="10" align="left" valign="middle" bgcolor="#ffffff")
+                                            td(width="10" align="left" valign="middle")
                                                 img(src="images/001-multicolor-heading-decor-left.png" alt="")
-                                            td.text-center.block-heading.px-5.fz-mob-22(bgcolor="#ffffff" align="center" valign="middle")
+                                            td.text-center.block-heading.px-5.fz-mob-22(align="center" valign="middle")
                                                 | Lorem ipsum dolor sit amet con
-                                            td(width="10" align="right" valign="middle" bgcolor="#ffffff")
+                                            td(width="10" align="right" valign="middle")
                                                 img(src="images/001-multicolor-heading-decor-right.png" alt="")
                         // block heading end
                         // Spacer 20 start
@@ -48,15 +48,16 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                         img.d-inline-block(src="images/001-price-badge.png", alt="")
 
                                                                 tr
-                                                                    td(valign="top" align="center" height="10")
-                                                                        table(cellpadding="0" cellspacing="0" border="0" width="94" align="center")
-                                                                            tr
-                                                                                td.spacer(align="left" valign="middle" width="8" height="8")
-                                                                                    img(src="images/001-white-rnd-crnr-bottom-left.png", alt="")
-                                                                                td.spacer(valign="top" align="left" height="8" bgcolor="#ffffff")
-                                                                                    | &nbsp;
-                                                                                td.spacer(align="right" valign="middle" width="8" height="8")
-                                                                                    img(src="images/001-white-rnd-crnr-bottom-right.png", alt="")
+                                                                    td.spacer(valign="top" align="center" height="8" bgcolor="#ffffff" style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;")
+                                                                        |&nbsp;
+                                                                        //- table(cellpadding="0" cellspacing="0" border="0" width="94" align="center")
+                                                                        //-     tr
+                                                                        //-         td(align="left" valign="middle" width="8" height="8")
+                                                                        //-             img(src="images/001-white-rnd-crnr-bottom-left.png", alt="")
+                                                                        //-         td.spacer(valign="top" align="left" height="8" bgcolor="#ffffff")
+                                                                        //-             | &nbsp;
+                                                                        //-         td(align="right" valign="middle" width="8" height="8")
+                                                                        //-             img(src="images/001-white-rnd-crnr-bottom-right.png", alt="")
 
                                                     tr
                                                         td(valign="top" align="center")
@@ -193,11 +194,11 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                                 td.spacer(valign="middle" width="8")
                                                                                 td(valign="middle" align="center")
                                                                                     table(cellpadding="0" cellspacing="0" border="0" align="center")
-                                                                                        include ./_rounded-lightblue-block-top.pug
+                                                                                        //- include ./_rounded-lightblue-block-top.pug
                                                                                         tr
-                                                                                            td.bg-lightblue.px-10.p-mob-10.fwb.text-blue.fz-mob-18.rounded-8(valign="top" align="center" bgcolor="#e4d5f2" style="font-size:20px;")
+                                                                                            td.bg-lightblue.px-10.py-5.fwb.text-blue.fz-mob-18.rounded-8(valign="middle" align="center" bgcolor="#e4d5f2" style="font-size:20px; border-radius: 8px;")
                                                                                                 | ABCXYZ
-                                                                                        include ./_rounded-lightblue-block-bottom.pug
+                                                                                        //- include ./_rounded-lightblue-block-bottom.pug
                                                                                 td.spacer(valign="middle" width="8")
                                                                                 td(valign="middle" align="center")
                                                                                     img(src="images/001-blue-heading-decor-right.png", alt="")

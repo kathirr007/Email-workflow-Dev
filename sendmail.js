@@ -52,14 +52,14 @@ var
   dest = devBuild ? 'builds/development/' : 'builds/production/';
 
 var htmlPaths = [
-                    // dest + 'emails/one/template-one.html',
+                    dest + 'emails/one/template-one.html',
                     // dest + 'emails/two/template-two.html',
                     // dest + 'emails/three/template-three.html',
                     // dest + 'emails/four/template-four.html',
                     // dest + 'emails/five/template-five.html',
                     // dest + 'emails/six/template-six.html',
-                    dest + 'emails/seven/template-seven.html',
-                    dest + 'emails/eight/template-eight.html',
+                    // dest + 'emails/seven/template-seven.html',
+                    // dest + 'emails/eight/template-eight.html',
                  ],
     path,mailOptions;
     $(htmlPaths).each(function(i){

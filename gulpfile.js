@@ -7,11 +7,28 @@ const $ = require('gulp-load-plugins')({
 // const pug = require('gulp-pug');
 const pkg = require('./package.json');
 const { crush } = require("html-crush");
-const comb = require('email-comb');
+const { comb } = require('email-comb');
 const wrapper = require('text-wrapper').wrapper;
 const del = require('del');
 const uncss = require('uncss');
 const postuncss = require('postcss-uncss');
+const whitelist = [
+    ".ExternalClass",
+    ".ReadMsgBody",
+    ".yshortcuts",
+    ".Mso*",
+    ".maxwidth-apple-mail-fix",
+    "#outlook",
+    ".module-*",
+    ".height_01",
+    "span.MsoHyperlink",
+    ".fallback-font",
+    ".fb-font",
+    ".p-o-10",
+    ".px-o-10",
+    ".py-o-15",
+    ".d-o-block"
+];
 // const sass = require('gulp-sass');
 // const replace = require('gulp-replace');
 // const inlineCss = require('gulp-inline-css');
@@ -155,6 +172,13 @@ gulp.task('buildHTML', gulp.series('fonts','compileSass', () => {
     var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
         htmlFilter2 = $.filter(['**/*.html', '!src/404.html', '!src/index.html'], { restore: true }),
         pugFilter = $.filter(['**/*.pug'], { restore: true });
+    function cleanUnUsedCss(file, t){
+        const cleanedUnusedCss = comb(file.contents.toString(), {
+            whitelist,
+            removeHTMLComments: false
+        });
+        return file.contents = Buffer.from(cleanedUnusedCss.result)
+    }
     function replaceImagePath(file, input) {
         return input.replace(/(images\/)/g, `https://kathirr007.github.io/Email-workflow-Dev/${path.parse(file.path).dir.split('\\').pop()}/$1`)
         }
@@ -217,7 +241,7 @@ gulp.task('buildHTML', gulp.series('fonts','compileSass', () => {
             preserveMediaQueries: false
         }))
         // remove unused css
-        .pipe($.emailRemoveUnusedCss({
+        /* .pipe($.emailRemoveUnusedCss({
             whitelist: [
                 ".ExternalClass",
                 ".ReadMsgBody",
@@ -230,22 +254,28 @@ gulp.task('buildHTML', gulp.series('fonts','compileSass', () => {
                 "span.MsoHyperlink",
                 ".fallback-font",
                 ".fb-font",
-                ".p-o-10"
+                ".p-o-10",
+                ".px-o-10",
+                ".py-o-15",
+                ".d-o-block"
             ],
             // removeHTMLComments: devBuild ? false : true // For HTML minification
             removeHTMLComments: false
-        }))
+        })) */
         .pipe(htmlFilter2.restore)
+        .pipe($.tap(function(file, t){
+            cleanUnUsedCss(file, t)
+        }))
         // Production html minification start
         .pipe($.if(devBuild, $.beautify.html({ indent_size: 2 })))
             .pipe($.if(!devBuild, $.tap(function(file, t) {
             // console.log(path.parse(file.path).dir.split('\\').pop())
-            const cleanedHtmlResult = crush(file.contents.toString(), { removeLineBreaks: true, removeIndentations: true, lineLengthLimit: 500 })
+            const cleanedHtmlResult = crush(file.contents.toString(), { removeLineBreaks: false, removeIndentations: true, lineLengthLimit: 500 })
             // const wrappedText = wrapper(cleanedHtmlResult.result, {wrapOn: 400})
             file.contents = Buffer.from(cleanedHtmlResult.result)
         })))
         // Production html minification end
-        .pipe($.beautify.html({ indent_size: 2 }))
+        // .pipe($.beautify.html({ indent_size: 2 }))
 
         // put compiled HTML email templates inside dist folder
         .pipe(gulp.dest(dest + 'emails'))
