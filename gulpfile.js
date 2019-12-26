@@ -171,6 +171,7 @@ gulp.task('compileSass', () => {
 gulp.task('buildHTML', gulp.series('fonts', () => {
     var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
         htmlFilter2 = $.filter(['**/*.html', '!src/404.html', '!src/index.html'], { restore: true }),
+        lengthyHTMLFilter = $.filter(['**/*template-one.html'], { restore: true }),
         pugFilter = $.filter(['**/*.pug'], { restore: true });
     function cleanUnUsedCss(file, t){
         const cleanedUnusedCss = comb(file.contents.toString(), {
@@ -242,39 +243,20 @@ gulp.task('buildHTML', gulp.series('fonts', () => {
             preserveMediaQueries: false
         }))
         // remove unused css
-        /* .pipe($.emailRemoveUnusedCss({
-            whitelist: [
-                ".ExternalClass",
-                ".ReadMsgBody",
-                ".yshortcuts",
-                ".Mso*",
-                ".maxwidth-apple-mail-fix",
-                "#outlook",
-                ".module-*",
-                ".height_01",
-                "span.MsoHyperlink",
-                ".fallback-font",
-                ".fb-font",
-                ".p-o-10",
-                ".px-o-10",
-                ".py-o-15",
-                ".d-o-block"
-            ],
-            // removeHTMLComments: devBuild ? false : true // For HTML minification
-            removeHTMLComments: false
-        })) */
         .pipe($.tap(function(file, t){
             cleanUnUsedCss(file, t)
         }))
         .pipe(htmlFilter2.restore)
         // Production html minification start
         .pipe($.if(devBuild, $.beautify.html({ indent_size: 2 })))
-            .pipe($.if(!devBuild, $.tap(function(file, t) {
+        .pipe(lengthyHTMLFilter)
+        .pipe($.if(!devBuild, $.tap(function(file, t) {
             // console.log(path.parse(file.path).dir.split('\\').pop())
             const cleanedHtmlResult = crush(file.contents.toString(), { removeLineBreaks: false, removeIndentations: true, lineLengthLimit: 500 })
             // const wrappedText = wrapper(cleanedHtmlResult.result, {wrapOn: 400})
             file.contents = Buffer.from(cleanedHtmlResult.result)
         })))
+        .pipe(lengthyHTMLFilter.restore)
         // Production html minification end
         // .pipe($.beautify.html({ indent_size: 2 }))
 
