@@ -66,7 +66,7 @@ let images = {
 };
 
 let resources = {
-    watch : ['src/**/*.scss', 'src/**/*.pug', 'src/*.html' , 'src/**/*.html' ,'!src/**/*.css']
+    watch : ['src/**/*.pug', 'src/*.html' , 'src/**/*.html' ,'!src/**/*.css']
 }
 
 let fonts = {
@@ -168,7 +168,7 @@ gulp.task('compileSass', () => {
 
 // build complete HTML email template
 // compile sass (compileSass task) before running build
-gulp.task('buildHTML', gulp.series('fonts','compileSass', () => {
+gulp.task('buildHTML', gulp.series('fonts', () => {
     var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
         htmlFilter2 = $.filter(['**/*.html', '!src/404.html', '!src/index.html'], { restore: true }),
         pugFilter = $.filter(['**/*.pug'], { restore: true });
@@ -185,6 +185,7 @@ gulp.task('buildHTML', gulp.series('fonts','compileSass', () => {
     return gulp
         // import all email template (name ending with .template.pug) files from src/emails folder
         .src(['src/*.html', 'src/emails/**/*.html', 'src/emails/**/*.pug', '!**/_*', '!**/_partials/**/*'])
+        .pipe($.newer(dest + 'emails/**/*.html'))
 
         // replace `.scss` file paths from template with compiled file paths
         .pipe($.replace(new RegExp('\/sass\/(.+)\.scss', 'ig'), '/css/$1.css'))
@@ -262,10 +263,10 @@ gulp.task('buildHTML', gulp.series('fonts','compileSass', () => {
             // removeHTMLComments: devBuild ? false : true // For HTML minification
             removeHTMLComments: false
         })) */
-        .pipe(htmlFilter2.restore)
         .pipe($.tap(function(file, t){
             cleanUnUsedCss(file, t)
         }))
+        .pipe(htmlFilter2.restore)
         // Production html minification start
         .pipe($.if(devBuild, $.beautify.html({ indent_size: 2 })))
             .pipe($.if(!devBuild, $.tap(function(file, t) {
@@ -310,7 +311,7 @@ gulp.task(
         // gulp.watch(b2bhtml.watch, gulp.series('b2bhtml'));
         // gulp.watch(html.watch, gulp.series('html', 'reload'));
         gulp.watch(resources.watch, gulp.series('buildHTML', 'reload'));
-        // gulp.watch('src/**/*.pug', gulp.series('build', 'reload'));
+        gulp.watch('./src/sass/**/*.scss', gulp.series('compileSass', 'reload'));
         
         // image changes
         gulp.watch(images.in, gulp.series('images'));

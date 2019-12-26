@@ -14,9 +14,25 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
   <script>
-    $(document).ready(function() {});
+    $(document).ready(function() {
+
+    });
   </script>
   <style>
+    #container {
+      margin-left: 400px;
+      margin-top: 50px;
+    }
+
+    #to,
+    #subject,
+    #content,
+    #htmlContent {
+      font-family: "Segoe UI";
+      font-size: 18px;
+      width: 530px;
+    }
+
     h1 {
       font-family: "Segoe UI";
       font-size: 40px;
@@ -25,6 +41,15 @@
 
     p {
       color: green;
+    }
+
+    #send_email {
+      font-size: 15px;
+      font-family: "Segoe UI";
+    }
+
+    #message {
+      font-size: 18px;
     }
   </style>
   <script type="text/javascript">
@@ -61,9 +86,9 @@
 </head>
 
 <body>
-  <div>
-    <h1>HTML Email Templates</h1>
-    <ul>
+  <div class="container-fluid">
+    <h1 class="text-center text-info">HTML Email Templates</h1>
+    <ul class="template-lists mx-auto w-75">
       <li><a href="one/template-one.html">Template one</a></li>
       <li><a href="two/template-two.html">Template two</a></li>
       <li><a href="three/template-three.html">Template three</a></li>

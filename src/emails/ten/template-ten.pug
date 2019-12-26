@@ -4,14 +4,14 @@ html
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         meta(name="format-detection" content="telephone=no")
-        title Email template | Eight
+        title Email template | Ten
         //- import css/scss stylesheets
         //- these file names will be replace by gulp with proper css file paths
         //- link(rel="stylesheet", href="../../sass/bootstrap/bootstrap-utilities.css")
         //- <link href="https://www.fontify.me/wf/f946b4b65d460845102e6e8994d8e699" rel="stylesheet" type="text/css">
         link(rel="stylesheet", href="../../sass/basic-email-styles.scss")
         link(rel="stylesheet", href="../../sass/basic.scss")
-        link(rel="stylesheet", href="../../sass/eight/style.scss")
+        link(rel="stylesheet", href="../../sass/ten/style.scss")
         //- embdedded css allowed, but not sass
         include ./_partials/_custom-fonts-and-mobile-styles.pug
         include ../_partials/_internal-and-conditional-styles.pug
@@ -31,9 +31,15 @@ html
                                     // Hero block start
                                     include ./_partials/_hero-block.pug
                                     // Hero block end
-                                    // Product block start
-                                    include ./_partials/_product-block.pug
-                                    // Product block end
+                                    // Hero content block start
+                                    include ./_partials/_hero-content-block.pug
+                                    // Hero content block end
+                                    //instructions block start
+                                    include ./_partials/_instructions-block.pug
+                                    //instructions block end
+                                    // contact-us block start
+                                    include ./_partials/_contact-us-block.pug
+                                    // contact-us block end
                                     // Footer block start
                                     include ./_partials/_footer-block.pug
                                     // Footer block end
