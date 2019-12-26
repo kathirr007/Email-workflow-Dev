@@ -4,14 +4,14 @@ html
         meta(charset="utf-8")
         meta(name="viewport" content="width=device-width, initial-scale=1")
         meta(name="format-detection" content="telephone=no")
-        title Email template | Eight
+        title Email template | Nine
         //- import css/scss stylesheets
         //- these file names will be replace by gulp with proper css file paths
         //- link(rel="stylesheet", href="../../sass/bootstrap/bootstrap-utilities.css")
         //- <link href="https://www.fontify.me/wf/f946b4b65d460845102e6e8994d8e699" rel="stylesheet" type="text/css">
         link(rel="stylesheet", href="../../sass/basic-email-styles.scss")
         link(rel="stylesheet", href="../../sass/basic.scss")
-        link(rel="stylesheet", href="../../sass/eight/style.scss")
+        link(rel="stylesheet", href="../../sass/nine/style.scss")
         //- embdedded css allowed, but not sass
         include ./_partials/_custom-fonts-and-mobile-styles.pug
         include ../_partials/_internal-and-conditional-styles.pug
@@ -31,9 +31,27 @@ html
                                     // Hero block start
                                     include ./_partials/_hero-block.pug
                                     // Hero block end
-                                    // Product block start
-                                    include ./_partials/_product-block.pug
-                                    // Product block end
+                                    // Hero content block start
+                                    include ./_partials/_hero-content-block.pug
+                                    // Hero content block end
+                                    // image down arrow block start
+                                    include ./_partials/_image-down-arrow-block.pug
+                                    // image down arrow block end
+                                    // content banner block start
+                                    include ./_partials/_content-banner-block.pug
+                                    // content banner block end
+                                    // promo block start
+                                    include ./_partials/_promo-block.pug
+                                    // promo block end
+                                    // Product block 01 start
+                                    include ./_partials/_product-block-01.pug
+                                    // Product block 01 end
+                                    // Product block 02 start
+                                    include ./_partials/_product-block-02.pug
+                                    // Product block 02 end
+                                    // Product block 03 start
+                                    include ./_partials/_product-block-03.pug
+                                    // Product block 03 end
                                     // Footer block start
                                     include ./_partials/_footer-block.pug
                                     // Footer block end
