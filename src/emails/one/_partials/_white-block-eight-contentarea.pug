@@ -5,7 +5,7 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
         // Rounded white block top end
         // Rounded white block content start
         tr
-            td.rounded-top-8(align="center" valign="middle" bgcolor="#ffffff")
+            td.rounded-top-8.no-inline(align="center" valign="middle" bgcolor="#ffffff")
                 table.contents(cellpadding="0" cellspacing="0" border="0" width="530" align="center")
                     tbody
                         // Spacer 20 start
@@ -14,38 +14,35 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                         // Spacer 20 end
                         // block heading start
                         tr
-                            td(align="center" valign="middle")
+                            td.no-inline(align="center" valign="middle")
                                 table(cellpadding="0" cellspacing="0" border="0" width="" align="center")
                                     tbody
                                         tr
-                                            td(width="10" align="left" valign="middle")
+                                            td.no-inline(width="10" align="left" valign="middle")
                                                 img(src="images/001-multicolor-heading-decor-left.png" alt="")
                                             td.text-center.block-heading.px-5.fz-mob-22(align="center" valign="middle")
                                                 | Lorem ipsum dolor sit amet con
-                                            td(width="10" align="right" valign="middle")
+                                            td.no-inline(width="10" align="right" valign="middle")
                                                 img(src="images/001-multicolor-heading-decor-right.png" alt="")
                         // block heading end
                         // Spacer 20 start
                         include ../../_partials/_spacer20.pug
                         // Spacer 20 end
                         tr
-                            td(valign="top" align="center")
+                            td.no-inline(valign="top" align="center")
                                 table.full(cellpadding="0" cellspacing="0" border="0" width="530" align="center")
                                     tbody
                                         tr
-                                            td.text-center(align="center" valign="top")
+                                            td.no-inline.text-center(align="center" valign="top")
                                                 // Article section 03 contentarea start
                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                     tbody
                                                         tr
-                                                            td.coldrop(valign="middle" align="center" width="120")
-                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
-                                                                    tr
-                                                                        td(valign="top" align="center")
-                                                                            img.rounded-8(src="images/001-promo-placeholder-05.png", alt="")
-                                                            td.spacer.coldrop(valign="middle" align="center" width="20" height="20")
+                                                            td.no-inline.coldrop(valign="middle" align="center" width="120")
+                                                                img.rounded-8(src="images/001-promo-placeholder-05.png", alt="")
+                                                            td.no-inline.spacer.coldrop(valign="middle" align="center" width="20" height="20")
                                                                 | &nbsp;
-                                                            td.coldrop(valign="middle" align="center")
+                                                            td.no-inline.coldrop(valign="middle" align="center")
                                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     tr
                                                                         td.article-title.text-center(valign="top" align="center" style="font-size: 14px; font-weight: bold;")
@@ -56,14 +53,14 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                             | Suspendisse neque tortor consectetur
                                                                     include ../../_partials/_spacer10.pug
                                                                     tr
-                                                                        td.text-center(valign="middle" align="center" style="font-size: 18px;")
+                                                                        td.no-inline.text-center(valign="middle" align="center" style="font-size: 18px;")
                                                                             span.fwb(style="font-size: 18px;")
                                                                                 | $1 = 
                                                                             span.fwb.text-blue(style="font-size: 18px;")
                                                                                 | 4 LinkPoints
-                                                            td.spacer.coldrop(valign="middle" align="center" width="20" height="20")
+                                                            td.no-inline.spacer.coldrop(valign="middle" align="center" width="20" height="20")
                                                                 | &nbsp;
-                                                            td.coldrop(valign="middle" align="center")
+                                                            td.no-inline.coldrop(valign="middle" align="center")
                                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     include ./_blue-cta-2.pug
                                                 // Article section 03 contentarea end
@@ -71,33 +68,30 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                         include ../../_partials/_spacer20.pug
                                         // Spacer 20 end
         tr
-            td.bg-gray.spacer(valign="top" align="center" bgcolor="#f6f6f6" height="5")
+            td.no-inline.bg-gray.spacer(valign="top" align="center" bgcolor="#f6f6f6" height="5")
                 | &nbsp;
         tr
-            td(align="center" valign="middle" bgcolor="#ffffff")
+            td.no-inline(align="center" valign="middle" bgcolor="#ffffff")
                 table.contents(cellpadding="0" cellspacing="0" border="0" width="530" align="center")
                     tbody
                         // Spacer 20 start
                         include ../../_partials/_spacer20.pug
                         // Spacer 20 end
                         tr
-                            td(valign="top" align="center")
+                            td.no-inline(valign="top" align="center")
                                 table.full(cellpadding="0" cellspacing="0" border="0" width="530" align="center")
                                     tbody
                                         tr
-                                            td.text-center(align="center" valign="top")
+                                            td.no-inline.text-center(align="center" valign="top")
                                                 // Article section 04 contentarea start
                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                     tbody
                                                         tr
-                                                            td.coldrop(valign="middle" align="center" width="120")
-                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
-                                                                    tr
-                                                                        td(valign="top" align="center")
-                                                                            img.rounded-8(src="images/001-promo-placeholder-05.png", alt="")
-                                                            td.spacer.coldrop(valign="middle" align="center" width="20" height="20")
+                                                            td.no-inline.coldrop(valign="middle" align="center" width="120")
+                                                                img.rounded-8(src="images/001-promo-placeholder-05.png", alt="")
+                                                            td.no-inline.spacer.coldrop(valign="middle" align="center" width="20" height="20")
                                                                 | &nbsp;
-                                                            td.coldrop(valign="middle" align="center")
+                                                            td.no-inline.coldrop(valign="middle" align="center")
                                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     tr
                                                                         td.article-title.text-center(valign="top" align="center" style="font-size: 14px; font-weight: bold;")
@@ -108,14 +102,14 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                             | Suspendisse neque tortor consectetur
                                                                     include ../../_partials/_spacer10.pug
                                                                     tr
-                                                                        td.text-center(valign="middle" align="center" style="font-size: 18px;")
+                                                                        td.no-inline.text-center(valign="middle" align="center" style="font-size: 18px;")
                                                                             span.fwb(style="font-size: 18px;")
                                                                                 | $1 = 
                                                                             span.fwb.text-blue(style="font-size: 18px;")
                                                                                 | 4 LinkPoints
-                                                            td.spacer.coldrop(valign="middle" align="center" width="20" height="20")
+                                                            td.no-inline.spacer.coldrop(valign="middle" align="center" width="20" height="20")
                                                                 | &nbsp;
-                                                            td.coldrop(valign="middle" align="center")
+                                                            td.no-inline.coldrop(valign="middle" align="center")
                                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     include ./_blue-cta-2.pug
                                                 // Article section 04 contentarea end
@@ -123,33 +117,30 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                         include ../../_partials/_spacer20.pug
                                         // Spacer 20 end
         tr
-            td.bg-gray.spacer(valign="top" align="center" bgcolor="#f6f6f6" height="5")
+            td.no-inline.bg-gray.spacer(valign="top" align="center" bgcolor="#f6f6f6" height="5")
                 | &nbsp;
         tr
-            td.rounded-bottom-8(align="center" valign="middle" bgcolor="#ffffff")
+            td.no-inline.rounded-bottom-8(align="center" valign="middle" bgcolor="#ffffff")
                 table.contents(cellpadding="0" cellspacing="0" border="0" width="530" align="center")
                     tbody
                         // Spacer 20 start
                         include ../../_partials/_spacer20.pug
                         // Spacer 20 end
                         tr
-                            td(valign="top" align="center")
+                            td.no-inline(valign="top" align="center")
                                 table.full(cellpadding="0" cellspacing="0" border="0" width="530" align="center")
                                     tbody
                                         tr
-                                            td.text-center(align="center" valign="top")
+                                            td.no-inline.text-center(align="center" valign="top")
                                                 // Article section 05 contentarea start
                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                     tbody
                                                         tr
-                                                            td.coldrop(valign="middle" align="center" width="120")
-                                                                table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
-                                                                    tr
-                                                                        td(valign="top" align="center")
-                                                                            img.rounded-8(src="images/001-promo-placeholder-05.png", alt="")
-                                                            td.spacer.coldrop(valign="middle" align="center" width="20" height="20")
+                                                            td.no-inline.coldrop(valign="middle" align="center" width="120")
+                                                                img.rounded-8(src="images/001-promo-placeholder-05.png", alt="")
+                                                            td.no-inline.spacer.coldrop(valign="middle" align="center" width="20" height="20")
                                                                 | &nbsp;
-                                                            td.coldrop(valign="middle" align="center")
+                                                            td.no-inline.coldrop(valign="middle" align="center")
                                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     tr
                                                                         td.article-title.text-center(valign="top" align="center" style="font-size: 14px; font-weight: bold;")
@@ -165,9 +156,9 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                                 | $1 = 
                                                                             span.fwb.text-blue(style="font-size: 18px;")
                                                                                 | 4 LinkPoints
-                                                            td.spacer.coldrop(valign="middle" align="center" width="20" height="20")
+                                                            td.no-inline.spacer.coldrop(valign="middle" align="center" width="20" height="20")
                                                                 | &nbsp;
-                                                            td.coldrop(valign="middle" align="center")
+                                                            td.no-inline.coldrop(valign="middle" align="center")
                                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     include ./_blue-cta-2.pug
                                                 // Article section 05 contentarea end

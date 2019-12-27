@@ -38,7 +38,7 @@ a {
   text-decoration: none;
 }
 
-div {
+div:not(.no-inline) {
   display: inherit;
 }
 

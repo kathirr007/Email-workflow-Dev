@@ -176,7 +176,8 @@ gulp.task('buildHTML', gulp.series('fonts', () => {
     function cleanUnUsedCss(file, t){
         const cleanedUnusedCss = comb(file.contents.toString(), {
             whitelist,
-            removeHTMLComments: false
+            uglify: true,
+            removeHTMLComments: true
         });
         return file.contents = Buffer.from(cleanedUnusedCss.result)
     }

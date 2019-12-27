@@ -1,11 +1,16 @@
 table(cellpadding="0" cellspacing="0" border="0" width="100%")
     tbody
+        // Spacer 40/25 start
+        tr
+            td.pt-40.pt-mob-25.spacer.no-inline(valign="top" align="center")
+                |&nbsp;
+        // Spacer 40/25 end
         // Rounded white block top start
         //- include ./_rounded-white-block-top.pug
         // Rounded white block top end
         // Rounded white block content start
         tr
-            td(align="center" valign="middle" bgcolor="#ffffff" style="border-radius: 8px;")
+            td.no-inline(align="center" valign="middle" bgcolor="#ffffff" style="border-radius: 8px;")
                 table.contents(cellpadding="0" cellspacing="0" border="0" width="530" align="center")
                     tbody
                         // Spacer 20 start
@@ -14,31 +19,31 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                         // Spacer 20 end
                         // block heading start
                         tr
-                            td(align="center" valign="middle")
+                            td.no-inline(align="center" valign="middle")
                                 table(cellpadding="0" cellspacing="0" border="0" width="" align="center")
                                     tbody
                                         tr
-                                            td(width="10" align="left" valign="middle")
+                                            td.no-inline(width="10" align="left" valign="middle")
                                                 img(src="images/001-multicolor-heading-decor-left.png" alt="")
                                             td.text-center.block-heading.px-5.fz-mob-22(align="center" valign="middle")
                                                 | Lorem ipsum dolor sit amet con
-                                            td(width="10" align="right" valign="middle")
+                                            td.no-inline(width="10" align="right" valign="middle")
                                                 img(src="images/001-multicolor-heading-decor-right.png" alt="")
                         // block heading end
                         // Spacer 20 start
                         include ../../_partials/_spacer20.pug
                         // Spacer 20 end
                         tr
-                            td(valign="top" align="center")
+                            td.no-inline(valign="top" align="center")
                                 table.full(cellpadding="0" cellspacing="0" border="0" width="530" align="center")
                                     tbody
                                         tr
-                                            td.text-center.coldrop(width="250" align="center" valign="top")
+                                            td.no-inline.text-center.coldrop(width="250" align="center" valign="top")
                                                 // Promo three contentarea start
                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                     tbody
                                                         tr
-                                                            td(valign="top" align="center")
+                                                            td.no-inline(valign="top" align="center")
                                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     tr
                                                                         //- td.hide(valign="top" align="center" width="8")
@@ -49,13 +54,13 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                         //-         tr
                                                                         //-             td.spacer.bg-gray(valign="top" align="center" bgcolor="#d8d8d8" height="30")
                                                                         //-                 | &nbsp;
-                                                                        td.bg-gray(valign="top" align="center" bgcolor="#d8d8d8" style="border-top-left-radius: 8px; border-top-right-radius: 8px;")
+                                                                        td.no-inline.bg-gray(valign="top" align="center" bgcolor="#d8d8d8" style="border-top-left-radius: 8px; border-top-right-radius: 8px;")
                                                                             table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                                 tr
-                                                                                    td(valign="top" align="center")
+                                                                                    td.no-inline(valign="top" align="center")
                                                                                         table(cellpadding="0" cellspacing="0" border="0" width="94" align="center")
                                                                                             tr
-                                                                                                td.spacer(valign="top" align="center" height="8" bgcolor="#ffffff")
+                                                                                                td.no-inline.spacer(valign="top" align="center" height="8" bgcolor="#ffffff")
                                                                                                     | &nbsp;
                                                                                             tr
                                                                                                 td(valign="middle" align="center" bgcolor="#ffffff" style="font-weight:bold; font-size:14px; color: #7c22c9; vertical-align: middle;")
@@ -63,13 +68,13 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                                                     img.d-inline-block(src="images/001-price-badge.png", alt="")
 
                                                                                             tr
-                                                                                                td.spacer(valign="top" align="center" height="8" bgcolor="#ffffff" style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;")
+                                                                                                td.no-inline.spacer(valign="top" align="center" height="8" bgcolor="#ffffff" style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;")
                                                                                                     |&nbsp;
                                                                                                     //- table(cellpadding="0" cellspacing="0" border="0" width="94" align="center")
                                                                                                     //-     tr
                                                                                                     //-         td.spacer(align="left" valign="middle" width="8" height="8")
                                                                                                     //-             img(src="images/001-white-rnd-crnr-bottom-left.png", alt="")
-                                                                                                    //-         td.spacer(valign="top" align="left" height="8" bgcolor="#ffffff")
+                                                                                                    //-         td.no-inline.spacer(valign="top" align="left" height="8" bgcolor="#ffffff")
                                                                                                     //-             | &nbsp;
                                                                                                     //-         td.spacer(align="right" valign="middle" width="8" height="8")
                                                                                                     //-             img(src="images/001-white-rnd-crnr-bottom-right.png", alt="")
@@ -83,13 +88,13 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                         //-             td.bg-gray.spacer(valign="top" align="center" bgcolor="#d8d8d8" height="30")
                                                                         //-                 | &nbsp;
                                                         tr
-                                                            td.bg-gray(valign="top" align="center" bgcolor="#d8d8d8")
+                                                            td.no-inline.bg-gray(valign="top" align="center" bgcolor="#d8d8d8")
                                                                 table.bg-gray(cellpadding="0" cellspacing="0" border="0" width="100%" align="center" bgcolor="#d8d8d8")
                                                                     tr
-                                                                        td(valign="top" align="center")
+                                                                        td.no-inline(valign="top" align="center")
                                                                             img.imgfull(src="images/001-promo-placeholder-02.jpg", alt="")
                                                         tr
-                                                            td.autoheight(valign="middle" align="center" height="200" bgcolor="#f6f4f9" style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;")
+                                                            td.no-inline.autoheight(valign="middle" align="center" height="200" bgcolor="#f6f4f9" style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;")
                                                                 table.px-10(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     tr
                                                                         include ../../_partials/_height15.pug
@@ -105,10 +110,10 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                     tr
                                                                         include ../../_partials/_height10.pug
                                                                     tr
-                                                                        td(valign="middle" align="center" style="vertical-align: middle")
+                                                                        td.no-inline(valign="middle" align="center" style="vertical-align: middle")
                                                                             table(cellpadding="0" cellspacing="0" border="0" align="center")
                                                                                 tr
-                                                                                    td(valign="middle" align="left" width="15")
+                                                                                    td.no-inline(valign="middle" align="left" width="15")
                                                                                         img(src="images/001-calendar-icon.png " alt="")
                                                                                     td.text-gray(valign="middle" align="left" style="font-style: italic; font-size: 10px; mso-line-height-rule:exactly; line-height:10px;")
                                                                                         | Valid till 28th Nov
@@ -119,21 +124,21 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                         include ../../_partials/_height15.pug
                                                         //- include ./_rounded-lightgray-block-bottom.pug
                                                 // Promo three contentarea end
-                                            td.coldrop.spacer(valign="top" align="center" width="30" height="20")
+                                            td.no-inline.coldrop.spacer(valign="top" align="center" width="30" height="20")
                                                 | &nbsp;
-                                            td.text-center.coldrop(width="250" align="center" valign="top")
+                                            td.no-inline.text-center.coldrop(width="250" align="center" valign="top")
                                                 // Promo four contentarea start
                                                 table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                     tbody
                                                         //- include ./_rounded-gray-block-top.pug
                                                         tr
-                                                            td.bg-gray.autoheight(valign="middle" align="center" height="140" bgcolor="#d8d8d8" style="border-top-left-radius: 8px; border-top-right-radius: 8px;")
+                                                            td.no-inline.bg-gray.autoheight(valign="middle" align="center" height="140" bgcolor="#d8d8d8" style="border-top-left-radius: 8px; border-top-right-radius: 8px;")
                                                                 img.rounded-top-8.imgfull(src="images/001-promo-placeholder-02.jpg", alt="")
                                                                 //- table(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                 //-     tr
                                                                 //-         td(valign="top" align="center")
                                                         tr
-                                                            td.autoheight(valign="top" align="center" bgcolor="#f6f4f9" height="200" style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;")
+                                                            td.no-inline.autoheight(valign="top" align="center" bgcolor="#f6f4f9" height="200" style="border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;")
                                                                 table.px-10(cellpadding="0" cellspacing="0" border="0" width="100%" align="center")
                                                                     tr
                                                                         include ../../_partials/_height15.pug
@@ -151,10 +156,10 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
                                                                     tr
                                                                         include ../../_partials/_height10.pug
                                                                     tr
-                                                                        td(valign="middle" align="center" style="vertical-align: middle")
+                                                                        td.no-inline(valign="middle" align="center" style="vertical-align: middle")
                                                                             table(cellpadding="0" cellspacing="0" border="0" align="center")
                                                                                 tr
-                                                                                    td(valign="middle" align="left" width="15")
+                                                                                    td.no-inline(valign="middle" align="left" width="15")
                                                                                         img(src="images/001-calendar-icon.png " alt="")
                                                                                     td.text-gray(valign="middle" align="left" style="font-style: italic; font-size: 10px; mso-line-height-rule:exactly; line-height:10px;")
                                                                                         | Valid till 28th Nov
@@ -172,3 +177,8 @@ table(cellpadding="0" cellspacing="0" border="0" width="100%")
         // Rounded white block bottom start
         //- include ./_rounded-white-block-bottom.pug
         // Rounded white block bottom end
+        // Spacer 40/25 start
+        tr
+            td.pt-40.pt-mob-25.spacer.no-inline(valign="top" align="center")
+                |&nbsp;
+        // Spacer 40/25 end
