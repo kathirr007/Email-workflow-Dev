@@ -173,11 +173,11 @@ gulp.task('buildHTML', gulp.series('fonts', () => {
         htmlFilter2 = $.filter(['**/*.html', '!src/404.html', '!src/index.html'], { restore: true }),
         lengthyHTMLFilter = $.filter(['**/*template-one.html'], { restore: true }),
         pugFilter = $.filter(['**/*.pug'], { restore: true });
-    function cleanUnUsedCss(file, t){
+    function cleanUnUsedCss(file, t, uglify=false, rmvcmnts=false){
         const cleanedUnusedCss = comb(file.contents.toString(), {
             whitelist,
-            uglify: true,
-            removeHTMLComments: true
+            uglify: uglify,
+            removeHTMLComments: rmvcmnts
         });
         return file.contents = Buffer.from(cleanedUnusedCss.result)
     }
@@ -251,6 +251,9 @@ gulp.task('buildHTML', gulp.series('fonts', () => {
         // Production html minification start
         .pipe($.if(devBuild, $.beautify.html({ indent_size: 2 })))
         .pipe(lengthyHTMLFilter)
+        .pipe($.if(!devBuild, $.tap(function(file, t){
+            cleanUnUsedCss(file, t, true, true)
+        })))
         .pipe($.if(!devBuild, $.tap(function(file, t) {
             // console.log(path.parse(file.path).dir.split('\\').pop())
             const cleanedHtmlResult = crush(file.contents.toString(), { removeLineBreaks: false, removeIndentations: true, lineLengthLimit: 500 })

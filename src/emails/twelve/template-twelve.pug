@@ -1,0 +1,102 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="format-detection" content="telephone=no")
+        title Email template | Twelve
+        //- import css/scss stylesheets
+        //- these file names will be replace by gulp with proper css file paths
+        //- link(rel="stylesheet", href="../../sass/bootstrap/bootstrap-utilities.css")
+        //- <link href="https://www.fontify.me/wf/f946b4b65d460845102e6e8994d8e699" rel="stylesheet" type="text/css">
+        link(rel="stylesheet", href="../../sass/basic-email-styles.scss")
+        link(rel="stylesheet", href="../../sass/basic.scss")
+        link(rel="stylesheet", href="../../sass/twelve/style.scss")
+        //- embdedded css allowed, but not sass
+        include ./_partials/_custom-fonts-and-mobile-styles.pug
+        include ../_partials/_internal-and-conditional-styles.pug
+    body.bg-white
+        // Yahoo Wrapper start
+        table.wrapper-table.bg-white(cellspacing="0" cellpadding="0" border="0" width="100%" bgcolor="#ffffff")
+            tr
+                td(align="center" valign="top")
+                    // Gmail Wrapper start
+                    table.full(cellpadding="0" cellspacing="0" width="650")
+                        tbody
+                            tr
+                                td(valign="top" align="center")
+                                    // Header block start
+                                    include ./_partials/_header-block.pug
+                                    // Header block end
+                                    // Hero block start
+                                    include ./_partials/_hero-block.pug
+                                    // Hero block end
+                                    // Content block 01 start
+                                    include ./_partials/_content-block-01.pug
+                                    // Content block 01 end
+                                    // Product block 01 start
+                                    table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                        tbody
+                                            // Spacer 20 start
+                                            include ../_partials/_spacer20.pug
+                                            // Spacer 20 end
+                                            tr
+                                                td(valign='top' align='center')
+                                                    table.bg-lightgray.align-center.autowidth.px-mob-20(border='0' cellspacing='0' cellpadding='0' align='center' width="570" bgcolor="#f2f2f2")
+                                                        tr
+                                                            td.coldrop.p-20(valign="middle" align="center" width="150")
+                                                                table(cellpadding="0" cellspacing="0" border="0" align="center")
+                                                                    tr
+                                                                        td(valign="middle" align="center")
+                                                                            img(src="images/prod-img-01.png", alt="Phlorentin CF - 30ml")
+                                                            td.coldrop(valign="top" align="center" width="35" height="20")
+                                                                |&nbsp;
+                                                            td.coldrop(valign="top" align="center")
+                                                                table.align-center.autowidth(border='0' cellspacing='0' cellpadding='0' align='center')
+                                                                    tr
+                                                                        td(valign='top')
+                                                                            table.align-center.autowidth(border='0' cellspacing='0' cellpadding='0')
+                                                                                tbody
+                                                                                    tr
+                                                                                        td.text-darkblue.fb-font.fz-mob-20.text-center.ls-1(valign='top' align="left" style="font-size:22px; color: #010101; letter-spacing:2px; font-family:'futura', Arial, Helvetica, sans-serif; text-align: left;").
+                                                                                            Phlorentin CF - 30ml
+                                                                                    include ../_partials/_spacer5.pug
+                                                                                    tr
+                                                                                        td.text-darkblue.fb-font.fz-mob-16.text-center(valign='top' align="left" style="font-size:18px; color: #8d8d8d;font-family:'futura-bt-book', 'futura', Arial, Helvetica, sans-serif; text-align: left;").
+                                                                                            $3,590
+                                                                                    include ../_partials/_spacer5.pug
+                                                                                    tr
+                                                                                        td.text-center(valign='top' align="left")
+                                                                                            table.align-center(cellpadding="0" cellspacing="0" border="0" width="60")
+                                                                                                tbody
+                                                                                                    tr
+                                                                                                        td.bg-darkblue.spacer(valign="top" align="center" height="3" bgcolor="#2e9ebe")
+                                                                                                            |&nbsp;
+                                                                                    include ../_partials/_spacer10.pug
+                                                                                    tr
+                                                                                        td(valign='top' align="left")
+                                                                                            table(cellpadding="0" cellspacing="0" border="0" width="100%")
+                                                                                                tbody
+                                                                                                    tr
+                                                                                                        td.text-black.fb-font.text-center(valign='top' align="left" style="font-size:16px; color: #010101; font-family:'futura-lt-bt', 'futura', Arial, Helvetica, sans-serif; text-align: left;").
+                                                                                                            Suero antioxidante que proporciona mayor protección contra los rayos UVA-UVB y la contaminación.
+                                                                                                    include ../_partials/_spacer15.pug
+                                                                                                    tr
+                                                                                                        td.text-center(valign='top' align="left")
+                                                                                                            table.full(cellpadding="0" cellspacing="0" border="0")
+                                                                                                                tbody
+                                                                                                                    tr
+                                                                                                                        td(valign="top" align="left")
+                                                                                                                            // CTA start
+                                                                                                                            include ./_partials/_darkgreen-cta-with-icon.pug
+                                                                                                                            // CTA end
+                                            // Spacer 20 start
+                                            include ../_partials/_spacer20.pug
+                                            // Spacer 20 end
+                                    // Product block 01 end
+                                    // Product block start
+                                    include ./_partials/_product-block.pug
+                                    // Product block end
+                                    // Footer block start
+                                    include ./_partials/_footer-block.pug
+                                    // Footer block end
