@@ -60,9 +60,14 @@ var htmlPaths = [
                     // dest + 'emails/six/template-six.html',
                     // dest + 'emails/seven/template-seven.html',
                     // dest + 'emails/eight/template-eight.html',
-                    dest + 'emails/nine/template-nine.html',
-                    dest + 'emails/ten/template-ten.html',
-                    dest + 'emails/eleven/template-eleven.html',
+                    // dest + 'emails/nine/template-nine.html',
+                    // dest + 'emails/ten/template-ten.html',
+                    // dest + 'emails/eleven/template-eleven.html',
+                    // dest + 'emails/twelve/template-twelve.html',
+                    // dest + 'emails/thirteen/template-thirteen.html',
+                    // dest + 'emails/fourteen/template-fourteen.html',
+                    // dest + 'emails/fifteen/template-fifteen.html',
+                    dest + 'emails/sixteen/template-sixteen.html',
                  ],
     path,mailOptions;
     $(htmlPaths).each(function(i){
