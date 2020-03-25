@@ -66,7 +66,13 @@ let images = {
 };
 
 let resources = {
-    watch : ['src/**/*.pug', 'src/*.html' , 'src/**/*.html' ,'!src/**/*.css']
+    watch : ['src/**/*.pug', 'src/*.html' , 'src/**/*.html', '!**/landing pages/**/*' ,'!src/**/*.css']
+}
+
+let landingPages = {
+    in : ['src/landing pages/**/*'],
+    watch: ['src/landing pages/**/*.html'],
+    out: `${dest}/emails/landing pages`
 }
 
 let fonts = {
@@ -140,6 +146,23 @@ gulp.task('images', function () {
         .pipe(gulp.dest(images.out));
 });
 
+// landing pages
+gulp.task('landingPages', function () {
+    var htmlFilter = $.filter(['src/landing pages/*.html'], { restore: true });
+    return gulp.src(landingPages.in)
+        .pipe($.plumber())
+        .pipe(htmlFilter)
+        .pipe($.preprocess({
+            context: {
+                devBuild: devBuild,
+                author: pkg.author,
+                version: pkg.version
+            },
+        }))
+        .pipe(htmlFilter.restore)
+        .pipe(gulp.dest(landingPages.out));
+});
+
 // copy fonts
 gulp.task('fonts', () => {
     return gulp
@@ -186,7 +209,7 @@ gulp.task('buildHTML', gulp.series('fonts', () => {
         }
     return gulp
         // import all email template (name ending with .template.pug) files from src/emails folder
-        .src(['src/*.html', 'src/emails/**/*.html', 'src/emails/**/*.pug', '!**/_*', '!**/_partials/**/*'])
+        .src(['src/*.html', 'src/emails/**/*.html', 'src/emails/**/*.pug', '!**/landing pages/**/*', '!**/_*', '!**/_partials/**/*'])
         .pipe($.newer(dest + 'emails/**/*.html'))
 
         // replace `.scss` file paths from template with compiled file paths
@@ -297,6 +320,7 @@ gulp.task(
         // gulp.watch(b2bhtml.watch, gulp.series('b2bhtml'));
         // gulp.watch(html.watch, gulp.series('html', 'reload'));
         gulp.watch(resources.watch, gulp.series('buildHTML', 'reload'));
+        gulp.watch(landingPages.watch, gulp.series('landingPages', 'reload'));
         gulp.watch('./src/sass/**/*.scss', gulp.series('compileSass', 'reload'));
         
         // image changes
