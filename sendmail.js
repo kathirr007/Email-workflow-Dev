@@ -1,3 +1,4 @@
+require('dotenv').config()
 const nodemailer = require('nodemailer');
 const xoauth2 = require('xoauth2');
 var jsdom = require("jsdom");
@@ -13,16 +14,10 @@ var transporter = nodemailer.createTransport({
     auth: {
         type: 'OAuth2',
         user: 'kathirr007@gmail.com',
-        clientId: '374024780934-uad11adl7jai1tbdg1if3o9ojkrcnc9g.apps.googleusercontent.com',
-        clientSecret: '2SHHBPYE81fS7kEEvD_xDMM1',
-        refreshToken: '1/2W0GiRY6qIj3VTXGWlEHhpG3XY2pcGbG8IJDk97WwOQ',
-        accessToken: 'ya29.Il-bB5mPYoqAtVY-hv4KKULNZnewcb8jB7aqTXLrLGIPB6W8pElCGFoquMi-RiTe3cBj0ry1LYB3R3Skiok74PNtR70vbjriOz-2CjKJgpQ6yspNiljtu18i5K0L2dvh7g'
-        /* xoauth2: xoauth2.createXOAuth2Generator({
-            user: 'kathirr007@gmail.com',
-            clientId: '374024780934-uad11adl7jai1tbdg1if3o9ojkrcnc9g.apps.googleusercontent.com',
-            clientSecret: '2SHHBPYE81fS7kEEvD_xDMM1',
-            refreshToken: '1/2W0GiRY6qIj3VTXGWlEHhpG3XY2pcGbG8IJDk97WwOQ'
-        }) */
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET,
+        refreshToken: process.env.REFRESH_TOKEN,
+        accessToken: process.env.ACCESS_TOKEN
     }
 })
 

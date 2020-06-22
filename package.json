@@ -36,6 +36,7 @@
     },
     "dependencies": {
         "cross-env": "^6.0.3",
+        "dotenv": "^8.2.0",
         "email-comb": "^3.8.16",
         "global": "^4.4.0",
         "gulp-beautify": "^3.0.0",
