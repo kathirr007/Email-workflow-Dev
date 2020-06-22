@@ -69,7 +69,7 @@ var htmlPaths = [
                     // dest + 'emails/fifteen/template-fifteen.html',
                     // dest + 'emails/sixteen/template-sixteen.html',
                     // dest + 'emails/17/template-17.html',
-                    dest + 'emails/test/test.html',
+                    dest + 'emails/gmailIssues/clip-off-issue.html',
                  ],
     path,mailOptions;
     $(htmlPaths).each(function(i){
