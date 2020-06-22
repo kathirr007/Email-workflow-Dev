@@ -10,14 +10,6 @@ var $ = jQuery = require('jquery')(window);
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
-    /* auth: {
-        xoauth2: xoauth2.createXOAuth2Generator({
-            user: 'kathirr007@gmail.com',
-            clientId: '374024780934-uad11adl7jai1tbdg1if3o9ojkrcnc9g.apps.googleusercontent.com',
-            clientSecret: 'ZYq8WFtlCTTXGTeKdQ26PVc8',
-            refreshToken: '1/ga4TJEHaMUypgYHzZPiSNpE91JRHb-aUi--eDyeRr8M'
-        })
-    }, */
     auth: {
         type: 'OAuth2',
         user: 'kathirr007@gmail.com',
