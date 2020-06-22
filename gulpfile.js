@@ -205,7 +205,7 @@ gulp.task('buildHTML', gulp.series('fonts', () => {
         return file.contents = Buffer.from(cleanedUnusedCss.result)
     }
     function replaceImagePath(file, input) {
-        return input.replace(/(images\/)/g, `https://kathirr007.github.io/Email-workflow-Dev/${path.parse(file.path).dir.split('\\').pop()}/$1`)
+        return input.replace(/(src=")(images\/)/g, `$1https://kathirr007.github.io/Email-workflow-Dev/${path.parse(file.path).dir.split('\\').pop()}/$2`)
         }
     return gulp
         // import all email template (name ending with .template.pug) files from src/emails folder
