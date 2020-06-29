@@ -56,7 +56,9 @@ var htmlPaths = [
                     // dest + 'emails/fifteen/template-fifteen.html',
                     // dest + 'emails/sixteen/template-sixteen.html',
                     // dest + 'emails/17/template-17.html',
-                    dest + 'emails/gmailIssues/clip-off-issue.html',
+                    // dest + 'emails/gmailIssues/clip-off-issue.html',
+                    // dest + 'emails/gmailIssues/23-06-2020/CHARLOTTE INNO ONE BLOCK TEMPLATE.html',
+                    dest + 'emails/gmailIssues/23-06-2020/CHARLOTTE INNO ONE BLOCK TEMPLATE_Updated.html',
                  ],
     path,mailOptions;
     $(htmlPaths).each(function(i){

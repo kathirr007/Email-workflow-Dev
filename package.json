@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "gulp build",
         "build": "cross-env NODE_ENV=production gulp build",
+        "prod": "cross-env NODE_ENV=production gulp build",
         "watch": "gulp watch",
         "serveEmail": "node ./server.js",
         "sendTestMail": "cross-env NODE_ENV=production node ./sendmail.js",
@@ -45,6 +46,7 @@
         "gulp-file-include": "^2.1.0",
         "gulp-filter": "^6.0.0",
         "gulp-foreach": "^0.1.0",
+        "gulp-htmlmin": "^5.0.1",
         "gulp-if": "^3.0.0",
         "gulp-image": "^5.1.0",
         "gulp-newer": "^1.4.0",

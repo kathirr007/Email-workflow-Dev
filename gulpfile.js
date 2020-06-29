@@ -195,12 +195,15 @@ gulp.task('buildHTML', gulp.series('fonts', () => {
     var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
         htmlFilter2 = $.filter(['**/*.html', '!src/404.html', '!src/index.html'], { restore: true }),
         lengthyHTMLFilter = $.filter(['**/*template-one.html'], { restore: true }),
+        mailChimpFilter = $.filter(['**/gmailIssues/**/*Updated.html'], { restore: true }),
         pugFilter = $.filter(['**/*.pug'], { restore: true });
-    function cleanUnUsedCss(file, t, uglify=false, rmvcmnts=false){
+    function cleanUnUsedCss(file, t, uglify=false, rmvHTMLCmnts=false, rmvCSSCmnts=false, rmvIndent=false){
         const cleanedUnusedCss = comb(file.contents.toString(), {
             whitelist,
             uglify: uglify,
-            removeHTMLComments: rmvcmnts
+            removeHTMLComments: rmvHTMLCmnts,
+            removeCSSComments: rmvCSSCmnts,
+            removeIndentations: rmvIndent
         });
         return file.contents = Buffer.from(cleanedUnusedCss.result)
     }
@@ -275,7 +278,7 @@ gulp.task('buildHTML', gulp.series('fonts', () => {
         .pipe($.if(devBuild, $.beautify.html({ indent_size: 2 })))
         .pipe(lengthyHTMLFilter)
         .pipe($.if(!devBuild, $.tap(function(file, t){
-            cleanUnUsedCss(file, t, true, true)
+            cleanUnUsedCss(file, t, true, true, true)
         })))
         .pipe($.if(!devBuild, $.tap(function(file, t) {
             // console.log(path.parse(file.path).dir.split('\\').pop())
@@ -284,6 +287,18 @@ gulp.task('buildHTML', gulp.series('fonts', () => {
             file.contents = Buffer.from(cleanedHtmlResult.result)
         })))
         .pipe(lengthyHTMLFilter.restore)
+        .pipe(mailChimpFilter)
+        .pipe($.if(!devBuild, $.tap(function(file, t){
+            cleanUnUsedCss(file, t, false, false, false, true)
+        })))
+        // .pipe($.if(!devBuild, $.htmlmin({collapseWhitespace: true, maxLineLength: 500})))
+        .pipe($.if(!devBuild, $.tap(function(file, t) {
+            // console.log(path.parse(file.path).dir.split('\\').pop())
+            const cleanedHtmlResult = crush(file.contents.toString(), { removeLineBreaks: false, removeIndentations: true, lineLengthLimit: 500 })
+            // const wrappedText = wrapper(cleanedHtmlResult.result, {wrapOn: 400})
+            file.contents = Buffer.from(cleanedHtmlResult.result)
+        })))
+        .pipe(mailChimpFilter.restore)
         // Production html minification end
         // .pipe($.beautify.html({ indent_size: 2 }))
 
