@@ -58,7 +58,7 @@
         "gulp-resolve-path": "^1.0.5",
         "gulp-size": "^3.0.0",
         "gulp-tap": "^2.0.0",
-        "html-crush": "^1.9.14",
+        "html-crush": "^2.0.0",
         "jquery": "^3.4.1",
         "jsdom": "^15.2.0",
         "lazypipe": "^1.0.2",
