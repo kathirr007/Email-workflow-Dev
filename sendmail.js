@@ -39,7 +39,7 @@ var
   dest = devBuild ? 'builds/development/' : 'builds/production/';
 
 var htmlPaths = [
-                    dest + 'emails/one/template-one.html',
+                    // dest + 'emails/one/template-one.html',
                     // dest + 'emails/two/template-two.html',
                     // dest + 'emails/three/template-three.html',
                     // dest + 'emails/four/template-four.html',
@@ -58,7 +58,7 @@ var htmlPaths = [
                     // dest + 'emails/17/template-17.html',
                     // dest + 'emails/gmailIssues/clip-off-issue.html',
                     // dest + 'emails/gmailIssues/23-06-2020/CHARLOTTE INNO ONE BLOCK TEMPLATE.html',
-                    dest + 'emails/gmailIssues/23-06-2020/CHARLOTTE INNO ONE BLOCK TEMPLATE_Updated.html',
+                    // dest + 'emails/gmailIssues/23-06-2020/CHARLOTTE INNO ONE BLOCK TEMPLATE_Updated.html',
                     dest + 'emails/others/AE_Template7_20200718/index_updated.html',
                  ],
     path,mailOptions;
