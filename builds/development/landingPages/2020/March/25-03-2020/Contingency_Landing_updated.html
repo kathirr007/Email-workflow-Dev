@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<style>
+	html,
+	body {
+		margin: 0;
+		padding: 0px;
+		line-height: 1.3;
+	}
+
+	.fix {
+		position: absolute;
+		bottom: 0;
+		margin-right: 0 !important;
+	}
+
+	@import url('https://fonts.googleapis.com/css?family=Allerta&display=swap');
+	/*@font-face {
+    font-family: 'allerregular';
+    src: url('https://go.pardot.com/l/419392/2020-01-28/2jr98l/419392/139749/aller_rg_webfont.woff2') format('woff2'),
+         url('	https://go.pardot.com/l/419392/2020-01-28/2jr98j/419392/139747/aller_rg_webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'allerbold';
+    src: url('https://go.pardot.com/l/419392/2020-01-28/2jr98d/419392/139743/aller_bd_webfont.woff2') format('woff2'),
+         url('https://go.pardot.com/l/419392/2020-01-28/2jr98g/419392/139745/aller_bd_webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+	.section {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	.row {
+		width: 85%;
+		margin: auto;
+	}
+
+	.table {
+		display: table;
+		margin: 0 auto;
+	}
+
+	ul#horizontal-list {
+		list-style: none;
+		padding-top: 20px;
+	}
+
+	ul#horizontal-list li {
+		display: inline;
+	}
+
+	/* ======= 1st section ======*/
+	.section.topsec {
+		background: url() top left;
+		height: 100% !important;
+		background-size: cover !important;
+	}
+
+	.row .topsec {
+		height: 100%;
+	}
+
+	.logo {
+		margin-top: 2%;
+		overflow: hidden;
+		display: inline-block;
+	}
+
+	.mlogo {
+		display: none;
+	}
+
+	.logo img {
+		width: auto;
+	}
+
+	.pardotleft {
+		display: inline-block;
+		vertical-align: top;
+		width: 55%;
+		margin-top: 4%;
+	}
+
+
+	.pardotleft h1 {
+		font-size: 51px;
+		font-family: 'Allerta', sans-serif;
+		margin: 0;
+		padding: 0;
+		color: #555555;
+	}
+
+	.pardotleft p {
+		color: #333333;
+		font-size: 18px;
+		font-family: 'Allerta', sans-serif;
+		margin-top: 5%;
+		line-height: 30px;
+	}
+
+	p.interested {
+		font-size: 20px;
+	}
+
+	.leftbtn {
+		display: inline-block;
+		vertical-align: top;
+		width: 45%;
+		margin-left: 0;
+	}
+
+	.leftbtn button {
+		text-align: center;
+		background: #1BA6DF;
+		border-radius: 5px;
+		padding: 5% 0;
+		font-size: 25px;
+		font-family: 'Allerta', sans-serif;
+		margin-bottom: 10%;
+		text-decoration: none;
+		color: #fff;
+		border: none;
+		width: 100%;
+		cursor: pointer;
+	}
+
+	.rightbtn {
+		display: inline-block;
+		vertical-align: top;
+		width: 45%;
+	}
+
+	.rightbtn button {
+		text-align: center;
+		background: #a3cd3e;
+		border-radius: 5px;
+		padding: 5% 0;
+		font-size: 25px;
+		font-family: 'Allerta', sans-serif;
+		margin-left: 2%;
+		margin-bottom: 10%;
+		text-decoration: none;
+		color: #fff;
+		border: none;
+		width: 100%;
+		cursor: pointer;
+	}
+
+	button {
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
+	}
+
+	button:hover {
+		background-color: #006898;
+		color: white;
+	}
+
+	.pardotright {
+		display: inline-block;
+		vertical-align: bottom;
+		width: 40%;
+		margin-left: 4.5%;
+
+	}
+
+	.pardotright img {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+	}
+
+	.section.midsec {
+		background: url(https://go.frontstream.com/l/171682/2020-01-28/43k7ns/171682/115267/auction.png) left top;
+		padding: 5% 0;
+		background-size: cover;
+	}
+
+	.midsec h2 {
+		text-align: center;
+		color: #fff;
+		font-family: "allerbold", sans-serif;
+		font-size: 51px;
+		margin: 0;
+		line-height: 44px;
+		margin-bottom: 2%;
+	}
+
+	.midsec p {
+		font-family: 'Allerta', sans-serif;
+		color: #fff;
+		/* line-height: 30px; */
+		line-height: 1.5;
+		font-size: 20px;
+		margin-top: 4%;
+		padding: 0 11%;
+	}
+
+	.midsection {
+		color: #fff;
+		margin: auto;
+		padding: 0 5%;
+		margin-left: 35px;
+		list-style: disc;
+	}
+
+	.midsection p {
+		font-family: 'Allerta', sans-serif;
+		color: #fff;
+		/* line-height: 30px; */
+		line-height: 1.5;
+		font-size: 20px;
+		margin-top: 5%;
+		padding: 0;
+	}
+	.midsection li p{
+		padding: 0 10px;
+	}
+	.startbtn-head a {
+		text-align: center;
+		margin: 0 auto;
+		display: inline-block;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 5px;
+		padding: 10px 15px;
+		font-size: 26px;
+		line-height: normal;
+		font-family: 'Allerta', sans-serif;
+		margin-top: 3%;
+		margin-bottom: 50px;
+		margin-left: 0;
+		background: #51B848;
+		cursor: pointer;
+		max-width: 300px;
+	}
+
+	.startbtn-head a {
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
+	}
+
+	.startbtn-head:hover a {
+		background-color: #1BA6DF;
+		color: white;
+	}
+
+    .startbtn-below {
+        text-align: center;
+    }
+
+	.startbtn-below a {
+		text-align: center;
+		margin: 0 auto;
+		display: inline-block;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 5px;
+		padding: 10px 15px;
+		font-size: 26px;
+		line-height: normal;
+		font-family: 'Allerta', sans-serif;
+		margin-top: 3%;
+		background: #51B848;
+		cursor: pointer;
+		max-width: 300px;
+	}
+
+	.startbtn-below a {
+		-webkit-transition-duration: 0.4s;
+		transition-duration: 0.4s;
+	}
+
+	.startbtn-below:hover a {
+		background-color: #1BA6DF;
+		color: white;
+	}
+
+	.section.testisec {
+		background: url() top left;
+
+		background-size: cover;
+		padding: 5% 0;
+	}
+
+	.section.testisec h2 {
+		text-align: center;
+		color: #333333;
+		font-size: 51px;
+		font-family: "allerbold", sans-serif;
+		margin: 0;
+		padding: 0;
+	}
+
+	.testisec ul {
+		margin: 7% 0 0 0;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+		display: flex;
+	}
+
+	/*	
+.testisec ul li {
+	display: inline-block;  
+    border-radius: 400px;
+    height: 400px;
+    width: 400px;
+	vertical-align: top;
+	text-align: center;
+	background: url(https://go.frontstream.com/l/171682/2020-03-12/46nv5f/171682/121062/Blue_Banner_No_Lines.png) repeat;
+	font-size: 16px ;
+	margin: 10px;
+}
+*/
+	.testisec ul li {
+		display: inline-block;
+		border-radius: 400px;
+		height: 400px;
+		width: 400px;
+		vertical-align: top;
+		text-align: center;
+		background: url(https://go.frontstream.com/l/171682/2020-03-12/46nv5f/171682/121062/Blue_Banner_No_Lines.png) repeat;
+		font-size: 16px;
+		margin: 10px;
+	}
+
+	ul li {
+		font-size: 16px;
+	}
+
+
+	.testimg {
+		text-align: right;
+		margin: -57px 23px 0px 0px;
+	}
+
+	.testimg img {
+		width: 50%;
+		height: 50%;
+	}
+
+	.tstname {
+		font-family: 'Allerta', sans-serif;
+		font-size: 13px;
+		color: #333333;
+		margin-top: 20px;
+		line-height: 1.35;
+	}
+
+	.testisec ul li:last-child {
+		margin-right: 0;
+	}
+
+	.testisec ul li p {
+		padding: 0;
+		color: #fff;
+		font-size: 18px;
+		line-height: 1.35;
+		font-family: 'Allerta', sans-serif;
+	}
+
+	.privacy a {
+		text-align: center;
+		display: block;
+		margin-top: 75px;
+		margin-bottom: 0 !important;
+		color: #026b99;
+		font-size: 16px;
+		font-family: 'Allerta', sans-serif;
+	}
+
+	/*============ page 2=============*/
+	.section.bluebg {
+		background: url(https://go.frontstream.com/l/171682/2020-03-12/46nv5f/171682/121062/Blue_Banner_No_Lines.png) right top;
+		padding: 5% 0;
+		background-size: cover;
+	}
+
+	.testisec ul li .greencircl {
+		display: inline-block;
+		border-radius: 400px;
+		height: 400px;
+		width: 400px;
+		vertical-align: top;
+		text-align: center;
+		background: url(https://go.frontstream.com/l/171682/2020-01-28/43k7nz/171682/115275/green.png) repeat;
+		font-size: 16px;
+		margin: 10px;
+	}
+
+	ul li {
+		font-size: 16px;
+	}
+
+	.mob-cta-container {
+		text-align: center;
+		width: 70%;
+		margin: 20px auto 0;
+		display: none;
+	}
+
+	.mob-cta-container img {
+		width: 100%;
+		height: auto;
+	}
+	.pardotleft p {
+		line-height: 1.5;
+	}
+
+    form.form input.text {
+    -webkit-appearance: none !important;
+    border-radius: 0 !important;
+    }
+
+    form.form p.submit input[type="submit"] {
+    -webkit-appearance: none !important;
+    }
+
+	@media screen and (min-width: 1441px) {
+		.pardotleft h1 {
+			font-size: 51px;
+			line-height: 48px;
+		}
+
+		.pardotleft p {
+			/* line-height: 25px; */
+			font-size: 20px;
+		}
+
+		.midsec h2 {
+			text-align: center;
+			color: #fff;
+			font-family: "allerbold", sans-serif;
+			font-size: 51px;
+			margin: 0 10px;
+			line-height: 48px;
+			margin-bottom: 2%;
+			margin-top: 2%;
+		}
+
+		.midsec p {
+			font-family: 'Allerta', sans-serif;
+			color: #fff;
+			/* line-height: 25px; */
+			font-size: 25px;
+			padding: 0 5%;
+			text-align: left;
+			margin-top: 2%;
+		}
+
+		.startbtn-head a {
+			/* width: 230px; */
+			margin-left: 0;
+		}
+
+		.startbtn-below a {
+			/* width: 230px; */
+            max-width: unset;
+		}
+	}
+
+	@media screen and (max-width: 1440px) {
+		/* .pardotright img {
+			width: 100%;
+		} */
+		.section.topsec {
+			background: url() top left;
+			height: 100%;
+
+		}
+
+		.row .topsec {
+			height: 100%;
+		}
+
+		.pardotleft h1 {
+			font-size: 51px;
+			line-height: 48px;
+		}
+
+		.pardotleft p {
+			/* line-height: 25px; */
+			font-size: 20px;
+		}
+
+		.midsec h2 {
+			text-align: center;
+			color: #fff;
+			font-family: "allerbold", sans-serif;
+			font-size: 51px;
+			margin: 0 10px;
+			line-height: 48px;
+			margin-bottom: 2%;
+			margin-top: 2%;
+		}
+
+		.midsec p {
+			font-family: 'Allerta', sans-serif;
+			color: #fff;
+			/* line-height: 22px; */
+			font-size: 22px;
+			padding: 0 5%;
+			text-align: left;
+			margin-top: 2%;
+		}
+
+		.startbtn-head a {
+			/* width: 230px; */
+			margin-left: 0;
+		}
+
+		.startbtn-below a {
+			/* width: 230px; */
+		}
+
+		.testisec ul li {
+			display: inline-block;
+			border-radius: 350px;
+			height: 350px;
+			width: 350px;
+			vertical-align: top;
+			text-align: center;
+			background: url(https://go.frontstream.com/l/171682/2020-03-12/46nv5f/171682/121062/Blue_Banner_No_Lines.png) repeat;
+			margin: 10px;
+		}
+
+		.testisec ul li.greencircl {
+			display: inline-block;
+			border-radius: 350px;
+			height: 350px;
+			width: 350px;
+			vertical-align: top;
+			text-align: center;
+			background: url(https://go.frontstream.com/l/171682/2020-01-28/43k7nz/171682/115275/green.png) repeat;
+			margin: 10px;
+		}
+
+		.testisec ul li p {
+			padding: 0;
+			color: #fff;
+			font-size: 15px;
+			font-family: 'Allerta', sans-serif;
+		}
+
+		.testisec ul li:last-child {
+			margin-right: 10;
+		}
+
+		.tstname {
+			font-family: 'Allerta', sans-serif;
+			font-size: 12px;
+			color: #333333;
+			margin-top: 10px;
+		}
+	}
+
+	@media screen and (max-width: 1366px) {
+		.section .topsec {
+			background: url() top left;
+			height: 100%;
+
+		}
+
+		.row .topsec {
+			height: 100%;
+		}
+
+		.pardotleft h1 {
+			font-size: 51px;
+			line-height: 48px;
+		}
+
+		.pardotleft p {
+			/* line-height: 20px; */
+			font-size: 18px;
+		}
+
+		.midsec h2 {
+			text-align: center;
+			color: #fff;
+			font-family: "allerbold", sans-serif;
+			font-size: 51px;
+			margin: 0 10px;
+			line-height: 48px;
+			margin-bottom: 2%;
+			margin-top: 2%;
+		}
+
+		.midsec p {
+			font-family: 'Allerta', sans-serif;
+			color: #fff;
+			/* line-height: 20px; */
+			font-size: 18px;
+			padding: 0 3%;
+			text-align: left;
+			margin-top: 2%;
+		}
+
+		.startbtn-head a {
+			/* width: 230px; */
+			margin-left: 0;
+			font-size: 20px;
+		}
+
+		.startbtn-below a {
+			/* width: 230px; */
+			font-size: 20px;
+		}
+
+		p.interested {
+			font-size: 3vw;
+		}
+
+		.table {
+			display: table;
+			margin-right: 70px;
+		}
+
+		.testisec ul li {
+			display: inline-block;
+			border-radius: 320px;
+			height: 320px;
+			width: 320px;
+			vertical-align: top;
+			text-align: center;
+			background: url(https://go.frontstream.com/l/171682/2020-03-12/46nv5f/171682/121062/Blue_Banner_No_Lines.png) repeat;
+			margin: 10px;
+		}
+
+		.testisec ul li.greencircl {
+			display: inline-block;
+			border-radius: 320px;
+			height: 320px;
+			width: 320px;
+			vertical-align: top;
+			text-align: center;
+			background: url(https://go.frontstream.com/l/171682/2020-01-28/43k7nz/171682/115275/green.png) repeat;
+			margin: 10px;
+		}
+
+		.testisec ul li p {
+			padding: 0;
+			color: #fff;
+			font-size: 15px;
+			font-family: 'Allerta', sans-serif;
+		}
+
+		.testisec ul li:last-child {
+			margin-right: 10;
+		}
+
+		.tstname {
+			font-family: 'Allerta', sans-serif;
+			font-size: 12px;
+			color: #333333;
+			margin-top: 10px;
+		}
+	}
+
+	@media screen and (max-width: 1024px) {
+		.section.topsec {
+			background: url() top left;
+			height: 100%;
+
+		}
+
+		.row .topsec {
+			height: 100%;
+		}
+
+		.pardotleft h1 {
+			font-size: 51px;
+			line-height: 48px;
+		}
+
+		.pardotleft p {
+			color: #333333;
+			font-size: 2vw;
+			font-family: 'Allerta', sans-serif;
+			margin-top: 8%;
+			/* line-height: 30px; */
+
+		}
+
+		p.interested {
+			font-size: 3vw;
+		}
+
+		.table {
+			display: table;
+			margin-right: 70px;
+		}
+
+		.testisec ul li {
+			display: inline-block;
+			border-radius: 270px;
+			height: 270px;
+			width: 270px;
+			vertical-align: top;
+			text-align: center;
+			background: url(https://go.frontstream.com/l/171682/2020-03-12/46nv5f/171682/121062/Blue_Banner_No_Lines.png) repeat;
+			margin: 10px;
+		}
+
+		.testisec ul li.greencircl {
+			display: inline-block;
+			border-radius: 320px;
+			height: 320px;
+			width: 320px;
+			vertical-align: top;
+			text-align: center;
+			background: url(https://go.frontstream.com/l/171682/2020-01-28/43k7nz/171682/115275/green.png) repeat;
+			margin: 10px;
+		}
+
+		.testisec ul li p {
+			padding: 0;
+			color: #fff;
+			font-size: 13px;
+			font-family: 'Allerta', sans-serif;
+		}
+
+		.testisec ul li:last-child {
+			margin-right: 10;
+		}
+
+		.tstname {
+			font-family: 'Allerta', sans-serif;
+			font-size: 12px;
+			color: #333333;
+			margin-top: 10px;
+		}
+
+		.leftbtn button {
+			font-size: 20px;
+
+		}
+
+		.rightbtn button {
+			font-size: 20px;
+
+		}
+
+		.startbtn-head a {
+			font-size: 20px;
+			/* width: 200px; */
+
+		}
+
+		.startbtn-below a {
+			font-size: 20px;
+			/* width: 200px; */
+		}
+
+
+
+		@media only screen and (max-width: 600px) {
+			.mob-cta-container {
+				display: block;
+			}
+
+			.mob-cta-container a {
+				display: block;
+				width: 100%;
+				text-align: center;
+			}
+
+			.mlogo {
+				display: block;
+				width: 100% !important;
+			}
+
+			.dlogo {
+				display: none;
+			}
+
+			.row {
+				width: 100%;
+				margin: auto;
+			}
+
+			.logo {
+				margin-top: 0%;
+			}
+
+			.pardotleft {
+				display: inline-block;
+				vertical-align: top;
+				width: 100%;
+				text-align: center;
+			}
+
+			.pardotleft h1 {
+				font-size: 30px;
+				line-height: 1;
+				padding: 0 10px;
+			}
+
+			.pardotleft p {
+				font-size: 4vw;
+				/* line-height: 22px; */
+				padding: 0 4%;
+				text-align: left;
+			}
+
+			.startbtn-head a {
+				text-align: center;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 25px;
+				/* width: 41%; */
+			}
+
+			p.interested {
+				font-size: 6vw;
+			}
+
+			.leftbtn {
+				display: block;
+				vertical-align: ;
+				width: 71%;
+				margin: 0 auto;
+			}
+
+			.rightbtn {
+				display: block;
+				vertical-align: ;
+				width: 71%;
+				margin: 0 auto;
+			}
+
+			.section.topsec {
+				height: auto;
+			}
+
+			.rightbtn button {
+				margin-left: 0%;
+			}
+
+			.pardotright {
+				display: none;
+			}
+
+			.section.midsec {
+				background: url(https://go.frontstream.com/l/171682/2020-01-28/43k7ns/171682/115267/auction.png) right top;
+				padding: 16% 0;
+				background-size: cover;
+				text-align: center;
+			}
+
+			.midsec h2 {
+				text-align: center;
+				color: #fff;
+				font-family: "allerbold", sans-serif;
+				font-size: 30px;
+				margin: 0 10px;
+				line-height: 1;
+				margin-bottom: 2%;
+			}
+
+			.midsec p {
+				font-family: 'Allerta', sans-serif;
+				color: #fff;
+				/* line-height: 20px; */
+				font-size: 4vw;
+				margin-top: 4%;
+				padding: 0 11%;
+				text-align: left;
+			}
+
+			.section.testisec h2 {
+				text-align: center;
+				color: #333333;
+				font-size: 30px;
+				font-family: "allerbold", sans-serif;
+				margin: 0 10px;
+				padding: 0;
+			}
+
+			.testisec ul {
+				display: block;
+			}
+
+			.testisec ul li.greencircl {
+				display: inline-block;
+				border-radius: 320px;
+				height: 320px;
+				width: 320px;
+				vertical-align: top;
+				text-align: center;
+				background: url(https://go.frontstream.com/l/171682/2020-01-28/43k7nz/171682/115275/green.png) repeat;
+				margin: 12px;
+			}
+
+			.testisec ul li {
+				display: inline-block;
+				border-radius: 300px;
+				height: 300px;
+				width: 300px;
+				vertical-align: top;
+				text-align: center;
+				background: url(https://go.frontstream.com/l/171682/2020-03-12/46nv5f/171682/121062/Blue_Banner_No_Lines.png) repeat;
+				margin-top: 20px;
+				font-size: 14px;
+			}
+
+			.testisec ul li p {
+				width: 80% !important;
+				padding: 0;
+				color: #fff;
+				font-size: 14px;
+				font-family: 'Allerta', sans-serif;
+			}
+
+			.testimg {
+				text-align: right;
+				margin: 0;
+				position: relative;
+				top: -35px;
+				margin-bottom: -35px;
+			}
+
+			.testimg img {
+				width: 35%;
+				height: auto;
+			}
+
+			.section.bluebg {
+				background: url(https://go.frontstream.com/l/171682/2020-03-12/46nv5f/171682/121062/Blue_Banner_No_Lines.png) left top;
+				padding: 5% 0;
+				background-size: cover;
+			}
+
+			.table {
+				display: table;
+				margin: 0 auto;
+			}
+
+			.startbtn-below a {
+				/* width: 230px; */
+				font-size: 17px;
+				font-weight: 500;
+			}
+
+			.startbtn-head a {
+				/* width: 230px; */
+				font-size: 17px;
+				font-weight: 500;
+			}
+		}
+
+		/*@media only screen and (max-width: 375px)  {	
+	.pardotleft h1 {
+     font-size: 8vw;
+	 line-height: 30px;
+		padding-left: 0px;
+	padding-right: 0px;
+  }
+
+.pardotleft p {
+	color: #333333;
+	b-size: 5vw ;
+	font-family: 'Allerta', sans-serif;
+	margin-top: 8%;
+	line-height: 30px;
+		padding-left: 0px;
+	padding-right: 0px;
+}
+p.interested {
+	font-size: 5vw ;
+}	
+
+}
+	*/
+		/* ADDS */
+		iframe#drift-widget.drift-widget-welcome-expanded-online {
+			display: none !important;
+		}
+
+		iframe#drift-widget.drift-widget-welcome-expanded-away {
+			display: none !important;
+		}
+</style>
+<html lang="en">
+
+<head>
+<link rel="stylesheet"
+        href="https://go.frontstream.com/l/171682/2020-01-03/424s48/171682/113265/CSS_Style_Sheet_Landing_page.css">
+		  <script>
+        (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-21457957-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <div pardot-region="Custom-Head-HTML-Code"></div>
+ <!-- VRN -->
+  <link rel="stylesheet" href="https://storage.pardot.com/674833/67434/magnific_popup.css">
+<style type="text/css">
+    .white-popup-block{background:#ededed;padding:20px 30px;text-align:left;max-width:360px;margin:40px auto; border: #bbb 2px solid;
+    border-radius: 5px;position:relative}
+</style>
+  <!-- VRN -->
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-57F94LQ');
+	</script>
+	<!-- End Google Tag Manager -->
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>%%title%%</title>
+
+	<!-- toggle function for the buttons
+<script>
+function auction() {
+
+  	var toggle = document.getElementById("Auction-hide-show");
+	var untoggle = document.getElementById("P2P-hide-show");
+  if (toggle.style.display === "none") {
+    toggle.style.display = "block";
+	toggle.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+	untoggle.style.display = "none";
+  }	else {
+    toggle.style.display = "none";
+  }
+}
+</script>
+	  
+<script>
+function p2p() {
+  	var toggle = document.getElementById("P2P-hide-show");
+	var untoggle = document.getElementById("Auction-hide-show")
+  if (toggle.style.display === "none") {
+	  toggle.style.display = "block";
+	  toggle.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+	  untoggle.style.display = "none";
+  } else{
+    toggle.style.display = "none";
+  }
+}
+</script>
+END TOGGLE -->
+	<!-- Start of Async Drift Code -->
+	<script>
+		"use strict";
+
+		! function () {
+			var t = window.driftt = window.drift = window.driftt || [];
+			if (!t.init) {
+				if (t.invoked) return void(window.console && console.error && console.error("Drift snippet included twice."));
+				t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide",
+						"off", "on"
+					],
+					t.factory = function (e) {
+						return function () {
+							var n = Array.prototype.slice.call(arguments);
+							return n.unshift(e), t.push(n), t;
+						};
+					}, t.methods.forEach(function (e) {
+						t[e] = t.factory(e);
+					}), t.load = function (t) {
+						var e = 3e5,
+							n = Math.ceil(new Date() / e) * e,
+							o = document.createElement("script");
+						o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src =
+							"https://js.driftt.com/include/" + n + "/" + t + ".js";
+						var i = document.getElementsByTagName("script")[0];
+						i.parentNode.insertBefore(o, i);
+					};
+			}
+		}();
+		drift.SNIPPET_VERSION = '0.3.1';
+		drift.load('393zz5kr3v8m');
+	</script>
+	<script>
+		/* ADDS */
+		drift.on('ready', function (api) {
+
+			api.widget.hide()
+			drift.on('message', function (e) {
+				if (!e.data.sidebarOpen) {
+					api.widget.show()
+				}
+			})
+			drift.on('sidebarClose', function (e) {
+				if (e.data.widgetVisible) {
+					api.widget.hide()
+				}
+			})
+		})
+	</script>
+	<!-- End of Async Drift Code -->
+	 
+</head>
+
+<body>
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57F94LQ" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div class="section topsec">
+		<div class="row">
+			<div class="logo"><a href="https://www.frontstream.com" target="_blank"><img
+						src="https://go.frontstream.com/l/171682/2020-01-28/43k7p6/171682/115283/logo.png"
+						class="dlogo"><img
+						src="https://go.frontstream.com/l/171682/2020-01-28/43k7pd/171682/115287/mobilelogo.png"
+						class="mlogo"></a></div>
+		</div>
+		<div class="row topsec">
+			<div class="pardotleft">
+				<!-- Start Pardot Editable Section -->
+				<div>
+
+					<div pardot-region="Header">
+						<h1>Plan for Event Cancellations: Get the NPO’s Guide to Fundraising Continuity</h1>
+					</div>
+					<div pardot-region="Intro-body">
+						<p>In today’s uncertain world, nonprofits need to plan for the unexpected so they can continue to 
+						raise funds and effect positive change even when unforeseen global events disrupt planned in-person events.
+						There are numerous alternatives to in-person events and having a contingency plan in place can make all the difference in continuing your fundraising efforts when an event is cancelled.
+						</p>
+					</div>
+
+				</div>
+				<!-- VRN TODO-->
+<div class="startbtn-head">
+
+<a class="popup-with-form" href="#my-form" pardot-region-type="pardot">Start Planning Now</a>
+</div>
+<div id="my-form" class="mfp-hide white-popup-block">
+<div class="form-container"><div>
+                                                            <p class="form-cta">Get Your Guide</p>
+                                                        </div>
+                                                        %%content%%
+                                                    </div>
+													
+</div>
+  				<!-- VRN -->
+				<!-- old buttons
+				<div class="leftbtn" pardot-region="CTA-P2P" pardot-region-type="pardot">
+    					<button id="P2P" onClick="p2p()">P2P Fundraising</button>
+ 				</div>
+				 
+				<div class="rightbtn" pardot-region="CTA-Auction" pardot-region-type="pardot">
+    					<button id="auction" onClick="auction()">Auction Fundraising</button>
+ 				</div>
+				END OLD BUTTONS -->
+			</div>
+
+			<div class="pardotright">
+				<img
+					src="https://go.frontstream.com/l/171682/2020-03-23/47ft7g/171682/122179/FrontStream_Contingency_Infographic_cover.png">
+			</div>
+		</div>
+	</div>
+	<div id="Auction-hide-show">
+		<div class="section midsec bluebg">
+			<div class="row">
+				<div pardot-region="Test.-title 2" pardot-region-type="pardot">
+					<div>
+						<h2>Understand Your Donor Base
+						</h2>
+					</div>
+					<div>
+						<p>
+							When an unforeseen global event such as the COVID-19 virus or a natural disaster strike, a nonprofit’s constituencies are the ones often the most in need. 
+							But if your fundraising event is cancelled, your mission suffers right when it is needed most.
+							
+							<br /><br />In this guide, you will learn:
+							<ul class="midsection">
+								<li>
+									<p>What kind of events can disrupt your fundraising </p>
+								</li>
+								<li>
+									<p>The potential effects one unforeseen global event can have on your mission</p>
+								<li>
+									<p>The steps you can take to plan for the unexpected</p>
+								<li>
+									<p>Types of digital events to replace your in-person events</p>
+
+							</ul>
+						</p>
+					</div>
+				</div>
+					 <!-- VRN TODO-->
+<div class="startbtn-below drift-open-chat">
+<a class="popup-with-form" href="#my-form" pardot-region="start-body" pardot-region-type="pardot">Start Planning Now</a>
+ </div>
+<div id="my-form" class="mfp-hide white-popup-block">
+<div class="form-container"><span <div>
+                                                            <p class="form-cta">Get Your Guide</p>
+                                                        </div>
+                                                        %%content%%
+                                                    </span></div>
+<style>
+.form-container {
+	border: 0px;
+}
+.form-cta {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: rgb(250, 102, 7);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+}
+</style>													
+													
+</div>
+  				<!-- VRN -->
+			</div>
+		</div>
+	
+		<div class="section testisec">
+			<div class="row">
+				<div>
+					<div pardot-region="Test.-title-Auction" pardot-region-type="pardot">
+						<h2>What Our Clients Are Saying</h2>
+						<div class="table">
+							<ul id="">
+								<li class="">
+									<div class="testimg"><img
+											src="https://go.frontstream.com/l/171682/2020-01-28/43k7p2/171682/115277/icon1.png">
+									</div>
+									<p style="width: 85%; margin: auto;">“The integrated features we use from Panorama
+										help us save a tremendous amount of time and effort by managing donor
+										information and data, not to mention helping us streamline our communication
+										efforts.”</p>
+									<div class="tstname">Rachel Weiss<br>Director of Development<br>Ben Porat Yosef
+									</div>
+								</li>
+								<li class="">
+
+									<div class="testimg"><img
+											src="https://go.frontstream.com/l/171682/2020-01-28/43k7p4/171682/115279/ico.png">
+									</div>
+									<p style="width: 85%; margin: auto;">“Being able to quickly import the contacts and
+										donation information allowed us to have a quick turnaround for analysis and
+										sharing the success of the event with the public.”</p>
+									<div class="tstname">Anna Withers<br>Development Assistant<br>Sarah’s Circle</div>
+								</li>
+
+								<li class="">
+									<div class="testimg"><img
+											src="https://go.frontstream.com/l/171682/2020-01-28/43k7p8/171682/115281/icon3.png">
+									</div>
+									<p style="width: 85%; margin: auto;">“I essentially did not find any product that
+										was remotely close to what I wanted to do until I discovered Panorama. There are
+										quite a few systems like ours in the nation who employ a lot of people. In my
+										opinion, your platform is the only one out there capable of serving this niche.”
+									</p>
+									<div class="tstname">John Thompson<br>Director of Development<br>Wellmont Foundation
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="startbtn-below drift-open-chat" pardot-region="start-footer"
+						pardot-region-type="pardot">
+						<a href="https://go.frontstream.com/ECP-2020" target="_blank">Request a Consultation</a>
+					</div>
+					<div class="privacy"><a href="https://www.frontstream.com/privacy-policy" pardot-region="privacy2"
+							pardot-region-type="link" target="_blank">Privacy Policy</a></div>
+				</div>
+			</div>
+		</div>
+			<!-- VRN -->
+		<!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<!-- Load the Pop-up Plugin-->
+<script src="https://storage.pardot.com/674833/67436/jquery.magnific_popup.min.js"></script>
+	
+  
+ <script>
+ $(document).ready(function() {
+	$('.popup-with-form').magnificPopup({
+		type: 'inline',
+	});
+});
+</script>
+</body>
+
+
+
+</html>

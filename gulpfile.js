@@ -58,7 +58,7 @@ const devBuild = ((process.env.NODE_ENV || 'development').trim().toLowerCase() !
 
 const source = './';
 const dest = devBuild ? 'builds/development/' : 'builds/production/';
-const baseDir = dest + 'emails/';
+const baseDir = dest;
 
 // in: source + 'src/emails/**/*.(jpg|jpeg|png|svg|gif)',
 let images = {
@@ -66,14 +66,35 @@ let images = {
     out: dest
 };
 
+let html = {
+    in : ['src/*.html'],
+    watch : ['src/*.html', 'src/_partials/*.html'],
+    out: `${dest}`
+}
+
 let resources = {
-    watch : ['src/**/*.pug', 'src/*.html' , 'src/**/*.html', '!**/landing pages/**/*' ,'!src/**/*.css']
+    watch : ['src/**/*.pug', 'src/**/*.html', '!src/*.html', '!src/_partials/*.html', '!**/landingPages/**/*' ,'!src/**/*.css']
 }
 
 let landingPages = {
-    in : ['src/landing pages/**/*'],
-    watch: ['src/landing pages/**/*.html'],
-    out: `${dest}/emails/landing pages`
+    in: ['src/landingPages/**/*', '!src/landingPages/**/_partials/*.html'],
+    js: {
+        in: ['src/landingPages/**/*.js'],
+        watch: ['src/landingPages/**/*.js']
+    },
+    css: {
+        in: ['src/landingPages/**/*.scss'],
+        watch: ['src/landingPages/**/*.{scss,css}'],
+        sassOpts: {
+            outputStyle: devBuild ? 'compact' : 'compressed',
+            imagePath: '../assets/img',
+            precision: 3,
+            errLogToConsole: true,
+            sourceMap: true,
+        }
+    },
+    watch: ['src/landingPages/**/*.html', 'src/landingPages/**/_partials/*.html'],
+    out: `${dest}/landingPages`
 }
 
 let fonts = {
@@ -117,6 +138,14 @@ gulp.task('clean-html', (cb) => {
     cb();
 });
 
+
+gulp.task('clean-landingpages', function (done) {
+    del([
+        dest + '/landingPages/**/*'
+    ]);
+    done();
+});
+
 // show build type
 console.log(pkg.name + ' ' + pkg.version + ', ' + (devBuild ? 'development' : 'production') + ' build');
 
@@ -147,9 +176,25 @@ gulp.task('images', function () {
         .pipe(gulp.dest(images.out));
 });
 
-// landing pages
+// landingPages
+gulp.task('html', function () {
+    return gulp.src(['src/*.html'])
+        .pipe($.plumber())
+        // .pipe(htmlFilter)
+        .pipe($.preprocess({
+            context: {
+                devBuild: devBuild,
+                author: pkg.author,
+                version: pkg.version
+            },
+        }))
+        // .pipe(htmlFilter.restore)
+        .pipe(gulp.dest(dest));
+});
+
+// landingPages
 gulp.task('landingPages', function () {
-    var htmlFilter = $.filter(['src/landing pages/*.html'], { restore: true });
+    var htmlFilter = $.filter(['src/landingPages/*.html'], { restore: true });
     return gulp.src(landingPages.in)
         .pipe($.plumber())
         .pipe(htmlFilter)
@@ -171,6 +216,46 @@ gulp.task('fonts', () => {
         .pipe($.newer(fonts.out))
         .pipe(gulp.dest(fonts.out));
 });
+
+// copy landingpage js
+gulp.task('landingJs', () => {
+    return gulp
+        .src(landingPages.js.in)
+        .pipe($.newer(landingPages.out))
+        .pipe(gulp.dest(landingPages.out));
+});
+
+// compile sass to css
+gulp.task(
+    'landingSass',
+    gulp.series( () => {
+        return gulp
+            .src(landingPages.css.in)
+            .pipe($.size({
+                title: 'SCSS in '
+            }))
+            .pipe($.sourcemaps.init({largeFile: true}))
+            .pipe($.plumber())
+            .pipe($.sass(landingPages.css.sassOpts))
+            //.pipe($.purifyCss(['./builds/**/*.js', './builds/**/*.html']))
+            /* .pipe($.plumber())
+            .pipe($.cssnano())
+            .pipe($.csso())
+            .pipe($.cleanCss({level: {2: {all: true}}})) */
+            // .pipe($.crass())
+            /* .pipe($.cleanCss({level: {1: {all: true}, 2: {all: true}}}))
+            .pipe($.cleanCss({level: {1: {all: true}, 2: {all: true}}}))
+            .pipe($.cssnano()) */
+            .pipe($.size({
+                title: 'SCSS out '
+            }))
+            .pipe($.sourcemaps.write('./maps'))
+            .pipe(gulp.dest(landingPages.out))
+            // .pipe(browserSync.stream({match: ['**/*.map', '**/*.css']}));
+            .pipe(browserSync.stream());
+            // .pipe(reload({stream: true}));
+    })
+);
 
 // compile sass to css
 gulp.task('compileSass', () => {
@@ -213,7 +298,7 @@ gulp.task('buildHTML', gulp.series('fonts', () => {
         }
     return gulp
         // import all email template (name ending with .template.pug) files from src/emails folder
-        .src(['src/*.html', 'src/emails/**/*.html', 'src/emails/**/*.pug', '!**/landing pages/**/*', '!**/_*', '!**/_partials/**/*'])
+        .src(['!src/*.html', 'src/emails/**/*.html', 'src/emails/**/*.pug', '!**/landingPages/**/*', '!**/_*', '!**/_partials/**/*'])
         .pipe($.newer(dest + 'emails/**/*.html'))
 
         // replace `.scss` file paths from template with compiled file paths
@@ -336,7 +421,10 @@ gulp.task(
         // gulp.watch(b2bhtml.watch, gulp.series('b2bhtml'));
         // gulp.watch(html.watch, gulp.series('html', 'reload'));
         gulp.watch(resources.watch, gulp.series('buildHTML', 'reload'));
+        gulp.watch(html.watch, gulp.series('html', 'reload'));
         gulp.watch(landingPages.watch, gulp.series('landingPages', 'reload'));
+        gulp.watch(landingPages.css.watch, gulp.series('landingSass'));
+        gulp.watch(landingPages.js.watch, gulp.series('landingJs', 'reload'));
         gulp.watch('./src/sass/**/*.scss', gulp.series('compileSass', 'reload'));
         
         // image changes
@@ -350,7 +438,7 @@ gulp.task(
 // );
 
 // default task
-gulp.task('default', gulp.parallel('buildHTML', 'images', 'watch'));
+gulp.task('default', gulp.parallel('buildHTML', 'landingPages', 'images', 'watch'));
 
 // build task
 gulp.task('build', gulp.parallel('buildHTML', 'images'));
