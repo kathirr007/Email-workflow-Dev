@@ -1,3 +1,4 @@
+require('dotenv').config()
 const nodemailer = require('nodemailer');
 const xoauth2 = require('xoauth2');
 var jsdom = require("jsdom");
@@ -10,27 +11,13 @@ var $ = jQuery = require('jquery')(window);
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
-    /* auth: {
-        xoauth2: xoauth2.createXOAuth2Generator({
-            user: 'kathirr007@gmail.com',
-            clientId: '374024780934-uad11adl7jai1tbdg1if3o9ojkrcnc9g.apps.googleusercontent.com',
-            clientSecret: 'ZYq8WFtlCTTXGTeKdQ26PVc8',
-            refreshToken: '1/ga4TJEHaMUypgYHzZPiSNpE91JRHb-aUi--eDyeRr8M'
-        })
-    }, */
     auth: {
         type: 'OAuth2',
         user: 'kathirr007@gmail.com',
-        clientId: '374024780934-uad11adl7jai1tbdg1if3o9ojkrcnc9g.apps.googleusercontent.com',
-        clientSecret: '2SHHBPYE81fS7kEEvD_xDMM1',
-        refreshToken: '1/2W0GiRY6qIj3VTXGWlEHhpG3XY2pcGbG8IJDk97WwOQ',
-        accessToken: 'ya29.Il-bB5mPYoqAtVY-hv4KKULNZnewcb8jB7aqTXLrLGIPB6W8pElCGFoquMi-RiTe3cBj0ry1LYB3R3Skiok74PNtR70vbjriOz-2CjKJgpQ6yspNiljtu18i5K0L2dvh7g'
-        /* xoauth2: xoauth2.createXOAuth2Generator({
-            user: 'kathirr007@gmail.com',
-            clientId: '374024780934-uad11adl7jai1tbdg1if3o9ojkrcnc9g.apps.googleusercontent.com',
-            clientSecret: '2SHHBPYE81fS7kEEvD_xDMM1',
-            refreshToken: '1/2W0GiRY6qIj3VTXGWlEHhpG3XY2pcGbG8IJDk97WwOQ'
-        }) */
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET,
+        refreshToken: process.env.REFRESH_TOKEN,
+        accessToken: process.env.ACCESS_TOKEN
     }
 })
 
@@ -52,7 +39,7 @@ var
   dest = devBuild ? 'builds/development/' : 'builds/production/';
 
 var htmlPaths = [
-                    dest + 'emails/one/template-one.html',
+                    // dest + 'emails/one/template-one.html',
                     // dest + 'emails/two/template-two.html',
                     // dest + 'emails/three/template-three.html',
                     // dest + 'emails/four/template-four.html',
@@ -68,7 +55,11 @@ var htmlPaths = [
                     // dest + 'emails/fourteen/template-fourteen.html',
                     // dest + 'emails/fifteen/template-fifteen.html',
                     // dest + 'emails/sixteen/template-sixteen.html',
-                    dest + 'emails/17/template-17.html',
+                    // dest + 'emails/17/template-17.html',
+                    // dest + 'emails/gmailIssues/clip-off-issue.html',
+                    // dest + 'emails/gmailIssues/23-06-2020/CHARLOTTE INNO ONE BLOCK TEMPLATE.html',
+                    // dest + 'emails/gmailIssues/23-06-2020/CHARLOTTE INNO ONE BLOCK TEMPLATE_Updated.html',
+                    dest + 'emails/others/AE_Template7_20200718/index_updated.html',
                  ],
     path,mailOptions;
     $(htmlPaths).each(function(i){

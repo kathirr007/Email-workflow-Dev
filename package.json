@@ -6,6 +6,7 @@
     "scripts": {
         "dev": "gulp build",
         "build": "cross-env NODE_ENV=production gulp build",
+        "prod": "cross-env NODE_ENV=production gulp build",
         "watch": "gulp watch",
         "serveEmail": "node ./server.js",
         "sendTestMail": "cross-env NODE_ENV=production node ./sendmail.js",
@@ -31,11 +32,12 @@
         "gulp-sass": "^4.0.2",
         "http": "^0.0.0",
         "multer": "^1.4.2",
-        "nodemailer": "^6.3.1",
+        "nodemailer": "^6.4.10",
         "querystring": "^0.2.0"
     },
     "dependencies": {
         "cross-env": "^6.0.3",
+        "dotenv": "^8.2.0",
         "email-comb": "^3.8.16",
         "global": "^4.4.0",
         "gulp-beautify": "^3.0.0",
@@ -44,6 +46,7 @@
         "gulp-file-include": "^2.1.0",
         "gulp-filter": "^6.0.0",
         "gulp-foreach": "^0.1.0",
+        "gulp-htmlmin": "^5.0.1",
         "gulp-if": "^3.0.0",
         "gulp-image": "^5.1.0",
         "gulp-newer": "^1.4.0",
@@ -55,7 +58,7 @@
         "gulp-resolve-path": "^1.0.5",
         "gulp-size": "^3.0.0",
         "gulp-tap": "^2.0.0",
-        "html-crush": "^1.9.14",
+        "html-crush": "^2.0.0",
         "jquery": "^3.4.1",
         "jsdom": "^15.2.0",
         "lazypipe": "^1.0.2",

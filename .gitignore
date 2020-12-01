@@ -27,6 +27,9 @@ nbproject
 *.sublime-workspace
 .idea
 
+# Environment values
+*.env
+
 #test files
 test/
 *_mod*
