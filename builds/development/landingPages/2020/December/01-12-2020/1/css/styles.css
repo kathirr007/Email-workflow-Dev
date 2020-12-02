@@ -35,7 +35,7 @@ img::-moz-selection { background: transparent; }
   .main-navbar .navbar-collapse { background-color: #67be5d; padding: 15px; } }
 
 @media (min-width: 992px) { #mainNav { border: none; transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out; }
-  #mainNav .navbar-brand { width: 18%; font-size: 1.5em; transition: font-size 0.3s ease-in-out; }
+  #mainNav .navbar-brand { width: 18%; max-width: 180px; font-size: 1.5em; transition: font-size 0.3s ease-in-out; }
   #mainNav .navbar-brand img { transition: height 0.3s ease-in-out; }
   #mainNav.navbar-shrink { background-color: #67be5d; }
   #mainNav.navbar-shrink .container-fluid { padding-top: 0; padding-bottom: 0; }

@@ -113,6 +113,7 @@ img::-moz-selection {
 	}
 	#mainNav .navbar-brand {
 		width: 18%;
+		max-width: 180px;
 		font-size: 1.5em;
 		transition: font-size 0.3s ease-in-out;
 	}
