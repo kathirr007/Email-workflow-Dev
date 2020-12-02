@@ -62,7 +62,7 @@ const baseDir = dest;
 
 // in: source + 'src/emails/**/*.(jpg|jpeg|png|svg|gif)',
 let images = {
-    in: 'src/**/*.{png,gif,jpg,jpeg,svg}',
+    in: ['src/**/*.{png,gif,jpg,jpeg,svg}', '!src/landingPages/**/*.{png,gif,jpg,jpeg,svg}'],
     out: dest
 };
 
@@ -77,10 +77,12 @@ let resources = {
 }
 
 let landingPages = {
-    in: ['src/landingPages/**/*', '!src/landingPages/**/_partials/*.html'],
-    js: {
-        in: ['src/landingPages/**/*.js'],
-        watch: ['src/landingPages/**/*.js']
+    assets: {
+        in: ['src/landingPages/**/*', '!src/landingPages/**/*.{css,html,js,scss,png,gif,jpg,jpeg,svg}'],
+        watch: []
+    },
+    images: {
+        in: ['src/landingPages/**/*.{png,gif,jpg,jpeg,svg}']
     },
     css: {
         in: ['src/landingPages/**/*.scss'],
@@ -92,6 +94,14 @@ let landingPages = {
             errLogToConsole: true,
             sourceMap: true,
         }
+    },
+    html: {
+        in: ['src/landingPages/**/*.html', '!src/landingPages/**/_partials/*.html'],
+        watch: ['src/landingPages/**/*.html', 'src/landingPages/**/_partials/*.html']
+    },
+    js: {
+        in: ['src/landingPages/**/*.js'],
+        watch: ['src/landingPages/**/*.js']
     },
     watch: ['src/landingPages/**/*.html', 'src/landingPages/**/_partials/*.html'],
     out: `${dest}/landingPages`
@@ -176,6 +186,14 @@ gulp.task('images', function () {
         .pipe(gulp.dest(images.out));
 });
 
+// copy fonts
+gulp.task('fonts', () => {
+    return gulp
+        .src(fonts.in)
+        .pipe($.newer(fonts.out))
+        .pipe(gulp.dest(fonts.out));
+});
+
 // landingPages
 gulp.task('html', function () {
     return gulp.src(['src/*.html'])
@@ -192,12 +210,37 @@ gulp.task('html', function () {
         .pipe(gulp.dest(dest));
 });
 
-// landingPages
-gulp.task('landingPages', function () {
-    var htmlFilter = $.filter(['src/landingPages/*.html'], { restore: true });
-    return gulp.src(landingPages.in)
+// copy fonts
+gulp.task('landingAssets', () => {
+    return gulp
+        .src(landingPages.assets.in)
+        .pipe($.newer(landingPages.out))
+        .pipe(gulp.dest(landingPages.out));
+});
+
+// manage landing page images
+gulp.task('landingImages', function () {
+    return gulp.src(landingPages.images.in)
+        .pipe($.size({
+            title: 'images in '
+        }))
+        .pipe($.newer(landingPages.out))
         .pipe($.plumber())
-        .pipe(htmlFilter)
+        .pipe($.image({
+            jpegRecompress: ['--strip', '--quality', 'medium', '--min', 40, '--max', 80],
+            quiet: true
+        }))
+        .pipe($.size({
+            title: 'images out '
+        }))
+        .pipe(gulp.dest(landingPages.out));
+});
+
+// landingPages
+gulp.task('landingPages', gulp.parallel( () => {
+    return gulp.src(landingPages.html.in)
+        .pipe($.plumber())
+        // .pipe(htmlFilter)
         .pipe($.preprocess({
             context: {
                 devBuild: devBuild,
@@ -205,17 +248,9 @@ gulp.task('landingPages', function () {
                 version: pkg.version
             },
         }))
-        .pipe(htmlFilter.restore)
+        // .pipe(htmlFilter.restore)
         .pipe(gulp.dest(landingPages.out));
-});
-
-// copy fonts
-gulp.task('fonts', () => {
-    return gulp
-        .src(fonts.in)
-        .pipe($.newer(fonts.out))
-        .pipe(gulp.dest(fonts.out));
-});
+}));
 
 // copy landingpage js
 gulp.task('landingJs', () => {
@@ -257,7 +292,7 @@ gulp.task(
     })
 );
 
-// compile sass to css
+// compile landingpage sass to css
 gulp.task('compileSass', () => {
     let plugins = [
         postuncss()
@@ -422,13 +457,17 @@ gulp.task(
         // gulp.watch(html.watch, gulp.series('html', 'reload'));
         gulp.watch(resources.watch, gulp.series('buildHTML', 'reload'));
         gulp.watch(html.watch, gulp.series('html', 'reload'));
-        gulp.watch(landingPages.watch, gulp.series('landingPages', 'reload'));
+        gulp.watch(landingPages.html.watch, gulp.series('landingPages', 'reload'));
         gulp.watch(landingPages.css.watch, gulp.series('landingSass'));
         gulp.watch(landingPages.js.watch, gulp.series('landingJs', 'reload'));
         gulp.watch('./src/sass/**/*.scss', gulp.series('compileSass', 'reload'));
         
+        // landingPages assets
+        gulp.watch(landingPages.assets.in, gulp.series('landingAssets', 'reload'));
+
         // image changes
         gulp.watch(images.in, gulp.series('images'));
+        gulp.watch(landingPages.images.in, gulp.series('landingImages'));
     })
 );
 
@@ -438,7 +477,7 @@ gulp.task(
 // );
 
 // default task
-gulp.task('default', gulp.parallel('buildHTML', 'landingPages', 'images', 'watch'));
+gulp.task('default', gulp.parallel('buildHTML', 'images', 'landingPages', 'landingAssets', 'landingImages', 'landingJs', 'landingSass', 'watch'));
 
 // build task
 gulp.task('build', gulp.parallel('buildHTML', 'images'));

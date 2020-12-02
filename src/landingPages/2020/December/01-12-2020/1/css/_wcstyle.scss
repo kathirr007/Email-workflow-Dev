@@ -1,0 +1,1500 @@
+/*
+Theme Name: Wine BC
+Description: A custom Wine BC Child Theme for the Enfold Wordpress Theme.
+Version: 1.0
+Author: Splash
+Author URI: https://splashmg.ca
+Template: enfold
+*/
+
+/*Add your own styles here:*/
+
+/* ======== */
+/* WEBFONTS */
+/* ======== */
+/* Relay webfont pulled in via typenetwork subscription
+
+
+
+
+
+/* =========== */
+/* BASE STYLES */
+/* =========== */
+.main_color {color:#555a5c;}
+
+.main_color strong, 
+.main_color b {
+	font-family: "Relay Bd", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	line-height: inherit;	
+	color:inherit;
+}
+
+.main_color a {
+	font-family: "Relay Reg", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	line-height: inherit;
+	color:#67be5c;
+}
+.main_color a:hover {color:#565a5c;}
+
+.main_color b a, 
+.main_color a b, 
+.main_color a strong,
+.main_color strong a {
+	font-family: "Relay Bd", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	line-height: inherit;	
+	color:#67be5c;
+}
+.main_color b a:hover, 
+.main_color a:hover b, 
+.main_color a:hover strong,
+.main_color strong a:hover {
+	color:#555a5c;
+}
+
+
+.container_wrap {border-top:none;}
+
+body {
+	font-family: 'Relay Lt', 'Trebuchet MS', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif!important;
+	font-weight: normal;
+	font-style: normal;
+	text-transform:none;
+	font-size:17px!important;
+}
+body .column-top-margin {
+    margin-top: 0px;
+}
+body img.alignleft,
+body .alignleft img{
+    float: left;
+    margin: 0px 20px 20px 0;
+    display: inline-block;
+    position: relative;
+}
+body img.alignright,
+body .alignright img
+{
+    float: right;
+    margin: 0px 0px 20px 20px;
+    display: inline-block;
+    position: relative;
+}
+
+
+
+/* TYPE */
+/* =================================================================== */
+p {
+	margin: 20px 0;
+	line-height: 1.5;
+}
+
+
+
+/* HEADINGS */
+/* =================================================================== */
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Relay Lt", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1.250;
+	text-transform:uppercase;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+h2 {font-size:20px;}
+h3 {font-size:16px;}
+h4 {font-size:14px;}
+h5 {font-size:12px;}
+h6 {font-size:10px;}
+
+/* Headers (bold) */
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong,
+strong h1, strong h2, strong h3, strong h4, strong h5, strong h6 {
+	font-family: "Relay Bd", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* stop base style from forcing H1s and H2s to be uppercase and applying extra letter spacing */
+.template-page .entry-content-wrapper h1, 
+.template-page .entry-content-wrapper h2 {
+    letter-spacing: 0px;
+}
+
+
+h2 + h3, h3 + h4, h4 + h5, h5 + h6 {margin-top:20px;}
+h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {margin-top:0px;}
+p + h2, p + h3, p + h4, p + h5, p + h6 {margin-top:50px;}
+
+h2 img, h3 img, h4 img {vertical-align: bottom;}
+
+h1 a {color:#555a5c!important;}
+h2 a, h3 a, h4 a, h5 a, h6 a {color:#67be5c!important;}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {color:#67be5c!important;}
+
+h1 strong a {color:#555a5c!important;}
+h2 strong a, h3 strong a, h4 strong a, h5 strong a, h6 strong a {color:#67be5c;}
+h1 strong a:hover, h2 strong a:hover, h3 strong a:hover, h4 strong a:hover, h5 strong a:hover, h6 strong a:hover {
+	color:#67be5c!important;
+}
+
+
+
+/* HEADER */
+/* =================================================================== */
+
+/* remove bottom border on header */
+#header_main {border: none;}
+
+/* adds a faded image overlay in the header when it's set to be transparent. Helps menu be visible */
+#header.av_header_transparency #header_main {
+	background-image:url(https://winebc.com/wp-content/uploads/2018/03/overlay-transparent-header.png) ;
+	background-position: top left;
+	background-repeat: repeat-x;
+}
+
+/* add bottom shadow when scrolled */
+#header.header-scrolled.header-scrolled-full {
+	box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+/* keeps header fully opaque (not semi-transparent) */
+#top .header_bg {opacity:1;}
+
+/* change glassy header color & opacity */
+/*#top .av_header_glassy.av_header_transparency .header_bg {
+	background-color: #000;
+	opacity:.3;
+}*/
+
+@media only screen and (max-width: 990px) {
+	/* Change header breakpoint so it stops floating above 'main' and forces elements below it down earlier */
+	.responsive #top.home #wrap_all #header {
+		position: relative;
+		float: none;
+	}
+	.html_header_top.html_header_sticky #header {
+		position: relative;
+		float: none;
+	}
+	/* makes header fully white as it stops floating */
+	#top .av_header_glassy.av_header_transparency .header_bg {
+		background-color: #fff;
+		opacity: 1!important;
+	}
+	/* removes overlay and makes background white */
+	#header.av_header_transparency #header_main {
+		background-image:none;
+		background-color: #fff;
+		opacity: 1!important;
+	}
+	/* changes the alternate (reversed) logo back to the default logo at same time as the header stops floating */
+	.responsive #top .av_header_transparency.av_alternate_logo_active .logo a > img {
+		opacity: 1;
+	}
+}
+
+
+
+
+/* LOGO */
+/* ================================================================= */
+@media only screen and (max-width: 767px) {
+	.responsive #top .logo {
+    position: static;
+    display: table;
+    height: 60px !important;
+    float: none;
+    padding: 0;
+    border: none;
+    width: 60%;
+	}
+}
+
+
+
+
+/* SECONDARY MENU BAR - ABOVE HEADER */
+/* ================================================================= */
+#header_meta {padding-top: 3px; padding-bottom: 3px;}
+
+/* keeps secondary bar a solid color when using the glassy header and scrolling down the page */
+#top .av_header_transparency #header_meta, #top #header_meta {
+	/* Fallback for web browsers that don't support RGBa */
+	background-color: rgb(103, 190, 93);
+	/* RGBa with 0.6 opacity */
+	background-color: rgba(103, 190, 93, 1);
+	box-shadow: none;
+	border-bottom: none;
+}
+
+.responsive #top .av_header_transparency #header_meta {
+	/* Fallback for web browsers that don't support RGBa */
+	background-color: rgb(103, 190, 93);
+	/* RGBa with 0.6 opacity */
+	background-color: rgba(103, 190, 93, 0.75);
+}
+
+
+
+
+/* MAIN MENU */
+/* ============================================== */
+/* forces the main menu hover link color to be non-transparent & red when using the Transparent - Glassy Header */
+#top .av_header_transparency .main_menu ul:first-child > li > a:hover, 
+#top #wrap_all .av_header_transparency .sub_menu > ul > li > a:hover {opacity: 1;}
+
+#top #header .av-main-nav > li > a {
+	font-family: "Relay Reg", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size:16px;
+	text-transform:uppercase;
+	padding: 0 10px;
+}
+
+@media only screen and (max-width: 1140px) {
+	#top #header .av-main-nav > li > a {
+		font-size:14px;
+		padding: 0 8px;
+	}
+}
+
+/* link color */
+.header_color .main_menu ul:first-child > li > a {color:#555;}
+.header_color .main_menu ul:first-child > li:hover > a {color:#67be5c}
+
+/* link color - homepage transparent header */
+.av_header_transparency.header_color .main_menu ul:first-child > li > a {color:#fff;}
+#top #wrap_all #header.av_header_transparency.header_color .main_menu ul:first-child > li:hover > a .avia-menu-text {color:#fff;}
+
+/* active menu items - header top level */
+#top .current_page_item > a,
+#top .current_page_ancestor > a,
+#top .current-menu-ancestor > a {
+	color:#67be5d;
+}
+
+/* active menu items - header transparent top level */
+#top .av_header_transparency.header_color .main_menu .current_page_item > a,
+#top .av_header_transparency.header_color .main_menu .current_page_ancestor > a,
+#top .av_header_transparency.header_color .main_menu .current-menu-ancestor > a {
+	font-family: "Relay Bd"!important;
+	color:#fff;
+}
+
+/* active menu items - top level header scrolled */
+#top .header-scrolled .current_page_item > a,
+#top .header-scrolled .current_page_ancestor > a,
+#top .header-scrolled .current-menu-ancestor > a {
+	font-family: "Relay Bd"!important;
+	color:#67be5d;
+}
+
+/*  remove Avia Menu FX */
+.avia-menu-fx {
+	display: none !important;
+	opacity: 0;
+}
+
+/* 
+ *Main menu dropdown
+ */
+#top .av-main-nav ul a {
+	font-size: 13px;
+	font-weight: normal;
+	font-style: normal;
+	border: 0 !important;
+	text-transform:uppercase;
+}
+.html_header_top .header_color .main_menu ul:first-child >li > ul, .html_header_top #top .header_color .avia_mega_div > .sub-menu {
+	border-top-color:transparent;
+	border:none;
+}
+#top .av-main-nav .sub-menu > li > a {
+	color:#fff!important;
+	background:#393e39!important;
+	border:none!important;
+}
+#top .av-main-nav .sub-menu > li:hover > a {
+	color:#67be5d!important;
+	background:#393e39!important;
+	border:none!important;
+}
+
+
+/* MOBILE MENU */
+/* ================================================================= */
+.html_av-overlay-side-classic #top #wrap_all .av-burger-overlay #av-burger-menu-ul li a {
+    border-color: #ccc;
+}
+#top #wrap_all #header.av_header_transparency.header_color .main_menu ul:first-child li.av-active-burger-items:hover a .avia-menu-text {
+    color: #67be5d;
+
+}
+
+
+
+
+
+
+
+/* SECONDARY MENU */
+/* ================================================================= */
+.header_color #header_meta .sub_menu > ul > li > a {
+	font-family: "Relay Bd", "open_sansbold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	color:#fff; 
+	font-size:12px; 
+	text-transform: uppercase;
+}
+
+.sub_menu li {border-right:none; padding:0 5px;}
+.header_color #header_meta .sub_menu > ul > li a:hover {color:#fff;}
+.header_color #header_meta .sub_menu > ul > li.active-link a {color:#333;}
+
+@media only screen and (max-width: 767px) {
+	.responsive #top #wrap_all .container {width: 95%; max-width: 95%;}
+	.av_secondary_right .sub_menu {padding-left: 0px;}
+	.responsive #header_meta .sub_menu > ul > li {padding: 0 5px;}
+	.responsive #top #wrap_all .av_header_transparency .sub_menu > ul > li > a {color:#fff; font-size:11px;}
+}
+
+
+
+
+
+/* REGION MENU (uses the Avia Full-Width Menu Widget) */
+/* ================================================================= */
+#top .av-submenu-container.region-menu {
+	min-height: auto;
+	border:none;
+  max-width:1310px;
+	padding:0 50px;
+	padding-top:40px;
+	margin:0 auto;
+}
+#top .av-submenu-container.region-menu .container {
+	width:100%;
+  max-width:1310px;
+	padding:0 50px;
+	border-top:none;
+	border-bottom:none;
+}
+#top .region-menu .av-subnav-menu > li {
+	padding: 0;
+	display: block;
+	float: left;
+}
+#top .av-submenu-container.region-menu .av-subnav-menu > li > a {padding: 10px 10px 5px 10px;}
+#top .av-submenu-container.region-menu .av-subnav-menu > li:first-child > a {padding: 10px 10px 5px 0px;}
+#top .av-submenu-container.region-menu .av-subnav-menu > li > a {border-left:none;}
+#top .av-submenu-container.region-menu .av-subnav-menu li a span {font-size:13px; color:#999; text-transform: uppercase;}
+#top .av-submenu-container.region-menu .av-subnav-menu li li a span {font-size:13px;}
+#top .av-submenu-container.region-menu .current_page_item > a span:before,
+#top .av-submenu-container.region-menu .current_page_parent > a span:before{
+	display:inline-block;
+	vertical-align: middle;
+	margin-right:3px;
+}
+/*#top .av-submenu-container.region-menu #menu-item-1004.current_page_item > a span:before {
+	content:url(https://winebc.com/wp-content/uploads/2017/12/i-circle-purple-small.png);
+}
+#top .av-submenu-container.region-menu #menu-item-1004.current_page_item > a span {color:#8b036f;}
+
+#top .av-submenu-container.region-menu #menu-item-994.current_page_item > a span:before {
+	content:url(https://winebc.com/wp-content/uploads/2018/02/i-circle-yellow-small.png);
+}
+#top .av-submenu-container.region-menu #menu-item-994.current_page_item > a span {color:#ddb823;}
+
+#top .av-submenu-container.region-menu #menu-item-993.current_page_item > a span:before {
+	content:url(https://winebc.com/wp-content/uploads/2018/02/i-circle-orange-small.png);
+}
+#top .av-submenu-container.region-menu #menu-item-993.current_page_item > a span {color:#ed7b32;}
+
+#top .av-submenu-container.region-menu #menu-item-995.current_page_item > a span:before,
+#top .av-submenu-container.region-menu #menu-item-995.current_page_parent > a span:before {
+	content:url(https://winebc.com/wp-content/uploads/2018/02/i-circle-red-small.png);
+}
+#top .av-submenu-container.region-menu #menu-item-995.current_page_item > a span,
+#top .av-submenu-container.region-menu #menu-item-995.current_page_parent > a span{color:#d31c55;}
+
+#top .av-submenu-container.region-menu #menu-item-1003.current_page_item > a span:before {
+	content:url(https://winebc.com/wp-content/uploads/2018/02/i-circle-teal-small.png);
+}
+#top .av-submenu-container.region-menu #menu-item-1003.current_page_item > a span,
+#top .av-submenu-container.region-menu #menu-item-1003.current_page_parent > a span{color:#06a99e;}
+
+#top .av-submenu-container.region-menu #menu-item-1005.current_page_item > a span:before,
+#top .av-submenu-container.region-menu #menu-item-1005.current_page_parent > a span:before{
+	content:url(https://winebc.com/wp-content/uploads/2018/02/i-circle-grey-lines-small.png);
+}
+#top .av-submenu-container.region-menu #menu-item-1005.current_page_item > a span {color:#555;}*/
+
+#top .region-menu .avia-arrow-wrap, #top .region-menu .avia-arrow {display: none;}
+
+@media only screen and (max-width: 767px) {
+	#top .av-submenu-container.region-menu {
+		min-height: auto;
+		border:none;
+		max-width:100%;
+		padding:0px;
+		padding-top:0px;
+		margin:0 auto;
+	}
+	#top .av-submenu-container.region-menu .mobile_menu_toggle {border-left:0; border-right:0; background-color:transparent;}
+	#top .av-submenu-container.region-menu .av-current-placeholder {display:none;}
+	#top .av-submenu-container.region-menu .container {padding:0!important;}
+	#top .region-menu .av-subnav-menu > li {
+		padding: 0;
+		display: inline-block;
+		float: none;
+	}
+	#top .av-submenu-container.region-menu .av-subnav-menu > li:first-child > a {padding: 15px 5%;}
+	.responsive #top .av-menu-mobile-active .av-subnav-menu > li a::before {content: "";}
+	#top .main_color.region-menu .av-subnav-menu a:hover {background-color:#f8f8f8!important;}
+}
+
+
+
+
+
+
+
+/* MAIN */
+/* ================================================================= */
+.container_wrap_first {border:none;}
+#after_submenu .template-page.content {padding-top:25px;}
+
+
+
+
+
+
+/* TITLEBAR */
+/* ================================================================= */
+#top .title_container {border:none;}
+#top .title_container .container {
+    min-height: 56px;
+    padding-bottom: 20px;
+    padding-top: 80px;
+}
+
+h1.main-title.entry-title {
+	font-family: "Relay Lt", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 56px;
+	letter-spacing: -1px!important;
+	text-transform:uppercase;
+	line-height: 1!important;
+	font-weight:normal;
+	font-style: normal;
+	color: #555a5c;
+}
+h1.main-title.entry-title a span {
+	font-size:24px;
+  color: #fff;
+}
+
+#top .alternate_color.title_container .main-title, 
+#top .alternate_color.title_container .main-title a {
+    color: #555a5c;
+}
+@media only screen and (max-width: 480px) {
+	h1.main-title.entry-title {
+		line-height: 1!important;
+	}	
+	h1.main-title.entry-title a {
+		font-size: 26px;
+		line-height: 1!important;
+	}	
+}
+
+/*
+ * Titlebar: with background image
+*/
+#wbc-custom-image-titlebar  {
+	margin-bottom:0px;
+}
+#wbc-custom-image-titlebar .av-section-color-overlay {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#wbc-custom-image-titlebar h1 {
+	font-family: "Relay Lt", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 82px;
+	color: #fff;
+	line-height: 1;
+	text-transform:uppercase;
+	letter-spacing: -2px;
+	text-shadow:0px 2px 14px rgba(0, 0, 0, 0.5); 
+	margin-bottom:0;
+	padding-top:11%;
+	padding-bottom:13%;
+}
+#wbc-custom-image-titlebar h1 span {
+	display: block;
+	font-size: 24px;
+	line-height: 1;
+	color: #fff;
+	letter-spacing: 5px;
+}
+
+@media only screen and (max-width: 990px) {
+	#wbc-custom-image-titlebar h1 {
+		font-size: 70px!important;
+	}
+}
+@media only screen and (max-width: 640px) {
+	#wbc-custom-image-titlebar h1 {
+		font-size: 56px!important;
+	}
+}
+@media only screen and (max-width: 480px) {
+	#wbc-custom-image-titlebar h1 {
+		font-size: 40px!important;
+	}
+}
+
+
+h2 span {
+	color: #fff;
+}
+h2 span.titlebar-small-text {
+	font-family: "Relay Lt", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff!important;
+	font-size:30px!important;
+	letter-spacing:10px;
+}
+
+
+
+
+
+
+/* Breadcrumb */
+/* ================================================================= */
+.title_container .breadcrumb {
+	font-size: 12px;
+	left: 0px;
+	line-height: 15px;
+	margin-top: 10px;
+	position: relative;
+	top: 100%;
+	z-index: 10;
+}
+@media only screen and (max-width: 640px) {
+.responsive .title_container .breadcrumb {
+    left: 0px;
+    margin: 0;
+    position: relative;
+    right: auto;
+    top: 5px;
+	}
+}
+#main .breadcrumb {color: #666 !important;}
+#main .breadcrumb a {color: #67be5c !important;}
+span.trail-before {display: none!important;} /* remove 'You are here' */
+
+
+
+
+
+
+
+/* POSTS (all post related styles) */
+/* ================================================================= */
+.entry-content-wrapper.cpt {
+	padding-top:25px;
+	padding-bottom:20px;
+	border-bottom:1px dotted #ccc;
+	margin:0;
+}
+
+#top .fullsize .template-blog .entry-content-wrapper.cpt .post-title {max-width: 100%; padding:0;}
+#top h2.post-title.entry-title,
+#top h2.post-title.entry-title a,
+#top h3.slide-entry-title.entry-title a {
+	font-family: "Relay Bd", "open_sansbold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+  text-align:left;
+  font-size: 20px;
+  line-height: normal;
+	text-transform: uppercase;
+}
+#top .entry-content-wrapper.cpt .post-title h2 {
+	font-family: "Relay Bd", "open_sansbold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+  text-align:left;
+  font-size: 20px;
+  line-height: normal;
+	text-transform: uppercase;
+}
+
+/* CPT - post meta */
+#top .fullsize .template-blog .entry-content-wrapper.cpt .post-meta-infos {
+	text-align: left;
+}
+
+
+
+
+/* 
+* CPT - Custom pagination for custom PAGE template (taste & terroir)
+*/
+.cpt-pagination {margin-top:50px;}
+.cpt-pagination .page-numbers {
+  background:#ededed;
+	font-size:14px;
+	color:#666;
+	display:block;
+	width:auto;
+	float:left;
+	margin: 4px 4px 4px 0;
+	padding:5px 15px 5px 15px;
+	text-decoration:none;
+}
+.cpt-pagination .page-numbers:hover{
+	background: #67be5c;
+	color:#fff;
+	text-decoration: none;
+}
+
+.cpt-pagination .page-numbers.current{
+  background: #555a5c;
+	color:#fff;
+}
+
+
+/* 
+* CPT - Custom Archive Links (in our case, by Year) - for custom POST template (taste & terroir)
+*/
+.cpt-archive-links {font-size:14px; color:#999; margin-bottom:30px;}
+.cpt-archive-links span.title {float:left; margin-right:10px;}
+.cpt-archive-links ul {display:inline; position: relative; overflow: hidden;}
+.cpt-archive-links ul li {display:block; float:left; margin-left:5px; padding-left:8px; padding-right:8px; background-color: #f3f3f3;}
+.cpt-archive-links ul li.cpt-archive-links-item a {padding:3px 2px 3px 0px;}
+
+
+/* 
+* CPT - Perfect Pairing Recipes
+*/
+.perfect-pairing-recipes .slide-meta {display:none;}
+/* Removes Feature Image from within Post content on the Perfect Pairing Recipes CPT */
+.pairing_recipes .big-preview.single-big {display:none;}
+
+
+
+
+/* 
+* CPT - Taste & Terroir styles
+*/
+/* custom background image */
+body.page-template-page-taste_terroir {
+	background-image: url(https://winebc.com/wp-content/uploads/2018/03/bg-taste-terroir-vines.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size:1920px;
+}
+/* make a bunch of containers transparent so custom bkg shows through */
+.page-template-page-taste_terroir #main,
+.page-template-page-taste_terroir #wrap_all,
+.page-template-page-taste_terroir #wrap_all .main_color,
+.page-template-page-taste_terroir .header_color .header_bg,
+.page-template-page-taste_terroir .alternate_color.light_bg_color.title_container
+{
+	background-color: transparent;
+	
+}
+/* add overlay in header to make menu and logo pop */
+/*.page-template-page-taste_terroir .header_bg {
+	background-image:url(https://winebc.com/wp-content/uploads/2018/03/overlay-transparent-header.png);
+	background-position: bottom left;
+	background-repeat: repeat-x;
+}
+.page-template-page-taste_terroir .header_color .main_menu ul:first-child > li > a {
+    color: #fff;
+}
+.page-template-page-taste_terroir #header.header-scrolled.header_color .main_menu ul:first-child > li > a {
+	color:#333;
+}*/
+
+
+
+/* remove overlay in header when scrolled */
+.page-template-page-taste_terroir #header.header-scrolled .header_bg {
+	background:none;
+}
+/* add bottom shadow and white background when scrolled */
+.page-template-page-taste_terroir #header.header-scrolled {
+	background-color:#fff;
+	transition: background-color 0.5s ease;
+	box-shadow: 0 0 4px rgba(0,0,0,0.4);
+}
+
+
+
+.page-template-page-taste_terroir #header {
+	background-color:transparent;
+	transition: background-color 0.5s ease;
+}
+
+
+.page-template-page-taste_terroir .entry-content-wrapper.cpt {
+	padding-top:20px;
+	padding-bottom:15px;
+	border:none;
+	background-color: rgba(255, 255, 255, 0.90);
+	padding-right:25px;
+	padding-left:25px;
+	margin:15px 0;
+}
+.page-template-page-taste_terroir .entry-content-wrapper.cpt {
+	font-family: "Relay Reg", "open_sansbold", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	color:#333;
+	/*text-shadow:0px 1px 9px rgba(0, 0, 0, 0.75); */
+}
+
+/*#top.page-template-page-taste_terroir h1.main-title.entry-title,
+#top.page-template-page-taste_terroir h1.main-title.entry-title a{
+	color: #fff;
+}
+#top.page-template-page-taste_terroir .entry-content-wrapper.cpt h2.post-title.entry-title a:hover {color:#fff;}*/
+
+
+
+
+/* 
+* CPT - Previous & Next Post bottom links for custom SINGLE template (taste & terroir)
+*/
+#top .navigation {
+	width:100%;
+	position:relative;
+	overflow: hidden
+}
+#top .navigation .previous-post,
+#top .navigation .next-post {
+	width:48%;
+	padding-top:8px;
+	padding-bottom:8px;
+	float:left;
+	position:relative;
+	font-size:14px;
+	line-height: 1.250;
+}
+#top .navigation .next-post {
+	text-align: right;
+	margin-left:4%;
+}
+@media only screen and (max-width: 480px) {
+	#top .navigation .previous-post {border-bottom:1px dotted #ccc;}
+	#top .navigation .previous-post,
+	#top .navigation .next-post {
+		width:100%;
+		float:none;
+		margin:0;
+		text-align: center;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+/* ================================================================= */
+#footer {
+	padding:40px 0 20px 0;
+	background-color: #67be5d;
+	font-size: 15px;
+	line-height: 1.375;
+	color:#333;
+}
+
+/* adjusts the footer columns so there is less left margin and the 5th column is wider */
+#footer div .av_one_fifth.first {margin-left:0%;}
+#footer div .av_one_fifth {margin-left:2%;width:17.4%;}
+#footer div .av_one_fifth:nth-child(5) {width:22.4%; clear: right;}
+
+/* footer h3 titles */
+#footer h3.widgettitle {font-family: "Relay Bd", "Trebuchet MS", "sans-serif"; font-weight: normal; font-size:16px; color:#fff; margin-bottom:20px;}
+#footer div .av_one_fifth:nth-child(5) h3.widgettitle {color:#333; margin-bottom: 10px;}
+
+/* footer links */
+#footer a, #footer a:link {color:#d9ffd5;}
+#footer a:hover {color:#fff; text-decoration: underline;}
+#footer li.current_page_item a {color:#fff; font-weight: normal;}
+
+/* footer bold text */
+#footer strong {color:inherit;}
+
+/* social icons */
+.footer-social-icon {margin:2px;}
+
+/* WBC logo */
+.footer-logo {float:right; display: block;}
+
+/* copyright */
+.wbc-copyright {width:100%; float:left; margin-top:75px; font-family: "Relay Reg", "Trebuchet MS", "sans-serif"; text-align:center; font-size: 14px; color:#333;}
+.wbc-copyright .tagline {width:100%; max-width:450px;}
+
+@media only screen and (max-width: 767px) {
+	.footer-logo {float:none; margin:0 auto;}
+	.wbc-copyright .tagline {width:100%; max-width:350px;}
+}
+
+
+
+
+
+
+
+
+/* SOCKET */
+/* ================================================================= */
+#socket .copyright {
+	font-family: "Relay Reg", "Trebuchet MS", "sans-serif";
+	text-align:center!important;
+	font-size: 14px;
+	margin:0 auto;
+	width:100%;
+}
+
+
+
+
+
+
+
+
+
+/* CUSTOMIZING PLUGINS */
+/* ================================================================= */
+
+/* ================== */
+/* === MAPIFY PRO === */
+/* ================== */
+.mapify-fullwidth .container {width:100%; max-width:100%; padding:0;}
+.mpfy-tooltip p {font-size:13px!important; margin-top:0px;}
+.mpfy-tooltip p strong {font-size:15px!important; text-transform:uppercase;}
+
+
+
+/* ============================================================== */
+/* === COMMUNITY EVENTS (Plugin for use with Events Calendar) === */
+/* ============================================================== */
+body.tribe_community_edit .tribe-button.submit, body.tribe_community_list .tribe-button.submit {
+	font-family: "Relay Reg", "Trebuchet MS", "sans-serif";
+	font-size: 18px;
+	margin: 20px auto;
+	min-width: 100px;
+	padding: 1em;
+	text-transform: uppercase;
+	width: 20%;
+  background: #67be5d;
+}
+
+body.tribe_community_edit .tribe-button.submit:focus,
+body.tribe_community_edit .tribe-button.submit:hover, 
+body.tribe_community_list .tribe-button.submit:focus, 
+body.tribe_community_list .tribe-button.submit:hover {
+    background: #555a5c;
+}
+
+
+
+
+
+
+/* ==================================== */
+/*                                      */
+/* AVIA LAYOUT BUILDER ELEMENTS/MODULES */
+/*                                      */
+/* ==================================== */
+
+/* -----------------------------------
+AVIA - Flex Column
+- stop bottom margin
+-------------------------------------- */
+@media only screen and (max-width: 989px) {
+	.responsive #top #wrap_all .av-break-at-tablet .flex_cell {
+		margin-bottom:0;
+	}
+}
+
+
+/* -----------------------------------
+AVIA - Special Heading
+- remove stupid extra top margin)
+-------------------------------------- */
+.av-special-heading {
+	margin-top:0;
+}
+
+
+/* -----------------------------------
+AVIA - Easy Slider
+-------------------------------------- */
+/* Keep arrows and circles visible */
+.avia_desktop .av_slideshow.avia-slideshow .avia-slideshow-controls a {
+  opacity: 1;
+  filter: alpha(opacity=1);
+}
+
+
+/* -----------------------------------
+AVIA - Full-Width Easy Slider
+- Note: Although styled mainly for the top titlebar with slider bkg, these styles will impact any full-width easy slider created.
+- If a slider needs to be created that looks different, then perhaps each titlebar with slider needs it's own class
+-------------------------------------- */
+#top .slideshow_caption h2 {
+	font-family: "Relay Bd"!important; 
+	text-shadow:0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+#top .slideshow_caption .titlebar-small-text {
+	display:inline-block;
+}
+@media only screen and (max-width: 1600px) {
+	#top .slideshow_caption h2.avia-caption-title {
+		font-size:65px!important;
+	}
+}
+@media only screen and (max-width: 1400px) {
+	#top .slideshow_caption h2.avia-caption-title {
+		font-size:55px!important;
+	}
+}
+@media only screen and (max-width: 1280px) {
+	#top .slideshow_caption h2.avia-caption-title {
+		font-size:45px!important;
+	}
+}
+@media only screen and (max-width: 990px) {
+	#top .slideshow_caption {
+		padding-top: 0px!important;
+	}
+	.responsive #top #wrap_all .slideshow_caption .titlebar-small-text {
+		font-size:24px!important;
+	}
+}
+@media only screen and (max-width: 767px) {
+	.responsive #top #wrap_all .slideshow_caption h2.avia-caption-title {
+		font-size:40px!important;
+	}
+	.responsive #top #wrap_all .slideshow_caption .titlebar-small-text {
+		font-size:20px!important; 
+		letter-spacing:4px; 
+		line-height: 1.5;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.responsive #top #wrap_all .slideshow_caption h2.avia-caption-title {
+		font-size:30px!important; 
+		line-height: 1;
+	}
+	.responsive #top #wrap_all .slideshow_caption .titlebar-small-text {
+		font-size:16px!important; 
+		letter-spacing:4px;
+	}
+}
+
+
+/* -----------------------------------
+AVIA - Full-Width Menu
+-------------------------------------- */
+#top .av-submenu-container {
+	min-height: auto;
+	border:none;
+  max-width:1310px;
+	padding:0 50px;
+	padding-top:40px;
+	margin:0 auto;
+}
+#top .av-submenu-container .container {
+	width:100%;
+  max-width:1310px;
+	padding:0 50px;
+	border-top:1px solid #ebebeb;
+	border-bottom:1px solid #ebebeb;
+}
+#top .av-subnav-menu > li {
+	padding: 0;
+	display: block;
+	float: left;
+}
+#top .av-submenu-container .av-subnav-menu > li a {padding: 5px 10px 5px 10px;}
+#top .av-submenu-container .av-subnav-menu > li > a {border-left:none;}
+#top .av-submenu-container .av-subnav-menu li a span {font-size:13px; color:#67be5d; text-transform: uppercase;}
+#top .av-submenu-container .av-subnav-menu li li a span {font-size:13px;}
+#top .av-submenu-container .current_page_item > a span:before,
+#top .av-submenu-container .current_page_parent > a span:before{
+	display:inline-block;
+	vertical-align: middle;
+	margin-right:3px;
+}
+#after_submenu {margin-top:20px;}
+#top .av-submenu-container .av-subnav-menu > li.current-menu-item.current_page_item > a > span,
+#top .av-submenu-container .av-subnav-menu > li.current_page_parent.current_page_ancestor > a > span{font-family: "Relay Bd"!important; color:#555a5c;}
+@media only screen and (max-width: 767px) {
+	#top .av-submenu-container .mobile_menu_toggle {border-left:0; border-right:0; background-color:transparent;}
+	#top .av-submenu-container .av-current-placeholder {display:none;}
+	
+	#top .av-submenu-container {
+		min-height: auto;
+		border:none;
+		max-width:100%;
+		padding:0px;
+		padding-top:0px;
+		margin:0 auto;
+	}
+	#top .av-subnav-menu > li {
+		padding: 0;
+		display: inline-block;
+		float: none;
+	}
+	.responsive #top .av-menu-mobile-active .av-subnav-menu > li > a {padding: 15px 5%;}
+	#top .av-submenu-container .av-subnav-menu > li:first-child > a {padding: 15px 5%;}
+	.responsive #top .av-menu-mobile-active .av-subnav-menu > li a::before {content: "";}
+	#top .main_color .av-subnav-menu a:hover {background-color:#f8f8f8!important;}
+}
+
+
+/* -----------------------------------
+AVIA - Tab section
+------------------------------------- */
+#awards-tabs .avia_textblock ul {
+	margin-left:0;
+	margin-bottom:30px;
+}
+#awards-tabs .avia_textblock ul li {
+	list-style: none;
+	margin-left:0;
+	padding:1px 0;
+	font-size:16px;
+	line-height: 1.250;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+#awards-tabs .avia_textblock h3 {
+	margin-bottom:0px;
+}
+
+
+/* -----------------------------------
+AVIA - Accordion
+------------------------------------- */
+.single_toggle {margin:0; padding-bottom:0;}
+.togglecontainer .single_toggle:first-child .toggler, .togglecontainer .taglist + .single_toggle .toggler {
+    border-top-left-radius:0;
+    border-top-right-radius:0;
+}
+.js_active .toggler {
+	padding:9px 3px 9px 40px;
+	top:0px;
+	border:none;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-bottom-color:#eee;
+}
+.js_active .toggler:hover {
+  top:0px;
+  border:none;
+  border-bottom-style:solid;
+  border-bottom-width:1px;
+  border-bottom-color:#eee;
+}
+.main_color .toggler {
+	background:#fff;
+	color:#67be5c;
+	font-size:20px;
+}
+.main_color .toggler:hover {
+background: #67be5c!important;
+color:#ffffff!important;
+}
+.main_color .toggler.activeTitle {
+background:#67be5c!important;
+color:#ffffff!important;
+}
+.main_color .toggler.activeTitle:hover {
+background:#67be5c!important;
+color:#ffffff!important;
+}
+.main_color .toggle_content {
+	background:#fcfcfc!important;
+}
+.toggle_icon {
+    width:23px;
+    height:23px;
+    border:none;
+    top:22px;
+    left:10px;
+}
+.toggler .toggle_icon {
+	background: url("https://winebc.com/industry/wp-content/uploads/sites/2/2018/03/i-accordion-toggle-off.png");
+	background-size: cover;
+}
+.toggler:hover .toggle_icon {
+	background: url("https://winebc.com/industry/wp-content/uploads/sites/2/2018/03/i-accordion-toggle-hover-off.png");
+	background-size: cover;
+}
+.activeTitle .toggle_icon {
+	background: url("https://winebc.com/industry/wp-content/uploads/sites/2/2018/03/i-accordion-toggle-on.png") !important;
+	background-size: cover;
+}
+.activeTitle .toggle_icon .vert_icon {display:none;}
+.toggle_icon .hor_icon, .toggle_icon .vert_icon {display:none;}
+
+
+/* -----------------------------------
+AVIA - Tabs
+-------------------------------------- */
+.js_active .tab {font-size:14px;}
+.main_color .sidebar_tab, .main_color .tabcontainer .tab {color:#67be5c;}
+
+
+/* -----------------------------------
+AVIA - Button
+-------------------------------------- */
+body div .avia-button {
+	font-weight:400;
+	letter-spacing:1px;
+	border:none;
+	border-radius:0;
+	background-color:#67be5c;
+	color:#fff;
+}
+body div .avia-button:hover {
+	background-color:#666!important;
+	color:#fff;
+}
+.avia-button.avia-size-small {
+    font-size:15px;
+    min-width:80px;
+    padding:6px 25px 6px;
+}
+.avia-button.avia-size-medium {
+    font-size:20px;
+    min-width:90px;
+    padding:6px 25px 6px;
+}
+.avia-button.avia-size-large {
+    font-size:26px;
+    min-width:139px;
+    padding:6px 25px 6px;
+}
+.avia-button.avia-size-x-large {
+    font-size:30px;
+    min-width:160px;
+    padding:6px 25px 9px;
+}
+@media only screen and (max-width: 800px) {
+	.avia-button.avia-size-large {
+    font-size:22px;
+    min-width:139px;
+    padding:8px 20px 8px;
+	}
+}
+
+
+/* -----------------------------------
+AVIA - Icon List
+-------------------------------------- */
+/* remove vertical timeline */
+.avia-icon-list .iconlist-timeline {display:none;}
+
+/* change background color of icon */
+.main_color .avia-icon-list .iconlist_icon {background-color: #002c45;}
+.avia-icon-list .iconlist_icon {
+    border-radius: 0; /* makes icon background square instead of round */
+    color: #fff;
+    float: left;
+    font-size: 30px;
+    height: 44px; /* makes backround area smaller */
+    line-height: 44px; /* adjusted for smaller background area */
+    margin-left: 2px;
+    margin-right: 15px; /* moves text closer to icon */
+    position: relative;
+    text-align: center;
+    width: 44px; /* makes backround area smaller */
+    z-index: 5;
+}
+h4.iconlist_title a {
+	color: #18639e!important; 
+	text-transform: none;
+}
+.iconlist_content p {font-size:14px;}
+
+
+/* -----------------------------------
+AVIA - Image
+------------------------------------- */
+/* styling the caption */
+.av-image-caption-overlay p {
+	font-family: "Relay Bd", "open_sanslight", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	text-shadow:0px 1px 4px rgba(0, 0, 0, 0.7); 
+}
+
+
+/* -----------------------------------
+AVIA - Masonry Gallery
+------------------------------------- */
+/* style for custom 7th column added via modifiying shortcode in child theme */
+.av-masonry-col-7 .av-masonry-entry {
+    width: 14.25%;
+}
+.av-masonry-col-8 .av-masonry-entry {
+    width: 12.5%;
+}
+/* remove default grey bkg */
+.main_color .av-masonry {
+	background-color:transparent;
+}
+/* Title */
+h3.av-masonry-entry-title.entry-title {
+	font-family: "Relay Bd", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif!important;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1;
+	text-shadow:0px 1px 4px rgba(0, 0, 0, 0.7); 
+}
+/* Caption */
+.av-masonry-entry-content.entry-content {
+	font-family: "Relay Reg", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size:18px;
+	line-height: 1;
+	text-shadow:0px 1px 12px rgba(0, 0, 0, 0.7); 
+}
+/* Caption - if strong tag is manually applied */
+.av-masonry-entry-content.entry-content strong {
+	font-family: "Relay Bd", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+}
+/* stops fly-in animation */
+.avia_desktop.avia_transform3d .av-masonry-entry.av-masonry-item-loaded .av-inner-masonry {
+-webkit-animation: none;
+animation: none;
+}
+.avia_desktop .av-hover-overlay-active .av-masonry-image-container {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+/* CUSTOM ITEMS */
+/* ============================================== */
+
+/* Customize the Enfold 'Blank' template */
+#top.avia-blank {vertical-align: top;}
+#top.avia-blank #wrap_all {vertical-align: top;}
+
+.html_stretched #top.avia-blank #wrap_all {background-color: #fff;}
+#top.page-template-template-blank main.content {padding-top: 50px;}
+
+
+/*
+ * Region Circles
+*/
+.region-circle-wrap {margin:0 auto; text-align: center;}
+.region-circle {
+	width:190px;
+	height:190px;
+	display:inline-table;
+	padding-left:3%;
+	padding-right:3%;
+	margin:3px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	text-align: center;
+}
+#top .region-circle h2 {
+	display:table-cell;
+	vertical-align: middle;
+	font-family: "Relay Bd", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-weight: normal;
+	font-style: normal;
+	font-size:16px;
+	color:#555a5c;
+	line-height: 1;
+	text-align: center;
+}
+.region-circle h2 span {
+	display:block;
+	font-family: "Relay Lt", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-weight: normal;
+	font-style: normal;
+	font-size:34px;
+}
+.region-circle-wrap.white-text h2 {color:#fff!important;}
+#top .region-circle-wrap a .region-circle:link h2,
+#top .region-circle-wrap a .region-circle:active h2,
+#top .region-circle-wrap a .region-circle:visitied h2 {color:#555a5c;}
+#top .region-circle-wrap a .region-circle:hover h2 {color:#67be5d;}
+.region-circle.purple {
+	background-image:url(https://winebc.com/wp-content/uploads/2018/01/circle-purple.png);
+}
+.region-circle.yellow {
+	background-image:url(https://winebc.com/wp-content/uploads/2018/01/circle-yellow.png);
+}
+.region-circle.orange {
+	background-image:url(https://winebc.com/wp-content/uploads/2018/01/circle-orange.png);
+}
+.region-circle.red {
+	background-image:url(https://winebc.com/wp-content/uploads/2018/01/circle-red.png);
+}
+.region-circle.teal {
+	background-image:url(https://winebc.com/wp-content/uploads/2018/01/circle-teal.png);
+}
+.region-circle.grey-lines {
+	background-image:url(https://winebc.com/wp-content/uploads/2018/01/circle-grey-lines.png);
+}
+.region-circle.white-lines {
+	background-image:url(https://winebc.com/wp-content/uploads/2018/02/circle-white-lines.png);
+}
+
+
+
+/* Pricing Table Customization */
+.main_color .table-no-styling .pricing-table li {background-color:transparent; border:none;}
+
+#top .flex_column.cmbcg-buy-tickets-box {margin-left:20px!important;}
+
+/* remove L & R arrows from pop-up iframe lightbox */
+.mfp-arrow.mfp-arrow-left, .mfp-arrow.mfp-arrow-right {display: none;}
+
+.page-template-template-blank h1.main-title.entry-title a {
+	font-family: "Relay Bd", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-weight: normal;
+	font-style: normal;
+	font-size:20px!important;
+}
+.page-template-template-blank main.content {padding-top:0px;}
+
+
+
+
+/* GENERAL CSS CUSTOMIZATIONS */
+/* ================================================== */
+#top .wider-container .container {max-width:1600px;}
+#top .full-width-container .container {max-width:100%;}
+
+/* Lightbox popup - turn off borders */
+#top.avia-blank #main .container_wrap:first-child,
+#top.avia-blank #main .container_wrap:last-child {border: none;}
+
+.nowrap {white-space: nowrap;}
+
+/* Images */
+.image-overlay{display: none !important;}
+
+/* Layout Items */
+.hr-inner {border-color:#ccc!important; border-style:dotted;}
+
+/* Color */
+.wbc-green {color:#67be5d!important;}
+.wbc-grey {color:#555a5c!important;}
+
+
+
+
+
+
+/* SEARCH AND SAVOUR CONTEST 2018 */
+/* ================================================== */
+/* Position the region stamp */
+#top .sas-stamp {
+	position:absolute;
+	top:-130px;
+	left:-150px;
+}
+
+/*
+ * Gravity Forms
+*/
+/* Search and Savour Contest 2018 */
+.gform_wrapper form #field_1_9 h3, .gform_wrapper form #field_1_10 h3, .gform_wrapper form #field_1_14 h3,
+.gform_wrapper form #field_2_9 h3, .gform_wrapper form #field_2_10 h3, .gform_wrapper form #field_2_14 h3,
+.gform_wrapper form #field_3_9 h3, .gform_wrapper form #field_3_10 h3, .gform_wrapper form #field_3_14 h3,
+.gform_wrapper form #field_4_9 h3, .gform_wrapper form #field_4_10 h3, .gform_wrapper form #field_4_14 h3,
+.gform_wrapper form #field_5_9 h3, .gform_wrapper form #field_5_10 h3, .gform_wrapper form #field_5_14 h3,
+.gform_wrapper form #field_6_9 h3, .gform_wrapper form #field_6_10 h3, .gform_wrapper form #field_6_14 h3,
+.gform_wrapper form #field_7_9 h3, .gform_wrapper form #field_7_10 h3, .gform_wrapper form #field_7_14 h3,
+.gform_wrapper form #field_8_9 h3, .gform_wrapper form #field_8_10 h3, .gform_wrapper form #field_8_14 h3,
+.gform_wrapper form #field_9_9 h3, .gform_wrapper form #field_9_10 h3, .gform_wrapper form #field_9_14 h3 {
+	color: #b89b71;
+	font-family: "Relay Bd", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-weight: normal;
+	font-style: normal;
+}
+.gform_wrapper form #field_1_8, .gform_wrapper form #field_1_11, .gform_wrapper form #field_1_13,
+.gform_wrapper form #field_2_8, .gform_wrapper form #field_2_11, .gform_wrapper form #field_2_13,
+.gform_wrapper form #field_3_8, .gform_wrapper form #field_3_11, .gform_wrapper form #field_3_13,
+.gform_wrapper form #field_4_8, .gform_wrapper form #field_4_11, .gform_wrapper form #field_4_13,
+.gform_wrapper form #field_5_8, .gform_wrapper form #field_5_11, .gform_wrapper form #field_5_13,
+.gform_wrapper form #field_6_8, .gform_wrapper form #field_6_11, .gform_wrapper form #field_6_13,
+.gform_wrapper form #field_7_8, .gform_wrapper form #field_7_11, .gform_wrapper form #field_7_13,
+.gform_wrapper form #field_8_8, .gform_wrapper form #field_8_11, .gform_wrapper form #field_8_13,
+.gform_wrapper form #field_9_8, .gform_wrapper form #field_9_11, .gform_wrapper form #field_9_13 {text-align: center!important;}
+
+/* wrong answer notifications */
+.gform_wrapper form #field_1_21, .gform_wrapper form #field_1_22, .gform_wrapper form #field_1_23,
+.gform_wrapper form #field_2_21, .gform_wrapper form #field_2_22, .gform_wrapper form #field_2_23,
+.gform_wrapper form #field_3_21, .gform_wrapper form #field_3_22, .gform_wrapper form #field_3_23,
+.gform_wrapper form #field_4_21, .gform_wrapper form #field_4_22, .gform_wrapper form #field_4_23,
+.gform_wrapper form #field_5_21, .gform_wrapper form #field_5_22, .gform_wrapper form #field_5_23,
+.gform_wrapper form #field_6_21, .gform_wrapper form #field_6_22, .gform_wrapper form #field_6_23,
+.gform_wrapper form #field_7_21, .gform_wrapper form #field_7_22, .gform_wrapper form #field_7_23,
+.gform_wrapper form #field_8_21, .gform_wrapper form #field_8_22, .gform_wrapper form #field_8_23,
+.gform_wrapper form #field_9_21, .gform_wrapper form #field_9_22, .gform_wrapper form #field_9_23 {color: red; text-align: center!important;}
+
+.gform_wrapper form #field_1_8 label, .gform_wrapper form #field_1_11 label, .gform_wrapper form #field_1_13 label,
+.gform_wrapper form #field_2_8 label, .gform_wrapper form #field_2_11 label, .gform_wrapper form #field_2_13 label,
+.gform_wrapper form #field_3_8 label, .gform_wrapper form #field_3_11 label, .gform_wrapper form #field_3_13 label,
+.gform_wrapper form #field_4_8 label, .gform_wrapper form #field_4_11 label, .gform_wrapper form #field_4_13 label,
+.gform_wrapper form #field_5_8 label, .gform_wrapper form #field_5_11 label, .gform_wrapper form #field_5_13 label,
+.gform_wrapper form #field_6_8 label, .gform_wrapper form #field_6_11 label, .gform_wrapper form #field_6_13 label,
+.gform_wrapper form #field_7_8 label, .gform_wrapper form #field_7_11 label, .gform_wrapper form #field_7_13 label,
+.gform_wrapper form #field_8_8 label, .gform_wrapper form #field_8_11 label, .gform_wrapper form #field_8_13 label,
+.gform_wrapper form #field_9_8 label, .gform_wrapper form #field_9_11 label, .gform_wrapper form #field_9_13 label {font-size: 20px!important;}
+
+#top .gform_wrapper .gfield_radio li label {margin: 1px 0 0 5px!important; max-width:100%;}
+
+body .gform_wrapper ul li.field_description_below div.ginput_container_checkbox {margin-top:0;}
+
+.gfield.gfield_html h3 {font-size:30px; text-align:center;}
