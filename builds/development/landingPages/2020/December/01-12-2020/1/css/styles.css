@@ -29,7 +29,7 @@ img::-moz-selection { background: transparent; }
 #mainNav .navbar-nav .nav-item .nav-link { font-size: 0.95rem; color: #fff; letter-spacing: 0.0625em; }
 
 @media (max-width: 991.98px) { .main-navbar { padding: 10px 25px !important; background-color: #fff; }
-  .main-navbar .navbar-brand { width: 20%; padding: 35px; display: block; background: url("../assets/img/logo.png") no-repeat 15px; background-size: contain; transition: padding .35s ease; }
+  .main-navbar .navbar-brand { width: 50%; padding: 35px; display: block; background: url("../assets/img/logo.png") no-repeat 15px; background-size: contain; transition: padding .35s ease; }
   .main-navbar .navbar-brand img { display: none; }
   .main-navbar .navbar-nav li a { color: #67be5d; }
   .main-navbar .navbar-collapse { background-color: #67be5d; padding: 15px; } }
