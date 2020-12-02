@@ -290,3 +290,20 @@ img::-moz-selection {
 		margin-bottom: 10px;
 	}
 }
+
+.datepicker {
+	padding: 10px;
+	table {
+		tr {
+			td {
+				&.active, &.active:hover {
+					background-image: linear-gradient(to bottom, #67be5d, #67be5d);
+				}
+			}
+		}
+	}
+	td {
+		width: 40px;
+		height: 35px;
+	}
+}

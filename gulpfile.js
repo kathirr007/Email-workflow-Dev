@@ -85,10 +85,10 @@ let landingPages = {
         in: ['src/landingPages/**/*.{png,gif,jpg,jpeg,svg}']
     },
     css: {
-        in: ['src/landingPages/**/*.scss'],
+        in: ['src/landingPages/**/*.{css,scss}'],
         watch: ['src/landingPages/**/*.{scss,css}'],
         sassOpts: {
-            outputStyle: devBuild ? 'compact' : 'compressed',
+            outputStyle: devBuild ? 'compressed' : 'compressed',
             imagePath: '../assets/img',
             precision: 3,
             errLogToConsole: true,
@@ -264,11 +264,21 @@ gulp.task('landingJs', () => {
 gulp.task(
     'landingSass',
     gulp.series( () => {
+        let cssFilter = $.filter(['**/*.css'], { restore: true });
         return gulp
             .src(landingPages.css.in)
             .pipe($.size({
                 title: 'SCSS in '
             }))
+            .pipe(cssFilter)
+            .pipe(
+                $.rename(function (path) {
+                    path.extname = '.scss';
+                })
+            )
+            .pipe($.plumber())
+            .pipe($.sass(landingPages.css.sassOpts))
+            .pipe(cssFilter.restore)
             .pipe($.sourcemaps.init({largeFile: true}))
             .pipe($.plumber())
             .pipe($.sass(landingPages.css.sassOpts))

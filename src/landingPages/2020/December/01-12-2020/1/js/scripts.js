@@ -73,6 +73,10 @@
                 })
             });
         } */
+
+        $('input.date-picker').datepicker({
+            todayHighlight: true
+        });
         
     });
 
@@ -94,5 +98,6 @@
         });
         }, false);
     })();
+
     
 })(jQuery); // End of use strict
