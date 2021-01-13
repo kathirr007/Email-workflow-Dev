@@ -5,7 +5,7 @@ Email development workflow with Node, Express, gulp & nodemailer
 
 **[Email-workflow-Dev](git@github.com:kathirr007/Email-workflow-Dev)** is the List of HTML emails by me for HTML Email Development outsourcing.
 
-For List of templates please checkout **[here](https://kathirr007.github.io/Email-workflow-Dev/)**
+For List of templates please checkout **[here](https://email-newsletters.vercel.app/)**
 
 ## Testing setup
 ```
