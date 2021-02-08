@@ -80,10 +80,21 @@ img::-moz-selection {
 	letter-spacing: 0.0625em;
 }
 
+.main-navbar {
+	background: url(../assets/img/bg-3.jpg) no-repeat center center;
+	background-size: cover;
+	@media (max-width: 991.98px) {
+		background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(237,237,242,.9) 30%, rgba(0,212,255,0) 60%) ,url(../assets/img/bg-3.jpg) no-repeat center center;
+	 }
+	@media screen and (max-width:480px) {
+		background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(237,237,242,.9) 40%, rgba(0,212,255,0) 90%) ,url(../assets/img/bg-3.jpg) no-repeat center center;
+	}
+}
+
 @media (max-width: 991.98px) {
 	&.main-navbar {
 		padding: 10px 25px !important;
-		background-color: #fff;
+		// background-color: #fff;
 		.navbar-brand {
 			width: 50%;
 			img {
