@@ -98,11 +98,25 @@
             border-bottom-left-radius: 0.25rem;
             border-bottom-right-radius: 0.25rem;
         }
+
         .no-pad {
             padding: 0;
         }
+
+
+
+        .landing-pages #accordion>.card,
+        div[id*="year-"]>.card {
+            margin-bottom: 15px;
+        }
+
+        .landing-pages #accordion>.card:last-child,
+        div[id*="year-"]>.card:last-child {
+            margin-bottom: 0;
+        }
+
         @media (min-width: 576px) {
-            .w-sm-75{
+            .w-sm-75 {
                 width: 75% !important;
             }
         }
