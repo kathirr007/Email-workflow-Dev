@@ -1,9 +1,14 @@
+* {
+  box-sizing: border-box;
+  line-height: normal;
+}
+
 body {
-  margin: 0px;
-  padding: 0px;
+  -ms-text-size-adjust: none !important;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none !important;
-  -ms-text-size-adjust: none !important;
+  margin: 0;
+  padding: 0;
 }
 
 /* * {
@@ -16,9 +21,9 @@ a[href^="x-apple-data-detectors:"] {
 }
 
 .spacer {
-  mso-line-height-rule: exactly;
-  line-height: 1px !important;
   font-size: 1px !important;
+  line-height: 1px !important;
+  mso-line-height-rule: exactly;
 }
 
 .fwb {
@@ -43,7 +48,7 @@ div:not(.no-inline) {
 }
 
 .text-white {
-  color: #ffffff;
+  color: #fff;
 }
 
 .text-black {
@@ -51,7 +56,7 @@ div:not(.no-inline) {
 }
 
 .bg-white {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .bg-black {
@@ -61,80 +66,80 @@ div:not(.no-inline) {
 /* Spacing styles */
 
 .p-0 {
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 0px;
-  padding-left: 0px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
 }
 
 .p-5 {
-  padding-top: 5px;
   padding-bottom: 5px;
-  padding-right: 5px;
   padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
 }
 
 .p-10 {
-  padding-top: 10px;
   padding-bottom: 10px;
-  padding-right: 10px;
   padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
 }
 
 .p-15 {
-  padding-top: 15px;
   padding-bottom: 15px;
-  padding-right: 15px;
   padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
 }
 
 .p-20 {
-  padding-top: 20px;
   padding-bottom: 20px;
-  padding-right: 20px;
   padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
 }
 
 .p-25 {
-  padding-top: 25px;
   padding-bottom: 25px;
-  padding-right: 25px;
   padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
 }
 
 .p-30 {
-  padding-top: 30px;
   padding-bottom: 30px;
-  padding-right: 30px;
   padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
 }
 
 .p-35 {
-  padding-top: 35px;
   padding-bottom: 35px;
-  padding-right: 35px;
   padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 35px;
 }
 
 .p-40 {
-  padding-top: 40px;
   padding-bottom: 40px;
-  padding-right: 40px;
   padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 40px;
 }
 
 .p-45 {
-  padding-top: 45px;
   padding-bottom: 45px;
-  padding-right: 45px;
   padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 45px;
 }
 
 .p-50 {
-  padding-top: 50px;
   padding-bottom: 50px;
-  padding-right: 50px;
   padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 50px;
 }
 
 .pt-5 {
@@ -303,8 +308,8 @@ div:not(.no-inline) {
 }
 
 .py-5 {
-  padding-top: 5px;
   padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .px-10 {
@@ -313,8 +318,8 @@ div:not(.no-inline) {
 }
 
 .py-10 {
-  padding-top: 10px;
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .px-15 {
@@ -323,8 +328,8 @@ div:not(.no-inline) {
 }
 
 .py-15 {
-  padding-top: 15px;
   padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 .px-20 {
@@ -333,8 +338,8 @@ div:not(.no-inline) {
 }
 
 .py-20 {
-  padding-top: 20px;
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .px-25 {
@@ -343,8 +348,8 @@ div:not(.no-inline) {
 }
 
 .py-25 {
-  padding-top: 25px;
   padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .px-30 {
@@ -353,8 +358,8 @@ div:not(.no-inline) {
 }
 
 .py-30 {
-  padding-top: 30px;
   padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .px-35 {
@@ -363,8 +368,8 @@ div:not(.no-inline) {
 }
 
 .py-35 {
-  padding-top: 35px;
   padding-bottom: 35px;
+  padding-top: 35px;
 }
 
 .px-40 {
@@ -373,8 +378,8 @@ div:not(.no-inline) {
 }
 
 .py-40 {
-  padding-top: 40px;
   padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .px-45 {
@@ -383,8 +388,8 @@ div:not(.no-inline) {
 }
 
 .py-45 {
-  padding-top: 45px;
   padding-bottom: 45px;
+  padding-top: 45px;
 }
 
 .px-50 {
@@ -393,8 +398,8 @@ div:not(.no-inline) {
 }
 
 .py-50 {
-  padding-top: 50px;
   padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 /* Display styles starts */

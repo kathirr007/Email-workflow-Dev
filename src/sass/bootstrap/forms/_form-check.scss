@@ -1,3 +1,4 @@
+@use "sass:math";
 //
 // Check/radio
 //
@@ -17,7 +18,10 @@
 .form-check-input {
   width: $form-check-input-width;
   height: $form-check-input-width;
-  margin-top: ($line-height-base - $form-check-input-width) / 2; // line-height minus check height
+  margin-top: math.div(
+    ($line-height-base - $form-check-input-width),
+    2
+  ); // line-height minus check height
   background-color: $form-check-input-bg;
   border: $form-check-input-border;
   appearance: none;
@@ -70,10 +74,10 @@
   &[disabled] {
     pointer-events: none;
     filter: none;
-    opacity: .5;
+    opacity: 0.5;
 
     ~ .form-check-label {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 }

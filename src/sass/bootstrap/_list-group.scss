@@ -7,8 +7,8 @@
   flex-direction: column;
 
   // No need to set list-style: none; since .list-group-item is block level
-  padding-left: 0; // reset padding because ul and ol
   margin-bottom: 0;
+  padding-left: 0; // reset padding because ul and ol
 }
 
 
@@ -18,22 +18,22 @@
 // list items. Includes an extra `.active` modifier class for selected items.
 
 .list-group-item-action {
-  width: 100%; // For `<button>`s (anchors become 100% by default though)
   color: $list-group-action-color;
   text-align: inherit; // For `<button>`s (anchors inherit)
+  width: 100%; // For `<button>`s (anchors become 100% by default though)
 
   // Hover state
   &:hover,
   &:focus {
-    z-index: 1; // Place hover/focus items above their siblings for proper border styling
+    background-color: $list-group-hover-bg;
     color: $list-group-action-hover-color;
     text-decoration: none;
-    background-color: $list-group-hover-bg;
+    z-index: 1; // Place hover/focus items above their siblings for proper border styling
   }
 
   &:active {
-    color: $list-group-action-active-color;
     background-color: $list-group-action-active-bg;
+    color: $list-group-action-active-color;
   }
 }
 
@@ -43,13 +43,13 @@
 // Use on `li`s or `div`s within the `.list-group` parent.
 
 .list-group-item {
-  position: relative;
-  display: block;
-  padding: $list-group-item-padding-y $list-group-item-padding-x;
-  margin-bottom: 0; // for <label> variations
-  color: $list-group-color;
   background-color: $list-group-bg;
   border: $list-group-border-width solid $list-group-border-color;
+  color: $list-group-color;
+  display: block;
+  margin-bottom: 0; // for <label> variations
+  padding: $list-group-item-padding-y $list-group-item-padding-x;
+  position: relative;
 
   &:first-child {
     @include border-top-radius($list-group-border-radius);
@@ -61,25 +61,25 @@
 
   &.disabled,
   &:disabled {
+    background-color: $list-group-disabled-bg;
     color: $list-group-disabled-color;
     pointer-events: none;
-    background-color: $list-group-disabled-bg;
   }
 
   // Include both here for `<a>`s and `<button>`s
   &.active {
-    z-index: 2; // Place active items above their siblings for proper border styling
-    color: $list-group-active-color;
     background-color: $list-group-active-bg;
     border-color: $list-group-active-border-color;
+    color: $list-group-active-color;
+    z-index: 2; // Place active items above their siblings for proper border styling
   }
 
   & + & {
     border-top-width: 0;
 
     &.active {
-      margin-top: -$list-group-border-width;
       border-top-width: $list-group-border-width;
+      margin-top: -$list-group-border-width;
     }
   }
 }
@@ -112,12 +112,12 @@
         }
 
         & + .list-group-item {
-          border-top-width: $list-group-border-width;
           border-left-width: 0;
+          border-top-width: $list-group-border-width;
 
           &.active {
-            margin-left: -$list-group-border-width;
             border-left-width: $list-group-border-width;
+            margin-left: -$list-group-border-width;
           }
         }
       }
@@ -133,8 +133,8 @@
 
 .list-group-flush {
   .list-group-item {
-    border-right-width: 0;
     border-left-width: 0;
+    border-right-width: 0;
     @include border-radius(0);
 
     &:first-child {

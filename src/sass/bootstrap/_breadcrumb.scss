@@ -1,11 +1,11 @@
 .breadcrumb {
+  background-color: $breadcrumb-bg;
   display: flex;
   flex-wrap: wrap;
-  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
-  margin-bottom: $breadcrumb-margin-bottom;
-  @include font-size($breadcrumb-font-size);
   list-style: none;
-  background-color: $breadcrumb-bg;
+  @include font-size($breadcrumb-font-size);
+  margin-bottom: $breadcrumb-margin-bottom;
+  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   @include border-radius($breadcrumb-border-radius);
 }
 
@@ -15,10 +15,10 @@
     padding-left: $breadcrumb-item-padding-x;
 
     &::before {
-      display: inline-block; // Suppress underlining of the separator in modern browsers
-      padding-right: $breadcrumb-item-padding-x;
       color: $breadcrumb-divider-color;
       content: escape-svg($breadcrumb-divider);
+      display: inline-block; // Suppress underlining of the separator in modern browsers
+      padding-right: $breadcrumb-item-padding-x;
     }
   }
 

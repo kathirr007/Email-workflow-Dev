@@ -15,6 +15,6 @@
 .navbar-expand-sm > .container-md,
 .navbar-expand-sm > .container-lg,
 .navbar-expand-sm > .container-xl {
-  padding-right: 0;
   padding-left: 0;
+  padding-right: 0;
 }

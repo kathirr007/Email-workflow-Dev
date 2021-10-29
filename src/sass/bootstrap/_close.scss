@@ -1,10 +1,10 @@
 .close {
   @include font-size($close-font-size);
+  color: $close-color;
   font-weight: $close-font-weight;
   line-height: 1;
-  color: $close-color;
-  text-shadow: $close-text-shadow;
   opacity: .5;
+  text-shadow: $close-text-shadow;
 
   // Override <a>'s hover style
   &:hover {
@@ -27,10 +27,10 @@
 
 // stylelint-disable-next-line selector-no-qualifying-type
 button.close {
-  padding: 0;
+  appearance: none;
   background-color: transparent;
   border: 0;
-  appearance: none;
+  padding: 0;
 }
 
 // Future-proof disabling of clicks on `<a>` elements

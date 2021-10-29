@@ -3,13 +3,13 @@
 // Make the div behave like a button
 .btn-group,
 .btn-group-vertical {
-  position: relative;
   display: inline-flex;
+  position: relative;
   vertical-align: middle; // match .btn alignment given font-size hack above
 
   > .btn {
-    position: relative;
     flex: 1 1 auto;
+    position: relative;
 
     // Bring the hover, focused, and "active" buttons to the front to overlay
     // the borders properly
@@ -65,8 +65,8 @@
 //
 
 .dropdown-toggle-split {
-  padding-right: $btn-padding-x * .75;
   padding-left: $btn-padding-x * .75;
+  padding-right: $btn-padding-x * .75;
 
   &::after,
   .dropup &::after,
@@ -80,13 +80,13 @@
 }
 
 .btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .75;
   padding-left: $btn-padding-x-sm * .75;
+  padding-right: $btn-padding-x-sm * .75;
 }
 
 .btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .75;
   padding-left: $btn-padding-x-lg * .75;
+  padding-right: $btn-padding-x-lg * .75;
 }
 
 
@@ -107,8 +107,8 @@
 //
 
 .btn-group-vertical {
-  flex-direction: column;
   align-items: flex-start;
+  flex-direction: column;
   justify-content: center;
 
   > .btn,
@@ -153,9 +153,9 @@
 
     input[type="radio"],
     input[type="checkbox"] {
-      position: absolute;
       clip: rect(0, 0, 0, 0);
       pointer-events: none;
+      position: absolute;
     }
   }
 }

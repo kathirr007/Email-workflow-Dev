@@ -3,10 +3,10 @@
 //
 
 .alert {
-  position: relative;
-  padding: $alert-padding-y $alert-padding-x;
-  margin-bottom: $alert-margin-bottom;
   border: $alert-border-width solid transparent;
+  margin-bottom: $alert-margin-bottom;
+  padding: $alert-padding-y $alert-padding-x;
+  position: relative;
   @include border-radius($alert-border-radius);
 }
 
@@ -31,11 +31,11 @@
 
   // Adjust close link position
   .close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: $alert-padding-y $alert-padding-x;
     color: inherit;
+    padding: $alert-padding-y $alert-padding-x;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 

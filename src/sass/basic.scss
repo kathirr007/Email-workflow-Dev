@@ -1,42 +1,60 @@
-html, body {
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-p:not(.no-inline), span:not(.no-inline), b:not(.no-inline), em:not(.no-inline), abbr:not(.no-inline), div:not(.no-inline), h1:not(.no-inline), h2:not(.no-inline), h3:not(.no-inline), h4:not(.no-inline), h5:not(.no-inline), a:not(.no-inline), td:not(.no-inline) {
-    font-family: Arial,Helvetica, sans-serif;
-    line-height: normal;
-    margin: 0;
-    box-sizing: border-box;
+p:not(.no-inline),
+span:not(.no-inline),
+b:not(.no-inline),
+em:not(.no-inline),
+abbr:not(.no-inline),
+div:not(.no-inline),
+h1:not(.no-inline),
+h2:not(.no-inline),
+h3:not(.no-inline),
+h4:not(.no-inline),
+h5:not(.no-inline),
+a:not(.no-inline),
+td:not(.no-inline) {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: normal;
+  margin: 0;
 }
 
-p:not(.no-inline), span:not(.no-inline), b:not(.no-inline), em:not(.no-inline), abbr:not(.no-inline), div:not(.no-inline) {
-    font-size: 12px;
-    color: #222;
+p:not(.no-inline),
+span:not(.no-inline),
+b:not(.no-inline),
+em:not(.no-inline),
+abbr:not(.no-inline),
+div:not(.no-inline) {
+  color: #222;
+  font-size: 12px;
 }
 
 a:not(.no-inline) {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 img:not(.no-inline) {
-    vertical-align: sub;
-    display: block;
-    border: none;
+  border: 0;
+  display: block;
+  vertical-align: sub;
 }
 
 table:not(.no-inline) {
-    margin: 0; 
-    padding: 0;
-    empty-cells: hide;
+  empty-cells: hide;
+  margin: 0;
+  padding: 0;
 
-    td:not(.no-inline) {
-        margin: 0 auto;
-    }
+  td:not(.no-inline) {
+    margin: 0 auto;
+  }
 }
 
 .text-left {
-    text-align: left;
+  text-align: left;
 }

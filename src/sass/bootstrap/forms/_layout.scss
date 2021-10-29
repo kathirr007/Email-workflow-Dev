@@ -1,3 +1,4 @@
+@use "sass:math";
 // Form grid
 //
 // Special replacement for our grid system's `.row` for tighter form layouts.
@@ -6,13 +7,13 @@
   .form-row {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -$form-grid-gutter-width / 2;
-    margin-left: -$form-grid-gutter-width / 2;
+    margin-right: math.div(-$form-grid-gutter-width, 2);
+    margin-left: math.div(-$form-grid-gutter-width, 2);
 
     > .col,
     > [class*="col-"] {
-      padding-right: $form-grid-gutter-width / 2;
-      padding-left: $form-grid-gutter-width / 2;
+      padding-right: math.div($form-grid-gutter-width, 2);
+      padding-left: math.div($form-grid-gutter-width, 2);
     }
   }
 }

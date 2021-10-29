@@ -15,8 +15,9 @@ a,
 td {
     font-family: "futura", Arial, Helvetica, sans-serif;
 }
+
 body {
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 table {
@@ -28,10 +29,10 @@ table {
     tr {
         td {
             h3 {
+                letter-spacing: 0.5px;
+                padding: 15px 25px;
                 text-align: center;
                 text-transform: uppercase;
-                padding: 15px 25px;
-                letter-spacing: 0.5px;
             }
         }
     }
@@ -39,7 +40,7 @@ table {
 
 
 .text-white {
-    color: #ffffff;
+    color: #fff;
 }
 
 .text-black {
@@ -65,12 +66,15 @@ table {
 .text-lightgray {
     color: #f2f2f2;
 }
+
 .text-darkgray {
     color: #424242;
 }
+
 .bg-darkgray {
     background-color: #424242;
 }
+
 .bg-border-gray {
     background-color: #c4c4c4;
 }
@@ -122,7 +126,7 @@ table {
 }
 
 .cta-blue {
-    color: #ffffff;
+    color: #fff;
 }
 
 .block-heading {

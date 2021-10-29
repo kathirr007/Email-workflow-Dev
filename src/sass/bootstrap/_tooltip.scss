@@ -1,3 +1,4 @@
+@use "sass:math";
 // Base class
 .tooltip {
   position: absolute;
@@ -12,7 +13,9 @@
   word-wrap: break-word;
   opacity: 0;
 
-  &.show { opacity: $tooltip-opacity; }
+  &.show {
+    opacity: $tooltip-opacity;
+  }
 
   .tooltip-arrow {
     position: absolute;
@@ -37,7 +40,7 @@
 
     &::before {
       top: 0;
-      border-width: $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+      border-width: $tooltip-arrow-height (math.div($tooltip-arrow-width, 2)) 0;
       border-top-color: $tooltip-arrow-color;
     }
   }
@@ -53,7 +56,8 @@
 
     &::before {
       right: 0;
-      border-width: ($tooltip-arrow-width / 2) $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+      border-width: math.div(($tooltip-arrow-width), 2) $tooltip-arrow-height
+        math.div(($tooltip-arrow-width), 2) 0;
       border-right-color: $tooltip-arrow-color;
     }
   }
@@ -67,7 +71,7 @@
 
     &::before {
       bottom: 0;
-      border-width: 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
+      border-width: 0 math.div(($tooltip-arrow-width), 2) $tooltip-arrow-height;
       border-bottom-color: $tooltip-arrow-color;
     }
   }
@@ -83,7 +87,8 @@
 
     &::before {
       left: 0;
-      border-width: ($tooltip-arrow-width / 2) 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
+      border-width: math.div(($tooltip-arrow-width), 2) 0
+        math.div(($tooltip-arrow-width), 2) $tooltip-arrow-height;
       border-left-color: $tooltip-arrow-color;
     }
   }

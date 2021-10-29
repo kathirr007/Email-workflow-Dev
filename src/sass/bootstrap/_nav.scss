@@ -6,9 +6,9 @@
 .nav {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 0;
-  margin-bottom: 0;
   list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
 .nav-link {
@@ -23,8 +23,8 @@
   // Disabled state lightens text
   &.disabled {
     color: $nav-link-disabled-color;
-    pointer-events: none;
     cursor: default;
+    pointer-events: none;
   }
 }
 
@@ -49,17 +49,17 @@
     }
 
     &.disabled {
-      color: $nav-link-disabled-color;
       background-color: transparent;
       border-color: transparent;
+      color: $nav-link-disabled-color;
     }
   }
 
   .nav-link.active,
   .nav-item.show .nav-link {
-    color: $nav-tabs-link-active-color;
     background-color: $nav-tabs-link-active-bg;
     border-color: $nav-tabs-link-active-border-color;
+    color: $nav-tabs-link-active-color;
   }
 
   .dropdown-menu {
@@ -82,8 +82,8 @@
 
   .nav-link.active,
   .show > .nav-link {
-    color: $nav-pills-link-active-color;
     background-color: $nav-pills-link-active-bg;
+    color: $nav-pills-link-active-color;
   }
 }
 
@@ -116,6 +116,7 @@
   > .tab-pane {
     display: none;
   }
+
   > .active {
     display: block;
   }

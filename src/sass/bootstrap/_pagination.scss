@@ -4,24 +4,24 @@
 }
 
 .page-link {
-  position: relative;
-  display: block;
-  color: $pagination-color;
   background-color: $pagination-bg;
   border: $pagination-border-width solid $pagination-border-color;
+  color: $pagination-color;
+  display: block;
+  position: relative;
 
   &:hover {
-    z-index: 2;
-    color: $pagination-hover-color;
-    text-decoration: none;
     background-color: $pagination-hover-bg;
     border-color: $pagination-hover-border-color;
+    color: $pagination-hover-color;
+    text-decoration: none;
+    z-index: 2;
   }
 
   &:focus {
-    z-index: 3;
-    outline: $pagination-focus-outline;
     box-shadow: $pagination-focus-box-shadow;
+    outline: $pagination-focus-outline;
+    z-index: 3;
   }
 }
 
@@ -31,19 +31,19 @@
   }
 
   &.active .page-link {
-    z-index: 3;
-    color: $pagination-active-color;
     background-color: $pagination-active-bg;
     border-color: $pagination-active-border-color;
+    color: $pagination-active-color;
+    z-index: 3;
   }
 
   &.disabled .page-link {
-    color: $pagination-disabled-color;
-    pointer-events: none;
-    // Opinionated: remove the "hand" cursor set previously for .page-link
-    cursor: auto;
     background-color: $pagination-disabled-bg;
     border-color: $pagination-disabled-border-color;
+    // Opinionated: remove the "hand" cursor set previously for .page-link
+    color: $pagination-disabled-color;
+    cursor: auto;
+    pointer-events: none;
   }
 }
 

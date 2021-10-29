@@ -1,3 +1,4 @@
+@use "sass:math";
 // Bootstrap functions
 //
 // Utility mixins and functions for evaluating source code across our variables, maps, and mixins.
@@ -47,7 +48,12 @@
   $result: ();
   @each $key, $value in $map {
     @if (index($values, $key) != null) {
-      $result: map-merge($result, ($key: $value));
+      $result: map-merge(
+        $result,
+        (
+          $key: $value,
+        )
+      );
     }
   }
   @return $result;
@@ -65,7 +71,12 @@
   $index: str-index($string, $search);
 
   @if $index {
-    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(
+        str-slice($string, $index + str-length($search)),
+        $search,
+        $replace
+      );
   }
 
   @return $string;
@@ -88,7 +99,7 @@
   $g: green($color);
   $b: blue($color);
 
-  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+  $yiq: math.div((($r * 299) + ($g * 587) + ($b * 114)), 1000);
 
   @return if($yiq >= $yiq-contrasted-threshold, $dark, $light);
 }

@@ -17,18 +17,18 @@ td {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 table tr td h3 {
+  letter-spacing: 0.5px;
+  padding: 15px 25px;
   text-align: center;
   text-transform: uppercase;
-  padding: 15px 25px;
-  letter-spacing: 0.5px;
 }
 
 .text-white {
-  color: #ffffff;
+  color: #fff;
 }
 
 .text-black {
@@ -113,7 +113,7 @@ table tr td h3 {
 }
 
 .cta-blue {
-  color: #ffffff;
+  color: #fff;
 }
 
 .block-heading {

@@ -1,7 +1,7 @@
 /* Mobile background styles start */
 
 .hero-bg-mob {
-  background-image: url(images/hero-banner-mob.png) !important;
+  background-image: url("images/hero-banner-mob.png") !important;
 }
 
 .transparent-black-50 {
@@ -11,7 +11,7 @@
 /* Mobile background styles ends */
 
 .text-white {
-  color: #ffffff;
+  color: #fff;
 }
 
 .text-black {
@@ -21,7 +21,7 @@
 /*Letter spacing styles start*/
 
 .ls-0 {
-  letter-spacing: 0px !important;
+  letter-spacing: 0 !important;
 }
 
 .ls-1 {
@@ -67,8 +67,8 @@
 /*Letter spacing styles end*/
 
 .spacer {
-  line-height: 1px !important;
   font-size: 1px !important;
+  line-height: 1px !important;
 }
 
 .wrapper-table {
@@ -80,8 +80,8 @@
 }
 
 .full {
-  width: 100% !important;
   min-width: 100% !important;
+  width: 100% !important;
 }
 
 .contents {
@@ -95,21 +95,21 @@
 .show {
   display: block !important;
   font-size: inherit !important;
-  max-height: none !important;
-  width: auto !important;
   line-height: normal !important;
+  max-height: none !important;
   overflow: visible !important;
+  width: auto !important;
 }
 
 .imgfull {
-  width: 100%;
   height: auto;
+  width: 100%;
 }
 
 .bg-responsive {
+  background-position: center !important;
   background-size: cover !important;
   object-fit: cover !important;
-  background-position: center !important;
 }
 
 .full-width {
@@ -135,8 +135,8 @@
 
 .coldrop {
   display: block;
+  padding: 0;
   width: 100%;
-  padding: 0px;
 }
 
 .arrange-top {
@@ -156,19 +156,19 @@
 }
 
 .autowidthheight {
-  width: auto !important;
   height: auto !important;
+  width: auto !important;
 }
 
 body[yahoo] .no-bg {
   background: none !important;
-  background-color: #ffffff !important;
+  background-color: #fff !important;
 }
 
 body[yahoo] .top-banner {
-  width: 100% !important;
-  background-size: cover !important;
   background-position: 100% top !important;
+  background-size: cover !important;
+  width: 100% !important;
 }
 
 /* Font styles start */
@@ -1194,80 +1194,80 @@ body[yahoo] .top-banner {
 /*Spacing styles starts*/
 
 .p-mob-0 {
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  padding-right: 0px !important;
-  padding-left: 0px !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
 }
 
 .p-mob-5 {
-  padding-top: 5px !important;
   padding-bottom: 5px !important;
-  padding-right: 5px !important;
   padding-left: 5px !important;
+  padding-right: 5px !important;
+  padding-top: 5px !important;
 }
 
 .p-mob-10 {
-  padding-top: 10px !important;
   padding-bottom: 10px !important;
-  padding-right: 10px !important;
   padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-top: 10px !important;
 }
 
 .p-mob-15 {
-  padding-top: 15px !important;
   padding-bottom: 15px !important;
-  padding-right: 15px !important;
   padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 15px !important;
 }
 
 .p-mob-20 {
-  padding-top: 20px !important;
   padding-bottom: 20px !important;
-  padding-right: 20px !important;
   padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 20px !important;
 }
 
 .p-mob-25 {
-  padding-top: 25px !important;
   padding-bottom: 25px !important;
-  padding-right: 25px !important;
   padding-left: 25px !important;
+  padding-right: 25px !important;
+  padding-top: 25px !important;
 }
 
 .p-mob-30 {
-  padding-top: 30px !important;
   padding-bottom: 30px !important;
-  padding-right: 30px !important;
   padding-left: 30px !important;
+  padding-right: 30px !important;
+  padding-top: 30px !important;
 }
 
 .p-mob-35 {
-  padding-top: 35px !important;
   padding-bottom: 35px !important;
-  padding-right: 35px !important;
   padding-left: 35px !important;
+  padding-right: 35px !important;
+  padding-top: 35px !important;
 }
 
 .p-mob-40 {
-  padding-top: 40px !important;
   padding-bottom: 40px !important;
-  padding-right: 40px !important;
   padding-left: 40px !important;
+  padding-right: 40px !important;
+  padding-top: 40px !important;
 }
 
 .p-mob-45 {
-  padding-top: 45px !important;
   padding-bottom: 45px !important;
-  padding-right: 45px !important;
   padding-left: 45px !important;
+  padding-right: 45px !important;
+  padding-top: 45px !important;
 }
 
 .p-mob-50 {
-  padding-top: 50px !important;
   padding-bottom: 50px !important;
-  padding-right: 50px !important;
   padding-left: 50px !important;
+  padding-right: 50px !important;
+  padding-top: 50px !important;
 }
 
 .pt-mob-5 {
@@ -1436,8 +1436,8 @@ body[yahoo] .top-banner {
 }
 
 .py-mob-5 {
-  padding-top: 5px !important;
   padding-bottom: 5px !important;
+  padding-top: 5px !important;
 }
 
 .px-mob-10 {
@@ -1446,8 +1446,8 @@ body[yahoo] .top-banner {
 }
 
 .py-mob-10 {
-  padding-top: 10px !important;
   padding-bottom: 10px !important;
+  padding-top: 10px !important;
 }
 
 .px-mob-15 {
@@ -1456,8 +1456,8 @@ body[yahoo] .top-banner {
 }
 
 .py-mob-15 {
-  padding-top: 15px !important;
   padding-bottom: 15px !important;
+  padding-top: 15px !important;
 }
 
 .px-mob-20 {
@@ -1466,8 +1466,8 @@ body[yahoo] .top-banner {
 }
 
 .py-mob-20 {
-  padding-top: 20px !important;
   padding-bottom: 20px !important;
+  padding-top: 20px !important;
 }
 
 .px-mob-25 {
@@ -1476,8 +1476,8 @@ body[yahoo] .top-banner {
 }
 
 .py-mob-25 {
-  padding-top: 25px !important;
   padding-bottom: 25px !important;
+  padding-top: 25px !important;
 }
 
 .px-mob-30 {
@@ -1486,8 +1486,8 @@ body[yahoo] .top-banner {
 }
 
 .py-mob-30 {
-  padding-top: 30px !important;
   padding-bottom: 30px !important;
+  padding-top: 30px !important;
 }
 
 .px-mob-35 {
@@ -1496,8 +1496,8 @@ body[yahoo] .top-banner {
 }
 
 .py-mob-35 {
-  padding-top: 35px !important;
   padding-bottom: 35px !important;
+  padding-top: 35px !important;
 }
 
 .px-mob-40 {
@@ -1506,8 +1506,8 @@ body[yahoo] .top-banner {
 }
 
 .py-mob-40 {
-  padding-top: 40px !important;
   padding-bottom: 40px !important;
+  padding-top: 40px !important;
 }
 
 .px-mob-45 {
@@ -1516,8 +1516,8 @@ body[yahoo] .top-banner {
 }
 
 .py-mob-45 {
-  padding-top: 45px !important;
   padding-bottom: 45px !important;
+  padding-top: 45px !important;
 }
 
 .px-mob-50 {
@@ -1526,8 +1526,8 @@ body[yahoo] .top-banner {
 }
 
 .py-mob-50 {
-  padding-top: 50px !important;
   padding-bottom: 50px !important;
+  padding-top: 50px !important;
 }
 
 /*Spacing styles starts ends*/

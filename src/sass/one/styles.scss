@@ -1,57 +1,56 @@
-table{
-    &.wrapper-table {
-        
+table {
+  &.wrapper-table {
+  }
+  &.content-table {
+    @media screen and (max-width: 645px) {
+      width: 645px !important;
     }
-    &.content-table {
-        @media screen and (max-width:645px) {
-            width: 645px !important;
-        }
+  }
+  tr {
+    td {
+      h3 {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 15px 25px;
+        letter-spacing: 0.5px;
+      }
     }
-    tr{
-        td{
-            h3{
-                text-align: center;
-                text-transform: uppercase;
-                padding: 15px 25px;
-                letter-spacing: 0.5px;
-            }
-        }
-    }
+  }
 }
 
 .text-black {
-    color: #010101;
+  color: #010101;
 }
 .text-white {
-    color: #ffffff;
+  color: #ffffff;
 }
 .text-gray {
-    color: #6c6c6c;
+  color: #6c6c6c;
 }
 .text-blue {
-    color: #7c22c9;
+  color: #7c22c9;
 }
 
-.bg-red{
-    background-color: #E84C50;
+.bg-red {
+  background-color: #e84c50;
 }
 .bg-blue {
-    background-color: #7c22c9;
+  background-color: #7c22c9;
 }
 .bg-lightgray {
-    background-color: #f6f4f9;
+  background-color: #f6f4f9;
 }
 .bg-lightblue {
-    background-color: #e4d5f2;
+  background-color: #e4d5f2;
 }
 .bg-lightpink {
-    background-color: #f2e8f9;
+  background-color: #f2e8f9;
 }
 .body-bg {
-    background-color: #f6f6f6;
+  background-color: #f6f6f6;
 }
 .bg-gray {
-    background-color: #d8d8d8;
+  background-color: #d8d8d8;
 }
 
 /* .ff-lato {
@@ -69,39 +68,39 @@ table{
 } */
 
 .hero-heading {
-    font-size: 32px;
-    font-weight: bold;
+  font-size: 32px;
+  font-weight: bold;
 }
 .hero-content {
-    font-size: 18px;
+  font-size: 18px;
 }
 .cta-blue {
-    color: #ffffff;
+  color: #ffffff;
 }
 .block-heading {
-    font-size: 25px;
-    font-weight: bold;
+  font-size: 25px;
+  font-weight: bold;
 }
 .promo-preheader {
-    font-size: 12px;
-    mso-line-height-rule:exactly;
-    line-height: 12px;
-    font-weight: bold;
+  font-size: 12px;
+  mso-line-height-rule: exactly;
+  line-height: 12px;
+  font-weight: bold;
 }
 .promo-offer-text {
-    font-size: 30px;
-    font-weight: bold;
+  font-size: 30px;
+  font-weight: bold;
 }
 .promo-text {
-    font-size: 16px;
+  font-size: 16px;
 }
 .promo-text-02 {
-    font-size: 18px;
+  font-size: 18px;
 }
 .cta {
-    font-size: 12px;
-    font-weight: bold;
-    &.big-cta {
-        font-size: 18px;
-    }
+  font-size: 12px;
+  font-weight: bold;
+  &.big-cta {
+    font-size: 18px;
+  }
 }
