@@ -59,7 +59,7 @@ const devBuild =
   (process.env.NODE_ENV || "development").trim().toLowerCase() !== "production";
 
 const source = "./";
-const dest = devBuild ? "builds/development/" : "builds/production/";
+const dest = devBuild ? "builds/development/" : "dist/";
 const baseDir = dest;
 
 // in: source + 'src/emails/**/*.(jpg|jpeg|png|svg|gif)',
