@@ -642,4 +642,4 @@ gulp.task(
 );
 
 // build task
-gulp.task("build", gulp.parallel("buildHTML", "images"));
+gulp.task("build", gulp.parallel("html", "buildHTML", "images"));
