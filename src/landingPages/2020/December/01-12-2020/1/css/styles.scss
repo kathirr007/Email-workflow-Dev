@@ -13,11 +13,9 @@ body {
   font-family: "Relay Lt", "Trebuchet MS", "HelveticaNeue", "Helvetica Neue",
     Helvetica, Arial, sans-serif;
 }
-
 p {
   line-height: 1.75;
 }
-
 @media (min-width: 768px) {
   section {
     padding: 9rem 0;
@@ -28,24 +26,19 @@ p {
   background: $primary;
   text-shadow: none;
 }
-
 ::selection {
   background: $primary;
   text-shadow: none;
 }
-
 img::-moz-selection {
   background: transparent;
 }
-
 img::selection {
   background: transparent;
 }
-
 img::-moz-selection {
   background: transparent;
 }
-
 .btn-xl {
   padding: 1.25rem 2.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -54,7 +47,6 @@ img::-moz-selection {
   font-size: 1.125rem;
   font-weight: 700;
 }
-
 .btn-social {
   height: 2.5rem;
   width: 2.5rem;
@@ -64,12 +56,10 @@ img::-moz-selection {
   padding: 0;
   border-radius: 100%;
 }
-
 #mainNav {
   padding: 0;
   background-color: $primary;
 }
-
 #mainNav .navbar-toggler {
   padding: 0.75rem;
   // font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -79,7 +69,6 @@ img::-moz-selection {
   background-color: $primary;
   border: 0;
 }
-
 #mainNav .navbar-brand {
   color: $primary;
   // font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -87,7 +76,6 @@ img::-moz-selection {
   letter-spacing: 0.0625em;
   text-transform: uppercase;
 }
-
 #mainNav .navbar-nav .nav-item .nav-link {
   // font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.95rem;
@@ -95,15 +83,43 @@ img::-moz-selection {
   letter-spacing: 0.0625em;
 }
 
+.main-navbar {
+  background: url(../assets/img/bg-3.jpg) no-repeat center center;
+  background-size: cover;
+
+  @media (max-width: 991.98px) {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(237, 237, 242, 0.9) 30%,
+        rgba(0, 212, 255, 0) 60%
+      ),
+      url(../assets/img/bg-3.jpg) no-repeat center center;
+  }
+
+  @media screen and (max-width: 480px) {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(237, 237, 242, 0.9) 40%,
+        rgba(0, 212, 255, 0) 90%
+      ),
+      url(../assets/img/bg-3.jpg) no-repeat center center;
+  }
+}
+
 @media (max-width: 991.98px) {
-  .main-navbar {
+  &.main-navbar {
     padding: 10px 25px !important;
-    background-color: #fff;
+
+    // background-color: #fff;
     .navbar-brand {
       width: 50%;
+
       img {
         display: none;
       }
+
       padding: 35px;
       display: block;
       background: url("../assets/img/logo.png") no-repeat 15px;
@@ -124,7 +140,7 @@ img::-moz-selection {
 
 @media (min-width: 992px) {
   #mainNav {
-    border: 0;
+    border: none;
     // background-color: transparent;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
@@ -144,24 +160,28 @@ img::-moz-selection {
     // padding-top: 1rem;
     // padding-bottom: 1rem;
     background-color: $primary;
+
     .container-fluid {
       padding-top: 0;
       padding-bottom: 0;
+
       &.main-navbar {
         background-color: #fff;
+
         .navbar-brand {
           img {
             display: none;
           }
+
           padding: 35px;
           display: block;
-          background: url("../assets/img/logo.png") no-repeat 15px;
+          background: url("../assets/img/logo-rev.png") no-repeat 15px;
           background-size: contain;
           transition: padding 0.35s ease;
         }
 
         .navbar-collapse > .navbar-nav > li > a {
-          color: $primary;
+          color: #fff;
         }
       }
     }
@@ -181,7 +201,6 @@ img::-moz-selection {
 	#mainNav.navbar-shrink .navbar-brand img {
 		height: 1.5rem;
 	} */
-
   #mainNav .navbar-nav .nav-item {
     margin-right: 1rem;
   }
@@ -193,6 +212,7 @@ img::-moz-selection {
 
 #top {
   padding-top: 160px;
+
   @media screen and (min-width: 768px) {
     padding-top: 130px;
   }
@@ -240,7 +260,6 @@ img::-moz-selection {
   }
 
   // .dropdown-menu > li:hover{ background-color: #f1f1f1 }
-
   .dropdown-menu > li:hover > .submenu {
     display: block;
   }
@@ -249,14 +268,17 @@ img::-moz-selection {
 .navbar {
   &.top-menu {
     background-color: $primary;
+
     .navbar-nav {
       .dropdown-menu {
         background-color: $menu-bg;
         border-radius: 0;
         border: 0;
+
         li,
         li a {
           color: #fff;
+
           &:hover {
             background-color: $menu-bg;
             color: $primary;
@@ -266,6 +288,7 @@ img::-moz-selection {
         .submenu {
           border-top: 2px solid #67be5d;
           padding-left: 20px;
+
           @media screen and (min-width: 768px) {
             padding-left: 0;
           }
@@ -315,6 +338,7 @@ img::-moz-selection {
   background-color: $primary;
   text-align: center;
   font-size: 0.9rem;
+
   // font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   .footer-social-icon-wrapper {
     a {
@@ -332,6 +356,7 @@ img::-moz-selection {
 
 .datepicker {
   padding: 10px;
+
   table {
     tr {
       td {
