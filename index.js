@@ -9,7 +9,7 @@ let app,
 const devBuild =
   (process.env.NODE_ENV || "development").trim().toLowerCase() !== "production";
 
-const dist = devBuild ? "/builds/development" : "/builds/production";
+const dist = devBuild ? "/builds/development" : "/dist";
 
 app = express();
 /* app.use(function (req, res, next) {
