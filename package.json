@@ -10,7 +10,6 @@
     "watch": "gulp watch",
     "serveEmail": "node ./server.js",
     "sendTestMail": "cross-env NODE_ENV=production node ./sendmail.js",
-    "postbuild": "cross-env NODE_ENV=production node ./sendmail.js",
     "heroku-postbuild": "npm run build",
     "start": "node index.js"
   },
