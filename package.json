@@ -39,7 +39,7 @@
     "cross-env": "^6.0.3",
     "dotenv": "^8.2.0",
     "email-comb": "^5.1.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "global": "^4.4.0",
     "gulp-beautify": "^3.0.0",
     "gulp-email-remove-unused-css": "^3.6.54",
