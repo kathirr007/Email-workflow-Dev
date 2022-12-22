@@ -1,45 +1,45 @@
-const path = require("path");
-const gulp = require("gulp");
+const path = require('path');
+const gulp = require('gulp');
 // const gulp = require('gulp-param')(require('gulp'), process.argv);
-const $ = require("gulp-load-plugins")({
+const $ = require('gulp-load-plugins')({
   lazy: true,
 });
-const gulpSass = require("gulp-sass")(require("sass"));
+const gulpSass = require('gulp-sass')(require('sass'));
 // const pug = require('gulp-pug');
-const pkg = require("./package.json");
-const { crush } = require("html-crush");
-const { comb } = require("email-comb");
-const wrapper = require("text-wrapper").wrapper;
-const del = require("del");
-const uncss = require("uncss");
-const postuncss = require("postcss-uncss");
+const pkg = require('./package.json');
+const { crush } = require('html-crush');
+const { comb } = require('email-comb');
+const wrapper = require('text-wrapper').wrapper;
+const del = require('del');
+const uncss = require('uncss');
+const postuncss = require('postcss-uncss');
 const whitelist = [
-  ".ExternalClass",
-  ".ReadMsgBody",
-  ".yshortcuts",
-  ".Mso*",
-  ".maxwidth-apple-mail-fix",
-  "#outlook",
-  ".module-*",
-  ".height_01",
-  "span.MsoHyperlink",
-  ".fallback-font",
-  ".fb-font",
-  ".p-o-10",
-  ".px-o-10",
-  ".py-o-15",
-  ".d-o-block",
-  ".mcn*",
+  '.ExternalClass',
+  '.ReadMsgBody',
+  '.yshortcuts',
+  '.Mso*',
+  '.maxwidth-apple-mail-fix',
+  '#outlook',
+  '.module-*',
+  '.height_01',
+  'span.MsoHyperlink',
+  '.fallback-font',
+  '.fb-font',
+  '.p-o-10',
+  '.px-o-10',
+  '.py-o-15',
+  '.d-o-block',
+  '.mcn*',
 ];
 // const sass = require('gulp-sass');
 // const replace = require('gulp-replace');
 // const inlineCss = require('gulp-inline-css');
 // const rename = require('gulp-rename');
-const browserSync = require("browser-sync").create();
+const browserSync = require('browser-sync').create();
 const reload = browserSync.reload;
 const pathOptions = {
   ext: {
-    template: ["html"],
+    template: ['html'],
   },
   /*
      root: process.cwd(),
@@ -56,135 +56,135 @@ const pathOptions = {
 // since we are building `index.pug` templates (located in src/emails) to `dist` folder.
 
 const devBuild =
-  (process.env.NODE_ENV || "development").trim().toLowerCase() !== "production";
+  (process.env.NODE_ENV || 'development').trim().toLowerCase() !== 'production';
 
-const source = "./";
-const dest = devBuild ? "builds/development/" : "dist/";
+const source = './';
+const dest = devBuild ? 'builds/development/' : 'dist/';
 const baseDir = dest;
 
 // in: source + 'src/emails/**/*.(jpg|jpeg|png|svg|gif)',
 let images = {
   in: [
-    "src/**/*.{png,gif,jpg,jpeg,svg}",
-    "!src/landingPages/**/*.{png,gif,jpg,jpeg,svg}",
+    'src/**/*.{png,gif,jpg,jpeg,svg}',
+    '!src/landingPages/**/*.{png,gif,jpg,jpeg,svg}',
   ],
   out: dest,
 };
 
 let html = {
-  in: ["src/*.html"],
-  watch: ["src/*.html", "src/_partials/*.html"],
+  in: ['src/*.html'],
+  watch: ['src/*.html', 'src/_partials/*.html'],
   out: `${dest}`,
 };
 
 let resources = {
   watch: [
-    "src/**/*.pug",
-    "src/**/*.html",
-    "!src/*.html",
-    "!src/_partials/*.html",
-    "!**/landingPages/**/*",
-    "!src/**/*.css",
+    'src/**/*.pug',
+    'src/**/*.html',
+    '!src/*.html',
+    '!src/_partials/*.html',
+    '!**/landingPages/**/*',
+    '!src/**/*.css',
   ],
 };
 
 let landingPages = {
   assets: {
     in: [
-      "src/landingPages/**/*",
-      "!src/landingPages/**/*.{css,html,js,scss,png,gif,jpg,jpeg,svg}",
+      'src/landingPages/**/*',
+      '!src/landingPages/**/*.{css,html,js,scss,png,gif,jpg,jpeg,svg}',
     ],
     watch: [],
   },
   images: {
-    in: ["src/landingPages/**/*.{png,gif,jpg,jpeg,svg}"],
+    in: ['src/landingPages/**/*.{png,gif,jpg,jpeg,svg}'],
   },
   css: {
-    in: ["src/landingPages/**/*.{css,scss}"],
-    watch: ["src/landingPages/**/*.{scss,css}"],
+    in: ['src/landingPages/**/*.{css,scss}'],
+    watch: ['src/landingPages/**/*.{scss,css}'],
     sassOpts: {
-      outputStyle: devBuild ? "compressed" : "compressed",
-      imagePath: "../assets/img",
+      outputStyle: devBuild ? 'compressed' : 'compressed',
+      imagePath: '../assets/img',
       precision: 3,
       errLogToConsole: true,
       sourceMap: true,
     },
   },
   html: {
-    in: ["src/landingPages/**/*.html", "!src/landingPages/**/_partials/*.html"],
+    in: ['src/landingPages/**/*.html', '!src/landingPages/**/_partials/*.html'],
     watch: [
-      "src/landingPages/**/*.html",
-      "src/landingPages/**/_partials/*.html",
+      'src/landingPages/**/*.html',
+      'src/landingPages/**/_partials/*.html',
     ],
   },
   js: {
-    in: ["src/landingPages/**/*.js"],
-    watch: ["src/landingPages/**/*.js"],
+    in: ['src/landingPages/**/*.js'],
+    watch: ['src/landingPages/**/*.js'],
   },
-  watch: ["src/landingPages/**/*.html", "src/landingPages/**/_partials/*.html"],
+  watch: ['src/landingPages/**/*.html', 'src/landingPages/**/_partials/*.html'],
   out: `${dest}/landingPages`,
 };
 
 let fonts = {
-  in: source + "src/fonts/**/*",
-  out: dest + "emails/fonts/",
+  in: source + 'src/fonts/**/*',
+  out: dest + 'emails/fonts/',
 };
 
 // Clean tasks
-gulp.task("clean", function (done) {
-  del([dest + "*"]);
+gulp.task('clean', function (done) {
+  del([dest + '*']);
   done();
 });
 
-gulp.task("clean-images", function (done) {
-  del([dest + "**/images/**/*"]);
+gulp.task('clean-images', function (done) {
+  del([dest + '**/images/**/*']);
   done();
 });
 
-gulp.task("clean-css", function (done) {
-  del(["./src/css/**/*"]);
+gulp.task('clean-css', function (done) {
+  del(['./src/css/**/*']);
   done();
 });
 
-gulp.task("clean-fonts", function (done) {
-  del([dest + "./emails/fonts/**/*"]);
+gulp.task('clean-fonts', function (done) {
+  del([dest + './emails/fonts/**/*']);
   done();
 });
 
-gulp.task("clean-html", (cb) => {
-  del([dest + "**/*.html"]);
+gulp.task('clean-html', (cb) => {
+  del([dest + '**/*.html']);
   cb();
 });
 
-gulp.task("clean-landingpages", function (done) {
-  del([dest + "/landingPages/**/*"]);
+gulp.task('clean-landingpages', function (done) {
+  del([dest + '/landingPages/**/*']);
   done();
 });
 
 // show build type
 console.log(
   pkg.name +
-    " " +
+    ' ' +
     pkg.version +
-    ", " +
-    (devBuild ? "development" : "production") +
-    " build"
+    ', ' +
+    (devBuild ? 'development' : 'production') +
+    ' build'
 );
 
 // reload task
-gulp.task("reload", (done) => {
+gulp.task('reload', (done) => {
   browserSync.reload();
   done();
 });
 
 // manage images
-gulp.task("images", function () {
+gulp.task('images', function () {
   return (
     gulp
       .src(images.in)
       .pipe(
         $.size({
-          title: "images in ",
+          title: 'images in ',
         })
       )
       .pipe($.newer(images.out))
@@ -192,12 +192,12 @@ gulp.task("images", function () {
       .pipe(
         $.image({
           jpegRecompress: [
-            "--strip",
-            "--quality",
-            "medium",
-            "--min",
+            '--strip',
+            '--quality',
+            'medium',
+            '--min',
             40,
-            "--max",
+            '--max',
             80,
           ],
           // mozjpeg: ['-optimize', '-progressive'],
@@ -208,7 +208,7 @@ gulp.task("images", function () {
       // .pipe($.rename({dirname: ''}))
       .pipe(
         $.size({
-          title: "images out ",
+          title: 'images out ',
         })
       )
       .pipe(gulp.dest(images.out))
@@ -216,15 +216,15 @@ gulp.task("images", function () {
 });
 
 // copy fonts
-gulp.task("fonts", () => {
+gulp.task('fonts', () => {
   return gulp.src(fonts.in).pipe($.newer(fonts.out)).pipe(gulp.dest(fonts.out));
 });
 
 // landingPages
-gulp.task("html", function () {
+gulp.task('html', function () {
   return (
     gulp
-      .src(["src/*.html"])
+      .src(['src/*.html'])
       .pipe($.plumber())
       // .pipe(htmlFilter)
       .pipe(
@@ -242,7 +242,7 @@ gulp.task("html", function () {
 });
 
 // copy fonts
-gulp.task("landingAssets", () => {
+gulp.task('landingAssets', () => {
   return gulp
     .src(landingPages.assets.in)
     .pipe($.newer(landingPages.out))
@@ -250,12 +250,12 @@ gulp.task("landingAssets", () => {
 });
 
 // manage landing page images
-gulp.task("landingImages", function () {
+gulp.task('landingImages', function () {
   return gulp
     .src(landingPages.images.in)
     .pipe(
       $.size({
-        title: "images in ",
+        title: 'images in ',
       })
     )
     .pipe($.newer(landingPages.out))
@@ -263,12 +263,12 @@ gulp.task("landingImages", function () {
     .pipe(
       $.image({
         jpegRecompress: [
-          "--strip",
-          "--quality",
-          "medium",
-          "--min",
+          '--strip',
+          '--quality',
+          'medium',
+          '--min',
           40,
-          "--max",
+          '--max',
           80,
         ],
         quiet: true,
@@ -276,7 +276,7 @@ gulp.task("landingImages", function () {
     )
     .pipe(
       $.size({
-        title: "images out ",
+        title: 'images out ',
       })
     )
     .pipe(gulp.dest(landingPages.out));
@@ -284,7 +284,7 @@ gulp.task("landingImages", function () {
 
 // landingPages
 gulp.task(
-  "landingPages",
+  'landingPages',
   gulp.parallel(() => {
     return (
       gulp
@@ -307,7 +307,7 @@ gulp.task(
 );
 
 // copy landingpage js
-gulp.task("landingJs", () => {
+gulp.task('landingJs', () => {
   return gulp
     .src(landingPages.js.in)
     .pipe($.newer(landingPages.out))
@@ -316,21 +316,21 @@ gulp.task("landingJs", () => {
 
 // compile sass to css
 gulp.task(
-  "landingSass",
+  'landingSass',
   gulp.series(() => {
-    let cssFilter = $.filter(["**/*.css"], { restore: true });
+    let cssFilter = $.filter(['**/*.css'], { restore: true });
     return (
       gulp
         .src(landingPages.css.in)
         .pipe(
           $.size({
-            title: "SCSS in ",
+            title: 'SCSS in ',
           })
         )
         .pipe(cssFilter)
         .pipe(
           $.rename(function (path) {
-            path.extname = ".scss";
+            path.extname = '.scss';
           })
         )
         .pipe($.plumber())
@@ -350,10 +350,10 @@ gulp.task(
             .pipe($.cssnano()) */
         .pipe(
           $.size({
-            title: "SCSS out ",
+            title: 'SCSS out ',
           })
         )
-        .pipe($.sourcemaps.write("./maps"))
+        .pipe($.sourcemaps.write('./maps'))
         .pipe(gulp.dest(landingPages.out))
         // .pipe(browserSync.stream({match: ['**/*.map', '**/*.css']}));
         .pipe(browserSync.stream())
@@ -363,44 +363,44 @@ gulp.task(
 );
 
 // compile landingpage sass to css
-gulp.task("compileSass", () => {
+gulp.task('compileSass', () => {
   let plugins = [postuncss()];
   return (
     gulp
       // import all email .scss files from src/scss folder
       // ** means any sub or deep-sub files or foders
-      .src("./src/sass/**/*.scss")
+      .src('./src/sass/**/*.scss')
 
       // on error, do not break the process
-      .pipe(gulpSass().on("error", gulpSass.logError))
+      .pipe(gulpSass().on('error', gulpSass.logError))
       .pipe($.extractMediaQueries())
       // .pipe($.rename({dirname: ''}))
       // output to `src/css` folder
-      .pipe(gulp.dest("./src/css"))
+      .pipe(gulp.dest('./src/css'))
   );
 });
 
 // build complete HTML email template
 // compile sass (compileSass task) before running build
 gulp.task(
-  "buildHTML",
-  gulp.series("fonts", () => {
-    var htmlFilter = $.filter(["**/*.html", "!**/*.pug"], { restore: true }),
+  'buildHTML',
+  gulp.series('fonts', 'compileSass', () => {
+    var htmlFilter = $.filter(['**/*.html', '!**/*.pug'], { restore: true }),
       htmlFilter2 = $.filter(
-        ["**/*.html", "!src/404.html", "!src/index.html"],
+        ['**/*.html', '!src/404.html', '!src/index.html'],
         { restore: true }
       ),
-      lengthyHTMLFilter = $.filter(["**/*template-one.html"], {
+      lengthyHTMLFilter = $.filter(['**/*template-one.html'], {
         restore: true,
       }),
       mailChimpFilter = $.filter(
         [
-          "**/gmailIssues/**/*Updated.html",
-          "**/gmailIssues/**/*Updated-2.html",
+          '**/gmailIssues/**/*Updated.html',
+          '**/gmailIssues/**/*Updated-2.html',
         ],
         { restore: true }
       ),
-      pugFilter = $.filter(["**/*.pug"], { restore: true });
+      pugFilter = $.filter(['**/*.pug'], { restore: true });
     function cleanUnUsedCss(
       file,
       t,
@@ -423,7 +423,7 @@ gulp.task(
         /(src=")(images\/)/g,
         `$1https://kathirr007.github.io/Email-workflow-Dev/${path
           .parse(file.path)
-          .dir.split("\\")
+          .dir.split('\\')
           .pop()}/$2`
       );
     }
@@ -431,17 +431,17 @@ gulp.task(
       gulp
         // import all email template (name ending with .template.pug) files from src/emails folder
         .src([
-          "!src/*.html",
-          "src/emails/**/*.html",
-          "src/emails/**/*.pug",
-          "!**/landingPages/**/*",
-          "!**/_*",
-          "!**/_partials/**/*",
+          '!src/*.html',
+          'src/emails/**/*.html',
+          'src/emails/**/*.pug',
+          '!**/landingPages/**/*',
+          '!**/_*',
+          '!**/_partials/**/*',
         ])
-        .pipe($.newer(dest + "emails/**/*.html"))
+        .pipe($.newer(dest + 'emails/**/*.html'))
 
         // replace `.scss` file paths from template with compiled file paths
-        .pipe($.replace(new RegExp("/sass/(.+).scss", "ig"), "/css/$1.css"))
+        .pipe($.replace(new RegExp('/sass/(.+).scss', 'ig'), '/css/$1.css'))
 
         // do not generate sub-folders inside dist folder
         // .pipe($.rename({dirname: ''}))
@@ -465,7 +465,7 @@ gulp.task(
           })) */
         .pipe(
           $.pug({
-            doctype: "html",
+            doctype: 'html',
             pretty: true,
           })
         )
@@ -573,13 +573,13 @@ gulp.task(
         // .pipe($.beautify.html({ indent_size: 2 }))
 
         // put compiled HTML email templates inside dist folder
-        .pipe(gulp.dest(dest + "emails"))
+        .pipe(gulp.dest(dest + 'emails'))
     );
   })
 );
 
 // browserSync task to launch preview server
-gulp.task("browserSync", () => {
+gulp.task('browserSync', () => {
   return browserSync.init({
     server: { baseDir: baseDir },
     open: false,
@@ -592,7 +592,7 @@ gulp.task("browserSync", () => {
 });
 
 // task to reload browserSync
-gulp.task("reloadBrowserSync", () => {
+gulp.task('reloadBrowserSync', () => {
   return browserSync.reload();
 });
 
@@ -600,24 +600,24 @@ gulp.task("reloadBrowserSync", () => {
 // run `build` task when anything inside `src` folder changes (except .css)
 // and reload browserSync
 gulp.task(
-  "watch",
-  gulp.parallel("browserSync", () => {
+  'watch',
+  gulp.parallel('browserSync', () => {
     // html changes
     // gulp.watch(b2bhtml.watch, gulp.series('b2bhtml'));
     // gulp.watch(html.watch, gulp.series('html', 'reload'));
-    gulp.watch(resources.watch, gulp.series("buildHTML", "reload"));
-    gulp.watch(html.watch, gulp.series("html", "reload"));
-    gulp.watch(landingPages.html.watch, gulp.series("landingPages", "reload"));
-    gulp.watch(landingPages.css.watch, gulp.series("landingSass"));
-    gulp.watch(landingPages.js.watch, gulp.series("landingJs", "reload"));
-    gulp.watch("./src/sass/**/*.scss", gulp.series("compileSass", "reload"));
+    gulp.watch(resources.watch, gulp.series('buildHTML', 'reload'));
+    gulp.watch(html.watch, gulp.series('html', 'reload'));
+    gulp.watch(landingPages.html.watch, gulp.series('landingPages', 'reload'));
+    gulp.watch(landingPages.css.watch, gulp.series('landingSass'));
+    gulp.watch(landingPages.js.watch, gulp.series('landingJs', 'reload'));
+    gulp.watch('./src/sass/**/*.scss', gulp.series('compileSass', 'reload'));
 
     // landingPages assets
-    gulp.watch(landingPages.assets.in, gulp.series("landingAssets", "reload"));
+    gulp.watch(landingPages.assets.in, gulp.series('landingAssets', 'reload'));
 
     // image changes
-    gulp.watch(images.in, gulp.series("images"));
-    gulp.watch(landingPages.images.in, gulp.series("landingImages"));
+    gulp.watch(images.in, gulp.series('images'));
+    gulp.watch(landingPages.images.in, gulp.series('landingImages'));
   })
 );
 
@@ -628,18 +628,18 @@ gulp.task(
 
 // default task
 gulp.task(
-  "default",
+  'default',
   gulp.parallel(
-    "buildHTML",
-    "images",
-    "landingPages",
-    "landingAssets",
-    "landingImages",
-    "landingJs",
-    "landingSass",
-    "watch"
+    'buildHTML',
+    'images',
+    'landingPages',
+    'landingAssets',
+    'landingImages',
+    'landingJs',
+    'landingSass',
+    'watch'
   )
 );
 
 // build task
-gulp.task("build", gulp.parallel("html", "buildHTML", "images"));
+gulp.task('build', gulp.parallel('html', 'buildHTML', 'images'));

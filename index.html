@@ -1,6 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Node.JS Email application</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script>
@@ -84,7 +87,7 @@
         <input type="text" id="subject" placeholder="Write Subject"><br>
         <textarea id="content" rows="5" cols="40" placeholder="Write what you want to send"></textarea><br>
         <textarea id="htmlContent" rows="5" cols="40" placeholder="Place your HTML Content here..."></textarea><br>
-        <input id="mailAttachments" name="mailAttachments" type="file"><br>
+        <input id="mailAttachments" title="attachments" name="mailAttachments" type="file"><br>
         <button id="send_email" type="button">Send Email</button><br>
         <span id="message"></span>
     </div>
