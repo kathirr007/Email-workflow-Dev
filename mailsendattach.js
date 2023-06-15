@@ -4,6 +4,7 @@ var http = require('http');
 var fs = require('fs');
 var querystring = require('querystring');
 var fs = require('fs');
+const { transporter } = require('./transporter');
 http
   .createServer(function (req, res) {
     console.log(req.url);
@@ -20,7 +21,7 @@ http
       });
       req.on('end', function (chunk) {
         var q = querystring.parse(data);
-        var transporter = nodemailer.createTransport({
+        /* var transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
             type: 'OAuth2',
@@ -30,7 +31,7 @@ http
             refreshToken: process.env.REFRESH_TOKEN,
             accessToken: process.env.ACCESS_TOKEN,
           },
-        });
+        }); */
         var mailOptions = {
           from: 'kathirr007@gmail.com', // sender's gmail
           to: q.demail, // data coming from form

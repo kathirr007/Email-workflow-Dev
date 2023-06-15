@@ -1,6 +1,7 @@
 var express = require('express');
 var nodemailer = require('nodemailer');
 var app = express();
+const { transporter } = require('./transporter');
 /*
     Here we are configuring our SMTP Server details.
     STMP is mail server which is responsible for sending and recieving email.
@@ -14,7 +15,7 @@ var smtpTransport = nodemailer.createTransport({
   },
 });
 
-export const transporter = nodemailer.createTransport({
+/* const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     type: 'OAuth2',
@@ -24,7 +25,7 @@ export const transporter = nodemailer.createTransport({
     refreshToken: process.env.REFRESH_TOKEN,
     accessToken: process.env.ACCESS_TOKEN,
   },
-});
+}); */
 /*------------------SMTP Over-----------------------------*/
 
 /*------------------Routing Started ------------------------*/
@@ -36,6 +37,7 @@ app.get('/', function (req, res) {
 });
 app.get('/send', function (req, res) {
   var mailOptions = {
+    from: 'Kathirr007 <kathirr007@gmail.com>',
     to: req.query.to,
     subject: req.query.subject,
     text: req.query.text,

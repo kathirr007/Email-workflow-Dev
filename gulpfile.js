@@ -3,6 +3,7 @@ const gulp = require('gulp');
 // const gulp = require('gulp-param')(require('gulp'), process.argv);
 const $ = require('gulp-load-plugins')({
   lazy: true,
+  
 });
 const gulpSass = require('gulp-sass')(require('sass'));
 // const pug = require('gulp-pug');
@@ -177,8 +178,29 @@ gulp.task('reload', (done) => {
   done();
 });
 
+// const images = series(
+//   async () => {
+//       imagemin = await import('gulp-imagemin');
+//   },
+//   () => src('./src/images/**/*')
+//       .pipe(
+//           imagemin.default(
+//               [
+//                   imagemin.mozjpeg({ quality: 60, progressive: true }),
+//                   imagemin.optipng({ optimizationLevel: 5, interlaced: null })
+//               ],
+//               {
+//                   silent: true
+//               }
+//           )
+//       )
+//       .pipe(dest('./dist/images'))
+// );
+
 // manage images
-gulp.task('images', function () {
+gulp.task('images', async function () {
+  // let imagemin = await import('gulp-imagemin');
+  // const { default:gulpImagemin } = imagemin
   return (
     gulp
       .src(images.in)
@@ -189,8 +211,8 @@ gulp.task('images', function () {
       )
       .pipe($.newer(images.out))
       .pipe($.plumber())
-      .pipe(
-        $.image({
+      /* .pipe(
+        imagemin.default({
           jpegRecompress: [
             '--strip',
             '--quality',
@@ -204,7 +226,7 @@ gulp.task('images', function () {
           // guetzli: ['--quality', 85],
           quiet: true,
         })
-      )
+      ) */
       // .pipe($.rename({dirname: ''}))
       .pipe(
         $.size({
@@ -250,7 +272,9 @@ gulp.task('landingAssets', () => {
 });
 
 // manage landing page images
-gulp.task('landingImages', function () {
+gulp.task('landingImages', async function () {
+  // let imagemin = await import('gulp-imagemin');
+  // const { default:gulpImagemin } = imagemin
   return gulp
     .src(landingPages.images.in)
     .pipe(
@@ -260,8 +284,8 @@ gulp.task('landingImages', function () {
     )
     .pipe($.newer(landingPages.out))
     .pipe($.plumber())
-    .pipe(
-      $.image({
+    /* .pipe(
+      imagemin.default({
         jpegRecompress: [
           '--strip',
           '--quality',
@@ -273,7 +297,7 @@ gulp.task('landingImages', function () {
         ],
         quiet: true,
       })
-    )
+    ) */
     .pipe(
       $.size({
         title: 'images out ',

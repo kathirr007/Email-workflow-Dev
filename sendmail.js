@@ -1,6 +1,7 @@
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 const xoauth2 = require('xoauth2');
+const { transporter } = require('./transporter');
 var jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const { window } = new JSDOM();
@@ -9,8 +10,10 @@ global.document = document;
 
 var $ = (jQuery = require('jquery')(window));
 
-var transporter = nodemailer.createTransport({
-  service: 'gmail',
+/* var transporter = nodemailer.createTransport({
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
   auth: {
     type: 'OAuth2',
     user: process.env.USER,
@@ -19,7 +22,7 @@ var transporter = nodemailer.createTransport({
     refreshToken: process.env.REFRESH_TOKEN,
     accessToken: process.env.ACCESS_TOKEN,
   },
-});
+}); */
 
 // For todays date;
 Date.prototype.today = function () {
