@@ -16,3 +16,16 @@ npm install
 ```
 gulp
 ```
+
+### Fix npm package gulp-image installation issue for post-install script
+
+Update the host file by adding the following:
+
+```
+# 52.74.223.119 github.com
+# 192.30.253.119 gist.github.com
+# 54.169.195.247 api.github.com
+# 185.199.111.153 assets-cdn.github.com
+151.101.76.133 raw.githubusercontent.com
+```
+

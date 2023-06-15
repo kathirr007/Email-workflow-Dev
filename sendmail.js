@@ -80,7 +80,7 @@ var htmlPaths = [
     // dest + 'emails/gmailIssues/clip-off-issue.html',
     // dest + 'emails/gmailIssues/23-06-2020/CHARLOTTE INNO ONE BLOCK TEMPLATE.html',
     // dest + 'emails/gmailIssues/23-06-2020/CHARLOTTE INNO ONE BLOCK TEMPLATE_Updated.html',
-    dest + 'emails/others/AE_Template7_20200718/index_updated.html',
+    dest + 'emails/19/template-19.html',
   ],
   path,
   mailOptions;
@@ -92,6 +92,7 @@ $(htmlPaths).each(function (i) {
     to: 'kathirr007@gmail.com, \
              kathirr007@aol.com, \
              kathirr007@hotmail.com, \
+             kathirr007@yahoo.com, \
              kathirr007@yahoo.com, \
              kathirr007@yandex.com,',
     subject: `Test Mail ${i + 1} on ${datetime}`,

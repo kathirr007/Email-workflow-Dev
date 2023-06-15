@@ -199,8 +199,8 @@ gulp.task('reload', (done) => {
 
 // manage images
 gulp.task('images', async function () {
-  // let imagemin = await import('gulp-imagemin');
-  // const { default:gulpImagemin } = imagemin
+  let gulpimage = await import('gulp-image');
+  const { default:gulpImage } = gulpimage
   return (
     gulp
       .src(images.in)
@@ -211,8 +211,8 @@ gulp.task('images', async function () {
       )
       .pipe($.newer(images.out))
       .pipe($.plumber())
-      /* .pipe(
-        imagemin.default({
+      .pipe(
+        gulpImage({
           jpegRecompress: [
             '--strip',
             '--quality',
@@ -226,7 +226,7 @@ gulp.task('images', async function () {
           // guetzli: ['--quality', 85],
           quiet: true,
         })
-      ) */
+      )
       // .pipe($.rename({dirname: ''}))
       .pipe(
         $.size({
