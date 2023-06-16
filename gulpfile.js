@@ -3,9 +3,10 @@ const gulp = require('gulp');
 // const gulp = require('gulp-param')(require('gulp'), process.argv);
 const $ = require('gulp-load-plugins')({
   lazy: true,
-  
+
 });
 const gulpSass = require('gulp-sass')(require('sass'));
+const gulpImage = async () => await import('gulp-image');
 // const pug = require('gulp-pug');
 const pkg = require('./package.json');
 const { crush } = require('html-crush');
@@ -165,11 +166,11 @@ gulp.task('clean-landingpages', function (done) {
 // show build type
 console.log(
   pkg.name +
-    ' ' +
-    pkg.version +
-    ', ' +
-    (devBuild ? 'development' : 'production') +
-    ' build'
+  ' ' +
+  pkg.version +
+  ', ' +
+  (devBuild ? 'development' : 'production') +
+  ' build'
 );
 
 // reload task
@@ -178,29 +179,9 @@ gulp.task('reload', (done) => {
   done();
 });
 
-// const images = series(
-//   async () => {
-//       imagemin = await import('gulp-imagemin');
-//   },
-//   () => src('./src/images/**/*')
-//       .pipe(
-//           imagemin.default(
-//               [
-//                   imagemin.mozjpeg({ quality: 60, progressive: true }),
-//                   imagemin.optipng({ optimizationLevel: 5, interlaced: null })
-//               ],
-//               {
-//                   silent: true
-//               }
-//           )
-//       )
-//       .pipe(dest('./dist/images'))
-// );
 
 // manage images
 gulp.task('images', async function () {
-  let gulpimage = await import('gulp-image');
-  const { default:gulpImage } = gulpimage
   return (
     gulp
       .src(images.in)
@@ -212,16 +193,8 @@ gulp.task('images', async function () {
       .pipe($.newer(images.out))
       .pipe($.plumber())
       .pipe(
-        gulpImage({
-          jpegRecompress: [
-            '--strip',
-            '--quality',
-            'medium',
-            '--min',
-            40,
-            '--max',
-            80,
-          ],
+        (await gulpImage()).default({
+          jpegRecompress: ['--strip', '--quality', 'medium', '--min', 40, '--max', 80],
           // mozjpeg: ['-optimize', '-progressive'],
           // guetzli: ['--quality', 85],
           quiet: true,
@@ -273,8 +246,6 @@ gulp.task('landingAssets', () => {
 
 // manage landing page images
 gulp.task('landingImages', async function () {
-  // let imagemin = await import('gulp-imagemin');
-  // const { default:gulpImagemin } = imagemin
   return gulp
     .src(landingPages.images.in)
     .pipe(
@@ -284,20 +255,12 @@ gulp.task('landingImages', async function () {
     )
     .pipe($.newer(landingPages.out))
     .pipe($.plumber())
-    /* .pipe(
-      imagemin.default({
-        jpegRecompress: [
-          '--strip',
-          '--quality',
-          'medium',
-          '--min',
-          40,
-          '--max',
-          80,
-        ],
+    .pipe(
+      (await gulpImage()).default({
+        jpegRecompress: ['--strip', '--quality', 'medium', '--min', 40, '--max', 80],
         quiet: true,
       })
-    ) */
+    )
     .pipe(
       $.size({
         title: 'images out ',
