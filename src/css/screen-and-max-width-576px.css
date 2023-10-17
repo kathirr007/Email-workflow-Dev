@@ -363,6 +363,10 @@ body[yahoo] .top-banner {
   border: none !important;
 }
 
+.shadow-mob-none {
+  box-shadow: none !important;
+}
+
 /*Font size styles ends */
 
 /*Rounded Corner Styles starts */
