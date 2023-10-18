@@ -43,7 +43,7 @@ a {
   text-decoration: none;
 }
 
-div:not(.no-inline) {
+.wrapper-table div:not(.no-inline) {
   display: inherit;
 }
 
@@ -440,6 +440,7 @@ div:not(.no-inline) {
 /* Spacing styles ends*/
 
 @media screen and (max-width: 576px) {
+
   /* Mobile background styles start */
   .hero-bg-mob {
     background-image: url("images/hero-banner-mob.png") !important;
@@ -449,6 +450,7 @@ div:not(.no-inline) {
     background-color: rgba($color: #000, $alpha: 0.5);
     // background-color: rgba(0,0,0,0.5);
   }
+
   /* Mobile background styles ends */
 
   .text-white {
@@ -618,6 +620,7 @@ div:not(.no-inline) {
   .fwn-mob {
     font-weight: normal !important;
   }
+
   /* Font styles end */
 
   /*Font size styles */
@@ -797,6 +800,7 @@ div:not(.no-inline) {
   .border-mob-none {
     border: none !important;
   }
+
   .shadow-mob-none {
     box-shadow: none !important;
   }
@@ -2029,14 +2033,10 @@ div:not(.no-inline) {
   }
 }
 
-@media screen and (max-width: 480px) {
-}
+@media screen and (max-width: 480px) {}
 
-@media screen and (max-width: 414px) {
-}
+@media screen and (max-width: 414px) {}
 
-@media screen and (max-width: 375px) {
-}
+@media screen and (max-width: 375px) {}
 
-@media screen and (max-width: 320px) {
-}
+@media screen and (max-width: 320px) {}

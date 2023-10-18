@@ -43,7 +43,7 @@ a {
   text-decoration: none;
 }
 
-div:not(.no-inline) {
+.wrapper-table div:not(.no-inline) {
   display: inherit;
 }
 
