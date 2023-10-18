@@ -43,7 +43,7 @@ a {
   text-decoration: none;
 }
 
-.wrapper-table div:not(.no-inline) {
+.email-wrapper-table div:not(.no-inline) {
   display: inherit;
 }
 
